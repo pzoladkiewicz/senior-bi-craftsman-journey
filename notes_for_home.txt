@@ -1,0 +1,12 @@
+KONTYNUACJA W DOMU - Środa wieczór
+
+TODO PRIORITY:
+1. Zamienić komórkę 2 na poprawioną wersję (kod gotowy w poprzedniej rozmowie)
+2. Re-run notebook z nową logiką deduplikacji  
+3. Sprawdzić czy liczby się zgadzają (wspólne = usuniętych między arkuszami)
+4. Update KPI w komórce 6 jeśli się zmienią
+5. Commit poprawek jako 'fix: corrected deduplication logic'
+
+DISCOVERED: Dataset ma 2 arkusze z ~22k wspólnymi rekordami
+ISSUE: Stara logika usuwała 34k (12k za dużo) - błąd w counting
+SOLUTION: Enhanced transaction key + separate internal/cross-sheet deduplication
