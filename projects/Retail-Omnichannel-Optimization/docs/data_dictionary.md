@@ -174,6 +174,7 @@ def transform_customer_dimension(df_raw):
     
     return final_customers
 ```
+
 #### Transformacja wymiaru produktu (Product Dimension) 
 ```python
 def transform_product_dimension(df_raw):
@@ -201,6 +202,7 @@ def transform_product_dimension(df_raw):
     
     return products
 ```
+
 #### Transformacja wymiaru geografii (Geography Dimension)
 ```python
 def transform_geography_dimension(df_raw):
@@ -226,10 +228,9 @@ def transform_geography_dimension(df_raw):
 
 #### Kompletny pipeline transformacji wymiarów (Complete dimension pipeline)
 ```python
-
 def build_star_schema_dimensions(df_raw):
-"""
-Budowa wszystkich wymiarów modelu gwiazdy (Build all star schema dimensions)
+    """
+    Budowa wszystkich wymiarów modelu gwiazdy (Build all star schema dimensions)
 
     Parameters:
     df_raw (DataFrame): Wyczyszczone dane źródłowe (cleaned raw data)
@@ -269,12 +270,13 @@ Budowa wszystkich wymiarów modelu gwiazdy (Build all star schema dimensions)
     print(f"Budowa wymiarów ukończona (Dimensions build complete)")
     
     return dimensions
-    def build_date_dimension(start_date, end_date):
-"""
-Budowa wymiaru czasu (Date dimension builder)
-"""
-import pandas as pd
-from datetime import datetime, timedelta
+
+def build_date_dimension(start_date, end_date):
+    """
+    Budowa wymiaru czasu (Date dimension builder)
+    """
+    import pandas as pd
+    from datetime import datetime, timedelta
 
     # Rozszerzenie zakresu dat (Extend date range)
     extended_start = start_date.replace(year=start_date.year)
@@ -302,11 +304,11 @@ from datetime import datetime, timedelta
 # Przykład użycia kompletnego pipeline (Complete pipeline usage example)
 
 def execute_etl_pipeline(df_raw):
-"""
-Wykonanie kompletnego procesu ETL (Execute complete ETL process)
-"""
-\# Budowa wymiarów (Build dimensions)
-dimensions = build_star_schema_dimensions(df_raw)
+    """
+    Wykonanie kompletnego procesu ETL (Execute complete ETL process)
+    """
+    # Budowa wymiarów (Build dimensions)
+    dimensions = build_star_schema_dimensions(df_raw)
 
     # Eksport do plików CSV (Export to CSV files)
     output_path = '../data/processed/'
@@ -330,27 +332,28 @@ dimensions = build_star_schema_dimensions(df_raw)
 ## KLUCZOWE MIARY (DAX MEASURES)
 
 ### Sprzedaż (Sales Measures)
-```
+```dax
 
 Total Sales = SUM(Fact_Sales[TotalValue])
 Total Quantity = SUM(Fact_Sales[Quantity])
 Average Order Value = DIVIDE([Total Sales], DISTINCTCOUNT(Fact_Sales[InvoiceNumber]))
 Sales Growth YoY = DIVIDE([Total Sales] - [Total Sales PY], [Total Sales PY])
+Total Sales PY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Dim_Date[Date]))
 
 ```
 
 ### Klienci (Customer Measures)
-```
+```dax
 
 Customer Count = DISTINCTCOUNT(Fact_Sales[CustomerKey])
 New Customers = CALCULATE([Customer Count], FILTER(Dim_Customer, Dim_Customer[FirstPurchaseDate] >= DATE(2010,1,1)))
 Customer Retention Rate = DIVIDE([Returning Customers], [Total Customers Previous Period])
-
+Returning Customers = CALCULATE([Customer Count], FILTER(Dim_Customer, Dim_Customer[TotalTransactions] > 1))
+Total Customers Previous Period = CALCULATE([Customer Count], DATEADD(Dim_Date[Date], -1, YEAR))
 ```
 
 ### Produkty (Product Measures)
-```
-
+```dax
 Product Count = DISTINCTCOUNT(Fact_Sales[ProductKey])
 Top 10 Products = TOPN(10, VALUES(Dim_Product[ProductName]), [Total Sales])
 Product Performance = RANKX(ALL(Dim_Product), [Total Sales])
