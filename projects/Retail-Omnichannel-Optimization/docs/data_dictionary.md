@@ -154,7 +154,7 @@ customers = df_raw.groupby('Customer ID').agg({
     }
     
     return customers
-    ```
+```
 
 ### Kontrola jakości po transformacji (Quality Gates)
 - **Kompletność (Completeness):** 0% brakujących kluczy głównych
