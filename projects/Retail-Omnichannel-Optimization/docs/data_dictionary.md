@@ -129,32 +129,197 @@
 | 5 | Kategoryzacja produktów | StockCode zawiera 'GIFT' → IsGift = 1 |
 
 ### Mapowanie wymiarów (Dimension Mapping)
-```
 
 
-# Przykład transformacji Customer
-
+#### Transformacja wymiaru klienta (Customer Dimension)
+```python
 def transform_customer_dimension(df_raw):
-"""
-Transformacja wymiaru klienta z obsługą zakupów gości
-"""
-customers = df_raw.groupby('Customer ID').agg({
-'Country': 'first',
-'InvoiceDate': ['min', 'max'],
-'Invoice': 'nunique',
-'Total_Value': 'sum'
-}).reset_index()
-
-    # Obsługa gości
-    guest_row = {
+    """
+    Transformacja wymiaru klienta z obsługą zakupów gości (Guest handling)
+    """
+    import pandas as pd
+    
+    # Agregacja zarejestrowanych klientów (Registered customers)
+    customers = df_raw[df_raw['Customer ID'].notna()].groupby('Customer ID').agg({
+        'Country': 'first',
+        'InvoiceDate': ['min', 'max'],
+        'Invoice': 'nunique',
+        'Total_Value': 'sum'
+    }).reset_index()
+    
+    # Spłaszczenie kolumn wielopoziomowych (Flatten multi-level columns)
+    customers.columns = ['CustomerID', 'Country', 'FirstPurchase', 'LastPurchase', 'TotalTransactions', 'TotalSpent']
+    
+    # Dodanie kluczy i typów (Add keys and types)
+    customers['CustomerKey'] = range(1, len(customers) + 1)
+    customers['CustomerType'] = 'Registered'
+    customers['IsUK'] = customers['Country'].apply(lambda x: 1 if x == 'United Kingdom' else 0)
+    
+    # Obsługa gości - wiersz reprezentujący wszystkich gości (Guest handling)
+    guest_purchases = df_raw[df_raw['Customer ID'].isna()]
+    guest_row = pd.DataFrame([{
         'CustomerKey': -1,
         'CustomerID': None,
         'CustomerType': 'Guest',
-        'Country': 'Mixed'
+        'Country': 'Mixed',
+        'FirstPurchase': guest_purchases['InvoiceDate'].min(),
+        'LastPurchase': guest_purchases['InvoiceDate'].max(),
+        'TotalTransactions': guest_purchases['Invoice'].nunique(),
+        'TotalSpent': guest_purchases['Total_Value'].sum(),
+        'IsUK': 0
+    }])
+    
+    # Połączenie zarejestrowanych klientów z gośćmi (Combine registered + guests)
+    final_customers = pd.concat([customers, guest_row], ignore_index=True)
+    
+    return final_customers
+```
+#### Transformacja wymiaru produktu (Product Dimension) 
+```python
+def transform_product_dimension(df_raw):
+    """
+    Transformacja wymiaru produktu z kategoryzacją (Product categorization)
+    """
+    products = df_raw.groupby('StockCode').agg({
+        'Description': 'first',
+        'Price': 'mean',
+        'Quantity': 'sum',
+        'InvoiceDate': ['min', 'max']
+    }).reset_index()
+    
+    # Spłaszczenie kolumn (Flatten columns)
+    products.columns = ['StockCode', 'ProductName', 'AveragePrice', 'TotalQuantitySold', 'FirstSaleDate', 'LastSaleDate']
+    
+    # Dodanie kategorii (Add categories)
+    products['ProductKey'] = range(1, len(products) + 1)
+    products['IsGift'] = products['StockCode'].str.contains('GIFT', na=False).astype(int)
+    products['IsPostage'] = products['StockCode'].str.contains('POST', na=False).astype(int)
+    products['Category'] = products.apply(lambda x: 
+        'Gift' if x['IsGift'] else 
+        'Service' if x['IsPostage'] else 
+        'Regular', axis=1)
+    
+    return products
+```
+#### Transformacja wymiaru geografii (Geography Dimension)
+```python
+def transform_geography_dimension(df_raw):
+    """
+    Transformacja wymiaru geograficznego (Geography dimension)
+    """
+    countries = df_raw['Country'].unique()
+    
+    geography = pd.DataFrame({
+        'GeographyKey': range(1, len(countries) + 1),
+        'Country': countries
+    })
+    
+    # Dodanie metadanych geograficznych (Geographic metadata)
+    geography['IsUK'] = geography['Country'].apply(lambda x: 1 if x == 'United Kingdom' else 0)
+    geography['Region'] = geography['Country'].apply(lambda x: 
+        'UK' if x == 'United Kingdom' else 
+        'Europe' if x in ['Germany', 'France', 'Netherlands', 'Belgium'] else 
+        'International')
+    
+    return geography
+```
+
+#### Kompletny pipeline transformacji wymiarów (Complete dimension pipeline)
+```python
+
+def build_star_schema_dimensions(df_raw):
+"""
+Budowa wszystkich wymiarów modelu gwiazdy (Build all star schema dimensions)
+
+    Parameters:
+    df_raw (DataFrame): Wyczyszczone dane źródłowe (cleaned raw data)
+    
+    Returns:
+    dict: Słownik zawierający wszystkie wymiary gotowe do eksportu
+    """
+    import pandas as pd
+    from datetime import datetime
+    
+    print(f"Rozpoczynanie budowy wymiarów modelu gwiazdy (star schema dimensions)...")
+    print(f"Dane wejściowe (input data): {len(df_raw):,} rekordów")
+    
+    # Transformacje wszystkich wymiarów (Transform all dimensions)
+    dim_customer = transform_customer_dimension(df_raw)
+    dim_product = transform_product_dimension(df_raw)
+    dim_geography = transform_geography_dimension(df_raw)
+    
+    # Budowa wymiaru czasu (Build date dimension)
+    start_date = df_raw['InvoiceDate'].min().date()
+    end_date = df_raw['InvoiceDate'].max().date()
+    dim_date = build_date_dimension(start_date, end_date)
+    
+    # Walidacja wymiarów (Dimension validation)
+    dimensions = {
+        'customers': dim_customer,
+        'products': dim_product,
+        'geography': dim_geography,
+        'dates': dim_date
     }
     
-    return customers
+    # Raport podsumowujący (Summary report)
+    print(f"\nPodsumowanie wymiarów modelu gwiazdy (Star schema dimensions summary):")
+    for dim_name, dim_df in dimensions.items():
+        print(f"-  {dim_name}: {len(dim_df):,} rekordów")
+    
+    print(f"Budowa wymiarów ukończona (Dimensions build complete)")
+    
+    return dimensions
+    def build_date_dimension(start_date, end_date):
+"""
+Budowa wymiaru czasu (Date dimension builder)
+"""
+import pandas as pd
+from datetime import datetime, timedelta
+
+    # Rozszerzenie zakresu dat (Extend date range)
+    extended_start = start_date.replace(year=start_date.year)
+    extended_end = end_date.replace(year=end_date.year + 1)
+    
+    date_range = pd.date_range(start=extended_start, end=extended_end, freq='D')
+    
+    dim_date = pd.DataFrame({
+        'DateKey': [int(d.strftime('%Y%m%d')) for d in date_range],
+        'Date': date_range,
+        'Year': date_range.year,
+        'Quarter': date_range.quarter,
+        'Month': date_range.month,
+        'MonthName': date_range.strftime('%B'),
+        'DayOfYear': date_range.dayofyear,
+        'DayOfMonth': date_range.day,
+        'DayOfWeek': date_range.dayofweek + 1,
+        'DayName': date_range.strftime('%A'),
+        'IsWeekend': (date_range.dayofweek >= 5).astype(int),
+        'IsBusinessDay': (date_range.dayofweek < 5).astype(int)
+    })
+    
+    return dim_date
+    
+# Przykład użycia kompletnego pipeline (Complete pipeline usage example)
+
+def execute_etl_pipeline(df_raw):
+"""
+Wykonanie kompletnego procesu ETL (Execute complete ETL process)
+"""
+\# Budowa wymiarów (Build dimensions)
+dimensions = build_star_schema_dimensions(df_raw)
+
+    # Eksport do plików CSV (Export to CSV files)
+    output_path = '../data/processed/'
+    
+    for dim_name, dim_df in dimensions.items():
+        filename = f"{output_path}dim_{dim_name}.csv"
+        dim_df.to_csv(filename, index=False)
+        print(f"Eksport ukończony (Export complete): {filename}")
+    
+    print(f"Kompletny ETL pipeline wykonany pomyślnie!")
+    return dimensions
 ```
+
 
 ### Kontrola jakości po transformacji (Quality Gates)
 - **Kompletność (Completeness):** 0% brakujących kluczy głównych
