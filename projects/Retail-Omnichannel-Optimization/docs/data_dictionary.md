@@ -23,7 +23,7 @@
 | InvoiceDate | DateTime | Data transakcji | Format DD/MM/YYYY HH:MM |
 | Price | Decimal(10,2) | Cena jednostkowa | GBP, wartości dodatnie |
 | Customer ID | Integer | Identyfikator klienta (Customer ID) | NULL = zakupy gości |
-| Country | String(50) | Kraj klienta | UK + 39 krajów międzynarodowych |
+| Country | String(50) | Kraj klienta | UK + 40+ innych krajów |
 
 ## WARSTWA PRZETWORZONA - MODEL GWIAZDY (STAR SCHEMA)
 
@@ -122,7 +122,7 @@
 ### Procedura czyszczenia danych (Data Cleaning Process)
 | Krok | Opis transformacji | Reguła biznesowa |
 |------|-------------------|------------------|
-| 1 | Deduplikacja rekordów | Enhanced transaction key (Invoice + StockCode + Quantity + Date + Price) |
+| 1 | Deduplikacja rekordów | Rozszerzony klucz transakcji (Invoice + StockCode + Quantity + Date + Price) |
 | 2 | Filtrowanie sprzedaży | Quantity > 0, Price > 0, InvoiceDate <= dzisiejsza data |
 | 3 | Obsługa gości (Guest handling) | Customer ID = NULL → CustomerKey = -1 |
 | 4 | Standaryzacja krajów | Mapowanie nazw krajów według tabeli ISO |
