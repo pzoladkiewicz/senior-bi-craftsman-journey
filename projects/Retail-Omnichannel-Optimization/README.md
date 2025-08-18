@@ -62,3 +62,14 @@ Ten etap koncentruje się na transformacji surowych danych w zoptymalizowany mod
 3.  Zainstaluj wymagane biblioteki, korzystając z pliku `requirements.txt` znajdującego się w głównym katalogu repozytorium: `pip install -r requirements.txt`.
 4.  Uruchom JupyterLab i otwórz notatnik analityczny znajdujący się w folderze `notebooks`.
 
+
+## ETL (v2) – uruchomienie
+
+Jednoplilkowy pipeline (RAW → STAR SCHEMA → CSV):
+
+python run_etl.py
+
+Domyślne ścieżki:
+- input: data/raw/online_retail_II.xlsx
+- output: data/processed
+
