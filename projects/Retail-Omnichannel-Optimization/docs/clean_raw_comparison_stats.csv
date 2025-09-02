@@ -1,0 +1,8 @@
+Metryka,clean_v1,clean_v2,Różnica
+Total_Records,1007912.0,1033034.0,25122.0
+Qty_Negative,0.0,22496.0,22496.0
+Price_Negative,0.0,5.0,5.0
+Price_Zero,0.0,6014.0,6014.0
+Invoice_C,1.0,19104.0,19103.0
+Invoice_A,1.0,6.0,5.0
+Total_Value_GBP,20476082.167999998,18854981.847999997,-1621100.3200000003
