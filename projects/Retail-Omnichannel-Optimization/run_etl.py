@@ -123,12 +123,14 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     _log(f"Usunięto duplikatów: {before - len(df):,}")
 
     # Filtrowanie sprzedaży: Quantity > 0, Price > 0, InvoiceDate <= now
-    _log("Filtrowanie prawidłowych sprzedaży...")
+    _log("Filtrowanie nieprawidłowych rekordów (zachowując zwroty i korekty)...")
     mask = (
-        (df["Quantity"] > 0) &
-        (df["Price"] > 0) &
         (df["InvoiceDate"].notna()) &
-        (df["InvoiceDate"] <= datetime.now())
+        (df["InvoiceDate"] <= datetime.now()) &
+        (df["Invoice"].notna()) &
+        (df["Invoice"] != "") &
+        (df["StockCode"].notna()) &
+        (df["StockCode"] != "")
     )
     df = df.loc[mask].copy()
     _log(f"Po filtrowaniu: {len(df):,} rekordów")
