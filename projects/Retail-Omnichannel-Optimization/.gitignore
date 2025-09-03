@@ -1,4 +1,3 @@
 
 # Duże pliki danych interim - tylko lokalnie
 data/interim/*.csv
-data/interim/clean_*_for_classification.csv
