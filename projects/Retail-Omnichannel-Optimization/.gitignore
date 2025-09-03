@@ -1,3 +1,18 @@
-
-# Duże pliki danych interim - tylko lokalnie
+# Duże pliki danych interim
 data/interim/*.csv
+
+# Power BI cache
+dashboards/powerbi/*.pbi.tmp
+
+# Tableau extracts (duże pliki)
+dashboards/tableau/extracts/
+
+# Python cache lokalnie w projekcie
+__pycache__/
+*.pyc
+
+# Tymczasowe pliki analizy
+notebooks/.ipynb_checkpoints/
+
+# Backupy
+*_backup.*
