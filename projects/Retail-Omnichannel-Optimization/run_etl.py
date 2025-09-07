@@ -11,11 +11,12 @@
 #   run_all("data/raw/online_retail_II.xlsx", "data/processed")
 
 import os
-import sys
+# import sys
 import hashlib
-from datetime import datetime, timedelta
+from datetime import datetime
 import pandas as pd
 import numpy as np
+from typing import Union
 
 # ------------------------------------
 # UTILITIES (Narzędzia pomocnicze)
@@ -159,16 +160,133 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     # Quality Gates
     _log("Quality Gates po czyszczeniu...")
     checks = {
-        #"positive_quantities": (df["Quantity"] > 0).all(),
-        #"positive_prices": (df["Price"] > 0).all(),
+        # "positive_quantities": (df["Quantity"] > 0).all(),
+        # "positive_prices": (df["Price"] > 0).all(),
         "non_future_dates": (df["InvoiceDate"] <= datetime.now()).all(),
         "non_missing_invoice": df["Invoice"].ne("").all(),
         "non_missing_stockcode": df["StockCode"].ne("").all(),
-        #"positive_total_value": (df["Total_Value"] > 0).all()
+        # "positive_total_value": (df["Total_Value"] > 0).all()
     }
     if not all(checks.values()):
         failed = [k for k, v in checks.items() if not v]
         _log(f"OSTRZEŻENIE: Quality Gates niezaliczone: {failed}")
+
+    return df
+
+
+'''
+    Edycja run_etl.py [edit]:
+
+    W sekcji po CLEANING wkleić classify_transactions i apply_rule;
+    w run_all dodać blok zapisu klasyfikacji jak wyżej;
+    nie zmieniać istniejących zapisów dim*/fact_sales.csv.
+'''
+
+# -----------------------------------------
+# CLASSIFICATION (klasyfikacja transakcji)
+# -----------------------------------------
+
+
+def _apply_rule(df: pd.DataFrame,
+                name: str,
+                condition: pd.Series,
+                category: str,
+                step: int) -> tuple[int, float]:
+    """
+    Aplikuje regułę klasyfikacji na rekordach 'ToVerification' [ToVerification state],
+    aktualizuje kolumny: TransactionCategory, ClassisificationRule, ClassificationStep.
+    Zwraca: (liczba_zaklasyfikowanych, procent_pozostalych_ToVerification).
+    """
+
+    mask = (df["TransactionCategory"].eq("ToVerification")) & condition
+    count = int(mask.sum())
+    if count > 0:
+        df.loc[mask, "TransactionCategory"] = category
+        df.loc[mask, "ClassificationRule"] = name
+        df.loc[mask, "ClassificationStep"] = step
+    remaining = int(df["TransactionCategory"].eq("ToVerification").sum())
+    remaining_pct = (remaining / len(df)) * 100.0 if len(df) else 0.0
+    return count, remaining_pct
+
+
+def classify_transactions(df_clean: pd.DataFrame) -> pd.DataFrame:
+    """
+    Klasyfikacja trnsakcji po czyszczeniu [Post-clean transaction classification].
+    Dodaje kolumny:
+        - TransactionCategory: kategoria biznesowa [business category]
+        - ClassificationRule: nazwa reguły [rule name]
+        - ClassificationStep: numer kroku [step number]
+    Zwraca kopię z klasyfikacją (bez modyfikacji wejscia)
+    """
+
+    df = df_clean.copy()
+    # Inicjalizacja kolumn klasyfikacji
+    df["TransactionCategory"] = "ToVerification"
+    df["ClassificationRule"] = "None"
+    df["ClassificationStep"] = 0
+
+    # Ułatwienia
+    stock = df["StockCode"].astype(str).str.upper()
+    desc = df["Description"].astype(str).str.upper()
+    invoice = df["Invoice"].astype(str)
+    qty = pd.to_numeric(df["Quantity"], errors="coerce").fillna(0)
+    price = pd.to_numeric(df["Price"], errors="coerce").fillna(0)
+
+    # Reguła 0: Błędy jakosci [DataError]
+    cond_data_error = (price.eq(0.0)) | desc.isin(["", "UNKNOWN PRODUCT"])
+    _apply_rule(df, "Bledy_Jakosci", cond_data_error, "DataError", 0)
+
+    # Reguła 1: Opłaty pocztowe [Postage]
+    cond_postage = stock.isin(["POST", "DOT"]) | stock.str.contains("POSTAGE") | desc.str.contains("POSTAGE")
+    _apply_rule(df, "Oplaty_Pocztowe", cond_postage, "Postage", 1)
+
+    # Reguła 2: Rabaty [Discount]
+    cond_discount = stock.eq("D") | desc.eq("DISCOUNT")
+    _apply_rule(df, "Rabaty", cond_discount, "Discount", 2)
+
+    # Reguła 3: Opłaty bankowe [BankCharges]
+    cond_bank = stock.eq("BANK CHARGES") | desc.eq("BANK CHARGES")
+    _apply_rule(df, "Oplaty_Bankowe", cond_bank, "BankCharges", 3)
+
+    # Reguła 4: Opłaty Amazon [AmazonFee]
+    cond_amazon = stock.eq("AMAZONFEE") | desc.eq("AMAZON FEE")
+    _apply_rule(df, "Oplaty_Amazon", cond_amazon, "AmazonFee", 4)
+
+    # Reguła 5: Korekty ręczne [ManualAdjustment]
+    cond_manual = ((stock.eq("M") & desc.eq("MANUAL")) |
+                   (stock.str.startswith("ADJUSTMENT") & desc.str.startswith("ADJUSTMENT BY")) |
+                   (stock.eq("B") & desc.str.startswith("ADJUST"))
+                   )
+    _apply_rule(df, "Korekty_Reczne", cond_manual, "ManualAdjustment", 5)
+
+    # Reguła 6: Koszty transportu [TransportCost]
+    cond_carriage = stock.eq("C2") | desc.eq("CARRIAGE")
+    _apply_rule(df, "Koszty_Transportu", cond_carriage, "TransportCost", 6)
+
+    # Reguła 7: Próbki [Sample]
+    cond_sample = stock.eq("S") | desc.eq("SAMPLE")
+    _apply_rule(df, "Probki", cond_sample, "Sample", 7)
+
+    # Reguła 8: Regularna sprzedaż [ValidSales]
+    stock_is_standard = (
+        (stock.str.len().eq(5) & stock.str.isnumeric()) |
+        (stock.str.len().eq(6) & stock.str[:5].str.isnumeric() & stock.str[5].str.isalpha()) |
+        (stock.str.len().eq(7) & stock.str[:5].str.isnumeric() & stock.str[5:].str.isalpha())
+        )
+    cond_valid_sale = stock_is_standard & invoice.str.isnumeric() & (qty > 0)
+    _apply_rule(df, "Prawidlowe_Transakcje", cond_valid_sale, "ValidSales", 8)
+
+    # Reguła 9: Zwroty [Returns]
+    cond_return = stock_is_standard & invoice.str.upper().str.startswith("C") & (qty < 0)
+    _apply_rule(df, "Zwroty", cond_return, "Returns", 9)
+
+    # Reguła 10: Produkty DCGS (DCGSProducts)
+    cond_dcgs = stock.str.startswith("DCGS")
+    _apply_rule(df, "Produkty_DCGS", cond_dcgs, "DCGSProducts", 10)
+
+    # Reguła 99: Niezaklasyfikowane [Unclassified]
+    cond_unclassified = df["TransactionCategory"].eq("ToVerification")
+    _apply_rule(df, "Nieklasyfikowane", cond_unclassified, "Unclassified", 99)
 
     return df
 
@@ -359,10 +477,25 @@ def build_fact_sales(df_clean: pd.DataFrame,
 # --------------------------------------------------
 
 
-def run_all(input_excel_path: str, output_dir: str, sheet: str | int | None = None, date_buffer_months: int = 6):
+def run_all(input_excel_path: str,
+            output_dir: str,
+            sheet: Union[str, int, None] = None,
+            date_buffer_months: int = 6,
+            classify: bool = False) -> dict:
     """
     Uruchamia cały pipeline: RAW -> CLEAN -> DIMS -> FACT -> CSV
+
+    Args:
+        input_excel_path: Ścieżka do pliku Excel
+        output_dir: Katalog wyjściowy dla plików CSV
+        sheet: Arkusz do wczytania (None = wszystkie)
+        date_buffer_months: Bufor miesięcy dla Dim_Date
+        classify: Czy wykonać klasyfikację transakcji [transaction classification]
+
+    Returns:
+        Dict z wszystkimi plikami ETL + opcjonalnie classified
     """
+
     _log("=== START: RUN ALL ETL ===")
     _ensure_dir(output_dir)
 
@@ -390,6 +523,22 @@ def run_all(input_excel_path: str, output_dir: str, sheet: str | int | None = No
             df.to_csv(out_path, index=False, encoding="utf-8")
             _log(f"Zapisano: {out_path} ({len(df):,} wierszy)")
 
+        # Klasyfikacja transakcji
+        classified = None
+        if classify:
+            _log("Klasyfikacja transakcji na podstawie df_clean...")
+            classified = classify_transactions(clean)
+            cls_path = os.path.join(output_dir, "fact_transactions_classified.csv")
+            classified.to_csv(cls_path, index=False, encoding="utf-8")
+            _log(f"Zapisano: {cls_path} ({len(classified):,} wierszy)")
+
+            # Podsumowanie klasyfikacji
+            category_summary = classified['TransactionCategory'].value_counts()
+            _log("Rozkład kategorii transakcji:")
+            for category, count in category_summary.items():
+                pct = (count / len(classified)) * 100
+                _log(f"  {category}: {count:,} ({pct:.1f}%)")
+
         # Raport końcowy
         _log("--- RAPORT KOŃCOWY ---")
         _log(f"RAW: {len(raw):,}")
@@ -399,9 +548,12 @@ def run_all(input_excel_path: str, output_dir: str, sheet: str | int | None = No
         _log(f"DIM_PRODUCT: {len(dim_prod):,}")
         _log(f"DIM_DATE: {len(dim_date):,}")
         _log(f"FACT_SALES: {len(fact):,}")
+        if classify:
+            _log(f"FACT_TRANSACTIONS_CLASSIFIED: {len(classified):,}")
         _log("=== STOP: RUN ALL ETL - SUKCES ===")
 
-        return {
+        # Return dictionary (rozszerzony o sklasyfikowane)
+        result = {
             "raw": raw,
             "clean": clean,
             "dim_geography": dim_geo,
@@ -410,6 +562,11 @@ def run_all(input_excel_path: str, output_dir: str, sheet: str | int | None = No
             "dim_date": dim_date,
             "fact_sales": fact
         }
+
+        if classify and classified is not None:
+            result["fact_transactions_classified"] = classified
+
+        return result
 
     except Exception as e:
         _log(f"BŁĄD PIPELINE: {e}")
