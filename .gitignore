@@ -23,3 +23,21 @@ Thumbs.db
 *.tmp
 *.temp
 ../../.virtual_documents/
+
+# Jupyter virtual documents - pliki tymczasowe
+.virtual_documents/
+**/.virtual_documents/
+../../.virtual_documents/
+*/.virtual_documents/
+
+# Jupyter virtual documents - pliki tymczasowe
+.virtual_documents/
+**/.virtual_documents/
+../../.virtual_documents/
+*/.virtual_documents/
+
+# Jupyter virtual documents - pliki tymczasowe
+.virtual_documents/
+**/.virtual_documents/
+../../.virtual_documents/
+*/.virtual_documents/
