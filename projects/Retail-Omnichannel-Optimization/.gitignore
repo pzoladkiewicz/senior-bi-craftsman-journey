@@ -26,3 +26,8 @@ data/processed/
 
 # Temporary analysis files
 data/raw/*_analiza.xlsx
+# Jupyter virtual documents - tymczasowe pliki
+.virtual_documents/
+**/.virtual_documents/
+../.virtual_documents/
+../../.virtual_documents/
