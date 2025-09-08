@@ -17,9 +17,6 @@ notebooks/.ipynb_checkpoints/
 # Backupy
 *_backup.*
 
-# Jupyter virtual documents
-.virtual_documents/
-**/.virtual_documents/
 
 # Generated ETL outputs
 data/processed/
