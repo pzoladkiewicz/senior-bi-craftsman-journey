@@ -3,6 +3,7 @@ data/interim/*.csv
 
 # Power BI cache
 dashboards/powerbi/*.pbi.tmp
+*.pbip-desktop-cache
 
 # Tableau extracts (duże pliki)
 dashboards/tableau/extracts/
@@ -19,13 +20,13 @@ notebooks/.ipynb_checkpoints/
 
 
 # Generated ETL outputs
-data/processed/
+data/processed/*.csv
+data/processed/*.parquet
 
-# Temporary analysis files
-data/raw/*_analiza.xlsx
 # Jupyter virtual documents - tymczasowe pliki
-.virtual_documents/
 **/.virtual_documents/
-../.virtual_documents/
-../../.virtual_documents/
-../../.virtual_documents/
+.notebooks_tmp/
+
+# OS/IDE noise
+.DS_Store
+Thumbs.db
