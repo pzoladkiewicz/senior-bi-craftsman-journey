@@ -1,0 +1,42 @@
+relationship 46785a2d-c2fd-4c6b-921e-d57aea286c9b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_customer.FirstPurchase
+	toColumn: LocalDateTable_8c26ec6f-d2b0-4ed1-91c6-804ac0a1b482.Date
+
+relationship dd18602a-3974-4d88-9647-827721ba0920
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_customer.LastPurchase
+	toColumn: LocalDateTable_6002a01d-8000-4028-a231-3585b1c4cd97.Date
+
+relationship 321d765f-62b0-4db0-8a5c-fca69b4bf501
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_date.Date
+	toColumn: LocalDateTable_d7e1adca-39ce-416f-a4d7-dea488092a04.Date
+
+relationship 691d2fdd-2dd5-4ec9-b5d4-20d557ccd123
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_product.FirstSaleDate
+	toColumn: LocalDateTable_6a8adc81-d213-4f31-93f3-e2185ec86848.Date
+
+relationship ea4da1bb-f29c-483d-ba86-40d5fa9728dc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dim_product.LastSaleDate
+	toColumn: LocalDateTable_43a6c7b9-db1e-45e7-9181-3e3b13380e94.Date
+
+relationship AutoDetected_67ef6368-7867-4a27-a6e6-7a18a0d2ab02
+	fromColumn: fact_sales.CustomerKey
+	toColumn: dim_customer.CustomerKey
+
+relationship AutoDetected_9820751f-8672-42dc-820c-0906853b0f31
+	fromColumn: fact_sales.DateKey
+	toColumn: dim_date.DateKey
+
+relationship AutoDetected_5e153c48-8f14-4bbd-b584-667689eda521
+	isActive: false
+	fromColumn: fact_sales.GeographyKey
+	toColumn: dim_geography.GeographyKey
+
+relationship AutoDetected_8717e10e-b236-4076-9da8-77e8caeed81b
+	fromColumn: fact_sales.ProductKey
+	toColumn: dim_product.ProductKey
+

@@ -1,0 +1,29 @@
+table _Measures
+	lineageTag: eabf5964-1bd6-45ed-8404-6194a3df1a25
+
+	measure Orders = DISTINCTCOUNT(fact_sales[CustomerKey])
+		formatString: 0
+		lineageTag: e14ef7db-ab85-4629-b88e-1c235d0fdbf1
+
+	measure 'Total Sales' = SUM(fact_sales[TotalValue])
+		lineageTag: 2434790d-1466-47f5-be94-94ea45d91250
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure AOV = DIVIDE([Total Sales],[Orders])
+		lineageTag: 4ce9331a-fbfe-47c3-aa72-bf9b5e441449
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
