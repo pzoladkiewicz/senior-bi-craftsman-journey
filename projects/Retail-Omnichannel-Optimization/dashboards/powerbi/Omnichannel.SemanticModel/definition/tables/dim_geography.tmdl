@@ -6,7 +6,7 @@ table dim_geography
 		isHidden
 		formatString: 0
 		lineageTag: 20b9ad3b-8b88-4b56-9d89-216ae777ee4d
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: GeographyKey
 
 		changedProperty = IsHidden
@@ -41,7 +41,7 @@ table dim_geography
 		dataType: int64
 		formatString: 0
 		lineageTag: 52f06333-e0c5-4035-b4f4-ae033c45854e
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IsUK
 
 		annotation SummarizationSetBy = Automatic
@@ -50,7 +50,7 @@ table dim_geography
 		dataType: int64
 		formatString: 0
 		lineageTag: b7006374-38cc-4da3-8cdb-070100923c04
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IsEU
 
 		annotation SummarizationSetBy = Automatic

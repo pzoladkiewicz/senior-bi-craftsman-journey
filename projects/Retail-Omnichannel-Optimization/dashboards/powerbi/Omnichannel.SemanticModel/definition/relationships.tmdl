@@ -8,11 +8,6 @@ relationship dd18602a-3974-4d88-9647-827721ba0920
 	fromColumn: dim_customer.LastPurchase
 	toColumn: LocalDateTable_6002a01d-8000-4028-a231-3585b1c4cd97.Date
 
-relationship 321d765f-62b0-4db0-8a5c-fca69b4bf501
-	joinOnDateBehavior: datePartOnly
-	fromColumn: dim_date.Date
-	toColumn: LocalDateTable_d7e1adca-39ce-416f-a4d7-dea488092a04.Date
-
 relationship 691d2fdd-2dd5-4ec9-b5d4-20d557ccd123
 	joinOnDateBehavior: datePartOnly
 	fromColumn: dim_product.FirstSaleDate
@@ -32,7 +27,6 @@ relationship AutoDetected_9820751f-8672-42dc-820c-0906853b0f31
 	toColumn: dim_date.DateKey
 
 relationship AutoDetected_5e153c48-8f14-4bbd-b584-667689eda521
-	isActive: false
 	fromColumn: fact_sales.GeographyKey
 	toColumn: dim_geography.GeographyKey
 

@@ -5,10 +5,10 @@ table dim_customer
 		dataType: int64
 		formatString: 0
 		lineageTag: ec329a16-8890-48d2-a75a-c86c73055c57
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CustomerID
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column Country
 		dataType: string
@@ -90,10 +90,10 @@ table dim_customer
 		dataType: int64
 		formatString: 0
 		lineageTag: e6e9413a-2301-43a4-8a43-284f7fbd3e25
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IsUK
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	partition dim_customer = m
 		mode: import

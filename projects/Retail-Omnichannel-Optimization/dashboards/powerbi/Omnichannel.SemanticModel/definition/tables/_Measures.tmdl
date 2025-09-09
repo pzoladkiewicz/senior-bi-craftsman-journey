@@ -3,15 +3,127 @@ table _Measures
 
 	measure Orders = DISTINCTCOUNT(fact_sales[CustomerKey])
 		formatString: 0
+		displayFolder: Sales/Base
 		lineageTag: e14ef7db-ab85-4629-b88e-1c235d0fdbf1
 
 	measure 'Total Sales' = SUM(fact_sales[TotalValue])
+		displayFolder: Sales/Base
 		lineageTag: 2434790d-1466-47f5-be94-94ea45d91250
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure AOV = DIVIDE([Total Sales],[Orders])
+		displayFolder: Sales/Base
 		lineageTag: 4ce9331a-fbfe-47c3-aa72-bf9b5e441449
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Quantity'
+		displayFolder: Sales/Base
+		lineageTag: e6bfda44-33b1-4f92-bdaf-020a04d717a0
+
+	measure Customers = DISTINCTCOUNT(fact_sales[CustomerKey])
+		formatString: 0
+		displayFolder: Customers\KPI
+		lineageTag: 99dceed5-5fed-4866-bc5d-81cd7ca83e14
+
+	measure 'Sales PY' = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(dim_date[Date]))
+		displayFolder: Sales/Time Intelligence
+		lineageTag: 14446660-40fe-40b2-affe-cd582529303c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales YoY %' = DIVIDE([Total Sales] - [Sales PY], [Sales PY])
+		displayFolder: Sales/Time Intelligence
+		lineageTag: 78d4c415-21ef-435b-b7a5-4529f9f22913
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales PM' = CALCULATE([Total Sales], PARALLELPERIOD(dim_date[Date], -1, MONTH))
+		displayFolder: Sales/Time Intelligence
+		lineageTag: 54481ddb-328f-4968-bcfb-9853a72a3984
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales MoM %' = DIVIDE([Total Sales] - [Sales PM], [Sales PM])
+		displayFolder: Sales/Time Intelligence
+		lineageTag: 1ab00c36-52a8-403b-b083-cbbf218dd101
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales YTD' = TOTALYTD([Total Sales], dim_date[Date])
+		displayFolder: Sales/Time Intelligence
+		lineageTag: 530a76c7-0bde-44f5-9639-52fc8d19c534
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales MTD' = CALCULATE([Total Sales], DATESMTD(dim_date[Date]))
+		displayFolder: Sales/Time Intelligence
+		lineageTag: b4005d6b-82c7-4c9d-907a-75c2e99e5cd5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	///  1) Data kotwicy: dzisiejszy miesiąc i dzień, rok = 2011 (przycięte do max daty 2011 w tabeli)
+	measure '1. Anchor Date (2011)' = ```
+			
+			VAR AktualnyDzien = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
+			var Max2011 = 
+			    CALCULATE(
+			        MAX(dim_date[Date]),
+			        FILTER( ALL(dim_date), dim_date[Year] = 2011)
+			    )
+			RETURN MIN(AktualnyDzien, Max2011)
+			
+			//  Data kotwicy: dzisiejszy miesiąc i dzień, rok  2011 (przycięte do max daty 2011 w tabeli)
+			```
+		formatString: yyyy-mm-dd
+		displayFolder: _projekt
+		lineageTag: 997661ff-f904-431d-a598-c82b0d071582
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure '2. Sales YTD (2011)' = ```
+			
+			    CALCULATE(
+			            [Total Sales],
+			            DATESBETWEEN(
+			                dim_date[Date],
+			                DATE(2011, 1, 1),
+			                [1. Anchor Date (2011)]
+			                    )
+			            )
+			```
+		displayFolder: _projekt
+		lineageTag: e1beeafd-5bc5-456c-a93f-515446593cc4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '3. Sales MTD (2011)' =
+			
+			CALCULATE(
+			    [Total Sales],
+			    FILTER(
+			        ALL(dim_date),
+			        YEAR(dim_date[Date]) = YEAR([1. Anchor Date (2011)])
+			        && MONTH(dim_date[Date]) = MONTH([1. Anchor Date (2011)])
+			        && dim_date[Date] <= [1. Anchor Date (2011)]
+			        )
+			    )
+		displayFolder: _projekt
+		lineageTag: e6ef2945-4b07-481d-88d8-9d1259d42c1d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '4. ytd' = ```
+			
+			 var anchor = [1. Anchor Date (2011)]
+			 RETURN
+			 CALCULATE([Total Sales],
+			        DATESBETWEEN(dim_date[Date],
+			        DATE(2011, 1, 1),
+			        anchor))
+			```
+		lineageTag: 2fc1c296-fa0d-4576-9ff2-0bb1f9238512
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

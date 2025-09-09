@@ -1,5 +1,6 @@
 table dim_date
 	lineageTag: c92a0811-61a4-45d6-9b4d-858bc37193fc
+	dataCategory: Time
 
 	column DateKey
 		dataType: int64
@@ -15,15 +16,11 @@ table dim_date
 
 	column Date
 		dataType: dateTime
-		formatString: Long Date
+		isKey
+		formatString: Short Date
 		lineageTag: ff101c5a-8990-452f-8789-f3db04e42a8c
 		summarizeBy: none
 		sourceColumn: Date
-
-		variation Variation
-			isDefault
-			relationship: 321d765f-62b0-4db0-8a5c-fca69b4bf501
-			defaultHierarchy: LocalDateTable_d7e1adca-39ce-416f-a4d7-dea488092a04.'Date Hierarchy'
 
 		changedProperty = SortByColumn
 
@@ -35,34 +32,43 @@ table dim_date
 		dataType: int64
 		formatString: 0
 		lineageTag: b8a692ae-9b91-4c49-940e-0fda318ae801
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Year
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
 
 	column Quarter
 		dataType: int64
 		formatString: 0
 		lineageTag: a0d1402a-a61b-4fd0-812f-057532e61bca
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Quarter
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
 
 	column Month
 		dataType: int64
 		formatString: 0
 		lineageTag: 368e13d8-c526-4ba6-8097-8eedb77d6ab3
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Month
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = User
 
 	column MonthName
 		dataType: string
 		lineageTag: 34eeb267-1b37-45de-8994-14b229d3667a
 		summarizeBy: none
 		sourceColumn: MonthName
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 
@@ -70,28 +76,28 @@ table dim_date
 		dataType: int64
 		formatString: 0
 		lineageTag: f63031c9-de20-4c92-843d-f11b427f95aa
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: DayOfYear
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column DayOfMonth
 		dataType: int64
 		formatString: 0
 		lineageTag: d6cad419-8512-4cd6-a74e-ca0d7fc6a506
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: DayOfMonth
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column DayOfWeek
 		dataType: int64
 		formatString: 0
 		lineageTag: bf4ccc0b-ad57-4cb2-ab21-041a74f4970a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: DayOfWeek
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column DayName
 		dataType: string
@@ -105,19 +111,30 @@ table dim_date
 		dataType: int64
 		formatString: 0
 		lineageTag: a5d46c54-8842-4d39-a8b9-aead44b33b93
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IsWeekend
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column IsBusinessDay
 		dataType: int64
 		formatString: 0
 		lineageTag: 72290a10-a12e-4db2-b66b-7c60687bebe8
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: IsBusinessDay
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
+
+	hierarchy YearQuarterMonth
+		lineageTag: eac76f93-b3da-4b1d-9e24-e5656e9641e1
+
+		level Year
+			lineageTag: 9a603023-1787-4763-bbbb-6b4b2ce18fdb
+			column: Year
+
+		level MonthName
+			lineageTag: b22d97e3-260f-4872-bb17-c5591ba40139
+			column: MonthName
 
 	partition dim_date = m
 		mode: import

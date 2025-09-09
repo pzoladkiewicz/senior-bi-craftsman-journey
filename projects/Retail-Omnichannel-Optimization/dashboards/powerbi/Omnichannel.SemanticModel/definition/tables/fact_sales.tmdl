@@ -50,7 +50,7 @@ table fact_sales
 		isHidden
 		formatString: 0
 		lineageTag: 506fa14b-5867-4990-9358-9fece655ec9e
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: GeographyKey
 
 		changedProperty = IsHidden
