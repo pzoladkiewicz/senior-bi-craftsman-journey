@@ -70,11 +70,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "2. Sales YTD (2011)"
+                  "Property": "Sales YTD (2011 Anchor)"
                 }
               },
               "queryRef": "_Measures.2. Sales YTD (2011)",
-              "nativeQueryRef": "2. Sales YTD (2011)"
+              "nativeQueryRef": "Sales YTD (2011 Anchor)"
             }
           ]
         }

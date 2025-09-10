@@ -3,6 +3,8 @@ data/interim/*.csv
 
 # Power BI cache
 dashboards/powerbi/*.pbi.tmp
+**/.pbi/
+*.pbip.user
 *.pbip-desktop-cache
 
 # Tableau extracts (duże pliki)

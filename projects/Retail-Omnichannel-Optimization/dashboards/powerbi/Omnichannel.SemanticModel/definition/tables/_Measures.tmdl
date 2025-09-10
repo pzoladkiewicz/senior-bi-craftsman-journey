@@ -1,129 +1,238 @@
 table _Measures
 	lineageTag: eabf5964-1bd6-45ed-8404-6194a3df1a25
 
-	measure Orders = DISTINCTCOUNT(fact_sales[CustomerKey])
+	measure Orders = DISTINCTCOUNT(fact_sales[InvoiceNumber])
 		formatString: 0
-		displayFolder: Sales/Base
+		displayFolder: Sales\Base
 		lineageTag: e14ef7db-ab85-4629-b88e-1c235d0fdbf1
 
 	measure 'Total Sales' = SUM(fact_sales[TotalValue])
-		displayFolder: Sales/Base
+		displayFolder: Sales\Base
 		lineageTag: 2434790d-1466-47f5-be94-94ea45d91250
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure AOV = DIVIDE([Total Sales],[Orders])
-		displayFolder: Sales/Base
+		displayFolder: Sales\Base
 		lineageTag: 4ce9331a-fbfe-47c3-aa72-bf9b5e441449
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Total Quantity'
-		displayFolder: Sales/Base
+	measure 'Total Quantity' = SUM(fact_sales[Quantity])
+		formatString: 0
+		displayFolder: Sales\Base
 		lineageTag: e6bfda44-33b1-4f92-bdaf-020a04d717a0
 
 	measure Customers = DISTINCTCOUNT(fact_sales[CustomerKey])
 		formatString: 0
-		displayFolder: Customers\KPI
+		displayFolder: Sales\Base
 		lineageTag: 99dceed5-5fed-4866-bc5d-81cd7ca83e14
 
-	measure 'Sales PY' = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(dim_date[Date]))
-		displayFolder: Sales/Time Intelligence
+	measure 'Sales PY (Live)' = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(dim_date[Date]))
+		displayFolder: Live\Sales\Time Intelligence
 		lineageTag: 14446660-40fe-40b2-affe-cd582529303c
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Sales YoY %' = DIVIDE([Total Sales] - [Sales PY], [Sales PY])
-		displayFolder: Sales/Time Intelligence
+	measure 'Sales YoY % (Live)' = DIVIDE([Total Sales] - [Sales PY (Live)], [Sales PY (Live)])
+		displayFolder: Live\Sales\Time Intelligence
 		lineageTag: 78d4c415-21ef-435b-b7a5-4529f9f22913
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Sales PM' = CALCULATE([Total Sales], PARALLELPERIOD(dim_date[Date], -1, MONTH))
-		displayFolder: Sales/Time Intelligence
+	measure 'Sales PM (Live)' = CALCULATE([Total Sales], DATEADD(dim_date[Date], -1, MONTH))
+		displayFolder: Live\Sales\Time Intelligence
 		lineageTag: 54481ddb-328f-4968-bcfb-9853a72a3984
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Sales MoM %' = DIVIDE([Total Sales] - [Sales PM], [Sales PM])
-		displayFolder: Sales/Time Intelligence
+	measure 'Sales MoM % (Live)' = DIVIDE([Total Sales] - [Sales PM (Live)], [Sales PM (Live)])
+		displayFolder: Live\Sales\Time Intelligence
 		lineageTag: 1ab00c36-52a8-403b-b083-cbbf218dd101
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Sales YTD' = TOTALYTD([Total Sales], dim_date[Date])
-		displayFolder: Sales/Time Intelligence
+	measure 'Sales YTD (Live)' = TOTALYTD([Total Sales], dim_date[Date])
+		displayFolder: Live\Sales\Time Intelligence
 		lineageTag: 530a76c7-0bde-44f5-9639-52fc8d19c534
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Sales MTD' = CALCULATE([Total Sales], DATESMTD(dim_date[Date]))
-		displayFolder: Sales/Time Intelligence
+	measure 'Sales MTD (Live)' = TOTALMTD([Total Sales], dim_date[Date])
+		displayFolder: Live\Sales\Time Intelligence
 		lineageTag: b4005d6b-82c7-4c9d-907a-75c2e99e5cd5
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	///  1) Data kotwicy: dzisiejszy miesiąc i dzień, rok = 2011 (przycięte do max daty 2011 w tabeli)
-	measure '1. Anchor Date (2011)' = ```
+	measure '1. Anchor Date (2011SameMD)' = ```
 			
-			VAR AktualnyDzien = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
-			var Max2011 = 
-			    CALCULATE(
-			        MAX(dim_date[Date]),
-			        FILTER( ALL(dim_date), dim_date[Year] = 2011)
-			    )
-			RETURN MIN(AktualnyDzien, Max2011)
+			    VAR AktualnyDzien = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
+			    var Max2011 = 
+			        CALCULATE(
+			            MAX(dim_date[Date]),
+			            FILTER( ALL(dim_date), dim_date[Year] = 2011)
+			        )
+			    RETURN MIN(AktualnyDzien, Max2011)
 			
-			//  Data kotwicy: dzisiejszy miesiąc i dzień, rok  2011 (przycięte do max daty 2011 w tabeli)
+			    //  Data kotwicy: dzisiejszy miesiąc i dzień, rok  2011 (przycięte do max daty 2011 w tabeli)
 			```
 		formatString: yyyy-mm-dd
-		displayFolder: _projekt
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 997661ff-f904-431d-a598-c82b0d071582
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	measure '2. Sales YTD (2011)' = ```
+	measure 'Sales YTD (2011 Anchor)' =
 			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			RETURN
 			    CALCULATE(
 			            [Total Sales],
 			            DATESBETWEEN(
 			                dim_date[Date],
 			                DATE(2011, 1, 1),
-			                [1. Anchor Date (2011)]
+			                Anchor
 			                    )
 			            )
-			```
-		displayFolder: _projekt
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: e1beeafd-5bc5-456c-a93f-515446593cc4
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '3. Sales MTD (2011)' =
+	measure 'Sales MTD (2011 Anchor)' =
 			
-			CALCULATE(
-			    [Total Sales],
-			    FILTER(
-			        ALL(dim_date),
-			        YEAR(dim_date[Date]) = YEAR([1. Anchor Date (2011)])
-			        && MONTH(dim_date[Date]) = MONTH([1. Anchor Date (2011)])
-			        && dim_date[Date] <= [1. Anchor Date (2011)]
-			        )
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			RETURN
+			    CALCULATE(
+			        [Total Sales],
+			        DATESBETWEEN(dim_date[Date],
+			        DATE(2011, MONTH(Anchor), 1),
+			        Anchor
 			    )
-		displayFolder: _projekt
+			)
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: e6ef2945-4b07-481d-88d8-9d1259d42c1d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '4. ytd' = ```
+	measure 'Sales YTD PY (Live)' = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(DATESYTD(dim_date[Date])))
+		displayFolder: Live\Sales\Time Intelligence
+		lineageTag: 7dea1c0c-ac0d-41fc-9c56-0d81e10f6a15
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales PY (2011 Anchor)' =
 			
-			 var anchor = [1. Anchor Date (2011)]
-			 RETURN
-			 CALCULATE([Total Sales],
-			        DATESBETWEEN(dim_date[Date],
-			        DATE(2011, 1, 1),
-			        anchor))
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			RETURN
+			    CALCULATE(
+			        [Total Sales],
+			        DATESBETWEEN(
+			            dim_date[Date],
+			            EDATE(DATE(2011, 1, 1), -12),
+			            EDATE(Anchor, -12)
+			        )
+			    )
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 2b1b9478-5789-4536-82d7-33df41067971
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales PM (2011 Anchor)' =
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR StartPrevMonth = EOMONTH(Anchor, -2) +1
+			VAR EndPrevMonth = EOMONTH(Anchor, -1)
+			RETURN
+			    CALCULATE(
+			        [Total Sales],
+			        DATESBETWEEN(dim_date[Date], StartPrevMonth, EndPrevMonth)
+			    )
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 3fcd5c82-1d1c-4db2-a8c9-228ef790fb1a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales YTD PY (2011 Anchor)' =
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			RETURN
+			    CALCULATE(
+			        [Total Sales],
+			        DATESBETWEEN(dim_date[Date], DATE(2010, 1, 1), EDATE(Anchor, -12))
+			    )
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: b552353f-c351-4ada-9646-ddaad37cfd19
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales YoY % (2011 Anchor)' =
+			
+			DIVIDE([Sales YTD (2011 Anchor)] - [Sales YTD PY (2011 Anchor)],
+			    [Sales YTD (2011 Anchor)])
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 392aaa47-8df7-4bc0-a6ed-c78481e04df5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales MoM MTD % (2011 Anchor)' =
+			
+			DIVIDE([Sales MTD (2011 Anchor)] - [Sales MTD PM (2011 Anchor)],
+			    [Sales MTD PM (2011 Anchor)])
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: cc23cfc7-4fc0-42df-a2a5-8d7c26989eb7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales MTD PM (2011 Anchor)' = ```
+			
+			var Anchor = [1. Anchor Date (2011SameMD)]
+			VAR StartPrevMonth = EOMONTH(Anchor, -2) + 1
+			VAR StopDate = EDATE(Anchor, -1)
+			RETURN
+			    CALCULATE(
+			        [Total Sales],
+			        DATESBETWEEN(
+			            dim_date[Date],
+			            StartPrevMonth,
+			            StopDate)
+			    )
+			
 			```
-		lineageTag: 2fc1c296-fa0d-4576-9ff2-0bb1f9238512
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: c8c2b4bf-414c-4495-812f-8e249560d407
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales 2011 (Up to Anchor)' =
+			
+			var Anchor = [1. Anchor Date (2011SameMD)]
+			RETURN
+			    CALCULATE(
+			        [Total Sales],
+			        FILTER(
+			            dim_date,
+			            YEAR(dim_date[Date]) = 2011 && dim_date[Date] <= Anchor)
+			    )
+		displayFolder: _2011_Anchor\Sales\Year Comparisons
+		lineageTag: 51b0c464-45e3-4a2c-9c3b-1716c65b871b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Sales 2010 (matched period)' =
+			
+			var Anchor = [1. Anchor Date (2011SameMD)]
+			var Anchor2010 = EDATE([1. Anchor Date (2011SameMD)], -12)
+			RETURN
+			    CALCULATE(
+			        [Total Sales],
+			        FILTER(
+			            dim_date,
+			            YEAR(dim_date[Date]) = 2010 && dim_date[Date] <= Anchor2010)
+			    )
+		displayFolder: _2011_Anchor\Sales\Year Comparisons
+		lineageTag: cd29a7d9-13f7-4471-bde3-9e404dae2d05
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

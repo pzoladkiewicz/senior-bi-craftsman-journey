@@ -37,7 +37,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "2. Sales YTD (2011)"
+                  "Property": "Sales YTD (2011 Anchor)"
                 }
               },
               "queryRef": "_Measures.2. Sales YTD (2011)",
@@ -91,7 +91,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "2. Sales YTD (2011)"
+            "Property": "Sales YTD (2011 Anchor)"
           }
         },
         "type": "Advanced"
