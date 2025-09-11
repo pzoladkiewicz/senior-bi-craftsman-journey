@@ -236,6 +236,33 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Customers YTD (2011 Anchor)' =
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			RETURN
+			CALCULATE(
+			    DISTINCTCOUNT(fact_sales[CustomerKey]),
+			    FILTER(dim_date,
+			        dim_date[Year] = 2011 && dim_date[Date] <= Anchor)
+			)
+		formatString: 0
+		displayFolder: _2011_Anchor\Sales\Base
+		lineageTag: 17a57f06-5fa5-4a82-81c7-ef90a807af1c
+
+	measure 'AOV (2011 YTD)' = ```
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			RETURN
+			DIVIDE([Sales YTD (2011 Anchor)], 
+			       CALCULATE(DISTINCTCOUNT(fact_sales[InvoiceNumber]),
+			           FILTER(dim_date, 
+			               dim_date[Year] = 2011 && dim_date[Date] <= Anchor)))
+			```
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 9b7336bf-403b-48d2-821c-ebaf45b89cca
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =

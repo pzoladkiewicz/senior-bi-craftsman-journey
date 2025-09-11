@@ -1,0 +1,180 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "977595412c0ab61901a1",
+  "position": {
+    "x": 426.26185958254268,
+    "y": 219.81024667931689,
+    "z": 5,
+    "height": 253.81404174573055,
+    "width": 321.82163187855787,
+    "tabOrder": 5
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_date"
+                        }
+                      },
+                      "Hierarchy": "YearQuarterMonth"
+                    }
+                  },
+                  "Level": "Year"
+                }
+              },
+              "queryRef": "dim_date.YearQuarterMonth.Year",
+              "nativeQueryRef": "YearQuarterMonth Year",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_date"
+                        }
+                      },
+                      "Hierarchy": "YearQuarterMonth"
+                    }
+                  },
+                  "Level": "MonthName"
+                }
+              },
+              "queryRef": "dim_date.YearQuarterMonth.MonthName",
+              "nativeQueryRef": "YearQuarterMonth MonthName",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sales 2011 (Up to Anchor)"
+                }
+              },
+              "queryRef": "_Measures.Sales 2011 (Up to Anchor)",
+              "nativeQueryRef": "Sales 2011 (Up to Anchor)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelOrientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'InsideBase'"
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales YTD'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

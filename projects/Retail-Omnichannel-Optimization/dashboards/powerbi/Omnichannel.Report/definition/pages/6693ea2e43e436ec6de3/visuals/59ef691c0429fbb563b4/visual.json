@@ -1,0 +1,102 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "59ef691c0429fbb563b4",
+  "position": {
+    "x": 779.65844402277037,
+    "y": 219.81024667931689,
+    "z": 8,
+    "height": 253.81404174573055,
+    "width": 289.0322580645161,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "donutChart",
+    "query": {
+      "queryState": {
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_geography"
+                    }
+                  },
+                  "Property": "IsUK"
+                }
+              },
+              "queryRef": "dim_geography.IsUK",
+              "nativeQueryRef": "IsUK"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Orders"
+                }
+              },
+              "queryRef": "_Measures.Orders",
+              "nativeQueryRef": "Orders"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Orders"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

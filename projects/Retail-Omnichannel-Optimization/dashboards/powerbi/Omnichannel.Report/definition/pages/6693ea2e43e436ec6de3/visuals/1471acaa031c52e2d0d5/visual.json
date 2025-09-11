@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "1471acaa031c52e2d0d5",
+  "position": {
+    "x": 18.216318785578746,
+    "y": 0,
+    "z": 6,
+    "height": 46.148007590132828,
+    "width": 195.52182163187854,
+    "tabOrder": 6
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Sales ",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "2011",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "color": "#118dff"
+                    }
+                  },
+                  {
+                    "value": " and ",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "2010",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "14pt",
+                      "color": "#ad5129"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "44c823c5ba0b49db8e8d"
+}
