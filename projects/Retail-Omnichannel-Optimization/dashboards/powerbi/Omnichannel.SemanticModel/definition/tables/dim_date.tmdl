@@ -125,6 +125,18 @@ table dim_date
 
 		annotation SummarizationSetBy = User
 
+	column Short_name = FORMAT(dim_date[Date], "mmm")
+		dataType: string
+		lineageTag: 7ae74c84-1ba3-4140-88e3-9dc5308af42e
+		summarizeBy: none
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
 	hierarchy YearQuarterMonth
 		lineageTag: eac76f93-b3da-4b1d-9e24-e5656e9641e1
 
