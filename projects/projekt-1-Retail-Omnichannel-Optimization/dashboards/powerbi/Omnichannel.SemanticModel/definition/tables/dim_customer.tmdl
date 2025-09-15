@@ -99,7 +99,7 @@ table dim_customer
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\Retail-Omnichannel-Optimization\data\processed\dim_customer.csv"),[Delimiter=",", Columns=9, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\projekt-1-Retail-Omnichannel-Optimization\data\processed\dim_customer.csv"),[Delimiter=",", Columns=9, Encoding=1250, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CustomerID", Int64.Type}, {"Country", type text}, {"FirstPurchase", type datetime}, {"LastPurchase", type datetime}, {"TotalTransactions", Int64.Type}, {"TotalSpent", type text}, {"CustomerKey", Int64.Type}, {"CustomerType", type text}, {"IsUK", Int64.Type}}),
 				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"TotalSpent", type number}}, "en-GB")
