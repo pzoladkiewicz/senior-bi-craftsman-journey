@@ -1,0 +1,718 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/16/2025 1:04:59 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CPL3201B2K02"
+  DTS:CreatorName="POLSATC\pzoladkiewicz"
+  DTS:DTSID="{688E80DE-5436-4C5B-88AC-8FB415ED53D2}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="ProductSales_ETL"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{6BA2287C-A517-4723-9D3A-3E4AD5764AF7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Azure_AdventureWorksLT]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{F577EF99-923A-41C3-A15B-974FF4104A2D}"
+      DTS:ObjectName="Azure_AdventureWorksLT">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=rg-cv-lab-dev-neu-01.database.windows.net;User ID=Cloud7ba;Initial Catalog=AdventureWorksLT;Application Name=SSIS-ProductSales_ETL-{F577EF99-923A-41C3-A15B-974FF4104A2D}rg-cv-lab-dev-neu-01.database.windows.net.AdventureWorksLT.Cloud7b;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAy1t1vzLgx0GkVHOaq6ipowAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABWpKpNuTywS5kHmCc8hS8uAAAAAASAAACgAAAAEAAAAO/JjQ3k3VK/CPLfuLSJ8dQgAAAArm7WfykhrPbs6yH7mM5BDyKnsA8KeTQBvlGeiTbgWqoUAAAAXeVzVa5pyrmi1S4woanj6HX6iK8</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load_ProductSales_Summary"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F35C78E9-D252-48FE-9EED-A8C782378452}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load_ProductSales_Summary"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load_ProductSales_Summary\Add_LastUpdateDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add_LastUpdateDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Output].Columns[LastUpdateDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Output].Columns[LastUpdateDate]"
+                      name="LastUpdateDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="Dest_ProductSalesSummary"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"SalesLT"."ProductSalesSummary"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Azure_AdventureWorksLT]"
+                  connectionManagerRefId="Package.ConnectionManagers[Azure_AdventureWorksLT]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].Columns[ProductID]"
+                      cachedDataType="i4"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].Columns[ProductName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ProductName"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[ProductName]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[ProductName]" />
+                    <inputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].Columns[CategoryName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CategoryName"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[CategoryName]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[CategoryName]" />
+                    <inputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].Columns[TotalQuantitySold]"
+                      cachedDataType="i4"
+                      cachedName="TotalQuantitySold"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[TotalQuantitySold]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[TotalQuantitySold]" />
+                    <inputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].Columns[TotalRevenue]"
+                      cachedDataType="numeric"
+                      cachedName="TotalRevenue"
+                      cachedPrecision="38"
+                      cachedScale="6"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[TotalRevenue]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[TotalRevenue]" />
+                    <inputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].Columns[AvgUnitPrice]"
+                      cachedDataType="cy"
+                      cachedName="AvgUnitPrice"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[AvgUnitPrice]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[AvgUnitPrice]" />
+                    <inputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].Columns[LastUpdateDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="LastUpdateDate"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[LastUpdateDate]"
+                      lineageId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Output].Columns[LastUpdateDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[ProductName]"
+                      dataType="wstr"
+                      length="50"
+                      name="ProductName" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[CategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CategoryName" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[TotalQuantitySold]"
+                      dataType="i4"
+                      name="TotalQuantitySold" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[TotalRevenue]"
+                      dataType="numeric"
+                      name="TotalRevenue"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[AvgUnitPrice]"
+                      dataType="numeric"
+                      name="AvgUnitPrice"
+                      precision="18"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input].ExternalColumns[LastUpdateDate]"
+                      dataType="dbTimeStamp"
+                      name="LastUpdateDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load_ProductSales_Summary\Source_ProductSalesView"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="Source_ProductSalesView"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+ProductID
+
+,ProductName
+
+,CategoryName
+   
+,TotalQuantitySold
+
+,TotalRevenue
+
+,AvgUnitPrice
+
+FROM SalesLT.vw_ProductSalesData
+
+WHERE TotalQuantitySold &gt; 0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Azure_AdventureWorksLT]"
+                  connectionManagerRefId="Package.ConnectionManagers[Azure_AdventureWorksLT]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[ProductID]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[ProductName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[ProductName]"
+                      length="50"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[ProductName]"
+                      name="ProductName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[CategoryName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[CategoryName]"
+                      length="50"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[CategoryName]"
+                      name="CategoryName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[TotalQuantitySold]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[TotalQuantitySold]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[TotalQuantitySold]"
+                      name="TotalQuantitySold"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[TotalRevenue]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[TotalRevenue]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[TotalRevenue]"
+                      name="TotalRevenue"
+                      precision="38"
+                      scale="6"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[AvgUnitPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[AvgUnitPrice]"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].Columns[AvgUnitPrice]"
+                      name="AvgUnitPrice"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[ProductName]"
+                      dataType="wstr"
+                      length="50"
+                      name="ProductName" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[CategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      name="CategoryName" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[TotalQuantitySold]"
+                      dataType="i4"
+                      name="TotalQuantitySold" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[TotalRevenue]"
+                      dataType="numeric"
+                      name="TotalRevenue"
+                      precision="38"
+                      scale="6" />
+                    <externalMetadataColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output].ExternalColumns[AvgUnitPrice]"
+                      dataType="cy"
+                      name="AvgUnitPrice" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[ProductID]"
+                      dataType="i4"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[ProductName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[ProductName]"
+                      name="ProductName" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[CategoryName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[CategoryName]"
+                      name="CategoryName" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[TotalQuantitySold]"
+                      dataType="i4"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[TotalQuantitySold]"
+                      name="TotalQuantitySold" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[TotalRevenue]"
+                      dataType="numeric"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[TotalRevenue]"
+                      name="TotalRevenue"
+                      precision="38"
+                      scale="6" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[AvgUnitPrice]"
+                      dataType="cy"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[AvgUnitPrice]"
+                      name="AvgUnitPrice" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load_ProductSales_Summary.Paths[ADO NET Source Output]"
+              endId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Inputs[Derived Column Input]"
+              name="ADO NET Source Output"
+              startId="Package\Load_ProductSales_Summary\Source_ProductSalesView.Outputs[ADO NET Source Output]" />
+            <path
+              refId="Package\Load_ProductSales_Summary.Paths[Derived Column Output]"
+              endId="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary.Inputs[ADO NET Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Load_ProductSales_Summary\Add_LastUpdateDate.Outputs[Derived Column Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Log_ETL_End"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{1B758712-AF6B-47FF-89F8-A6E14CFE808F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Log_ETL_End"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F577EF99-923A-41C3-A15B-974FF4104A2D}"
+          SQLTask:SqlStatementSource="UPDATE SalesLT.ETLLog&#xA;&#xA;SET&#xA;&#x9;EndTime = GETDATE(),&#xA;&#x9;Status = 'COMPLETED',&#xA;&#xA;&#x9;RecordsProcessed = (SELECT COUNT(*) FROM SalesLT.ProductSalesSummary)&#xA;&#xA;WHERE LogID = (SELECT MAX(LogID) FROM SalesLT.ETLLog WHERE PackageName = 'ProductSales_ETL');&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Log_ETL_Start"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{11C8CB90-C0C5-4CEA-A3F6-03AF8009021D}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Log_ETL_Start"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F577EF99-923A-41C3-A15B-974FF4104A2D}"
+          SQLTask:SqlStatementSource="INSERT INTO SalesLT.ETLLog (PackageName, StartTime, Status)&#xA;&#xA;VALUES ('ProductSales_ETL', GETDATE(), 'STARTED')&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{FB63A169-9450-4FFF-8F20-B0454B330B45}"
+      DTS:From="Package\Log_ETL_Start"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load_ProductSales_Summary" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{60044E87-5B24-4B24-8A51-F5699CF9CC9E}"
+      DTS:From="Package\Load_ProductSales_Summary"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Log_ETL_End" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="228,42"
+          Id="Package\Load_ProductSales_Summary"
+          TopLeft="428,258" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Log_ETL_Start"
+          TopLeft="467,123" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="542.75,165">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,93"
+              Start="0,0"
+              End="0,85.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,85.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Log_ETL_End"
+          TopLeft="471,378" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="543.75,300">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load_ProductSales_Summary">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="209,42"
+          Id="Package\Load_ProductSales_Summary\Source_ProductSalesView"
+          TopLeft="207,48" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Load_ProductSales_Summary\Add_LastUpdateDate"
+          TopLeft="214,164" />
+        <EdgeLayout
+          Id="Package\Load_ProductSales_Summary.Paths[ADO NET Source Output]"
+          TopLeft="308.75,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74"
+              Start="0,0"
+              End="0,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="220,42"
+          Id="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary"
+          TopLeft="194,262" />
+        <EdgeLayout
+          Id="Package\Load_ProductSales_Summary.Paths[Derived Column Output]"
+          TopLeft="305,206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56"
+              Start="0,0"
+              End="0,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_ProductSales_Summary\Source_ProductSalesView">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load_ProductSales_Summary\Dest_ProductSalesSummary">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
