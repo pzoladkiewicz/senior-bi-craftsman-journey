@@ -1,8 +1,12 @@
-# Duże pliki danych interim
+# Duże pliki danych
 data/interim/*.csv
+data/processed/*.csv
+data/processed/*.parquet
 
 # Power BI cache
 dashboards/powerbi/*.pbi.tmp
+**/.pbi/
+*.pbip.user
 *.pbip-desktop-cache
 
 # Tableau extracts (duże pliki)
@@ -18,10 +22,6 @@ notebooks/.ipynb_checkpoints/
 # Backupy
 *_backup.*
 
-
-# Generated ETL outputs
-data/processed/*.csv
-data/processed/*.parquet
 
 # Jupyter virtual documents - tymczasowe pliki
 **/.virtual_documents/

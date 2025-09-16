@@ -1,0 +1,112 @@
+table dim_customer
+	lineageTag: 5e7efa55-1d2d-479a-bf27-d3dec26444a4
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: ec329a16-8890-48d2-a75a-c86c73055c57
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = User
+
+	column Country
+		dataType: string
+		lineageTag: 9e0bb5bf-9976-43d7-a2ba-41ab84066618
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstPurchase
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 7ee43c1d-20f8-49f8-870c-cf608189eff9
+		summarizeBy: none
+		sourceColumn: FirstPurchase
+
+		variation Variation
+			isDefault
+			relationship: 46785a2d-c2fd-4c6b-921e-d57aea286c9b
+			defaultHierarchy: LocalDateTable_8c26ec6f-d2b0-4ed1-91c6-804ac0a1b482.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastPurchase
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 1d09f8d0-1845-448d-bf31-62ccf43155e5
+		summarizeBy: none
+		sourceColumn: LastPurchase
+
+		variation Variation
+			isDefault
+			relationship: dd18602a-3974-4d88-9647-827721ba0920
+			defaultHierarchy: LocalDateTable_6002a01d-8000-4028-a231-3585b1c4cd97.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalTransactions
+		dataType: int64
+		formatString: 0
+		lineageTag: 3107fcee-6911-4c23-b2c9-965929023675
+		summarizeBy: sum
+		sourceColumn: TotalTransactions
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalSpent
+		dataType: double
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		lineageTag: 935c17bf-8e4c-45c2-b32b-c16a2da122e3
+		summarizeBy: sum
+		sourceColumn: TotalSpent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9d3eb8ee-3fca-4481-815b-28913457eb7f
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerType
+		dataType: string
+		lineageTag: 2f2ca987-78b8-43ae-89f6-20265f8d6106
+		summarizeBy: none
+		sourceColumn: CustomerType
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsUK
+		dataType: int64
+		formatString: 0
+		lineageTag: e6e9413a-2301-43a4-8a43-284f7fbd3e25
+		summarizeBy: none
+		sourceColumn: IsUK
+
+		annotation SummarizationSetBy = User
+
+	partition dim_customer = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\projekt-1-Retail-Omnichannel-Optimization\data\processed\dim_customer.csv"),[Delimiter=",", Columns=9, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"CustomerID", Int64.Type}, {"Country", type text}, {"FirstPurchase", type datetime}, {"LastPurchase", type datetime}, {"TotalTransactions", Int64.Type}, {"TotalSpent", type text}, {"CustomerKey", Int64.Type}, {"CustomerType", type text}, {"IsUK", Int64.Type}}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"TotalSpent", type number}}, "en-GB")
+				in
+				    #"Changed Type with Locale"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

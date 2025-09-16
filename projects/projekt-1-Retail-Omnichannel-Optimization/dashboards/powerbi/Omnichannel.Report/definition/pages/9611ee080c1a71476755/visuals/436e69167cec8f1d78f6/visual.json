@@ -1,0 +1,99 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "436e69167cec8f1d78f6",
+  "position": {
+    "x": 9.7153700189753316,
+    "y": 290.24667931688805,
+    "z": 1000,
+    "height": 176.0910815939279,
+    "width": 669.146110056926,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sales MTD (2011 Anchor)"
+                }
+              },
+              "queryRef": "_Measures.Sales MTD (2011 Anchor)",
+              "nativeQueryRef": "Sales MTD (2011 Anchor)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sales MTD PM (2011 Anchor)"
+                }
+              },
+              "queryRef": "_Measures.Sales MTD PM (2011 Anchor)",
+              "nativeQueryRef": "Sales MTD PM (2011 Anchor)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sales MoM MTD % (2011 Anchor)"
+                }
+              },
+              "queryRef": "_Measures.Sales MoM MTD % (2011 Anchor)",
+              "nativeQueryRef": "Sales MoM MTD % (2011 Anchor)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Sales MTD (2011 Anchor)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

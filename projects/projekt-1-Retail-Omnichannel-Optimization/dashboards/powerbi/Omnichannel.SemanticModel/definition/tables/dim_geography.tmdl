@@ -1,0 +1,87 @@
+table dim_geography
+	lineageTag: 67304305-ce07-477c-b3a6-66d88d056323
+
+	column GeographyKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 20b9ad3b-8b88-4b56-9d89-216ae777ee4d
+		summarizeBy: none
+		sourceColumn: GeographyKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: d258b8e6-10ea-416b-93b1-ae2d034e0d3c
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryCode
+		dataType: string
+		lineageTag: dadf5d36-3268-4f19-98ec-f90550a7a933
+		summarizeBy: none
+		sourceColumn: CountryCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 72b5b2d5-37fd-4050-9fc4-f568ccc0aeee
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsUK
+		dataType: int64
+		formatString: 0
+		lineageTag: 52f06333-e0c5-4035-b4f4-ae033c45854e
+		summarizeBy: none
+		sourceColumn: IsUK
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsEU
+		dataType: int64
+		formatString: 0
+		lineageTag: b7006374-38cc-4da3-8cdb-070100923c04
+		summarizeBy: none
+		sourceColumn: IsEU
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		lineageTag: e53ecc0f-42ec-4729-be1f-00bfd8ec3f03
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TimeZone
+		dataType: string
+		lineageTag: da58775a-a75b-4e09-b9ed-d7a6ccb2b888
+		summarizeBy: none
+		sourceColumn: TimeZone
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_geography = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\projekt-1-Retail-Omnichannel-Optimization\data\processed\dim_geography.csv"),[Delimiter=",", Columns=8, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"GeographyKey", Int64.Type}, {"Country", type text}, {"CountryCode", type text}, {"Region", type text}, {"IsUK", Int64.Type}, {"IsEU", Int64.Type}, {"CurrencyCode", type text}, {"TimeZone", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
