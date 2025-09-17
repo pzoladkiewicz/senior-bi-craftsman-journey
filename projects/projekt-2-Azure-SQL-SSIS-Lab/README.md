@@ -98,12 +98,11 @@ projekt-2-Azure-SQL-SSIS-Lab/
 ├── ssis-packages/
 │   └── ProductSales_ETL.dtsx    \# Main SSIS package
 └── screenshots/
-├── 1. struktura folderow.jpg
-├── 2. SSMS connect.jpg
-├── 3. query 01 - DB info.jpg
+├── 01-struktura-folderow.jpg
+├── 02-ssms-connect.jpg
 ├── ...
-├── 23. Control Flow - OK.jpg
-└── 24. query 05 - Control Flow Log - OK.jpg
+├── 22-control-flow-ok.jpg
+└── 23-query-05-log-start-end.jpg
 
 ```
 
