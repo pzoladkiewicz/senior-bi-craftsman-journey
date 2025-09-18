@@ -89,7 +89,7 @@ table dim_product
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\projekt-1-Retail-Omnichannel-Optimization\data\processed\dim_product.csv"),[Delimiter=",", Columns=10, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\retail-omnichannel-optimization\data\processed\dim_product.csv"),[Delimiter=",", Columns=10, Encoding=1250, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"StockCode", type text}, {"ProductName", type text}, {"AveragePrice", type text}, {"TotalQuantitySold", Int64.Type}, {"FirstSaleDate", type datetime}, {"LastSaleDate", type datetime}, {"ProductKey", Int64.Type}, {"IsGift", Int64.Type}, {"IsPostage", Int64.Type}, {"Category", type text}}),
 				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"AveragePrice", type number}}, "en-GB"),

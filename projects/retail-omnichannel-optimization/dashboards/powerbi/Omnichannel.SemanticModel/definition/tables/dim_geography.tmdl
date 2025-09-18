@@ -75,7 +75,7 @@ table dim_geography
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\projekt-1-Retail-Omnichannel-Optimization\data\processed\dim_geography.csv"),[Delimiter=",", Columns=8, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\retail-omnichannel-optimization\data\processed\dim_geography.csv"),[Delimiter=",", Columns=8, Encoding=1250, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"GeographyKey", Int64.Type}, {"Country", type text}, {"CountryCode", type text}, {"Region", type text}, {"IsUK", Int64.Type}, {"IsEU", Int64.Type}, {"CurrencyCode", type text}, {"TimeZone", type text}})
 				in

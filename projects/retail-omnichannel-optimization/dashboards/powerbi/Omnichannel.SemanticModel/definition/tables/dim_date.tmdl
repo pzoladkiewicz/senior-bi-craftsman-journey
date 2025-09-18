@@ -152,7 +152,7 @@ table dim_date
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\projekt-1-Retail-Omnichannel-Optimization\data\processed\dim_date.csv"),[Delimiter=",", Columns=12, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\retail-omnichannel-optimization\data\processed\dim_date.csv"),[Delimiter=",", Columns=12, Encoding=1250, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DateKey", Int64.Type}, {"Date", type date}, {"Year", Int64.Type}, {"Quarter", Int64.Type}, {"Month", Int64.Type}, {"MonthName", type text}, {"DayOfYear", Int64.Type}, {"DayOfMonth", Int64.Type}, {"DayOfWeek", Int64.Type}, {"DayName", type text}, {"IsWeekend", Int64.Type}, {"IsBusinessDay", Int64.Type}})
 				in
