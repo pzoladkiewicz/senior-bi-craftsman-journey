@@ -461,6 +461,68 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 4d9689ce-2c39-4510-ab3a-7394a0427129
 
+	measure 'UK Sales Share % (2011)' =
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR UKSales =
+			    CALCULATE(
+			        [Total Sales],
+			        dim_geography[IsUK] = 1,
+			        dim_date[Year] = YEAR(Anchor),
+			        dim_date[Date] <= Anchor
+			    )
+			VAR TotalSales =
+			    CALCULATE(
+			        [Total Sales],
+			        dim_date[Year] = YEAR(Anchor),
+			        dim_date[Date] <= Anchor
+			    )
+			RETURN
+			    DIVIDE(UKSales, TotalSales)
+		formatString: 0%;-0%;0%
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: c8f171f3-71ec-481a-b4d6-fe99d1f78077
+
+	measure 'Intl Sales Share % (2011)' = 1 - [UK Sales Share % (2011)]
+		formatString: 0%;-0%;0%
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 7f5ca795-51ec-4cef-aa12-c75b2451c504
+
+	measure 'Guest Transactions % (2011)' =
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR GuestCustomers =
+			    CALCULATE(
+			        COUNTROWS(fact_sales),
+			        dim_customer[CustomerType] = "Guest",
+			        dim_date[Year] = YEAR(Anchor),
+			        dim_date[Date] <= Anchor
+			    )
+			VAR TotalCustomers =
+			    CALCULATE(
+			        COUNTROWS(fact_sales),
+			        dim_date[Year] = YEAR(Anchor),
+			        dim_date[Date] <= Anchor
+			    )
+			RETURN
+			    DIVIDE(GuestCustomers, TotalCustomers)
+		formatString: 0%;-0%;0%
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: b428c804-a6d5-4318-affc-a05b703fe687
+
+	measure 'Channel Score (2011)' =
+			
+			VAR UKShare = [UK Sales Share % (2011)]
+			VAR IntlShare = 1 - UKShare
+			VAR GuestShare = [Guest Transactions % (2011)]
+			VAR RegisteredShare = 1 - GuestShare
+			RETURN
+			    (UKShare * 0.4) + (IntlShare * 0.3) + (RegisteredShare * 0.3)
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: e29fa000-6ce1-46e3-b135-d29a5d8a653f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =

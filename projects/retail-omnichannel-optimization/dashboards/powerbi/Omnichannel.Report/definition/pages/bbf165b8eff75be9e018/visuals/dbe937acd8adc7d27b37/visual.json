@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "df0c33c874654f2d00df",
+  "name": "dbe937acd8adc7d27b37",
   "position": {
-    "x": 448,
-    "y": 16,
-    "z": 3000,
-    "height": 200,
-    "width": 320,
-    "tabOrder": 2000
+    "x": 368,
+    "y": 47.999999999999993,
+    "z": 2,
+    "height": 144,
+    "width": 240,
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers CY"
+                  "Property": "Guest Transactions % (2011)"
                 }
               },
-              "queryRef": "_Measures.Customers CY",
-              "nativeQueryRef": "Customers CY"
+              "queryRef": "_Measures.Guest Customers % (2011)",
+              "nativeQueryRef": "Guest Transactions % (2011)"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Customers CY"
+                "Property": "Guest Transactions % (2011)"
               }
             },
             "direction": "Descending"
@@ -211,20 +211,6 @@
           },
           "selector": {
             "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "matchValueAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Customers CY"
           }
         }
       ],
@@ -534,20 +520,6 @@
           "selector": {
             "id": "default"
           }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Customers CY"
-          }
         }
       ],
       "outline": [
@@ -697,7 +669,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b7b45aa2ca8a1ef7f03e",
+        "name": "f7f581bb113479378bb9",
         "field": {
           "Measure": {
             "Expression": {
@@ -705,7 +677,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Customers CY"
+            "Property": "Guest Transactions % (2011)"
           }
         },
         "type": "Advanced"
