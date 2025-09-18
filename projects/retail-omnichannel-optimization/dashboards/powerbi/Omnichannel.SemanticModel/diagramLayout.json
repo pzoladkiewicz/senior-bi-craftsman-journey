@@ -85,6 +85,18 @@
             "width": 234
           },
           "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1520.0000000000002,
+            "y": 406.35714285714289
+          },
+          "nodeIndex": "WaterfallCategories Table",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

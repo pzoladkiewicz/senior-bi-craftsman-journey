@@ -523,6 +523,96 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure '2010 Base Revenue' = [Sales YTD PY (2011 Anchor)]
+		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		lineageTag: cbaca7bb-5624-4532-919f-766fee44066d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '2011 Total Revenue' = [Sales YTD (2011 Anchor)]
+		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		lineageTag: 87fcabb4-5ae9-4564-9757-f72fc92a236a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Volume Effect' =
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR Qty2011 =
+			    CALCULATE(
+			        [Total Quantity],
+			        dim_date[Year] = YEAR(Anchor),
+			        dim_date[Date] <= Anchor
+			    )
+			VAR Qty2010 =
+			    CALCULATE(
+			        [Total Quantity],
+			        dim_date[Year] = YEAR(EDATE(Anchor, -12)),
+			        dim_date[Date] <= EDATE(Anchor, -12)
+			    )
+			VAR AvgPrice2010 =
+			    DIVIDE([2010 Base Revenue], Qty2010)
+			RETURN
+			    (Qty2011 - Qty2010) * AvgPrice2010
+		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		lineageTag: f629cb91-2061-48eb-8cb1-bbf323043ada
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Price Effect' =
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR Qty2011 =
+			    CALCULATE(
+			        [Total Quantity],
+			        dim_date[Year] = YEAR(Anchor),
+			        dim_date[Date] <= Anchor
+			    )
+			VAR Qty2010 =
+			    CALCULATE(
+			        [Total Quantity],
+			        dim_date[Year] = YEAR(EDATE(Anchor, -12)),
+			        dim_date[Date] <= EDATE(Anchor, -12)
+			    )
+			VAR AvgPrice2010 =
+			    DIVIDE([2010 Base Revenue], Qty2010)
+			VAR AvgPrice2011 =
+			    DIVIDE([2011 Total Revenue], Qty2011)
+			RETURN
+			    Qty2011 * (AvgPrice2011 - AvgPrice2010)
+		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		lineageTag: f9076c6b-b02e-4cd0-b468-27f54999dc42
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Mix Effect' =
+			
+			VAR TotalCalculated = [2010 Base Revenue] + [Volume Effect] + [Price Effect]
+			VAR ActualTotal = [2011 Total Revenue]
+			RETURN
+			    ActualTotal - TotalCalculated
+		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		lineageTag: 87d84886-223e-4475-a4fc-cfe2b7b729e5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Waterfall Value' = ```
+			
+			SWITCH(
+			    SELECTEDVALUE('WaterfallCategories Table'[Category]),
+			    "2010 Base Revenue", [2010 Base Revenue],
+			    "Volume Effect", [Volume Effect],
+			    "Price Effect", [Price Effect], 
+			    "Mix Effect", [Mix Effect],
+			    "2011 Total Revenue", [2011 Total Revenue],
+			    0
+			)
+			```
+		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		lineageTag: 7c6fbb7e-4ca2-4f99-a9b7-f7c8765b19c2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition _Measures = m
 		mode: import
 		source =

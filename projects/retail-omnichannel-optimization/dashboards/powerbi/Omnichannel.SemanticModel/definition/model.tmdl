@@ -23,6 +23,7 @@ ref table LocalDateTable_6a8adc81-d213-4f31-93f3-e2185ec86848
 ref table LocalDateTable_43a6c7b9-db1e-45e7-9181-3e3b13380e94
 ref table fact_sales
 ref table _Measures
+ref table 'WaterfallCategories Table'
 
 ref cultureInfo en-US
 

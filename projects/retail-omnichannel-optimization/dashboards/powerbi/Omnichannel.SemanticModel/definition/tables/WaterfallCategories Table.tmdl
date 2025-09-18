@@ -1,0 +1,41 @@
+table 'WaterfallCategories Table'
+	lineageTag: e8c1e303-c595-4efd-b671-ace9a1eb5f00
+
+	column Category
+		lineageTag: 3498cffb-3f58-44c5-a26a-dc5d3acb6851
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Category]
+		sortByColumn: SortOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		formatString: 0
+		lineageTag: 5ef30da2-73fc-4896-b54c-902b2384f76a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [SortOrder]
+
+		annotation SummarizationSetBy = User
+
+	partition 'WaterfallCategories Table' = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Category", STRING,
+				    "SortOrder", INTEGER,
+				    {
+				        {"2010 Base Revenue", 1},
+				        {"Volume Effect", 2},
+				        {"Price Effect", 3},
+				        {"Mix Effect", 4},
+				        {"2011 Total Revenue", 5}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = ee7dcbed8b854bac8a6da170f883f588
+
