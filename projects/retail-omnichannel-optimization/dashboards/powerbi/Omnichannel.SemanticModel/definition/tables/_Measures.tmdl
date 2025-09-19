@@ -630,6 +630,20 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 1a2f7cc3-c7db-48ca-8cfb-3f010b849d82
 
+	measure 'Country Sales Share by Month' =
+			
+			VAR CountryMonthlySales = [Total Sales]
+			VAR TotalMonthlySales =
+			    CALCULATE(
+			        [Total Sales],
+			        ALL(dim_geography[Country])
+			    )
+			RETURN
+			    DIVIDE(CountryMonthlySales, TotalMonthlySales)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 4f89c86f-3b4c-4b12-be33-451c045dce73
+
 	partition _Measures = m
 		mode: import
 		source =
