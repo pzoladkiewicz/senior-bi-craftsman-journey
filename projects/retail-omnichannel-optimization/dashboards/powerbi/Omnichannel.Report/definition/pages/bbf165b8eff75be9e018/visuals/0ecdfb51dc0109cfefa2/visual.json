@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "ef0eb90cf7e6a27f7e3f",
+  "name": "0ecdfb51dc0109cfefa2",
   "position": {
-    "x": 384,
+    "x": 832,
     "y": 256,
-    "z": 4000,
+    "z": 4001,
     "height": 304,
-    "width": 416,
-    "tabOrder": 3000
+    "width": 384,
+    "tabOrder": 5001
   },
   "visual": {
-    "visualType": "pivotTable",
+    "visualType": "barChart",
     "query": {
       "queryState": {
-        "Columns": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_date"
-                    }
-                  },
-                  "Property": "Quarter"
-                }
-              },
-              "queryRef": "dim_date.Quarter",
-              "nativeQueryRef": "Quarter",
-              "active": true
-            }
-          ]
-        },
-        "Rows": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -51,7 +32,7 @@
             }
           ]
         },
-        "Values": {
+        "Tooltips": {
           "projections": [
             {
               "field": {
@@ -61,11 +42,43 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD"
+                  "Property": "Customers YTD (2011 Anchor)"
                 }
               },
-              "queryRef": "_Measures.Sales YTD",
-              "nativeQueryRef": "Sales YTD"
+              "queryRef": "_Measures.Customers YTD (2011 Anchor)",
+              "nativeQueryRef": "Customers YTD (2011 Anchor)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "AOV (2011 YTD)"
+                }
+              },
+              "queryRef": "_Measures.AOV (2011 YTD)",
+              "nativeQueryRef": "AOV (2011 YTD)"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sales YTD (2011 Anchor)"
+                }
+              },
+              "queryRef": "_Measures.Sales YTD (2011 Anchor)",
+              "nativeQueryRef": "Sales YTD (2011 Anchor)"
             }
           ]
         }
@@ -80,26 +93,34 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Sales YTD"
+                "Property": "Sales YTD (2011 Anchor)"
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "subTotals": [
+      "valueAxis": [
         {
           "properties": {
-            "rowSubtotals": {
+            "gridlineShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "columnSubtotals": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -109,169 +130,43 @@
           }
         }
       ],
-      "rowHeaders": [
+      "ribbonBands": [
         {
           "properties": {
-            "steppedLayoutIndentation": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            },
-            "showExpandCollapseButtons": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
-            },
-            "expandCollapseButtonsColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 6,
-                      "Percent": 0.6
-                    }
-                  }
-                }
-              }
-            },
-            "outlineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
             }
           }
         }
       ],
-      "general": [
+      "labels": [
         {
           "properties": {
-            "layout": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Compact'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "grid": [
-        {
-          "properties": {
-            "outlineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "gridVertical": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "rowPadding": {
+            "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "blankRows": [
-        {
-          "properties": {
-            "showBlankRows": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "columnHeaders": [
-        {
-          "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Center'"
+                  "Value": "'OutsideEnd'"
                 }
               }
             },
-            "wordWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "outlineStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "4D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "values": [
-        {
-          "properties": {
-            "bandedRowHeaders": {
+            "labelOverflow": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "wordWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "valuesOnRow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "columnFormatting": [
-        {
-          "properties": {
             "labelDisplayUnits": {
               "expr": {
                 "Literal": {
@@ -282,19 +177,60 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "0L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelContentLayout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SingleLine'"
                 }
               }
             }
-          },
+          }
+        },
+        {
+          "properties": {},
           "selector": {
-            "metadata": "_Measures.Sales YTD"
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "highlightMatching": 1
           }
         }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
+      ],
+      "categoryAxis": [
         {
           "properties": {
             "show": {
@@ -304,17 +240,25 @@
                 }
               }
             },
-            "titleWrap": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
-            },
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sales by TOp 10 Countries in Quarters'"
+                  "Value": "'Sales YTD Excl. UK'"
                 }
               }
             },
@@ -328,13 +272,34 @@
           }
         }
       ],
-      "visualHeader": [
+      "padding": [
         {
           "properties": {
-            "show": {
+            "left": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "20D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -348,33 +313,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "padding": [
-        {
-          "properties": {
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
                 }
               }
             }
@@ -391,29 +329,22 @@
                 }
               }
             },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.3
+                      "Percent": -0.1
                     }
                   }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
@@ -445,47 +376,7 @@
           }
         }
       ],
-      "visualTooltip": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "type": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Canvas'"
-                }
-              }
-            },
-            "section": {
-              "expr": {
-                "Literal": {
-                  "Value": "'1d2b98b13e23bf3c0429'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "stylePreset": [
-        {
-          "properties": {
-            "name": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Default'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "divider": [
+      "visualHeader": [
         {
           "properties": {
             "show": {
@@ -498,61 +389,25 @@
           }
         }
       ],
-      "spacing": [
+      "visualTooltip": [
         {
           "properties": {
-            "customizeSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
+            "themedBackground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
                 }
               }
             },
-            "spaceBelowTitle": {
+            "transparency": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
-                }
-              }
-            },
-            "spaceBelowSubTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "subTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "' '"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "heading": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Heading2'"
                 }
               }
             }
@@ -565,7 +420,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "38a09b1fe7c0ab216395",
+        "name": "faad0f78f85c7158e835",
         "field": {
           "Column": {
             "Expression": {
@@ -664,6 +519,60 @@
             }
           ]
         }
+      },
+      {
+        "name": "b1c1d2bfc41dc75476aa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_geography"
+              }
+            },
+            "Property": "IsUK"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_geography",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "IsUK"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "0L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   }

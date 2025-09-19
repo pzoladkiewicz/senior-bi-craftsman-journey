@@ -615,6 +615,21 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Total Quantity YTD (2011)' = ```
+			
+			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			RETURN
+			    CALCULATE(
+			        [Total Quantity],
+			        dim_date[Year] = YEAR(Anchor),
+			        dim_date[Date] <= Anchor
+			    )
+			
+			```
+		formatString: 0
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 1a2f7cc3-c7db-48ca-8cfb-3f010b849d82
+
 	partition _Measures = m
 		mode: import
 		source =

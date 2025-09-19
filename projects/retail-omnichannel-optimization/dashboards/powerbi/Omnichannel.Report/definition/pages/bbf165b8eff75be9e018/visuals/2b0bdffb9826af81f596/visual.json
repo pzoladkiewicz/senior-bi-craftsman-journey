@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "2b0bdffb9826af81f596",
   "position": {
-    "x": 48.000000000000007,
+    "x": 16,
     "y": 256,
     "z": 3000,
-    "height": 272,
-    "width": 448,
+    "height": 304,
+    "width": 352,
     "tabOrder": 2000
   },
   "visual": {
@@ -736,37 +736,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f614d690524e8fe9cf16",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Waterfall Value"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c092a731dda70dba6e6e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "WaterfallCategories Table"
-              }
-            },
-            "Property": "Category"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
