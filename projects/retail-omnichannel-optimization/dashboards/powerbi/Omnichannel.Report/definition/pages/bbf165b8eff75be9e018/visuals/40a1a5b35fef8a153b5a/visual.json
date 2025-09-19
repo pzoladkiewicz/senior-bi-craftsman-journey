@@ -6,7 +6,8 @@
     "y": 47.999999999999993,
     "z": 0,
     "height": 144,
-    "width": 240
+    "width": 240,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -664,5 +665,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bc6c69b488cdca3873ad",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "UK Sales Share % (2011)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

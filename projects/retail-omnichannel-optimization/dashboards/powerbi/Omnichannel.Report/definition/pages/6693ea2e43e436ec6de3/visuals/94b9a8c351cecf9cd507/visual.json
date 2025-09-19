@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "94b9a8c351cecf9cd507",
   "position": {
     "x": 624,
     "y": 560,
-    "z": 5002,
+    "z": 7000,
     "height": 272,
     "width": 544,
-    "tabOrder": 3002
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "hundredPercentStackedAreaChart",
@@ -250,34 +250,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "f9f1b615023b912a28fc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "New Customers (Period)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "35accf2681148f5fb7f2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Returning Customers (Period)"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "6b25a4b97b338f1902ae",
         "field": {

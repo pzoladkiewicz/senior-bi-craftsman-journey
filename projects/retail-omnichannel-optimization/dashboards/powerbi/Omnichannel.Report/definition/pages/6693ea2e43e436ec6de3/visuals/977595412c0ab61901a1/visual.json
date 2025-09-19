@@ -6,7 +6,8 @@
     "y": 276.56850192061404,
     "z": 0,
     "height": 192.00000000000003,
-    "width": 352
+    "width": 352,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -369,37 +370,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5f9c683483c0ddee1d18",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Short_name"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "7baa34743372b3d1bccd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Sales 2011 (Up to Anchor)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

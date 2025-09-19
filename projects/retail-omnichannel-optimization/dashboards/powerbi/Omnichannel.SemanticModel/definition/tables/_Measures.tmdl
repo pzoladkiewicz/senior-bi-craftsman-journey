@@ -216,10 +216,11 @@ table _Measures
 			            dim_date,
 			            YEAR(dim_date[Date]) = 2011 && dim_date[Date] <= Anchor)
 			    )
+		formatString: "£"#,0;-"£"#,0;"£"#,0
 		displayFolder: _2011_Anchor\Sales\Year Comparisons
 		lineageTag: 51b0c464-45e3-4a2c-9c3b-1716c65b871b
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
 	measure 'Sales 2010 (matched period)' =
 			
@@ -259,10 +260,11 @@ table _Measures
 			           FILTER(dim_date, 
 			               dim_date[Year] = 2011 && dim_date[Date] <= Anchor)))
 			```
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 9b7336bf-403b-48d2-821c-ebaf45b89cca
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
 	measure 'Sales YTD' = [Sales 2011 (Up to Anchor)]
 		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00

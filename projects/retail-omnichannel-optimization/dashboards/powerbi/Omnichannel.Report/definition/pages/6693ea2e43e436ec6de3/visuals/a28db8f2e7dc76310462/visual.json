@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "a28db8f2e7dc76310462",
   "position": {
     "x": 48,
     "y": 560,
-    "z": 5001,
+    "z": 6000,
     "height": 270,
     "width": 540,
-    "tabOrder": 3001
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "tableEx",
@@ -448,48 +448,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "67e492fb81e70d0fb012",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "2011"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0c07c549c590ea491ac6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "2010"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6a2c860707db952d0b97",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "YoY"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }
