@@ -136,17 +136,6 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     df = df.loc[mask].copy()
     _log(f"Po filtrowaniu: {len(df):,} rekordów")
 
-    # Standaryzajca krajów (proste mapowanie; można rozszerzyć)
-    _log("Standaryzacja krajów...")
-    country_map = {
-        "UK": "United Kingdom",
-        "England": "United Kingdom",
-        "Great Britain": "United Kingdom",
-        "EIRE": "Ireland",
-        "U.S.A.": "United States",
-        "USA": "United States"}
-    df["Country"] = df["Country"].replace(country_map)
-
     # Czyszczenie opisów
     _log("Czyszczenie opisów produktu...")
     df["Description"] = df["Description"].replace({"nan": "", "None": ""}).fillna("").str.strip()
@@ -173,14 +162,31 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
 
     return df
 
+# ------------------------------------------
+# STANDARIZATION (Standaryzacja)
+# ------------------------------------------
 
-'''
-    Edycja run_etl.py [edit]:
 
-    W sekcji po CLEANING wkleić classify_transactions i apply_rule;
-    w run_all dodać blok zapisu klasyfikacji jak wyżej;
-    nie zmieniać istniejących zapisów dim*/fact_sales.csv.
-'''
+def standardize_country_name(country_name: str) -> str:
+    """
+    Stanadaryzacja nazw krajow dla raportowania
+    Wywolywane z build_dim_geography()
+    """
+    standard_map = {
+        "UK": "United Kingdom",
+        "England": "United Kingdom",
+        "Great Britain": "United Kingdom",
+        "United Kingdom": "United Kingdom",
+
+        "EIRE": "Ireland",
+        "Ireland": "Ireland",
+
+        "U.S.A.": "United States",
+        "USA": "United States",
+        "United States": "United States"
+        }
+
+    return standard_map.get(country_name, country_name)
 
 # -----------------------------------------
 # CLASSIFICATION (klasyfikacja transakcji)
@@ -296,6 +302,10 @@ def classify_transactions(df_clean: pd.DataFrame) -> pd.DataFrame:
 
 
 def build_dim_geography(df_clean: pd.DataFrame) -> pd.DataFrame:
+    """
+    Uproszczone dim_geography z ustandaryzowanymi nazwami krajów
+    """
+
     _log("Budowa Dim_Geography...")
 
     countries = (
@@ -311,21 +321,16 @@ def build_dim_geography(df_clean: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for c in countries:
         key = _hash_surrogate(c, prefix="GEO", length=12)
-        is_uk = 1 if c == "United Kingdom" else 0
-        # Proste regiony (można rozbudować przez słownik konfigu)
-        region = "UK" if is_uk else "Europe" if c in ["Germany", "France", "Netherlands", "Belgium", "Ireland"] else "International"
+
+        country_standard = standardize_country_name(c)
+
         rows.append({
             "GeographyKey": key,
-            "Country": c,
-            "CountryCode": None,                                # opcjonalnie w przyszłosci
-            "Region": region,
-            "IsUK": is_uk,
-            "IsEU": 1 if region in ["UK", "Europe"] else 0,     # formalnie UK =! EU, ale upraszczamy
-            "CurrencyCode": "GBP" if is_uk else None,
-            "TimeZone": "GMT+0" if is_uk else None
+            "CountryOriginal": c,
+            "Country": country_standard,
+            "IsUK": 1 if country_standard == "United Kingdom" else 0,
         })
-    dim = pd.DataFrame(rows)
-    return dim
+    return pd.DataFrame(rows)
 
 
 def build_dim_customer(df_clean: pd.DataFrame) -> pd.DataFrame:
@@ -425,7 +430,7 @@ def build_fact_sales(df_clean: pd.DataFrame,
     # Mapowanie kluczy
     cust_map = dim_customer.set_index("CustomerID")["CustomerKey"].to_dict()
     prod_map = dim_product.set_index("StockCode")["ProductKey"].to_dict()
-    geo_map = dim_geography.set_index("Country")["GeographyKey"].to_dict()
+    geo_map = dim_geography.set_index("CountryOriginal")["GeographyKey"].to_dict()
     date_map = dim_date.set_index("Date")["DateKey"].to_dict()
 
     df = df_clean.copy()
@@ -466,7 +471,11 @@ def build_fact_sales(df_clean: pd.DataFrame,
 
     # Wymu typy int dla FK
     for col in ["ProductKey", "DateKey", "GeographyKey"]:
-        fact[col] = fact[col].astype(int)
+        # Obsluga NaN w kluczach obcych (niezmapowane rekordy)
+        nan_count = fact[col].isna().sum()
+        if nan_count > 0:
+            _log(f"UWAGA: {nan_count} wartosci NULL w {col} - zmapowane do -1")
+        fact[col] = fact[col].fillna(-1).astype(int)
 
     # Podsumowanie
     _log(f"Fact_Sales - wiersze: {len(fact):,}")
