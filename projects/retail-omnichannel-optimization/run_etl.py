@@ -115,6 +115,8 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
         .replace({"nan": np.nan, "": np.nan})
     )
 
+    df = df.rename(columns={"Customer ID": "CustomerID"})
+
     # Deduplikacja (Klucz rozszerzony)
     _log("Deduplikacja rekordów...")
     before = len(df)
@@ -141,10 +143,10 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     df["Description"] = df["Description"].replace({"nan": "", "None": ""}).fillna("").str.strip()
     df.loc[df["Description"] == "", "Description"] = "UNKNOWN PRODUCT"
 
-    # Total_Value
-    _log("Kalkulacja Total_Value...")
-    df["Total_Value"] = df["Quantity"].astype(float) * df["Price"].astype(float)
-    _log(f"Łączny przychód: £{df['Total_Value'].sum():,.2f}")
+    # TotalValue
+    _log("Kalkulacja TotalValue...")
+    df["TotalValue"] = df["Quantity"].astype(float) * df["Price"].astype(float)
+    _log(f"Łączny przychód: £{df['TotalValue'].sum():,.2f}")
 
     # Quality Gates
     _log("Quality Gates po czyszczeniu...")
@@ -154,7 +156,7 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
         "non_future_dates": (df["InvoiceDate"] <= datetime.now()).all(),
         "non_missing_invoice": df["Invoice"].ne("").all(),
         "non_missing_stockcode": df["StockCode"].ne("").all(),
-        # "positive_total_value": (df["Total_Value"] > 0).all()
+        # "positive_totalvalue": (df["TotalValue"] > 0).all()
     }
     if not all(checks.values()):
         failed = [k for k, v in checks.items() if not v]
@@ -337,14 +339,14 @@ def build_dim_customer(df_clean: pd.DataFrame) -> pd.DataFrame:
     _log("Budowa Dim_Customer...")
 
     # registered customers
-    reg = df_clean[df_clean["Customer ID"].notna()].copy()
-    grp = reg.groupby("Customer ID").agg(
+    reg = df_clean[df_clean["CustomerID"].notna()].copy()
+    grp = reg.groupby("CustomerID").agg(
         Country=("Country", "first"),
         FirstPurchase=("InvoiceDate", "min"),
         LastPurchase=("InvoiceDate", "max"),
         TotalTransactions=("Invoice", "nunique"),
-        TotalSpent=("Total_Value", "sum")
-    ).reset_index().rename(columns={"Customer ID": "CustomerID"})
+        TotalSpent=("TotalValue", "sum")
+    ).reset_index()
 
     # Klucz deterministyczny
     grp["CustomerKey"] = grp["CustomerID"].apply(lambda x: _hash_surrogate(str(x), prefix="CUS", length=12))
@@ -352,7 +354,7 @@ def build_dim_customer(df_clean: pd.DataFrame) -> pd.DataFrame:
     grp["IsUK"] = (grp["Country"] == "United Kingdom").astype(int)
 
     # Guest (goscie) - agregacja wspólna (CustomerKey = -1)
-    guest = df_clean[df_clean["Customer ID"].isna()]
+    guest = df_clean[df_clean["CustomerID"].isna()]
     if len(guest) > 0:
         guest_row = pd.DataFrame([{
             "CustomerKey": -1,
@@ -362,7 +364,7 @@ def build_dim_customer(df_clean: pd.DataFrame) -> pd.DataFrame:
             "FirstPurchase": guest["InvoiceDate"].min(),
             "LastPurchase": guest["InvoiceDate"].max(),
             "TotalTransactions": guest["Invoice"].nunique(),
-            "TotalSpent": guest["Total_Value"].sum(),
+            "TotalSpent": guest["TotalValue"].sum(),
             "IsUK": 0
         }])
         dim = pd.concat([grp, guest_row], ignore_index=True)
@@ -436,7 +438,7 @@ def build_fact_sales(df_clean: pd.DataFrame,
     df = df_clean.copy()
 
     # CustomerKey: registered z mapowania, guest = -1
-    df["CustomerKey"] = df["Customer ID"].map(cust_map).fillna(-1).astype(int)
+    df["CustomerKey"] = df["CustomerID"].map(cust_map).fillna(-1).astype(int)
     # ProductKey
     df["ProductKey"] = df["StockCode"].map(prod_map).astype("Int64")
     # GeographyKey
@@ -451,9 +453,8 @@ def build_fact_sales(df_clean: pd.DataFrame,
     # Pola tabeli faktów
     fact = df.loc[:, [
         "InvoiceNumber", "CustomerKey", "ProductKey", "DateKey", "GeographyKey",
-        "Quantity", "Price", "Total_Value"
+        "Quantity", "Price", "TotalValue"
     ]].rename(columns={
-        "Total_Value": "TotalValue",
         "Price": "UnitPrice"
     }).copy()
 
@@ -490,7 +491,7 @@ def run_all(input_excel_path: str,
             output_dir: str,
             sheet: Union[str, int, None] = None,
             date_buffer_months: int = 6,
-            classify: bool = False) -> dict:
+            classify: bool = True) -> dict:
     """
     Uruchamia cały pipeline: RAW -> CLEAN -> DIMS -> FACT -> CSV
 
@@ -543,10 +544,12 @@ def run_all(input_excel_path: str,
 
             # Podsumowanie klasyfikacji
             category_summary = classified['TransactionCategory'].value_counts()
+            unclassified_pct = (category_summary.get('Unclassified', 0) / len(classified)) * 100
             _log("Rozkład kategorii transakcji:")
             for category, count in category_summary.items():
                 pct = (count / len(classified)) * 100
                 _log(f"  {category}: {count:,} ({pct:.1f}%)")
+            _log(f"Coverage quality: {100-unclassified_pct:.2f}%")
 
         # Raport końcowy
         _log("--- RAPORT KOŃCOWY ---")
