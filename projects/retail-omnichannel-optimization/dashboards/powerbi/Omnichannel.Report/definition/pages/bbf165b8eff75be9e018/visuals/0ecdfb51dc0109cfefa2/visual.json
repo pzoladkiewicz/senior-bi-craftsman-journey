@@ -4,10 +4,10 @@
   "position": {
     "x": 832,
     "y": 256,
-    "z": 4001,
+    "z": 5000,
     "height": 304,
     "width": 384,
-    "tabOrder": 5001
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "barChart",
@@ -42,7 +42,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers YTD (2011 Anchor)"
+                  "Property": "Customers YTD (_2011)"
                 }
               },
               "queryRef": "_Measures.Customers YTD (2011 Anchor)",
@@ -56,7 +56,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV (2011 YTD)"
+                  "Property": "AOV YTD (_2011)"
                 }
               },
               "queryRef": "_Measures.AOV (2011 YTD)",
@@ -74,7 +74,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD (2011 Anchor)"
+                  "Property": "Sales YTD (_2011)"
                 }
               },
               "queryRef": "_Measures.Sales YTD (2011 Anchor)",
@@ -93,7 +93,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Sales YTD (2011 Anchor)"
+                "Property": "Sales YTD (_2011)"
               }
             },
             "direction": "Descending"
@@ -476,7 +476,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Sales YTD (2011 Anchor)"
+                            "Property": "Sales YTD (_2011)"
                           }
                         }
                       }

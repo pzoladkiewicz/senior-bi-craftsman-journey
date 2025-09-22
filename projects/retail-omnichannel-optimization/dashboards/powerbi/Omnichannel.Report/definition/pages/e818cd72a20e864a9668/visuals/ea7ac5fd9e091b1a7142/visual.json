@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 672.00000000000011,
-    "width": 496
+    "width": 496,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "tableEx",
@@ -60,7 +61,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD (2011 Anchor)"
+                  "Property": "Sales YTD (_2011)"
                 }
               },
               "queryRef": "_Measures.Sales YTD (2011 Anchor)",

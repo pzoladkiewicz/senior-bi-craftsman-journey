@@ -75,7 +75,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV (2011 YTD)"
+                  "Property": "AOV YTD (_2011)"
                 }
               },
               "queryRef": "_Measures.AOV (2011 YTD)",
@@ -108,7 +108,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "AOV (2011 YTD)"
+                "Property": "AOV YTD (_2011)"
               }
             },
             "direction": "Descending"
@@ -167,79 +167,5 @@
       }
     ],
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f0b5107bd67c72d0aaa7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "78585811be348edc81e3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "AOV (2011 YTD)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9b728da37288f0228c8b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Country Sales Share by Month"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "398cd909a9f12e987c67",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "MonthName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3b302849a5ff0507e69e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_geography"
-              }
-            },
-            "Property": "Country"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

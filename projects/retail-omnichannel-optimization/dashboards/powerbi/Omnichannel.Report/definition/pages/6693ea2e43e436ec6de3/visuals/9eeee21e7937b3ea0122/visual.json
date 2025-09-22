@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "df0c33c874654f2d00df",
+  "name": "9eeee21e7937b3ea0122",
   "position": {
     "x": 448,
     "y": 16,
-    "z": 3000,
+    "z": 8001,
     "height": 200,
     "width": 320,
-    "tabOrder": 1000
+    "tabOrder": 8001
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,13 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers CY"
+                  "Property": "Customers YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.Customers CY",
-              "nativeQueryRef": "Customers CY"
+              "queryRef": "_Measures.Customers YTD (2011 Anchor)",
+              "nativeQueryRef": "Customers YTD",
+              "displayName": "Customers YTD",
+              "format": "0"
             }
           ]
         }
@@ -42,7 +44,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Customers CY"
+                "Property": "Customers YTD (_2011)"
               }
             },
             "direction": "Descending"
@@ -75,29 +77,29 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 2,
-                      "Percent": -0.5
+                      "Percent": 0.2
                     }
                   }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "47D"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
                 }
               }
             }
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)"
           }
         }
       ],
@@ -119,6 +121,51 @@
           },
           "selector": {
             "metadata": "_Measures.Sales YTD"
+          }
+        },
+        {
+          "properties": {
+            "dividerColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.AOV YTD"
+          }
+        },
+        {
+          "properties": {
+            "dividerColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            },
+            "dividerIgnorePadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ],
@@ -149,6 +196,20 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)"
+          }
         }
       ],
       "label": [
@@ -157,7 +218,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -215,7 +276,7 @@
         },
         {
           "properties": {
-            "matchValueAlignment": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -224,7 +285,21 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Customers CY"
+            "metadata": "_Measures.Sales YTD (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Customers YTD (2011 Anchor)"
           }
         }
       ],
@@ -238,17 +313,38 @@
                 }
               }
             },
-            "calloutSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "53D"
-                }
-              }
-            },
             "orientation": {
               "expr": {
                 "Literal": {
                   "Value": "2D"
+                }
+              }
+            },
+            "maxTiles": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "cellPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5L"
+                }
+              }
+            },
+            "calloutSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "70D"
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cards'"
                 }
               }
             }
@@ -256,6 +352,27 @@
         },
         {
           "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rectangleRoundedCurveCustomStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "14L"
+                }
+              }
+            },
             "topOuterMargin": {
               "expr": {
                 "Literal": {
@@ -308,7 +425,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "vs Last Year"
+                  "Property": "Sales YoY% - formated"
                 }
               }
             }
@@ -339,15 +456,176 @@
           "selector": {
             "metadata": "_Measures.Sales YTD"
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "PY"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.AOV YTD",
+            "id": "field-1f894bdd-567d-69a2-311e-0e5b306db13b",
+            "order": 0
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "AOV YoY % formated"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.AOV YTD",
+            "id": "field-f18bc79f-a2bb-597f-35cf-f51f1e7bd7d5",
+            "order": 1
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sales YoY% - formated"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Sales YTD (_2011)",
+            "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4",
+            "order": 0
+          }
+        },
+        {
+          "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.AOV YTD"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Customers YoY% - formated"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Customers YTD (2011 Anchor)",
+            "id": "field-02ae83f6-9340-7e26-f881-943b3588462a",
+            "order": 0
+          }
         }
       ],
       "referenceLabelLayout": [
         {
           "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'below'"
+                }
+              }
+            },
             "style": {
               "expr": {
                 "Literal": {
                   "Value": "'tabular'"
+                }
+              }
+            },
+            "verticalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'top'"
+                }
+              }
+            },
+            "valueArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            },
+            "labelSpace": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "outerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
                 }
               }
             }
@@ -401,7 +679,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "CF Last Year"
+                      "Property": "CF - Sales YoY%"
                     }
                   }
                 }
@@ -418,6 +696,143 @@
             ],
             "metadata": "_Measures.Sales YTD",
             "id": "field-30583f58-e9a6-ff69-64d9-cbe47a31f906"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "CF - AOV YoY %"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.AOV YTD",
+            "id": "field-f18bc79f-a2bb-597f-35cf-f51f1e7bd7d5"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "CF - Sales YoY%"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Sales YTD (_2011)",
+            "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4"
+          }
+        },
+        {
+          "properties": {
+            "showBlankAs": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)",
+            "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4"
+          }
+        },
+        {
+          "properties": {
+            "showBlankAs": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Customers YTD (2011 Anchor)",
+            "id": "field-02ae83f6-9340-7e26-f881-943b3588462a"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "CF - Customers YoY%"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Customers YTD (2011 Anchor)",
+            "id": "field-02ae83f6-9340-7e26-f881-943b3588462a"
           }
         }
       ],
@@ -546,20 +961,89 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Customers CY"
+            "metadata": "_Measures.Customers YTD (2011 Anchor)"
           }
         }
       ],
-      "outline": [
+      "border": [
         {
           "properties": {
-            "lineColor": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "referenceLabelDetail": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)",
+            "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4"
+          }
+        }
+      ],
+      "referenceLabelTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vs Last Year'"
+                }
+              }
+            },
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)",
+            "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "titleFontColor": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.2
+                      "Percent": -0.6
                     }
                   }
                 }
@@ -568,6 +1052,28 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vs Last Year'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Customers YTD (2011 Anchor)",
+            "id": "field-02ae83f6-9340-7e26-f881-943b3588462a"
           }
         }
       ]

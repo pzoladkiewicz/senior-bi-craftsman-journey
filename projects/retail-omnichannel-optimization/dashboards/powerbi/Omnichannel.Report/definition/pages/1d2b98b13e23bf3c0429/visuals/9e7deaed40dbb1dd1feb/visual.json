@@ -22,7 +22,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV (2011 YTD)"
+                  "Property": "AOV YTD (_2011)"
                 }
               },
               "queryRef": "_Measures.AOV (2011 YTD)",
@@ -36,7 +36,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers YTD (2011 Anchor)"
+                  "Property": "Customers YTD (_2011)"
                 }
               },
               "queryRef": "_Measures.Customers YTD (2011 Anchor)",
@@ -55,7 +55,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "AOV (2011 YTD)"
+                "Property": "AOV YTD (_2011)"
               }
             },
             "direction": "Descending"
