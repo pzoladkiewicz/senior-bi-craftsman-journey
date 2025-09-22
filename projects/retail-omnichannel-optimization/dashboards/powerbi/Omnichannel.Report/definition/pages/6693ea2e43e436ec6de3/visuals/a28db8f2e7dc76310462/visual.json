@@ -3,11 +3,11 @@
   "name": "a28db8f2e7dc76310462",
   "position": {
     "x": 48,
-    "y": 560,
-    "z": 5000,
-    "height": 270,
-    "width": 540,
-    "tabOrder": 2000
+    "y": 576,
+    "z": 2000,
+    "height": 256,
+    "width": 528,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "tableEx",
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_product.ProductName",
-              "nativeQueryRef": "ProductName"
+              "nativeQueryRef": "Product",
+              "displayName": "Product"
             },
             {
               "field": {
@@ -37,11 +38,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "2011"
+                  "Property": "Sales YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.Top 10 Products YTD 2011",
-              "nativeQueryRef": "2011"
+              "queryRef": "_Measures.Sales YTD (_2011)",
+              "nativeQueryRef": "2011",
+              "displayName": "2011"
             },
             {
               "field": {
@@ -51,11 +53,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "2010"
+                  "Property": "Sales YTD PY (_2010)"
                 }
               },
-              "queryRef": "_Measures.Products YTD 2010 (matched period)",
-              "nativeQueryRef": "2010"
+              "queryRef": "_Measures.Sales YTD PY (_2010)",
+              "nativeQueryRef": "2010",
+              "displayName": "2010"
             },
             {
               "field": {
@@ -65,11 +68,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "YoY"
+                  "Property": "Sales YoY % (_2011)"
                 }
               },
-              "queryRef": "_Measures.Product YoY Growth %",
-              "nativeQueryRef": "YoY"
+              "queryRef": "_Measures.Sales YoY % (_2011)",
+              "nativeQueryRef": "YoY",
+              "displayName": "YoY"
             }
           ]
         }
@@ -84,7 +88,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "2011"
+                "Property": "Sales YTD (_2011)"
               }
             },
             "direction": "Descending"
@@ -155,7 +159,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Product YoY Growth Color"
+                      "Property": "Sales YoY% CF"
                     }
                   }
                 }
@@ -170,7 +174,7 @@
                 }
               }
             ],
-            "metadata": "_Measures.Product YoY Growth %"
+            "metadata": "_Measures.Sales YoY % (_2011)"
           }
         }
       ],
@@ -201,19 +205,91 @@
           }
         }
       ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YoY % (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD PY (_2010)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_product.ProductName"
+          }
+        }
+      ],
       "columnWidth": [
         {
           "properties": {
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "88.07400379506642D"
+                  "Value": "67.5608202627404D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "_Measures.Top 10 Products YTD 2011"
+            "metadata": "_Measures.Sales YTD (_2011)"
           }
         },
         {
@@ -221,13 +297,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "85.00189938647364D"
+                  "Value": "70.80409613797518D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "_Measures.Products YTD 2010 (matched period)"
+            "metadata": "_Measures.Sales YTD PY (_2010)"
           }
         },
         {
@@ -235,13 +311,13 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "73.430748039359D"
+                  "Value": "79.0845029781156D"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "_Measures.Product YoY Growth %"
+            "metadata": "_Measures.Sales YoY % (_2011)"
           }
         }
       ]
@@ -342,6 +418,33 @@
             }
           }
         }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -405,7 +508,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "2011"
+                            "Property": "Sales YTD (_2011)"
                           }
                         }
                       }

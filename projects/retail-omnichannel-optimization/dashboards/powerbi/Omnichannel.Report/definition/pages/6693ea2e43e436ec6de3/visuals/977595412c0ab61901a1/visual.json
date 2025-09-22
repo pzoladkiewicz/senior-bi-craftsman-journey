@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "977595412c0ab61901a1",
   "position": {
-    "x": 802.81690140845058,
-    "y": 276.56850192061404,
+    "x": 48,
+    "y": 272,
     "z": 0,
-    "height": 192.00000000000003,
-    "width": 352,
-    "tabOrder": 6000
+    "height": 240,
+    "width": 350,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -23,31 +23,17 @@
                       "Entity": "dim_date"
                     }
                   },
-                  "Property": "Short_name"
+                  "Property": "Short Month"
                 }
               },
               "queryRef": "dim_date.Short_name",
-              "nativeQueryRef": "Short_name",
+              "nativeQueryRef": "Short Month",
               "active": true
             }
           ]
         },
         "Y": {
           "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Sales 2011 (Up to Anchor)"
-                }
-              },
-              "queryRef": "_Measures.Sales 2011 (Up to Anchor)",
-              "nativeQueryRef": "Sales 2011 (Up to Anchor)"
-            },
             {
               "field": {
                 "NativeVisualCalculation": {
@@ -71,6 +57,20 @@
               "queryRef": "select1",
               "nativeQueryRef": "Moving average 1",
               "hidden": true
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Sales YTD (_2011)"
+                }
+              },
+              "queryRef": "_Measures.Sales YTD (_2011)",
+              "nativeQueryRef": "Sales YTD (_2011)"
             }
           ]
         }
@@ -130,14 +130,14 @@
             "labelOrientation": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "1D"
                 }
               }
             },
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideBase'"
+                  "Value": "'OutsideEnd'"
                 }
               }
             },
@@ -199,7 +199,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sales YTD'"
+                  "Value": "'    Sales YTD'"
                 }
               }
             },
@@ -208,8 +208,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.6
+                      "ColorId": 1,
+                      "Percent": 0.1
                     }
                   }
                 }
@@ -218,7 +218,7 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -226,6 +226,27 @@
               "expr": {
                 "Literal": {
                   "Value": "12D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading2'"
                 }
               }
             }
@@ -239,6 +260,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "ignorePadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -264,21 +292,21 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "15D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             }

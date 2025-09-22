@@ -17,41 +17,9 @@ table 'WaterfallCategories Table'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'AOV (2011 YTD) 2' = ```
-			
-			VAR _Anchor = [1. Anchor Date (2011SameMD)]
-			VAR _startDate = DATE(YEAR(_Anchor), 1, 1)
-			RETURN
-			DIVIDE([Sales YTD (_2011)], 
-			       CALCULATE(DISTINCTCOUNT(fact_sales[InvoiceNumber]),
-			           DATESBETWEEN(dim_date[Date],
-			           _startDate,
-			           _Anchor
-			           )
-			       )
-			)
-			```
-		lineageTag: 52219f81-3135-4f86-8eec-ef5cdbfcea9d
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'AOV PY (2011 YTD) 2' = ```
-			
-			VAR _Anchor = EDATE([1. Anchor Date (2011SameMD)], -12)
-			VAR _startDate = DATE(YEAR(_Anchor), 1, 1)
-			RETURN
-			DIVIDE([Sales YTD PY (_2010)], 
-			       CALCULATE(DISTINCTCOUNT(fact_sales[InvoiceNumber]),
-			           DATESBETWEEN(dim_date[Date],
-			           _startDate,
-			           _Anchor
-			           )
-			       )
-			)
-			```
-		lineageTag: 45e1c248-1d93-4534-ae54-1d854d002861
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure _dataMniejszaNizAnchor = IF(MAX(dim_date[Date]) <= [1. Anchor Date (2011SameMD)], 1, 0)
+		formatString: 0
+		lineageTag: 475efd32-742e-41c2-87db-b20eb62b7f6e
 
 	column Category
 		lineageTag: 3498cffb-3f58-44c5-a26a-dc5d3acb6851

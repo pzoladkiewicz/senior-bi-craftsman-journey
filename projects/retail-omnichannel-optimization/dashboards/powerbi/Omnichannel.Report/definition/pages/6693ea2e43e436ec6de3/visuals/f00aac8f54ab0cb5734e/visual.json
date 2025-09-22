@@ -5,9 +5,8 @@
     "x": 0,
     "y": 0,
     "z": 0,
-    "height": 200,
-    "width": 350,
-    "tabOrder": 1000
+    "height": 240,
+    "width": 350
   },
   "visual": {
     "visualType": "lineChart",
@@ -23,11 +22,11 @@
                       "Entity": "dim_date"
                     }
                   },
-                  "Property": "Short_name"
+                  "Property": "Short Month"
                 }
               },
               "queryRef": "dim_date.Short_name",
-              "nativeQueryRef": "Short_name",
+              "nativeQueryRef": "Short Month",
               "active": true
             }
           ]
@@ -42,11 +41,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales 2011 (Up to Anchor)"
+                  "Property": "Sales YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.Sales 2011 (Up to Anchor)",
-              "nativeQueryRef": "Sales 2011 (Up to Anchor)"
+              "queryRef": "_Measures.Sales YTD (_2011)",
+              "nativeQueryRef": "Sales YTD (_2011)"
             },
             {
               "field": {
@@ -56,11 +55,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales 2010 (matched period)"
+                  "Property": "Sales YTD PY (_2010)"
                 }
               },
-              "queryRef": "_Measures.Sales 2010 (matched period)",
-              "nativeQueryRef": "Sales 2010 (matched period)"
+              "queryRef": "_Measures.Sales YTD PY (_2010)",
+              "nativeQueryRef": "Sales YTD PY (_2010)"
             }
           ]
         }
@@ -141,42 +140,7 @@
           }
         }
       ],
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 4,
-                      "Percent": -0.25
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales 2010 (matched period)"
-          }
-        }
-      ],
       "lineStyles": [
-        {
-          "properties": {
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales 2010 (matched period)"
-          }
-        },
         {
           "properties": {
             "areaShow": {
@@ -199,22 +163,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "error": [
-        {
-          "properties": {
-            "enabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales 2011 (Up to Anchor)"
           }
         }
       ],
@@ -241,6 +189,27 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD PY (_2010)"
           }
         }
       ]

@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 304,
     "width": 416,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -61,31 +61,14 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD"
+                  "Property": "Sales YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.Sales YTD",
-              "nativeQueryRef": "Sales YTD"
+              "queryRef": "_Measures.Sales YTD (_2011)",
+              "nativeQueryRef": "Sales YTD (_2011)"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
-                  }
-                },
-                "Property": "Sales YTD"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
@@ -266,29 +249,6 @@
                 }
               }
             }
-          }
-        }
-      ],
-      "columnFormatting": [
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1000D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales YTD"
           }
         }
       ]

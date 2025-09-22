@@ -4,10 +4,10 @@
   "position": {
     "x": 800.00000000000011,
     "y": 16,
-    "z": 8000,
+    "z": 5000,
     "height": 200,
     "width": 320,
-    "tabOrder": 8000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -92,7 +92,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - formated"
+                  "Property": "Sales YoY% - format"
                 }
               }
             }
@@ -134,7 +134,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - formated"
+                  "Property": "Sales YoY% - format"
                 }
               }
             }
@@ -679,7 +679,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "CF - Sales YoY%"
+                      "Property": "Sales YoY% CF"
                     }
                   }
                 }
@@ -724,7 +724,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "CF - Sales YoY%"
+                      "Property": "Sales YoY% CF"
                     }
                   }
                 }
@@ -770,7 +770,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "CF - AOV YoY %"
+                      "Property": "AOV YoY% CF"
                     }
                   }
                 }
@@ -801,7 +801,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "CF - AOV YoY %"
+                      "Property": "AOV YoY% CF"
                     }
                   }
                 }
@@ -832,7 +832,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "CF - AOV YoY %"
+                      "Property": "AOV YoY% CF"
                     }
                   }
                 }

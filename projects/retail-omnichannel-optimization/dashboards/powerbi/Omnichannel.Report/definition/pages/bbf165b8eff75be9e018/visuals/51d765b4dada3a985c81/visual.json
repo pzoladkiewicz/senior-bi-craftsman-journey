@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 144,
     "width": 240,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -294,7 +294,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - formated"
+                  "Property": "Sales YoY% - format"
                 }
               }
             }
@@ -387,7 +387,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "CF - Sales YoY%"
+                      "Property": "Sales YoY% CF"
                     }
                   }
                 }

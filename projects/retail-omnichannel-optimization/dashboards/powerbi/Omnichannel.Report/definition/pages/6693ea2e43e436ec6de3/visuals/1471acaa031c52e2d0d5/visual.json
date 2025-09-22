@@ -2,11 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "1471acaa031c52e2d0d5",
   "position": {
-    "x": 14.239284832015811,
-    "y": 0,
+    "x": 16,
+    "y": 12.48,
     "z": 1000,
-    "height": 39.398923444976077,
-    "width": 199.34998764822134
+    "height": 46.08,
+    "width": 192,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "textbox",
@@ -18,20 +19,21 @@
               {
                 "textRuns": [
                   {
-                    "value": "Sales in ",
+                    "value": "Sales YTD ",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "2011",
+                    "value": "2011 ",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontSize": "12pt",
-                      "color": "#118dff"
+                      "color": "#0d6abf"
                     }
                   },
                   {
-                    "value": " and ",
+                    "value": "vs ",
                     "textStyle": {
                       "fontSize": "12pt"
                     }

@@ -125,7 +125,7 @@ table dim_date
 
 		annotation SummarizationSetBy = User
 
-	column Short_name = FORMAT(dim_date[Date], "mmm")
+	column 'Short Month' = FORMAT(dim_date[Date], "mmm")
 		dataType: string
 		lineageTag: 7ae74c84-1ba3-4140-88e3-9dc5308af42e
 		summarizeBy: none
@@ -134,6 +134,12 @@ table dim_date
 		changedProperty = SortByColumn
 
 		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Day' = FORMAT(dim_date[Date], "DDD")
+		lineageTag: e0059801-f6f8-448f-accc-8e6f38188bf2
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 

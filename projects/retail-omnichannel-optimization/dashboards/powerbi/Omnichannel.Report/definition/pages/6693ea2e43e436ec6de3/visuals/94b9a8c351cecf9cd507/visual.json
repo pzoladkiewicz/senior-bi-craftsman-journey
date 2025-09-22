@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "94b9a8c351cecf9cd507",
   "position": {
-    "x": 624,
-    "y": 560,
-    "z": 6000,
-    "height": 272,
-    "width": 544,
-    "tabOrder": 3000
+    "x": 640,
+    "y": 576,
+    "z": 3000,
+    "height": 256,
+    "width": 528
   },
   "visual": {
     "visualType": "hundredPercentStackedAreaChart",
@@ -23,11 +22,11 @@
                       "Entity": "dim_date"
                     }
                   },
-                  "Property": "Short_name"
+                  "Property": "Short Month"
                 }
               },
               "queryRef": "dim_date.Short_name",
-              "nativeQueryRef": "Short_name",
+              "nativeQueryRef": "Short Month",
               "active": true
             }
           ]
@@ -42,11 +41,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "New Customers (Period)"
+                  "Property": "_nc"
                 }
               },
-              "queryRef": "_Measures.New Customers (Period)",
-              "nativeQueryRef": "New Customers (Period)"
+              "queryRef": "_Measures._nc",
+              "nativeQueryRef": "_nc"
             },
             {
               "field": {
@@ -56,11 +55,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Returning Customers (Period)"
+                  "Property": "_rc"
                 }
               },
-              "queryRef": "_Measures.Returning Customers (Period)",
-              "nativeQueryRef": "Returning Customers (Period)"
+              "queryRef": "_Measures._rc",
+              "nativeQueryRef": "_rc"
             }
           ]
         }
@@ -73,7 +72,35 @@
             "showTitle": {
               "expr": {
                 "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "legendMarkerRendering": {
+              "expr": {
+                "Literal": {
+                  "Value": "'markerCircleDefault'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "' '"
                 }
               }
             }
@@ -104,6 +131,65 @@
               }
             },
             "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "areaShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "areaMatchStrokeColor": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "82D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "seriesLabels": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -244,6 +330,40 @@
             }
           }
         }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -290,6 +410,69 @@
                   "Right": {
                     "Literal": {
                       "Value": "2011L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "57c24120c113b179c903",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_date"
+              }
+            },
+            "Property": "Short Month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "592265dced45e654bd66",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "WaterfallCategories Table"
+              }
+            },
+            "Property": "_dataMniejszaNizAnchor"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "w",
+              "Entity": "WaterfallCategories Table",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "w"
+                        }
+                      },
+                      "Property": "_dataMniejszaNizAnchor"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
                     }
                   }
                 }
