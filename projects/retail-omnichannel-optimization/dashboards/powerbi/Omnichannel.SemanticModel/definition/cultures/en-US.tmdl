@@ -7563,7 +7563,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.new_customers_period": {
+			    "entity__measure.new_customers__2011": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -7573,7 +7573,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "new customers (period)": {
+			          "new customers (_2011)": {
 			            "State": "Generated"
 			          }
 			        },
@@ -7584,7 +7584,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "New Customers vs.": {
+			          "New vs.": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -7595,7 +7595,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.returning_customers_period": {
+			    "entity__measure.returning_customers__2011": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -7605,7 +7605,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "returning customers (period)": {
+			          "returning customers (_2011)": {
 			            "State": "Generated"
 			          }
 			        },
@@ -7613,16 +7613,6 @@ cultureInfo en-US
 			          "returning customers": {
 			            "State": "Generated",
 			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "Returning Customers (in 2011)": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9088,10 +9078,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "WaterfallCategories_table.sales_YTD_anchor": {
+			    "entity__measure.sales_YTD_anchor": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "WaterfallCategories Table",
+			          "ConceptualEntity": "_Measures",
 			          "ConceptualProperty": "Sales YTD Anchor"
 			        }
 			      },
@@ -9930,7 +9920,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_WaterfallCategories_table_sales_YTD_anchor": {
+			    "fact_sale_has_entity__measure_sales_YTD_anchor": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -9941,9 +9931,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "WaterfallCategories_table.sales_YTD_anchor": {
+			        "entity__measure.sales_YTD_anchor": {
 			          "Target": {
-			            "Entity": "WaterfallCategories_table.sales_YTD_anchor"
+			            "Entity": "entity__measure.sales_YTD_anchor"
 			          }
 			        }
 			      },
@@ -9954,7 +9944,7 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "WaterfallCategories_table.sales_YTD_anchor"
+			              "Role": "entity__measure.sales_YTD_anchor"
 			            }
 			          },
 			          "State": "Generated",
@@ -9963,7 +9953,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_date_has_WaterfallCategories_table_sales_YTD_anchor": {
+			    "dim_date_has_entity__measure_sales_YTD_anchor": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_date"
 			      },
@@ -9974,9 +9964,9 @@ cultureInfo en-US
 			            "Entity": "dim_date"
 			          }
 			        },
-			        "WaterfallCategories_table.sales_YTD_anchor": {
+			        "entity__measure.sales_YTD_anchor": {
 			          "Target": {
-			            "Entity": "WaterfallCategories_table.sales_YTD_anchor"
+			            "Entity": "entity__measure.sales_YTD_anchor"
 			          }
 			        }
 			      },
@@ -9987,7 +9977,7 @@ cultureInfo en-US
 			              "Role": "dim_date"
 			            },
 			            "Object": {
-			              "Role": "WaterfallCategories_table.sales_YTD_anchor"
+			              "Role": "entity__measure.sales_YTD_anchor"
 			            }
 			          },
 			          "State": "Generated",
@@ -10623,20 +10613,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_customer_has_entity__measure_returning_customers_period": {
+			    "fact_sale_has_entity__measure_returning_customers__2011": {
 			      "Binding": {
-			        "ConceptualEntity": "dim_customer"
+			        "ConceptualEntity": "fact_sales"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dim_customer": {
+			        "fact_sale": {
 			          "Target": {
-			            "Entity": "dim_customer"
+			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.returning_customers_period": {
+			        "entity__measure.returning_customers__2011": {
 			          "Target": {
-			            "Entity": "entity__measure.returning_customers_period"
+			            "Entity": "entity__measure.returning_customers__2011"
 			          }
 			        }
 			      },
@@ -10644,19 +10634,85 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_customer"
+			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.returning_customers_period"
+			              "Role": "entity__measure.returning_customers__2011"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_customers_have_returning_customers_period"
+			          "ID": "fact_sales_have_returning_customers__2011"
 			        }
 			      ]
 			    },
-			    "dim_customer_has_entity__measure_new_customers_period": {
+			    "dim_date_has_entity__measure_returning_customers__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.returning_customers__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.returning_customers__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.returning_customers__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_returning_customers__2011"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_new_customers__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.new_customers__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.new_customers__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.new_customers__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_new_customers__2011"
+			        }
+			      ]
+			    },
+			    "dim_customer_has_entity__measure_new_customers__2011": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_customer"
 			      },
@@ -10667,9 +10723,9 @@ cultureInfo en-US
 			            "Entity": "dim_customer"
 			          }
 			        },
-			        "entity__measure.new_customers_period": {
+			        "entity__measure.new_customers__2011": {
 			          "Target": {
-			            "Entity": "entity__measure.new_customers_period"
+			            "Entity": "entity__measure.new_customers__2011"
 			          }
 			        }
 			      },
@@ -10680,12 +10736,12 @@ cultureInfo en-US
 			              "Role": "dim_customer"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.new_customers_period"
+			              "Role": "entity__measure.new_customers__2011"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_customers_have_new_customers_period"
+			          "ID": "dim_customers_have_new_customers__2011"
 			        }
 			      ]
 			    },

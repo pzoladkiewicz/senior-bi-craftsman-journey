@@ -5,8 +5,8 @@
     "x": 16,
     "y": 0,
     "z": 0,
-    "height": 704,
-    "width": 576
+    "height": 688,
+    "width": 1120
   },
   "visual": {
     "visualType": "tableEx",
@@ -85,7 +85,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "WaterfallCategories Table"
+                      "Entity": "_Measures"
                     }
                   },
                   "Property": "_dataMniejszaNizAnchor"
@@ -93,6 +93,76 @@
               },
               "queryRef": "WaterfallCategories Table._dataMniejszaNizAnchor",
               "nativeQueryRef": "_dataMniejszaNizAnchor"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "_nc"
+                }
+              },
+              "queryRef": "_Measures._nc",
+              "nativeQueryRef": "_nc"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Returning Customers (No RelatedTable)"
+                }
+              },
+              "queryRef": "_Measures._rc",
+              "nativeQueryRef": "_rc"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Returning Customers (No RelatedTable)"
+                }
+              },
+              "queryRef": "_Measures._rc",
+              "nativeQueryRef": "_rc"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "New Customers (Period)"
+                }
+              },
+              "queryRef": "WaterfallCategories Table.New Customers (Period)",
+              "nativeQueryRef": "New Customers (Period)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Returning Customers (Period)"
+                }
+              },
+              "queryRef": "WaterfallCategories Table.Returning Customers (Period)",
+              "nativeQueryRef": "Returning Customers (Period)"
             }
           ]
         }
@@ -141,68 +211,122 @@
             "Level": "Year"
           }
         },
-        "type": "Advanced"
-      },
-      {
-        "name": "5b466d3bf967bbb3ec14",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dim_date"
-                  }
-                },
-                "Hierarchy": "YearQuarterMonth"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_date",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Year"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2010L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2011L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              },
+              "Annotations": {
+                "filterExpressionMetadata": {
+                  "expressions": [
+                    {
+                      "HierarchyLevel": {
+                        "Expression": {
+                          "Hierarchy": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "dim_date"
+                              }
+                            },
+                            "Hierarchy": "YearQuarterMonth"
+                          }
+                        },
+                        "Level": "Year"
+                      }
+                    }
+                  ],
+                  "decomposedIdentities": {
+                    "values": [
+                      [
+                        {
+                          "0": [
+                            {
+                              "Literal": {
+                                "Value": "2010L"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      [
+                        {
+                          "0": [
+                            {
+                              "Literal": {
+                                "Value": "2011L"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    ],
+                    "columns": [
+                      {
+                        "value": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Entity": "dim_date"
+                              }
+                            },
+                            "Property": "Year"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "valueMap": [
+                    {
+                      "0": "2010"
+                    },
+                    {
+                      "0": "2011"
+                    }
+                  ]
+                }
               }
-            },
-            "Level": "MonthName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "91a46abca4f62b8a7bfd",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "New Customers (_2011)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "52e2a81d729e73f36da6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "new-cust"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7ab40e1852daca1a4f4d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "WaterfallCategories Table"
-              }
-            },
-            "Property": "_dataMniejszaNizAnchor"
-          }
-        },
-        "type": "Advanced"
+            }
+          ]
+        }
       }
     ]
   }
