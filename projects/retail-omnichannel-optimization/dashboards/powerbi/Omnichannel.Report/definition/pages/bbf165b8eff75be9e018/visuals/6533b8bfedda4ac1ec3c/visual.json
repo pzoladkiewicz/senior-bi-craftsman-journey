@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "7a5baabe73cceb0f7bd5",
+  "name": "6533b8bfedda4ac1ec3c",
   "position": {
-    "x": 16,
-    "y": 0,
-    "z": 0,
-    "height": 608,
-    "width": 896
+    "x": 32,
+    "y": 656,
+    "z": 5001,
+    "height": 304,
+    "width": 576
   },
   "visual": {
     "visualType": "ribbonChart",
@@ -681,7 +681,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "10D"
                 }
               }
             }
@@ -1042,7 +1042,7 @@
         }
       },
       {
-        "name": "cecfc05538e471cc438d",
+        "name": "40efe9d1fea4b9f9101d",
         "field": {
           "Measure": {
             "Expression": {

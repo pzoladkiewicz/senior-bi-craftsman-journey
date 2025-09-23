@@ -564,10 +564,20 @@ table _Measures
 			
 			VAR CountryMonthlySales = [Total Sales]
 			VAR TotalMonthlySales =
-			    CALCULATE(
-			        [Total Sales],
-			        ALL(dim_geography[Country])
-			    )
+			            IF(
+			                MAX(dim_date[Date]) <= [1. Anchor Date (2011SameMD)] && YEAR(MAX(dim_date[Date])) = YEAR([1. Anchor Date (2011SameMD)]),
+			                CALCULATE(
+			                    [Total Sales],
+			                    dim_geography[IsUK] = 0,
+			                    ALLSELECTED(dim_geography[Country])
+			                    ,FILTER(
+			                        dim_date,
+			                        dim_date[Date] >= MIN(dim_date[Date]) &&
+			                        dim_date[Date] <= max(dim_date[Date])
+			                    )
+			                ),
+			                BLANK()
+			            )
 			RETURN
 			    DIVIDE(CountryMonthlySales, TotalMonthlySales)
 		formatString: 0.00%;-0.00%;0.00%

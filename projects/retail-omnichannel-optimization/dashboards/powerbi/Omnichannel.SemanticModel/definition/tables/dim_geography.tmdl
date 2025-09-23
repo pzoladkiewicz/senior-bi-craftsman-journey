@@ -38,6 +38,27 @@ table dim_geography
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Country Group' =
+			
+			VAR _country = dim_geography[Country]
+			RETURN
+			    IF(
+			        dim_geography[IsUK] = 1, "UK",
+			        SWITCH(
+			            _country,
+			            "Netherlands", "Netherlands",
+			            "Ireland", "Ireland",
+			            "Germany", "Germany",
+			            "France", "France",
+			            "Australia", "Australia",
+			            "Others"
+			        )
+			    )
+		lineageTag: 81cbcb3f-da83-46cd-bca0-0004f0480f25
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_geography = m
 		mode: import
 		source =
