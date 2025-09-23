@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "dbe937acd8adc7d27b37",
+  "name": "8075995ba10aaa7457ac",
   "position": {
-    "x": 325.33333333333331,
+    "x": 944,
     "y": 16,
-    "z": 2000,
+    "z": 5002,
     "height": 204,
     "width": 300,
-    "tabOrder": 4000
+    "tabOrder": 5001
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,32 +23,17 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Guest Transactions % (2011)"
+                  "Property": "Intl Growth Rate % formated"
                 }
               },
-              "queryRef": "_Measures.Guest Customers % (2011)",
-              "nativeQueryRef": "Guest Transactions",
-              "displayName": "Guest Transactions"
+              "queryRef": "_Measures.Intl Growth Rate % formated",
+              "nativeQueryRef": "Intl Growth Rate",
+              "displayName": "Intl Growth Rate"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
-                  }
-                },
-                "Property": "Guest Transactions % (2011)"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -550,7 +535,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Intl Sales Share % (2011)"
+                  "Property": "UK Growth Rate"
                 }
               }
             }
@@ -563,36 +548,8 @@
                 }
               }
             ],
-            "metadata": "_Measures.UK Sales Share % (2011)",
-            "id": "field-31b9b7e3-2db7-352e-33ab-3d8752f80e91",
-            "order": 0
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Registered Transactions (_2011)"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.Guest Customers % (2011)",
-            "id": "field-415d1dc3-bcee-244c-cfef-90f2457febe0",
+            "metadata": "_Measures.Intl Growth Rate % formated",
+            "id": "field-1dc9d4d9-8f9d-97f4-9e28-4ca7fcf1c9fd",
             "order": 0
           }
         }
@@ -813,8 +770,8 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Guest Customers % (2011)",
-            "id": "field-415d1dc3-bcee-244c-cfef-90f2457febe0"
+            "metadata": "_Measures.Intl Growth Rate % formated",
+            "id": "field-1dc9d4d9-8f9d-97f4-9e28-4ca7fcf1c9fd"
           }
         }
       ],
@@ -1024,53 +981,10 @@
         },
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.UK Sales Share % (2011)"
-          }
-        },
-        {
-          "properties": {
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Intl Sales'"
-                }
-              }
-            },
             "titleContentType": {
               "expr": {
                 "Literal": {
                   "Value": "'custom'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.UK Sales Share % (2011)",
-            "id": "field-31b9b7e3-2db7-352e-33ab-3d8752f80e91"
-          }
-        },
-        {
-          "properties": {
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Registered Cust.'"
                 }
               }
             },
@@ -1083,8 +997,8 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.Guest Customers % (2011)",
-            "id": "field-415d1dc3-bcee-244c-cfef-90f2457febe0"
+            "metadata": "_Measures.Intl Growth Rate % formated",
+            "id": "field-1dc9d4d9-8f9d-97f4-9e28-4ca7fcf1c9fd"
           }
         }
       ]

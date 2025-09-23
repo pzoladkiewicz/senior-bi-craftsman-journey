@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "40a1a5b35fef8a153b5a",
   "position": {
-    "x": 135.21804511278191,
-    "y": 32,
+    "x": 16,
+    "y": 16,
     "z": 0,
-    "height": 200,
-    "width": 320,
+    "height": 204,
+    "width": 300,
     "tabOrder": 1000
   },
   "visual": {
@@ -773,6 +773,21 @@
             "metadata": "_Measures.Sales YTD (_2011)",
             "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4"
           }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.UK Sales Share % (2011)",
+            "id": "field-31b9b7e3-2db7-352e-33ab-3d8752f80e91"
+          }
         }
       ],
       "shadowCustom": [
@@ -1006,6 +1021,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Intl Sales'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
                 }
               }
             }
