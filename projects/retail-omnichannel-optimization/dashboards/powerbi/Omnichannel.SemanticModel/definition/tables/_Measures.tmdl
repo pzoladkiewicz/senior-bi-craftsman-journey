@@ -637,6 +637,13 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Registered Transactions (_2011)' = ```
+			
+			    1 - [Guest Transactions % (2011)]
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: f81790f9-e4e7-4a4b-abeb-0ff5faf1b169
+
 	partition _Measures = m
 		mode: import
 		source =

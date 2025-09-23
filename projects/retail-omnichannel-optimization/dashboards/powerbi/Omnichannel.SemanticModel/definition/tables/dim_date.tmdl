@@ -143,6 +143,12 @@ table dim_date
 
 		annotation SummarizationSetBy = Automatic
 
+	column QuarterName = "Q" & dim_date[Quarter]
+		lineageTag: 760681bc-0bd2-45bb-b406-8f53884bdd8d
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	hierarchy YearQuarterMonth
 		lineageTag: eac76f93-b3da-4b1d-9e24-e5656e9641e1
 

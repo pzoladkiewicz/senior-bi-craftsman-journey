@@ -7636,6 +7636,16 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
+			        },
+			        {
+			          "UK Sales": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7679,6 +7689,16 @@ cultureInfo en-US
 			          "guest transactions %": {
 			            "State": "Generated",
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Guest Transactions": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9205,42 +9225,31 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.registered_transactions__2011": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Registered Transactions (_2011)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "registered transactions (_2011)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "registered transactions": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.first_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.date_hierarchy"
-			          }
-			        },
-			        "dim_product.first_sale_date.month": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.first_sale_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_product.first_sale_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "first_sale_date_hierarchies_have_first_sale_months"
-			        }
-			      ]
-			    },
 			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_product"
@@ -9917,6 +9926,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_customers_have_fact_sales"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_registered_transactions__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.registered_transactions__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.registered_transactions__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.registered_transactions__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_registered_transactions__2011"
 			        }
 			      ]
 			    },
@@ -13149,6 +13191,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_customers_are_in_countries"
+			        }
+			      ]
+			    },
+			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.first_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.date_hierarchy"
+			          }
+			        },
+			        "dim_product.first_sale_date.month": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.first_sale_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_product.first_sale_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_sale_date_hierarchies_have_first_sale_months"
 			        }
 			      ]
 			    },

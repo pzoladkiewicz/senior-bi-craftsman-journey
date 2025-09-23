@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "ef0eb90cf7e6a27f7e3f",
   "position": {
-    "x": 384,
-    "y": 256,
+    "x": 416,
+    "y": 304,
     "z": 4000,
     "height": 304,
-    "width": 416
+    "width": 448
   },
   "visual": {
     "visualType": "pivotTable",
@@ -22,11 +22,11 @@
                       "Entity": "dim_date"
                     }
                   },
-                  "Property": "Quarter"
+                  "Property": "QuarterName"
                 }
               },
-              "queryRef": "dim_date.Quarter",
-              "nativeQueryRef": "Quarter",
+              "queryRef": "dim_date.QuarterName",
+              "nativeQueryRef": "QuarterName",
               "active": true
             }
           ]
@@ -64,10 +64,28 @@
                 }
               },
               "queryRef": "_Measures.Sales YTD (_2011)",
-              "nativeQueryRef": "Sales YTD (_2011)"
+              "nativeQueryRef": "Sales YTD (_2011)",
+              "format": "#,0"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Sales YTD (_2011)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "objects": {
@@ -87,6 +105,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "perColumnLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -97,7 +122,7 @@
             "steppedLayoutIndentation": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "79D"
                 }
               }
             },
@@ -163,7 +188,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "10D"
                 }
               }
             },
@@ -174,10 +199,10 @@
                 }
               }
             },
-            "rowPadding": {
+            "gridHorizontal": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "false"
                 }
               }
             }
@@ -214,6 +239,13 @@
                 }
               }
             },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "outlineStyle": {
               "expr": {
                 "Literal": {
@@ -247,7 +279,185 @@
                   "Value": "false"
                 }
               }
+            },
+            "outlineStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_date"
+                          }
+                        },
+                        "Property": "QuarterName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Q2'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_date"
+                          }
+                        },
+                        "Property": "QuarterName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Q1'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_date"
+                          }
+                        },
+                        "Property": "QuarterName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Q3'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "dim_geography.Country"
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {}
+        }
+      ],
+      "columnTotal": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "italic": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)"
           }
         }
       ]
@@ -273,7 +483,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Sales by TOp 10 Countries in Quarters'"
+                  "Value": "'Channel Performance by Geography'"
                 }
               }
             },
@@ -281,6 +491,25 @@
               "expr": {
                 "Literal": {
                   "Value": "12D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -326,7 +555,7 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "20D"
                 }
               }
             },
@@ -370,7 +599,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.3
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -453,6 +682,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "ignorePadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -463,7 +699,7 @@
             "customizeSpacing": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -512,6 +748,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'Heading2'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

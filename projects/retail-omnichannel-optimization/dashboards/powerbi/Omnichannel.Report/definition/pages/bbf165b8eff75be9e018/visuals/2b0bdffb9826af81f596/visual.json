@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "2b0bdffb9826af81f596",
   "position": {
-    "x": 16,
-    "y": 256,
+    "x": 32,
+    "y": 304,
     "z": 3000,
     "height": 304,
-    "width": 352,
+    "width": 320,
     "tabOrder": 5000
   },
   "visual": {
@@ -522,6 +522,26 @@
             }
           }
         }
+      ],
+      "margins": [
+        {
+          "properties": {
+            "topMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "20L"
+                }
+              }
+            },
+            "bottomMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -636,7 +656,14 @@
             "verticalSpacing": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "10D"
+                }
+              }
+            },
+            "customizeSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -649,21 +676,21 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "20D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
                 }
               }
             }
