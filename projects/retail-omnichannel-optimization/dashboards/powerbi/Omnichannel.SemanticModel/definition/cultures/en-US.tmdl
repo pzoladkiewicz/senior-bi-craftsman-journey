@@ -9761,10 +9761,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "WaterfallCategories_table.international_market_share": {
+			    "entity__measure.international_market_share": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "WaterfallCategories Table",
+			          "ConceptualEntity": "_Measures",
 			          "ConceptualProperty": "International Market Share"
 			        }
 			      },
@@ -9888,9 +9888,766 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.entity__slicer__sales_YTD__2011": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_slicer - Sales YTD (_2011)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_slicer - sales YTD (_2011)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_slicer - sales YTD": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "_slicer sales YTD (_2011)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "2011": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity__slicer__sales_YTD_PY__2010": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_slicer - Sales YTD PY (_2010)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_slicer - sales YTD PY (_2010)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_slicer - sales YTD PY": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "_slicer sales YTD PY (_2010)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "2010": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.orders_YTD__2011": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Orders YTD (_2011)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "orders YTD (_2011)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "orders YTD": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity__slicer__orders_YTD__2011": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_slicer - Orders YTD (_2011)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_slicer - orders YTD (_2011)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_slicer - orders YTD": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "_slicer orders YTD (_2011)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_slicer Customer Filter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_slicer customer filter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_slicer client filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_slicer consumer filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_slicer user filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_slicer buyer filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_slicer patron filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_slicer purchaser filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_slicer shopper filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "_slicer customer strainer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "_slicer customer sifter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "_slicer customer sieve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter.customer_type_filter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_slicer Customer Filter",
+			          "ConceptualProperty": "CustomerTypeFilter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer type filter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CustomerTypeFilter": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "filter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "type filter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "client type filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "consumer type filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "user type filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "buyer type filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "patron type filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "purchaser type filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "shopper type filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "customer category filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "customer genre filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "customer manner filter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter.sort_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_slicer Customer Filter",
+			          "ConceptualProperty": "SortOrder"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sort order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SortOrder": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "order": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sort instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sort direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "sort edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sort command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sort directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sort demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sort mandate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity__slicer__sales_YoY__2011": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_slicer - Sales YoY (_2011)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_slicer - sales YoY (_2011)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_slicer - sales YoY": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "_slicer sales YoY (_2011)": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "YoY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity__slicer_sales_YoY_CF": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_slicer Sales YoY% CF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "_slicer sales YoY% CF": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "dim_date_year_quarter_month_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.year_quarter_month": {
+			          "Target": {
+			            "Entity": "dim_date.year_quarter_month"
+			          }
+			        },
+			        "dim_date.year_quarter_month.year": {
+			          "Target": {
+			            "Entity": "dim_date.year_quarter_month.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.year_quarter_month"
+			            },
+			            "Object": {
+			              "Role": "dim_date.year_quarter_month.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_quarter_months_have_years"
+			        }
+			      ]
+			    },
+			    "dim_customer_last_purchase_date_hierarchy_has_dim_customer_last_purchase_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_customer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_customer.last_purchase.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.date_hierarchy"
+			          }
+			        },
+			        "dim_customer.last_purchase.day": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_customer.last_purchase.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_customer.last_purchase.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_purchase_date_hierarchies_have_last_purchase_days"
+			        }
+			      ]
+			    },
+			    "dim_customer_last_purchase_date_hierarchy_has_dim_customer_last_purchase_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_customer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_customer.last_purchase.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.date_hierarchy"
+			          }
+			        },
+			        "dim_customer.last_purchase.month": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_customer.last_purchase.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_customer.last_purchase.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_purchase_date_hierarchies_have_last_purchase_months"
+			        }
+			      ]
+			    },
+			    "dim_customer_last_purchase_date_hierarchy_has_dim_customer_last_purchase_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_customer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_customer.last_purchase.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.date_hierarchy"
+			          }
+			        },
+			        "dim_customer.last_purchase.quarter": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_customer.last_purchase.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_customer.last_purchase.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_purchase_date_hierarchies_have_last_purchase_quarters"
+			        }
+			      ]
+			    },
+			    "dim_customer_last_purchase_date_hierarchy_has_dim_customer_last_purchase_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_customer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_customer.last_purchase.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.date_hierarchy"
+			          }
+			        },
+			        "dim_customer.last_purchase.year": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_customer.last_purchase.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_customer.last_purchase.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_purchase_date_hierarchies_have_last_purchase_years"
+			        }
+			      ]
+			    },
+			    "dim_customer_last_purchase_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_customer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_customer.last_purchase": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase"
+			          }
+			        },
+			        "dim_customer.last_purchase.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_customer.last_purchase.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_customer.last_purchase"
+			            },
+			            "Object": {
+			              "Role": "dim_customer.last_purchase.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_purchase_have_last_purchase_date_hierarchies"
+			        }
+			      ]
+			    },
 			    "dim_customer_first_purchase_date_hierarchy_has_dim_customer_first_purchase_day": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_customer"
@@ -10240,7 +10997,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_WaterfallCategories_table_international_market_share": {
+			    "fact_sale_has_entity__measure_entity__slicer_sales_YoY_CF": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -10251,9 +11008,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "WaterfallCategories_table.international_market_share": {
+			        "entity__measure.entity__slicer_sales_YoY_CF": {
 			          "Target": {
-			            "Entity": "WaterfallCategories_table.international_market_share"
+			            "Entity": "entity__measure.entity__slicer_sales_YoY_CF"
 			          }
 			        }
 			      },
@@ -10264,7 +11021,449 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "WaterfallCategories_table.international_market_share"
+			              "Role": "entity__measure.entity__slicer_sales_YoY_CF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have__slicer_sales_YoY_CF"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer_sales_YoY_CF": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter"
+			          }
+			        },
+			        "entity__measure.entity__slicer_sales_YoY_CF": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer_sales_YoY_CF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer_sales_YoY_CF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_filters_have__slicer_sales_YoY_CF"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity__slicer__sales_YoY__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity__slicer__sales_YoY__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer__sales_YoY__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer__sales_YoY__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have__slicer__sales_YoY__2011"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer__sales_YoY__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter"
+			          }
+			        },
+			        "entity__measure.entity__slicer__sales_YoY__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer__sales_YoY__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer__sales_YoY__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_filters_have__slicer__sales_YoY__2011"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter_has_sort_order": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter"
+			          }
+			        },
+			        "entity__slicer_customer_filter.sort_order": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter.sort_order"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Object": {
+			              "Role": "entity__slicer_customer_filter.sort_order"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_filters_have_sort_orders"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter_has_customer_type_filter": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter"
+			          }
+			        },
+			        "entity__slicer_customer_filter.customer_type_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter.customer_type_filter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Object": {
+			              "Role": "entity__slicer_customer_filter.customer_type_filter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_filters_have_customer_type_filters"
+			        },
+			        {
+			          "DynamicAdjective": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Adjective": {
+			              "Role": "entity__slicer_customer_filter.customer_type_filter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customer_type_filters_describe__slicer_customer_filters"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity__slicer__orders_YTD__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity__slicer__orders_YTD__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer__orders_YTD__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer__orders_YTD__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have__slicer__orders_YTD__2011"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer__orders_YTD__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter"
+			          }
+			        },
+			        "entity__measure.entity__slicer__orders_YTD__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer__orders_YTD__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer__orders_YTD__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_filters_have__slicer__orders_YTD__2011"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_orders_YTD__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.orders_YTD__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.orders_YTD__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.orders_YTD__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_orders_YTD__2011"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity__slicer__sales_YTD_PY__2010": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity__slicer__sales_YTD_PY__2010": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer__sales_YTD_PY__2010"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer__sales_YTD_PY__2010"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have__slicer__sales_YTD_PY__2010"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer__sales_YTD_PY__2010": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter"
+			          }
+			        },
+			        "entity__measure.entity__slicer__sales_YTD_PY__2010": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer__sales_YTD_PY__2010"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer__sales_YTD_PY__2010"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_filters_have__slicer__sales_YTD_PY__2010"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity__slicer__sales_YTD__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity__slicer__sales_YTD__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer__sales_YTD__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer__sales_YTD__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have__slicer__sales_YTD__2011"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer__sales_YTD__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter"
+			          }
+			        },
+			        "entity__measure.entity__slicer__sales_YTD__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.entity__slicer__sales_YTD__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity__slicer__sales_YTD__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_filters_have__slicer__sales_YTD__2011"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_international_market_share": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.international_market_share": {
+			          "Target": {
+			            "Entity": "entity__measure.international_market_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.international_market_share"
 			            }
 			          },
 			          "State": "Generated",
@@ -10273,7 +11472,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_date_has_WaterfallCategories_table_international_market_share": {
+			    "dim_date_has_entity__measure_international_market_share": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_date"
 			      },
@@ -10284,9 +11483,9 @@ cultureInfo en-US
 			            "Entity": "dim_date"
 			          }
 			        },
-			        "WaterfallCategories_table.international_market_share": {
+			        "entity__measure.international_market_share": {
 			          "Target": {
-			            "Entity": "WaterfallCategories_table.international_market_share"
+			            "Entity": "entity__measure.international_market_share"
 			          }
 			        }
 			      },
@@ -10297,7 +11496,7 @@ cultureInfo en-US
 			              "Role": "dim_date"
 			            },
 			            "Object": {
-			              "Role": "WaterfallCategories_table.international_market_share"
+			              "Role": "entity__measure.international_market_share"
 			            }
 			          },
 			          "State": "Generated",
@@ -13877,204 +15076,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_customers_are_in_countries"
-			        }
-			      ]
-			    },
-			    "dim_customer_last_purchase_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_customer"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_customer.last_purchase": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase"
-			          }
-			        },
-			        "dim_customer.last_purchase.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_customer.last_purchase"
-			            },
-			            "Object": {
-			              "Role": "dim_customer.last_purchase.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_purchase_have_last_purchase_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "dim_customer_last_purchase_date_hierarchy_has_dim_customer_last_purchase_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_customer"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_customer.last_purchase.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.date_hierarchy"
-			          }
-			        },
-			        "dim_customer.last_purchase.year": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_customer.last_purchase.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_customer.last_purchase.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_purchase_date_hierarchies_have_last_purchase_years"
-			        }
-			      ]
-			    },
-			    "dim_customer_last_purchase_date_hierarchy_has_dim_customer_last_purchase_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_customer"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_customer.last_purchase.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.date_hierarchy"
-			          }
-			        },
-			        "dim_customer.last_purchase.quarter": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_customer.last_purchase.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_customer.last_purchase.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_purchase_date_hierarchies_have_last_purchase_quarters"
-			        }
-			      ]
-			    },
-			    "dim_customer_last_purchase_date_hierarchy_has_dim_customer_last_purchase_month": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_customer"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_customer.last_purchase.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.date_hierarchy"
-			          }
-			        },
-			        "dim_customer.last_purchase.month": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_customer.last_purchase.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_customer.last_purchase.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_purchase_date_hierarchies_have_last_purchase_months"
-			        }
-			      ]
-			    },
-			    "dim_customer_last_purchase_date_hierarchy_has_dim_customer_last_purchase_day": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_customer"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_customer.last_purchase.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.date_hierarchy"
-			          }
-			        },
-			        "dim_customer.last_purchase.day": {
-			          "Target": {
-			            "Entity": "dim_customer.last_purchase.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_customer.last_purchase.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_customer.last_purchase.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_purchase_date_hierarchies_have_last_purchase_days"
-			        }
-			      ]
-			    },
-			    "dim_date_year_quarter_month_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date.year_quarter_month": {
-			          "Target": {
-			            "Entity": "dim_date.year_quarter_month"
-			          }
-			        },
-			        "dim_date.year_quarter_month.year": {
-			          "Target": {
-			            "Entity": "dim_date.year_quarter_month.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date.year_quarter_month"
-			            },
-			            "Object": {
-			              "Role": "dim_date.year_quarter_month.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_quarter_months_have_years"
 			        }
 			      ]
 			    },

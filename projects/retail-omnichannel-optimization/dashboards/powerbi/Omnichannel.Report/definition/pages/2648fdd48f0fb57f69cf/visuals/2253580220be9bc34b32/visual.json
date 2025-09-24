@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "aa9e0e7630f4f9314713",
+  "name": "2253580220be9bc34b32",
   "position": {
     "x": 16,
     "y": 16,
-    "z": 7000,
+    "z": 6000,
     "height": 32,
     "width": 704.00000000000011,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -94,7 +94,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Registered Only'"
+                                "Value": "'All Customers'"
                               }
                             }
                           ]

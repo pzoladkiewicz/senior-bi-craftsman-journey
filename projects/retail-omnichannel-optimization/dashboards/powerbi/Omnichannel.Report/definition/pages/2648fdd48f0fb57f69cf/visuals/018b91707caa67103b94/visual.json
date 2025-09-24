@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "a28db8f2e7dc76310462",
+  "name": "018b91707caa67103b94",
   "position": {
     "x": 48,
     "y": 688,
-    "z": 1000,
+    "z": 10000,
     "height": 256,
     "width": 528,
-    "tabOrder": 5000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "tableEx",
@@ -38,10 +38,10 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD (_2011)"
+                  "Property": "_slicer - Sales YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.Sales YTD (_2011)",
+              "queryRef": "_Measures._slicer - Sales YTD (_2011)",
               "nativeQueryRef": "2011",
               "displayName": "2011"
             },
@@ -53,10 +53,10 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD PY (_2010)"
+                  "Property": "_slicer - Sales YTD PY (_2010)"
                 }
               },
-              "queryRef": "_Measures.Sales YTD PY (_2010)",
+              "queryRef": "_Measures._slicer - Sales YTD PY (_2010)",
               "nativeQueryRef": "2010",
               "displayName": "2010"
             },
@@ -68,10 +68,10 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY % (_2011)"
+                  "Property": "_slicer - Sales YoY (_2011)"
                 }
               },
-              "queryRef": "_Measures.Sales YoY % (_2011)",
+              "queryRef": "_Measures._slicer - Sales YoY (_2011)",
               "nativeQueryRef": "YoY",
               "displayName": "YoY"
             }
@@ -88,7 +88,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Sales YTD (_2011)"
+                "Property": "_slicer - Sales YTD (_2011)"
               }
             },
             "direction": "Descending"
@@ -175,6 +175,36 @@
               }
             ],
             "metadata": "_Measures.Sales YoY % (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "_slicer Sales YoY% CF"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Measures._slicer - Sales YoY (_2011)"
           }
         }
       ],

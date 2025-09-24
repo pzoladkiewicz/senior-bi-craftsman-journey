@@ -1,13 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "9eeee21e7937b3ea0122",
+  "name": "d69d91557a54482a39e5",
   "position": {
-    "x": 448,
-    "y": 136.56649395509498,
+    "x": 80,
+    "y": 140.56649395509498,
     "z": 5000,
-    "height": 200,
-    "width": 320,
-    "tabOrder": 3000
+    "height": 192,
+    "width": 320
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,13 +22,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers YTD (_2011)"
+                  "Property": "Sales YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.Customers YTD (2011 Anchor)",
-              "nativeQueryRef": "Customers YTD",
-              "displayName": "Customers YTD",
-              "format": "0"
+              "queryRef": "_Measures.Sales YTD (_2011)",
+              "nativeQueryRef": "Sales YTD",
+              "displayName": "Sales YTD"
             }
           ]
         }
@@ -44,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Customers YTD (_2011)"
+                "Property": "Sales YTD (_2011)"
               }
             },
             "direction": "Descending"
@@ -54,32 +52,117 @@
       }
     },
     "objects": {
-      "accentBar": [
+      "layout": [
         {
           "properties": {
-            "show": {
+            "calloutSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "70D"
                 }
               }
             },
-            "position": {
+            "cellPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top'"
+                  "Value": "5L"
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0.2
-                    }
-                  }
+            "maxTiles": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cards'"
+                }
+              }
+            },
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'middle'"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rectangleRoundedCurveCustomStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "14L"
+                }
+              }
+            },
+            "topOuterMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "value": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "showBlankAs": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
                 }
               }
             }
@@ -97,118 +180,6 @@
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales YTD (_2011)"
-          }
-        }
-      ],
-      "divider": [
-        {
-          "properties": {
-            "dividerColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales YTD"
-          }
-        },
-        {
-          "properties": {
-            "dividerColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.AOV YTD"
-          }
-        },
-        {
-          "properties": {
-            "dividerColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
-                    }
-                  }
-                }
-              }
-            },
-            "dividerIgnorePadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "fillCustom": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "glowCustom": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales YTD (_2011)"
           }
         }
       ],
@@ -287,96 +258,132 @@
           "selector": {
             "metadata": "_Measures.Sales YTD (_2011)"
           }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Customers YTD (2011 Anchor)"
-          }
         }
       ],
-      "layout": [
+      "spacing": [
         {
           "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'middle'"
-                }
-              }
-            },
-            "orientation": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            },
-            "maxTiles": {
-              "expr": {
-                "Literal": {
-                  "Value": "2L"
-                }
-              }
-            },
-            "cellPadding": {
+            "verticalSpacing": {
               "expr": {
                 "Literal": {
                   "Value": "5L"
                 }
               }
-            },
-            "calloutSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "70D"
-                }
-              }
-            },
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "referenceLabelLayout": [
+        {
+          "properties": {
             "style": {
               "expr": {
                 "Literal": {
-                  "Value": "'Cards'"
+                  "Value": "'tabular'"
+                }
+              }
+            },
+            "verticalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'top'"
+                }
+              }
+            },
+            "valueArea": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            },
+            "labelSpace": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "outerPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'below'"
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "divider": [
+        {
+          "properties": {
+            "dividerColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD"
           }
         },
         {
           "properties": {
-            "backgroundShow": {
+            "dividerColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.AOV YTD"
+          }
+        },
+        {
+          "properties": {
+            "dividerIgnorePadding": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "rectangleRoundedCurveCustomStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "rectangleRoundedCurve": {
-              "expr": {
-                "Literal": {
-                  "Value": "14L"
-                }
-              }
-            },
-            "topOuterMargin": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
+            "dividerColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
                 }
               }
             }
@@ -445,20 +452,6 @@
         },
         {
           "properties": {
-            "backgroundShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales YTD"
-          }
-        },
-        {
-          "properties": {
             "value": {
               "expr": {
                 "Measure": {
@@ -515,6 +508,64 @@
         },
         {
           "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD"
+          }
+        },
+        {
+          "properties": {
+            "backgroundShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.AOV YTD"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Sales YTD (_2011)",
+            "id": "field-48ca4e5c-fc81-f321-9a32-b308a23c05f6",
+            "order": 0
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Sales YTD (_2011)",
+            "id": "field-c753b814-53e2-e11b-a0b7-b8a3e736796d",
+            "order": 0
+          }
+        },
+        {
+          "properties": {
             "value": {
               "expr": {
                 "Measure": {
@@ -539,99 +590,6 @@
             "metadata": "_Measures.Sales YTD (_2011)",
             "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4",
             "order": 0
-          }
-        },
-        {
-          "properties": {
-            "backgroundShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.AOV YTD"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Customers YoY% - formated"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.Customers YTD (2011 Anchor)",
-            "id": "field-02ae83f6-9340-7e26-f881-943b3588462a",
-            "order": 0
-          }
-        }
-      ],
-      "referenceLabelLayout": [
-        {
-          "properties": {
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'below'"
-                }
-              }
-            },
-            "style": {
-              "expr": {
-                "Literal": {
-                  "Value": "'tabular'"
-                }
-              }
-            },
-            "verticalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'top'"
-                }
-              }
-            },
-            "valueArea": {
-              "expr": {
-                "Literal": {
-                  "Value": "50D"
-                }
-              }
-            },
-            "labelSpace": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "outerPadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "5D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
@@ -696,20 +654,6 @@
             ],
             "metadata": "_Measures.Sales YTD",
             "id": "field-30583f58-e9a6-ff69-64d9-cbe47a31f906"
-          }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         },
         {
@@ -791,38 +735,22 @@
         },
         {
           "properties": {
-            "showBlankAs": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'0'"
+                  "Value": "true"
                 }
               }
             }
           },
           "selector": {
-            "metadata": "_Measures.Customers YTD (2011 Anchor)",
-            "id": "field-02ae83f6-9340-7e26-f881-943b3588462a"
+            "id": "default"
           }
-        },
+        }
+      ],
+      "referenceLabelTitle": [
         {
-          "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "Customers YoY% CF"
-                    }
-                  }
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {
@@ -831,187 +759,16 @@
                 }
               }
             ],
-            "metadata": "_Measures.Customers YTD (2011 Anchor)",
-            "id": "field-02ae83f6-9340-7e26-f881-943b3588462a"
-          }
-        }
-      ],
-      "shadowCustom": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "shapeCustomRectangle": [
-        {
-          "properties": {
-            "tileShape": {
-              "expr": {
-                "Literal": {
-                  "Value": "'rectangleRoundedByPixel'"
-                }
-              }
-            },
-            "rectangleRoundedCurve": {
-              "expr": {
-                "Literal": {
-                  "Value": "10L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "5L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "value": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "25D"
-                }
-              }
-            },
-            "horizontalAlignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            },
-            "showBlankAs": {
-              "expr": {
-                "Literal": {
-                  "Value": "'0'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Customers YTD (2011 Anchor)"
-          }
-        }
-      ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "referenceLabelDetail": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
             "metadata": "_Measures.Sales YTD (_2011)",
             "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4"
           }
-        }
-      ],
-      "referenceLabelTitle": [
+        },
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'vs Last Year'"
                 }
               }
             },
@@ -1019,6 +776,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vs Last Year'"
                 }
               }
             }
@@ -1053,33 +817,9 @@
           "selector": {
             "id": "default"
           }
-        },
-        {
-          "properties": {
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'vs Last Year'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Customers YTD (2011 Anchor)",
-            "id": "field-02ae83f6-9340-7e26-f881-943b3588462a"
-          }
         }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
+      ],
+      "border": [
         {
           "properties": {
             "show": {
@@ -1088,25 +828,104 @@
                   "Value": "false"
                 }
               }
-            },
-            "titleWrap": {
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "shadowCustom": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "text": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'Customer YTD'"
+                  "Value": "true"
                 }
               }
             }
           }
         }
       ],
-      "background": [
+      "accentBar": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0.2
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)"
+          }
+        }
+      ],
+      "referenceLabelDetail": [
         {
           "properties": {
             "show": {
@@ -1115,30 +934,69 @@
                   "Value": "false"
                 }
               }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
             }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)",
+            "id": "field-c4d1adc3-cf5a-67df-6832-3a465e1ac0f4"
           }
         }
       ],
-      "padding": [
+      "shapeCustomRectangle": [
         {
           "properties": {
-            "top": {
+            "tileShape": {
               "expr": {
                 "Literal": {
-                  "Value": "5D"
+                  "Value": "'rectangleRoundedByPixel'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ],
+      "glowCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
       "border": [
         {
           "properties": {
@@ -1160,6 +1018,26 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -1198,6 +1076,46 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "5D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales YTD KPI'"
                 }
               }
             }

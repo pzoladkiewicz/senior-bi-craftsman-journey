@@ -762,6 +762,145 @@ table _Measures
 			    FORMAT([Intl Growth Rate], "0.0%"))
 		lineageTag: 5392eb92-0bc9-4d78-8e58-cb42accb94b2
 
+	measure '_slicer - Sales YTD (_2011)' = ```
+			
+			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Filter'[CustomerTypeFilter], "All Customers")
+			VAR _filterCondition = 
+			    SWITCH(
+			        _customerSelection,
+			        "All Customers", [Sales YTD (_2011)],
+			        "Registered Only", CALCULATE(
+			            [Sales YTD (_2011)], dim_customer[CustomerType] = "Registered"
+			            ),
+			        "Guest Only", CALCULATE(
+			            [Sales YTD (_2011)], dim_customer[CustomerType] = "Guest"
+			        ), 
+			        [Sales YTD (_2011)]
+			    )
+			RETURN
+			    _filterCondition
+			```
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: f9f2c659-af5f-44a7-bed7-9c46d4a7faad
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'International Market Share' = ```
+			
+			VAR _anchor = [1. Anchor Date (2011SameMD)]
+			
+			VAR _total = 
+			    CALCULATE(
+			        SUM(fact_sales[TotalValue]),
+			        dim_geography[IsUK] = 0,
+			        REMOVEFILTERS(dim_geography[Country Group]
+			        )
+			    )
+			VAR _group = SUM(fact_sales[TotalValue])
+			RETURN
+			    IF(
+			        MAX(dim_date[Date]) <= _anchor && MAX(dim_date[Year]) = YEAR(_anchor),
+			        DIVIDE(_group, _total),
+			        BLANK()
+			    )
+			```
+		lineageTag: e58fb0bf-707e-4d2c-8e2d-b317b304c7e0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '_slicer - Sales YTD PY (_2010)' = ```
+			
+			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Filter'[CustomerTypeFilter], "All Customers")
+			VAR _filterCondition = 
+			    SWITCH(
+			        _customerSelection,
+			        "All Customers", [Sales YTD PY (_2010)],
+			        "Registered Only", CALCULATE(
+			            [Sales YTD PY (_2010)], dim_customer[CustomerType] = "Registered"
+			            ),
+			        "Guest Only", CALCULATE(
+			            [Sales YTD PY (_2010)], dim_customer[CustomerType] = "Guest"
+			        ), 
+			        [Sales YTD PY (_2010)]
+			    )
+			RETURN
+			    _filterCondition
+			```
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: db1bb8c2-c98f-4534-b575-b7572242d567
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Orders YTD (_2011)' =
+			
+			VAR _Anchor = [1. Anchor Date (2011SameMD)]
+			VAR _dateStart = DATE(YEAR(_Anchor), 1, 1)
+			RETURN
+			    CALCULATE(
+			        DISTINCTCOUNT(fact_sales[InvoiceNumber]),
+			        DATESBETWEEN(
+			            dim_date[Date],
+			            _dateStart,
+			            _Anchor
+			        )
+			    )
+		formatString: 0
+		lineageTag: 0f34dd8d-d391-4a38-b4f6-ebc7060b6bf0
+
+	measure '_slicer - Orders YTD (_2011)' = ```
+			
+			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Filter'[CustomerTypeFilter], "All Customers")
+			VAR _filterCondition = 
+			    SWITCH(
+			        _customerSelection,
+			        "All Customers", [Orders YTD (_2011)],
+			        "Registered Only", CALCULATE(
+			            [Orders YTD (_2011)], dim_customer[CustomerType] = "Registered"
+			            ),
+			        "Guest Only", CALCULATE(
+			            [Orders YTD (_2011)], dim_customer[CustomerType] = "Guest"
+			        ), 
+			        [Orders YTD (_2011)]
+			    )
+			RETURN
+			    _filterCondition
+			```
+		formatString: 0
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: b41ee5b7-9c88-4612-af1a-eed57dfd149c
+
+	measure '_slicer - Sales YoY (_2011)' = ```
+			
+			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Filter'[CustomerTypeFilter], "All Customers")
+			VAR _filterCondition = 
+			    SWITCH(
+			        _customerSelection,
+			        "All Customers", [Sales YoY % (_2011)],
+			        "Registered Only", CALCULATE(
+			            [Sales YoY % (_2011)], dim_customer[CustomerType] = "Registered"
+			            ),
+			        "Guest Only", CALCULATE(
+			            [Sales YoY % (_2011)], dim_customer[CustomerType] = "Guest"
+			        ), 
+			        [Sales YoY % (_2011)]
+			    )
+			RETURN
+			    _filterCondition
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: d2867e94-e3b5-48fe-885e-bcb7a6e60816
+
+	measure '_slicer Sales YoY% CF' =
+			
+			SWITCH(
+			    TRUE(),
+			    [_slicer - Sales YoY (_2011)] > 0, "Green",
+			    [_slicer - Sales YoY (_2011)] < 0, "Red",
+			    "Grey")
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: da820f1a-a62d-47a0-9928-44941c37ca6f
+
 	partition _Measures = m
 		mode: import
 		source =

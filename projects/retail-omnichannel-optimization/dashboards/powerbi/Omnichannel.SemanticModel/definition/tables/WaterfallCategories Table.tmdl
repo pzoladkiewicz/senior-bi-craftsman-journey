@@ -1,50 +1,6 @@
 table 'WaterfallCategories Table'
 	lineageTag: e8c1e303-c595-4efd-b671-ace9a1eb5f00
 
-	measure 'International Market Share' = ```
-			
-			VAR _anchor = [1. Anchor Date (2011SameMD)]
-			
-			VAR _total = 
-			    CALCULATE(
-			        SUM(fact_sales[TotalValue]),
-			        dim_geography[IsUK] = 0,
-			        REMOVEFILTERS(dim_geography[Country Group]
-			        )
-			    )
-			VAR _group = SUM(fact_sales[TotalValue])
-			RETURN
-			    IF(
-			        MAX(dim_date[Date]) <= _anchor && MAX(dim_date[Year]) = YEAR(_anchor),
-			        DIVIDE(_group, _total),
-			        BLANK()
-			    )
-			```
-		lineageTag: e58fb0bf-707e-4d2c-8e2d-b317b304c7e0
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure _dateSlicerDefault =
-			
-			VAR _max =
-			    SWITCH(
-			        TRUE(),
-			        MAX(dim_date[Date]) > [1. Anchor Date (2011SameMD)],
-			        [1. Anchor Date (2011SameMD)],
-			        MAX(dim_date[Date]
-			        )
-			    )
-			VAR _out =
-			    SWITCH(
-			        TRUE(),
-			        MAX(dim_date[Year]) = YEAR([1. Anchor Date (2011SameMD)]),
-			        "YTD",
-			        "All Time"
-			    )
-			RETURN
-			    _out
-		lineageTag: 12292ce0-2bc1-4d60-aed6-2ce017400a2a
-
 	column Category
 		lineageTag: 3498cffb-3f58-44c5-a26a-dc5d3acb6851
 		summarizeBy: none

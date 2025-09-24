@@ -56,7 +56,7 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "WaterfallCategories Table"
+                      "Entity": "_Measures"
                     }
                   },
                   "Property": "International Market Share"
