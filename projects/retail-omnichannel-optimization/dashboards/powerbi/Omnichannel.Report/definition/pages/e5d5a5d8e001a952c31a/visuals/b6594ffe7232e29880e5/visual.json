@@ -61,51 +61,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "3581616a884d9fc89eab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Intl Growth Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "538628d905b3a5dd8e3d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "_ytd"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5c7baad4c70a1dd04b28",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "_py"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

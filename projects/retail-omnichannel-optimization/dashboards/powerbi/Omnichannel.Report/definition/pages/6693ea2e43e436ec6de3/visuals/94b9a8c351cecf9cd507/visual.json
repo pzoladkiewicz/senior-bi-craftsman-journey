@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "94b9a8c351cecf9cd507",
   "position": {
-    "x": 640,
-    "y": 576,
-    "z": 3000,
+    "x": 656,
+    "y": 688,
+    "z": 1000,
     "height": 256,
     "width": 528,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "hundredPercentStackedAreaChart",
@@ -325,7 +325,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -465,65 +465,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "39230643d7d72165eaa8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Short Month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "9e19b692fe4d36b7d8e0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0dcd7a7c9b0587a4419e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "New Customers (_2011)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "91e51840f67236bf64d9",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Returning Customers (_2011)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

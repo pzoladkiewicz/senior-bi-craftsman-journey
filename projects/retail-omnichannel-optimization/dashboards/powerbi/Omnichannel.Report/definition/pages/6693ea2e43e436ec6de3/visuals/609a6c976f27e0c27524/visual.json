@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "609a6c976f27e0c27524",
   "position": {
-    "x": 96,
-    "y": 16,
-    "z": 4000,
-    "height": 200,
-    "width": 320,
-    "tabOrder": 1000
+    "x": 80,
+    "y": 140.56649395509498,
+    "z": 7000,
+    "height": 192,
+    "width": 320
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1110,6 +1109,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Sales YTD KPI'"
                 }
               }
             }

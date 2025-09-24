@@ -1,0 +1,31 @@
+table '_slicer Customer Filter'
+	lineageTag: 6da8ea01-46d6-4dfc-97ff-8c8c01f28e62
+
+	column CustomerTypeFilter
+		dataType: string
+		lineageTag: 257d3dd6-8602-414a-990b-c11be6c96c25
+		summarizeBy: none
+		sourceColumn: CustomerTypeFilter
+
+		annotation SummarizationSetBy = Automatic
+
+	column SortOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: bd3915d4-eb4f-43ad-bb3c-c0ae7167211d
+		summarizeBy: none
+		sourceColumn: SortOrder
+
+		annotation SummarizationSetBy = User
+
+	partition '_slicer Customer Filter' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WcszJUXAuLS7Jz00tKlbSUTJUitWJVgpKTc8sLkktSk1R8M/LqQSKG4HF3UtTi0tgQsZKsbEA", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [CustomerTypeFilter = _t, SortOrder = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"CustomerTypeFilter", type text}, {"SortOrder", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

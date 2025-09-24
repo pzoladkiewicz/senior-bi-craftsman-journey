@@ -7,7 +7,7 @@
     "z": 5000,
     "height": 304,
     "width": 320,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "barChart",
@@ -599,48 +599,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "8221e0fd306dc0619b1d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Customers YTD (_2011)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "25114b27ab0542af0a99",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "AOV YTD (_2011)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "d3510081e8dea06c3f9d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Sales YTD (_2011)"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

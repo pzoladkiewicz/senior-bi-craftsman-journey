@@ -1040,20 +1040,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "cecfc05538e471cc438d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "WaterfallCategories Table"
-              }
-            },
-            "Property": "International Market Share"
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

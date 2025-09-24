@@ -2,15 +2,30 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "a4bc5adf468682299da2",
   "position": {
-    "x": 464,
-    "y": 272,
-    "z": 7000,
+    "x": 463,
+    "y": 397.89982728842836,
+    "z": 3000,
     "height": 240,
     "width": 290,
     "tabOrder": 4000
   },
   "visualGroup": {
-    "displayName": "Group 2",
-    "groupMode": "ScaleMode"
+    "displayName": "Orders UK vs Intl",
+    "groupMode": "ScaleMode",
+    "objects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
   }
 }

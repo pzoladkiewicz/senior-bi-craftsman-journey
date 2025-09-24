@@ -8,7 +8,7 @@ model Model
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["dim_customer","dim_date","dim_geography","dim_product","fact_sales","Measures (2)","_Measures"]
+annotation PBI_QueryOrder = ["dim_customer","dim_date","dim_geography","dim_product","fact_sales","Measures (2)","_Measures","_slicer Customer Filter"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -24,6 +24,7 @@ ref table LocalDateTable_43a6c7b9-db1e-45e7-9181-3e3b13380e94
 ref table fact_sales
 ref table _Measures
 ref table 'WaterfallCategories Table'
+ref table '_slicer Customer Filter'
 
 ref cultureInfo en-US
 

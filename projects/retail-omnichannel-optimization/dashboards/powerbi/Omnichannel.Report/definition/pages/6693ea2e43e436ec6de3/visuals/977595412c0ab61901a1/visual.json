@@ -3,10 +3,11 @@
   "name": "977595412c0ab61901a1",
   "position": {
     "x": 48,
-    "y": 272,
-    "z": 0,
+    "y": 397.89982728842836,
+    "z": 4000,
     "height": 240,
-    "width": 350
+    "width": 352,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -185,7 +186,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -198,7 +199,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'    Sales YTD'"
+                  "Value": "'    Sales YTD bars'"
                 }
               }
             },

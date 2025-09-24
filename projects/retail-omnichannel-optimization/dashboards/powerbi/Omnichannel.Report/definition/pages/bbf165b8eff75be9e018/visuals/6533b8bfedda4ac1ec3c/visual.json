@@ -4,9 +4,10 @@
   "position": {
     "x": 32,
     "y": 656,
-    "z": 5001,
+    "z": 6000,
     "height": 304,
-    "width": 576
+    "width": 576,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "ribbonChart",
@@ -1040,20 +1041,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "40efe9d1fea4b9f9101d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "WaterfallCategories Table"
-              }
-            },
-            "Property": "International Market Share"
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

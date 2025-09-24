@@ -4,5 +4,12 @@
   "displayName": "Channel Analysis",
   "displayOption": "FitToPage",
   "height": 1000,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "0ecdfb51dc0109cfefa2",
+      "target": "6533b8bfedda4ac1ec3c",
+      "type": "NoFilter"
+    }
+  ]
 }
