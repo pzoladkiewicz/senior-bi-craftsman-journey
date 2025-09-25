@@ -21,22 +21,6 @@ table dim_geography
 
 		annotation SummarizationSetBy = Automatic
 
-	column CountryCode
-		dataType: string
-		lineageTag: dadf5d36-3268-4f19-98ec-f90550a7a933
-		summarizeBy: none
-		sourceColumn: CountryCode
-
-		annotation SummarizationSetBy = Automatic
-
-	column Region
-		dataType: string
-		lineageTag: 72b5b2d5-37fd-4050-9fc4-f568ccc0aeee
-		summarizeBy: none
-		sourceColumn: Region
-
-		annotation SummarizationSetBy = Automatic
-
 	column IsUK
 		dataType: int64
 		formatString: 0
@@ -46,28 +30,38 @@ table dim_geography
 
 		annotation SummarizationSetBy = Automatic
 
-	column IsEU
-		dataType: int64
-		formatString: 0
-		lineageTag: b7006374-38cc-4da3-8cdb-070100923c04
+	column CountryOriginal
+		dataType: string
+		lineageTag: 25a0b184-5e0d-4a4a-b8b7-2db10d6e2071
 		summarizeBy: none
-		sourceColumn: IsEU
+		sourceColumn: CountryOriginal
 
 		annotation SummarizationSetBy = Automatic
 
-	column CurrencyCode
-		dataType: string
-		lineageTag: e53ecc0f-42ec-4729-be1f-00bfd8ec3f03
+	column 'Country Group' =
+			
+			VAR _country = dim_geography[Country]
+			RETURN
+			    IF(
+			        dim_geography[IsUK] = 1, "UK",
+			        SWITCH(
+			            _country,
+			            "Netherlands", "Netherlands",
+			            "Ireland", "Ireland",
+			            "Germany", "Germany",
+			            "France", "France",
+			            "Australia", "Australia",
+			            "Others"
+			        )
+			    )
+		lineageTag: 81cbcb3f-da83-46cd-bca0-0004f0480f25
 		summarizeBy: none
-		sourceColumn: CurrencyCode
 
 		annotation SummarizationSetBy = Automatic
 
-	column TimeZone
-		dataType: string
-		lineageTag: da58775a-a75b-4e09-b9ed-d7a6ccb2b888
+	column 'Where are customers from' = IF([IsUK] = 1, "Domestic (UK)", "International")
+		lineageTag: 3f17d446-84a9-47de-bcae-da7caa290726
 		summarizeBy: none
-		sourceColumn: TimeZone
 
 		annotation SummarizationSetBy = Automatic
 
@@ -75,9 +69,10 @@ table dim_geography
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\projekt-1-Retail-Omnichannel-Optimization\data\processed\dim_geography.csv"),[Delimiter=",", Columns=8, Encoding=1250, QuoteStyle=QuoteStyle.None]),
-				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"GeographyKey", Int64.Type}, {"Country", type text}, {"CountryCode", type text}, {"Region", type text}, {"IsUK", Int64.Type}, {"IsEU", Int64.Type}, {"CurrencyCode", type text}, {"TimeZone", type text}})
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\retail-omnichannel-optimization\data\processed\dim_geography.csv"),[Delimiter=",", Columns=8, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Column5", "Column6", "Column7", "Column8"}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Columns", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"GeographyKey", Int64.Type}, {"IsUK", Int64.Type}})
 				in
 				    #"Changed Type"
 

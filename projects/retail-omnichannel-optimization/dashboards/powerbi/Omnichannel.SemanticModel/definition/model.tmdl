@@ -8,9 +8,7 @@ model Model
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBIDesktopVersion = 2.146.1454.0 (25.08)+901d6c338d1dea81ac3e53073ffb10469f0f37b8
-
-annotation PBI_QueryOrder = ["dim_customer","dim_date","dim_geography","dim_product","fact_sales","Measures (2)","_Measures"]
+annotation PBI_QueryOrder = ["dim_customer","dim_date","dim_geography","dim_product","fact_sales","Measures (2)","_Measures","_slicer Customer Segment - Executive Summary"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -25,6 +23,8 @@ ref table LocalDateTable_6a8adc81-d213-4f31-93f3-e2185ec86848
 ref table LocalDateTable_43a6c7b9-db1e-45e7-9181-3e3b13380e94
 ref table fact_sales
 ref table _Measures
+ref table 'WaterfallCategories Table'
+ref table '_slicer Customer Segment - Executive Summary'
 
 ref cultureInfo en-US
 

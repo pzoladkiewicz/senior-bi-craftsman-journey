@@ -92,7 +92,7 @@ table fact_sales
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\projekt-1-Retail-Omnichannel-Optimization\data\processed\fact_sales.csv"),[Delimiter=",", Columns=8, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\retail-omnichannel-optimization\data\processed\fact_sales.csv"),[Delimiter=",", Columns=8, Encoding=1250, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"InvoiceNumber", type text}, {"CustomerKey", Int64.Type}, {"ProductKey", Int64.Type}, {"DateKey", Int64.Type}, {"GeographyKey", Int64.Type}, {"Quantity", Int64.Type}, {"UnitPrice", type text}, {"TotalValue", type text}}),
 				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"UnitPrice", type number}}, "en-GB"),
