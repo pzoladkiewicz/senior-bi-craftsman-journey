@@ -4,13 +4,13 @@
   "position": {
     "x": 864,
     "y": 406,
-    "z": 6000,
+    "z": 750,
     "height": 240,
     "width": 368,
-    "tabOrder": 12000
+    "tabOrder": 2500
   },
   "visualGroup": {
-    "displayName": "Group 1",
+    "displayName": "2011 vs 2010 - lines",
     "groupMode": "ScaleMode",
     "objects": {
       "background": [

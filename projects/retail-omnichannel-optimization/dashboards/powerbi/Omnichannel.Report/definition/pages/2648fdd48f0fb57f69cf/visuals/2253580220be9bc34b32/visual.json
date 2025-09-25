@@ -4,10 +4,10 @@
   "position": {
     "x": 1040,
     "y": 48,
-    "z": 5000,
+    "z": 9500,
     "height": 160,
     "width": 192,
-    "tabOrder": 4000
+    "tabOrder": 12187
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_slicer Customer Filter"
+                      "Entity": "_slicer Customer Segment - Executive Summary"
                     }
                   },
                   "Property": "Segment"
@@ -71,7 +71,7 @@
                 "From": [
                   {
                     "Name": "_",
-                    "Entity": "_slicer Customer Filter",
+                    "Entity": "_slicer Customer Segment - Executive Summary",
                     "Type": 0
                   }
                 ],
@@ -537,6 +537,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Customer Segment'"
+                }
+              }
             }
           }
         }
@@ -716,7 +723,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "_slicer Customer Filter"
+                "Entity": "_slicer Customer Segment - Executive Summary"
               }
             },
             "Property": "CustomerTypeFilter"

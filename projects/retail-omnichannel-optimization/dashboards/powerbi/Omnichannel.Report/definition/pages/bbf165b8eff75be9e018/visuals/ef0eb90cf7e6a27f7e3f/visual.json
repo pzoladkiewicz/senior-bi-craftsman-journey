@@ -3,7 +3,7 @@
   "name": "ef0eb90cf7e6a27f7e3f",
   "position": {
     "x": 416,
-    "y": 304,
+    "y": 310,
     "z": 4000,
     "height": 304,
     "width": 448,
@@ -75,13 +75,13 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Measures"
+                    "Entity": "dim_geography"
                   }
                 },
-                "Property": "Sales YTD (_2011)"
+                "Property": "Country"
               }
             },
             "direction": "Descending"
@@ -484,7 +484,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Channel Performance by Geography'"
+                  "Value": "'Regional Sales Performance'"
                 }
               }
             },
@@ -536,7 +536,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -640,7 +640,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },

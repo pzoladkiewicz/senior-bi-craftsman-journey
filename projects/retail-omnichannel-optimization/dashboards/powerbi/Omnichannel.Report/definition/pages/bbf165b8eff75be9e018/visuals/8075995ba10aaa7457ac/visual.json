@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "8075995ba10aaa7457ac",
   "position": {
-    "x": 944,
-    "y": 16,
+    "x": 960,
+    "y": 74,
     "z": 7000,
-    "height": 204,
-    "width": 300,
+    "height": 208,
+    "width": 304,
     "tabOrder": 4000
   },
   "visual": {
@@ -23,17 +23,31 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Intl Growth Rate % formated"
+                  "Property": "Intl Growth Rate"
                 }
               },
-              "queryRef": "_Measures.Intl Growth Rate % formated",
-              "nativeQueryRef": "Intl Growth Rate",
-              "displayName": "Intl Growth Rate"
+              "queryRef": "_Measures.Intl Growth Rate",
+              "nativeQueryRef": "Intl Growth Rate"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Intl Growth Rate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -552,6 +566,34 @@
             "id": "field-1dc9d4d9-8f9d-97f4-9e28-4ca7fcf1c9fd",
             "order": 0
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "UK Growth Rate"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Intl Growth Rate",
+            "id": "field-2463ac1d-b061-59d1-bd17-ee2b0e06d5db",
+            "order": 0
+          }
         }
       ],
       "referenceLabelLayout": [
@@ -999,6 +1041,28 @@
           "selector": {
             "metadata": "_Measures.Intl Growth Rate % formated",
             "id": "field-1dc9d4d9-8f9d-97f4-9e28-4ca7fcf1c9fd"
+          }
+        },
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'UK Rate'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Intl Growth Rate",
+            "id": "field-2463ac1d-b061-59d1-bd17-ee2b0e06d5db"
           }
         }
       ]

@@ -9728,16 +9728,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.605
 			          }
-			        },
-			        {
-			          "Intl Growth Rate": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -9995,125 +9985,31 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter": {
+			    "entity__slicer_customer_segment__executive_summary": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_slicer Customer Filter"
+			          "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "_slicer customer filter": {
+			          "_slicer customer segment - executive summary": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "_slicer client filter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "_slicer consumer filter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "_slicer user filter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "_slicer buyer filter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "_slicer patron filter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "_slicer purchaser filter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "_slicer shopper filter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "_slicer customer strainer": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "_slicer customer sifter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "_slicer customer sieve": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
+			          "_slicer customer segment executive summary": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter.customer_type_filter": {
+			    "entity__slicer_customer_segment__executive_summary.customer_type_filter": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_slicer Customer Filter",
+			          "ConceptualEntity": "_slicer Customer Segment - Executive Summary",
 			          "ConceptualProperty": "CustomerTypeFilter"
 			        }
 			      },
@@ -10245,10 +10141,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter.sort_order": {
+			    "entity__slicer_customer_segment__executive_summary.sort_order": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_slicer Customer Filter",
+			          "ConceptualEntity": "_slicer Customer Segment - Executive Summary",
 			          "ConceptualProperty": "SortOrder"
 			        }
 			      },
@@ -10561,10 +10457,10 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter.segment": {
+			    "entity__slicer_customer_segment__executive_summary.segment": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "_slicer Customer Filter",
+			          "ConceptualEntity": "_slicer Customer Segment - Executive Summary",
 			          "ConceptualProperty": "Segment"
 			        }
 			      },
@@ -11335,20 +11231,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter_has_segment": {
+			    "entity__slicer_customer_segment__executive_summary_has_segment": {
 			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Filter"
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__slicer_customer_filter": {
+			        "entity__slicer_customer_segment__executive_summary": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
-			        "entity__slicer_customer_filter.segment": {
+			        "entity__slicer_customer_segment__executive_summary.segment": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter.segment"
+			            "Entity": "entity__slicer_customer_segment__executive_summary.segment"
 			          }
 			        }
 			      },
@@ -11356,28 +11252,28 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
-			              "Role": "entity__slicer_customer_filter.segment"
+			              "Role": "entity__slicer_customer_segment__executive_summary.segment"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_filters_have_segments"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_segments"
 			        },
 			        {
 			          "DynamicAdjective": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Adjective": {
-			              "Role": "entity__slicer_customer_filter.segment"
+			              "Role": "entity__slicer_customer_segment__executive_summary.segment"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "segments_describe__slicer_customer_filters"
+			          "ID": "segments_describe__slicer_customer_segment__executive_summaries"
 			        }
 			      ]
 			    },
@@ -11447,15 +11343,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer_sales_YoY_CF": {
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer_sales_YoY_CF": {
 			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Filter"
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__slicer_customer_filter": {
+			        "entity__slicer_customer_segment__executive_summary": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
 			        "entity__measure.entity__slicer_sales_YoY_CF": {
@@ -11468,7 +11364,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.entity__slicer_sales_YoY_CF"
@@ -11476,7 +11372,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_filters_have__slicer_sales_YoY_CF"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer_sales_YoY_CF"
 			        }
 			      ]
 			    },
@@ -11513,15 +11409,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer__sales_YoY__2011": {
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer__sales_YoY__2011": {
 			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Filter"
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__slicer_customer_filter": {
+			        "entity__slicer_customer_segment__executive_summary": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
 			        "entity__measure.entity__slicer__sales_YoY__2011": {
@@ -11534,7 +11430,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.entity__slicer__sales_YoY__2011"
@@ -11542,24 +11438,24 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_filters_have__slicer__sales_YoY__2011"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer__sales_YoY__2011"
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter_has_sort_order": {
+			    "entity__slicer_customer_segment__executive_summary_has_sort_order": {
 			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Filter"
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__slicer_customer_filter": {
+			        "entity__slicer_customer_segment__executive_summary": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
-			        "entity__slicer_customer_filter.sort_order": {
+			        "entity__slicer_customer_segment__executive_summary.sort_order": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter.sort_order"
+			            "Entity": "entity__slicer_customer_segment__executive_summary.sort_order"
 			          }
 			        }
 			      },
@@ -11567,32 +11463,32 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
-			              "Role": "entity__slicer_customer_filter.sort_order"
+			              "Role": "entity__slicer_customer_segment__executive_summary.sort_order"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_filters_have_sort_orders"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_sort_orders"
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter_has_customer_type_filter": {
+			    "entity__slicer_customer_segment__executive_summary_has_customer_type_filter": {
 			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Filter"
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__slicer_customer_filter": {
+			        "entity__slicer_customer_segment__executive_summary": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
-			        "entity__slicer_customer_filter.customer_type_filter": {
+			        "entity__slicer_customer_segment__executive_summary.customer_type_filter": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter.customer_type_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary.customer_type_filter"
 			          }
 			        }
 			      },
@@ -11600,28 +11496,28 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
-			              "Role": "entity__slicer_customer_filter.customer_type_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary.customer_type_filter"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_filters_have_customer_type_filters"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_customer_type_filters"
 			        },
 			        {
 			          "DynamicAdjective": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Adjective": {
-			              "Role": "entity__slicer_customer_filter.customer_type_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary.customer_type_filter"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "customer_type_filters_describe__slicer_customer_filters"
+			          "ID": "customer_type_filters_describe__slicer_customer_segment__executive_summaries"
 			        }
 			      ]
 			    },
@@ -11658,15 +11554,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer__orders_YTD__2011": {
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer__orders_YTD__2011": {
 			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Filter"
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__slicer_customer_filter": {
+			        "entity__slicer_customer_segment__executive_summary": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
 			        "entity__measure.entity__slicer__orders_YTD__2011": {
@@ -11679,7 +11575,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.entity__slicer__orders_YTD__2011"
@@ -11687,7 +11583,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_filters_have__slicer__orders_YTD__2011"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer__orders_YTD__2011"
 			        }
 			      ]
 			    },
@@ -11757,15 +11653,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer__sales_YTD_PY__2010": {
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer__sales_YTD_PY__2010": {
 			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Filter"
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__slicer_customer_filter": {
+			        "entity__slicer_customer_segment__executive_summary": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
 			        "entity__measure.entity__slicer__sales_YTD_PY__2010": {
@@ -11778,7 +11674,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.entity__slicer__sales_YTD_PY__2010"
@@ -11786,7 +11682,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_filters_have__slicer__sales_YTD_PY__2010"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer__sales_YTD_PY__2010"
 			        }
 			      ]
 			    },
@@ -11823,15 +11719,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_filter_has_entity__measure_entity__slicer__sales_YTD__2011": {
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer__sales_YTD__2011": {
 			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Filter"
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "entity__slicer_customer_filter": {
+			        "entity__slicer_customer_segment__executive_summary": {
 			          "Target": {
-			            "Entity": "entity__slicer_customer_filter"
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
 			        "entity__measure.entity__slicer__sales_YTD__2011": {
@@ -11844,7 +11740,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "entity__slicer_customer_filter"
+			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
 			              "Role": "entity__measure.entity__slicer__sales_YTD__2011"
@@ -11852,7 +11748,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_filters_have__slicer__sales_YTD__2011"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer__sales_YTD__2011"
 			        }
 			      ]
 			    },

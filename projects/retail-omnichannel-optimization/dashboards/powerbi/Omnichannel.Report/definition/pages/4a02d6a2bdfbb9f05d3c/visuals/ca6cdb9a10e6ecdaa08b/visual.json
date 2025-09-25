@@ -1,51 +1,34 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "0ecdfb51dc0109cfefa2",
+  "name": "ca6cdb9a10e6ecdaa08b",
   "position": {
-    "x": 928,
-    "y": 310,
-    "z": 5000,
-    "height": 304,
-    "width": 320
+    "x": 656,
+    "y": 48.000000000000007,
+    "z": 2000,
+    "height": 288,
+    "width": 544,
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Category": {
+        "Values": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_geography"
+                      "Entity": "dim_product"
                     }
                   },
-                  "Property": "Country"
+                  "Property": "ProductName"
                 }
               },
-              "queryRef": "dim_geography.Country",
-              "nativeQueryRef": "Country",
-              "active": true
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Customers YTD (_2011)"
-                }
-              },
-              "queryRef": "_Measures.Customers YTD (2011 Anchor)",
-              "nativeQueryRef": "Customers YTD (2011 Anchor)"
+              "queryRef": "dim_product.ProductName",
+              "nativeQueryRef": "Product",
+              "displayName": "Product"
             },
             {
               "field": {
@@ -55,16 +38,13 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YTD (_2011)"
+                  "Property": "_slicer - Sales YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.AOV (2011 YTD)",
-              "nativeQueryRef": "AOV (2011 YTD)"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
+              "queryRef": "_Measures._slicer - Sales YTD (_2011)",
+              "nativeQueryRef": "2011",
+              "displayName": "2011"
+            },
             {
               "field": {
                 "Measure": {
@@ -73,11 +53,27 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD (_2011)"
+                  "Property": "_slicer - Sales YTD PY (_2010)"
                 }
               },
-              "queryRef": "_Measures.Sales YTD (2011 Anchor)",
-              "nativeQueryRef": "Sales YTD (2011 Anchor)"
+              "queryRef": "_Measures._slicer - Sales YTD PY (_2010)",
+              "nativeQueryRef": "2010",
+              "displayName": "2010"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "_slicer - Sales YoY (_2011)"
+                }
+              },
+              "queryRef": "_Measures._slicer - Sales YoY (_2011)",
+              "nativeQueryRef": "YoY",
+              "displayName": "YoY"
             }
           ]
         }
@@ -92,34 +88,19 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Sales YTD (_2011)"
+                "Property": "_slicer - Sales YTD (_2011)"
               }
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
-      "valueAxis": [
+      "total": [
         {
           "properties": {
-            "gridlineShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showAxisTitle": {
+            "totals": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -129,10 +110,10 @@
           }
         }
       ],
-      "ribbonBands": [
+      "grid": [
         {
           "properties": {
-            "show": {
+            "gridHorizontal": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -142,81 +123,49 @@
           }
         }
       ],
-      "labels": [
+      "values": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'OutsideEnd'"
-                }
-              }
-            },
-            "labelOverflow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1000D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "color": {
+            "backColorSecondary": {
               "solid": {
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
+                      "ColorId": 0,
                       "Percent": 0
                     }
                   }
                 }
               }
             },
-            "enableDetailDataLabel": {
+            "wordWrap": {
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "labelContentLayout": {
-              "expr": {
-                "Literal": {
-                  "Value": "'SingleLine'"
                 }
               }
             }
           }
         },
         {
-          "properties": {},
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "Sales YoY% CF"
+                    }
+                  }
+                }
+              }
+            }
+          },
           "selector": {
             "data": [
               {
@@ -225,42 +174,43 @@
                 }
               }
             ],
-            "highlightMatching": 1
+            "metadata": "_Measures.Sales YoY % (_2011)"
           }
-        }
-      ],
-      "categoryAxis": [
+        },
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "_slicer Sales YoY% CF"
+                    }
+                  }
                 }
               }
             }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'International Markets Ranking'"
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
                 }
               }
-            },
+            ],
+            "metadata": "_Measures._slicer - Sales YoY (_2011)"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -268,10 +218,86 @@
                 }
               }
             },
-            "fontFamily": {
+            "wordWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                  "Value": "false"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YoY % (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD PY (_2010)"
+          }
+        },
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "styleValues": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "styleHeader": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
@@ -281,50 +307,85 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.6
+                      "Percent": 0
                     }
                   }
                 }
               }
-            },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
             }
+          },
+          "selector": {
+            "metadata": "dim_product.ProductName"
           }
         }
       ],
-      "padding": [
+      "columnWidth": [
         {
           "properties": {
-            "left": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "67.5608202627404D"
                 }
               }
-            },
-            "top": {
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "70.80409613797518D"
                 }
               }
-            },
-            "right": {
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YTD PY (_2010)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "79.0845029781156D"
                 }
               }
-            },
-            "bottom": {
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Sales YoY % (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "307.09474954719406D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_product.ProductName"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -360,7 +421,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.2
+                      "Percent": -0.3
                     }
                   }
                 }
@@ -401,7 +462,7 @@
           }
         }
       ],
-      "visualHeader": [
+      "visualTooltip": [
         {
           "properties": {
             "show": {
@@ -414,29 +475,71 @@
           }
         }
       ],
-      "visualTooltip": [
+      "padding": [
         {
           "properties": {
-            "themedBackground": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
-                    }
-                  }
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             },
-            "transparency": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "bottom": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
                 }
               }
-            },
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 Selling Products'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -452,15 +555,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "faad0f78f85c7158e835",
+        "name": "596d210cccf57d26e017",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dim_geography"
+                "Entity": "dim_product"
               }
             },
-            "Property": "Country"
+            "Property": "ProductName"
           }
         },
         "type": "TopN",
@@ -476,7 +579,7 @@
                     "From": [
                       {
                         "Name": "d",
-                        "Entity": "dim_geography",
+                        "Entity": "dim_product",
                         "Type": 0
                       },
                       {
@@ -493,7 +596,7 @@
                               "Source": "d"
                             }
                           },
-                          "Property": "Country"
+                          "Property": "ProductName"
                         },
                         "Name": "field"
                       }
@@ -521,7 +624,7 @@
             },
             {
               "Name": "d",
-              "Entity": "dim_geography",
+              "Entity": "dim_product",
               "Type": 0
             }
           ],
@@ -537,7 +640,7 @@
                             "Source": "d"
                           }
                         },
-                        "Property": "Country"
+                        "Property": "ProductName"
                       }
                     }
                   ],
@@ -551,60 +654,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "b1c1d2bfc41dc75476aa",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_geography"
-              }
-            },
-            "Property": "IsUK"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "d",
-              "Entity": "dim_geography",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "d"
-                          }
-                        },
-                        "Property": "IsUK"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "0L"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
       }
     ]
   }

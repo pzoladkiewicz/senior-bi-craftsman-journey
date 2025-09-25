@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "bbf75c46c7c519bda471",
+  "name": "a92b0b36374d13578e0a",
   "position": {
     "x": 32,
-    "y": 15,
-    "z": 10000,
+    "y": 8,
+    "z": 7001,
     "height": 64,
     "width": 783.99999999999989,
-    "tabOrder": 13062
+    "tabOrder": 7001
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Business Performance Overview",
+                    "value": "Channel & Market Analysis",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
                       "fontSize": "20pt",

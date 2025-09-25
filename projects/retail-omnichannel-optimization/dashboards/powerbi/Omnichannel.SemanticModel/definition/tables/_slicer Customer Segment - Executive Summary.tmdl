@@ -1,4 +1,4 @@
-table '_slicer Customer Filter'
+table '_slicer Customer Segment - Executive Summary'
 	lineageTag: 6da8ea01-46d6-4dfc-97ff-8c8c01f28e62
 
 	column CustomerTypeFilter
@@ -32,7 +32,7 @@ table '_slicer Customer Filter'
 
 		annotation SummarizationSetBy = Automatic
 
-	partition '_slicer Customer Filter' = m
+	partition '_slicer Customer Segment - Executive Summary' = m
 		mode: import
 		source =
 				let
@@ -40,6 +40,8 @@ table '_slicer Customer Filter'
 				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"CustomerTypeFilter", type text}, {"SortOrder", Int64.Type}})
 				in
 				    #"Changed Type"
+
+	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

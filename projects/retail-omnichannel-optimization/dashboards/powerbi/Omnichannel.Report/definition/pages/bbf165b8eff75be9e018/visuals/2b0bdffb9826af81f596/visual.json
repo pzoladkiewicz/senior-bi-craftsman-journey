@@ -3,7 +3,7 @@
   "name": "2b0bdffb9826af81f596",
   "position": {
     "x": 32,
-    "y": 304,
+    "y": 310,
     "z": 3000,
     "height": 304,
     "width": 320,
@@ -551,7 +551,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -610,7 +610,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Revenue Bridge 2010→2011 Analysis'"
+                  "Value": "'Revenue Growth Analysis'"
                 }
               }
             }
@@ -623,7 +623,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },

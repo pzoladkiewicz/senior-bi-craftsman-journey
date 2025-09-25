@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "51d765b4dada3a985c81",
   "position": {
-    "x": 634.66666666666663,
-    "y": 16,
+    "x": 645.33333333333337,
+    "y": 74,
     "z": 1000,
-    "height": 204,
-    "width": 300,
+    "height": 208,
+    "width": 304,
     "tabOrder": 1000
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "_Measures.Channel Score (2011)",
-              "nativeQueryRef": "Channel Score (2011)"
+              "nativeQueryRef": "Channel Score",
+              "displayName": "Channel Score"
             }
           ]
         }

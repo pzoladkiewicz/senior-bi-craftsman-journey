@@ -7,7 +7,7 @@
     "z": 9000,
     "height": 112,
     "width": 192,
-    "tabOrder": 7000
+    "tabOrder": 12125
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -556,6 +556,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Market Scope'"
                 }
               }
             }

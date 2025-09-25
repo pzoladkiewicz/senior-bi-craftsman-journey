@@ -751,20 +751,21 @@ table _Measures
 			    (_ytd / _py) - 1
 			```
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 293364b2-aca0-4e19-8cd3-6c3651f6bdaa
 
 	measure 'Intl Growth Rate % formated' =
 			
 			SWITCH(
 			    TRUE(),
-			    [Intl Growth Rate] > 0, "+" &FORMAT([AOV YoY %], "0.0%"),
-			    [Intl Growth Rate] < 0, "-" &FORMAT([AOV YoY %], "0.0%"),
+			    [Intl Growth Rate] > 0, "+" &FORMAT([Intl Growth Rate], "0.0%"),
+			    [Intl Growth Rate] < 0, "-" &FORMAT([Intl Growth Rate], "0.0%"),
 			    FORMAT([Intl Growth Rate], "0.0%"))
 		lineageTag: 5392eb92-0bc9-4d78-8e58-cb42accb94b2
 
 	measure '_slicer - Sales YTD (_2011)' = ```
 			
-			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Filter'[CustomerTypeFilter], "All Customers")
+			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Segment - Executive Summary'[CustomerTypeFilter], "All Customers")
 			VAR _filterCondition = 
 			    SWITCH(
 			        _customerSelection,
@@ -804,13 +805,12 @@ table _Measures
 			        BLANK()
 			    )
 			```
+		formatString: 0%;-0%;0%
 		lineageTag: e58fb0bf-707e-4d2c-8e2d-b317b304c7e0
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '_slicer - Sales YTD PY (_2010)' = ```
 			
-			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Filter'[CustomerTypeFilter], "All Customers")
+			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Segment - Executive Summary'[CustomerTypeFilter], "All Customers")
 			VAR _filterCondition = 
 			    SWITCH(
 			        _customerSelection,
@@ -849,7 +849,7 @@ table _Measures
 
 	measure '_slicer - Orders YTD (_2011)' = ```
 			
-			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Filter'[CustomerTypeFilter], "All Customers")
+			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Segment - Executive Summary'[CustomerTypeFilter], "All Customers")
 			VAR _filterCondition = 
 			    SWITCH(
 			        _customerSelection,
@@ -871,7 +871,7 @@ table _Measures
 
 	measure '_slicer - Sales YoY (_2011)' = ```
 			
-			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Filter'[CustomerTypeFilter], "All Customers")
+			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Segment - Executive Summary'[CustomerTypeFilter], "All Customers")
 			VAR _filterCondition = 
 			    SWITCH(
 			        _customerSelection,
