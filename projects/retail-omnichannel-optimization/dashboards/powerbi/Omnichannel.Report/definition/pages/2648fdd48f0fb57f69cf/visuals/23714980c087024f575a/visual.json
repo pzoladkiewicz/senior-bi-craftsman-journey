@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "23714980c087024f575a",
   "position": {
-    "x": 471,
-    "y": 397.89982728842836,
-    "z": 2000,
+    "x": 495,
+    "y": 406,
+    "z": 1000,
     "height": 240,
     "width": 290,
-    "tabOrder": 4000
+    "tabOrder": 2000
   },
   "visualGroup": {
     "displayName": "Orders UK vs Intl",
@@ -19,7 +19,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }

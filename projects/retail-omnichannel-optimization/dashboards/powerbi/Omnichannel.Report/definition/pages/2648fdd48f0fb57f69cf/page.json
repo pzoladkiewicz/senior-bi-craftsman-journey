@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "2648fdd48f0fb57f69cf",
-  "displayName": "Duplicate of Executive Summary",
+  "displayName": "Executive Summary",
   "displayOption": "FitToPage",
   "height": 1000,
   "width": 1280,
@@ -56,6 +56,41 @@
   "visualInteractions": [
     {
       "source": "2253580220be9bc34b32",
+      "target": "3e2cf5b49342dcb24319",
+      "type": "NoFilter"
+    },
+    {
+      "source": "710993e89440c1552ab7",
+      "target": "4735c6e19e2af1d062d2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "710993e89440c1552ab7",
+      "target": "68e64bbc35dc63197e59",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2253580220be9bc34b32",
+      "target": "4735c6e19e2af1d062d2",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2253580220be9bc34b32",
+      "target": "68e64bbc35dc63197e59",
+      "type": "NoFilter"
+    },
+    {
+      "source": "710993e89440c1552ab7",
+      "target": "067b7c1923e38da16025",
+      "type": "NoFilter"
+    },
+    {
+      "source": "2253580220be9bc34b32",
+      "target": "067b7c1923e38da16025",
+      "type": "NoFilter"
+    },
+    {
+      "source": "710993e89440c1552ab7",
       "target": "3e2cf5b49342dcb24319",
       "type": "NoFilter"
     }

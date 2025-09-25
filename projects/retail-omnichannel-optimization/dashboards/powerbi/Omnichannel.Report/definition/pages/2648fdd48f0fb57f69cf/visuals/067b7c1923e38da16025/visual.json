@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "067b7c1923e38da16025",
   "position": {
-    "x": 656,
-    "y": 688,
+    "x": 687.99999999999989,
+    "y": 687.99999999999989,
     "z": 0,
-    "height": 256,
-    "width": 528,
-    "tabOrder": 6000
+    "height": 283,
+    "width": 544,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "hundredPercentStackedAreaChart",
@@ -76,8 +76,8 @@
                 }
               },
               "queryRef": "_Measures.Returning Customers (_2011)",
-              "nativeQueryRef": "Returning Customers",
-              "displayName": "Returning Customers"
+              "nativeQueryRef": "Returning",
+              "displayName": "Returning"
             }
           ]
         }
@@ -119,6 +119,13 @@
               "expr": {
                 "Literal": {
                   "Value": "' '"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TopRight'"
                 }
               }
             }
@@ -312,7 +319,28 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Customer Aquisition & Retention'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -435,14 +463,14 @@
             "top": {
               "expr": {
                 "Literal": {
-                  "Value": "6D"
+                  "Value": "11D"
                 }
               }
             },
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "16D"
                 }
               }
             },

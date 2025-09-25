@@ -1,16 +1,17 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "3d0bf8728e9a67c664b9",
+  "name": "789a1e4063e04ac0724c",
   "position": {
-    "x": 554,
-    "y": 0,
-    "z": 1000,
-    "height": 688,
-    "width": 496,
-    "tabOrder": 1000
+    "x": 472,
+    "y": 48,
+    "z": 2000,
+    "height": 280,
+    "width": 280,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "tableEx",
+    "autoSelectVisualType": true,
     "query": {
       "queryState": {
         "Values": {
@@ -23,25 +24,11 @@
                       "Entity": "dim_geography"
                     }
                   },
-                  "Property": "Country Group"
+                  "Property": "IsUK"
                 }
               },
-              "queryRef": "dim_geography.Country Group",
-              "nativeQueryRef": "Country Group"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Sales YTD (_2011)"
-                }
-              },
-              "queryRef": "_Measures.Sales YTD (_2011)",
-              "nativeQueryRef": "Sales YTD (_2011)"
+              "queryRef": "dim_geography.IsUK",
+              "nativeQueryRef": "IsUK"
             }
           ]
         }
@@ -56,7 +43,7 @@
                     "Entity": "dim_geography"
                   }
                 },
-                "Property": "Country Group"
+                "Property": "IsUK"
               }
             },
             "direction": "Ascending"

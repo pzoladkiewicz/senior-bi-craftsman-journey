@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "a1b0be1a9e3d403d702d",
   "position": {
-    "x": 16,
-    "y": 13.100172711571645,
-    "z": 9000,
-    "height": 36,
-    "width": 192,
+    "x": 20,
+    "y": 11,
+    "z": 1000,
+    "height": 48,
+    "width": 256,
     "tabOrder": 1000
   },
   "visual": {
@@ -19,13 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Sales YTD ",
-                    "textStyle": {
-                      "fontSize": "12pt"
-                    }
-                  },
-                  {
-                    "value": "2011 ",
+                    "value": "2011",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt",
@@ -33,17 +27,23 @@
                     }
                   },
                   {
-                    "value": "vs. ",
+                    "value": "-over-",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "2010",
+                    "value": "2010 ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt",
                       "color": "#ad5129"
+                    }
+                  },
+                  {
+                    "value": "Growth Trend ",
+                    "textStyle": {
+                      "fontSize": "12pt"
                     }
                   }
                 ]

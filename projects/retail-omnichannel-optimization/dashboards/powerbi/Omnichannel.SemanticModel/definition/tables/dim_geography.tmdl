@@ -59,6 +59,12 @@ table dim_geography
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Where are customers from' = IF([IsUK] = 1, "Domestic (UK)", "International")
+		lineageTag: 3f17d446-84a9-47de-bcae-da7caa290726
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_geography = m
 		mode: import
 		source =

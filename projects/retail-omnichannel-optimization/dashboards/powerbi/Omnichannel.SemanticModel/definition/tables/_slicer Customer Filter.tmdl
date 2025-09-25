@@ -18,6 +18,20 @@ table '_slicer Customer Filter'
 
 		annotation SummarizationSetBy = User
 
+	column Segment = ```
+			
+			    SWITCH(
+			        [CustomerTypeFilter],
+			        "All Customers", "All Segments",
+			        "Registered Only", "Registered Customers",
+			        "Guest Only", "Guest Customers"
+			    )
+			```
+		lineageTag: 5c071a8e-aec9-420a-8d4b-a83efc07c056
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition '_slicer Customer Filter' = m
 		mode: import
 		source =

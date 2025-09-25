@@ -3,11 +3,11 @@
   "name": "018b91707caa67103b94",
   "position": {
     "x": 48,
-    "y": 688,
-    "z": 10000,
-    "height": 256,
-    "width": 528,
-    "tabOrder": 10000
+    "y": 687.99999999999989,
+    "z": 8000,
+    "height": 283,
+    "width": 550,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "tableEx",
@@ -300,6 +300,18 @@
                   "Value": "true"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
@@ -348,6 +360,20 @@
           },
           "selector": {
             "metadata": "_Measures.Sales YoY % (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "307.09474954719406D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dim_product.ProductName"
           }
         }
       ]
@@ -470,6 +496,40 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 Selling Products'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }

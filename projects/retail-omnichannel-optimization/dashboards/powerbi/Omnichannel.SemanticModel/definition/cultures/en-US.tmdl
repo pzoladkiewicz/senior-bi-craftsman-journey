@@ -28,16 +28,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
-			        },
-			        {
-			          "2011": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -7176,16 +7166,6 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
-			        },
-			        {
-			          "2010": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -7207,16 +7187,6 @@ cultureInfo en-US
 			          "sales YoY %": {
 			            "State": "Generated",
 			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "YoY": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -7613,6 +7583,16 @@ cultureInfo en-US
 			          "returning customers": {
 			            "State": "Generated",
 			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Returning": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -10447,9 +10427,367 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "dim_geography.where_are_customers_from": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_geography",
+			          "ConceptualProperty": "Where are customers from"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "where are customers from": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "where are customer from": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "where are clientele from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "where are patron from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "where are client from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "where are consumer from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "where are punter from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "where are regular from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "where are custom from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "where are trade from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "where are business from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "where are following from": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "Market Scope": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter.segment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_slicer Customer Filter",
+			          "ConceptualProperty": "Segment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "segment": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "division": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "subdivision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "sector": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "bit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "fragment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "slice": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Customer Segment": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.first_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.date_hierarchy"
+			          }
+			        },
+			        "dim_product.first_sale_date.year": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.first_sale_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_product.first_sale_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_sale_date_hierarchies_have_first_sale_years"
+			        }
+			      ]
+			    },
+			    "dim_product_first_sale_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.first_sale_date": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date"
+			          }
+			        },
+			        "dim_product.first_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.first_sale_date"
+			            },
+			            "Object": {
+			              "Role": "dim_product.first_sale_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_sale_dates_have_first_sale_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "dim_date_year_quarter_month_has_month_name": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date.year_quarter_month": {
+			          "Target": {
+			            "Entity": "dim_date.year_quarter_month"
+			          }
+			        },
+			        "dim_date.year_quarter_month.month_name": {
+			          "Target": {
+			            "Entity": "dim_date.year_quarter_month.month_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date.year_quarter_month"
+			            },
+			            "Object": {
+			              "Role": "dim_date.year_quarter_month.month_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_quarter_months_have_month_names"
+			        }
+			      ]
+			    },
 			    "dim_date_year_quarter_month_has_year": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_date"
@@ -10994,6 +11332,85 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_customers_have_fact_sales"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_filter_has_segment": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Filter"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_filter": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter"
+			          }
+			        },
+			        "entity__slicer_customer_filter.segment": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_filter.segment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Object": {
+			              "Role": "entity__slicer_customer_filter.segment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_filters_have_segments"
+			        },
+			        {
+			          "DynamicAdjective": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_filter"
+			            },
+			            "Adjective": {
+			              "Role": "entity__slicer_customer_filter.segment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "segments_describe__slicer_customer_filters"
+			        }
+			      ]
+			    },
+			    "dim_geography_has_where_are_customers_from": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_geography"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_geography": {
+			          "Target": {
+			            "Entity": "dim_geography"
+			          }
+			        },
+			        "dim_geography.where_are_customers_from": {
+			          "Target": {
+			            "Entity": "dim_geography.where_are_customers_from"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_geography"
+			            },
+			            "Object": {
+			              "Role": "dim_geography.where_are_customers_from"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_geographies_have_where_are_customers_from"
 			        }
 			      ]
 			    },
@@ -15076,105 +15493,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_customers_are_in_countries"
-			        }
-			      ]
-			    },
-			    "dim_date_year_quarter_month_has_month_name": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_date.year_quarter_month": {
-			          "Target": {
-			            "Entity": "dim_date.year_quarter_month"
-			          }
-			        },
-			        "dim_date.year_quarter_month.month_name": {
-			          "Target": {
-			            "Entity": "dim_date.year_quarter_month.month_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_date.year_quarter_month"
-			            },
-			            "Object": {
-			              "Role": "dim_date.year_quarter_month.month_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_quarter_months_have_month_names"
-			        }
-			      ]
-			    },
-			    "dim_product_first_sale_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.first_sale_date": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date"
-			          }
-			        },
-			        "dim_product.first_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.first_sale_date"
-			            },
-			            "Object": {
-			              "Role": "dim_product.first_sale_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "first_sale_dates_have_first_sale_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.first_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.date_hierarchy"
-			          }
-			        },
-			        "dim_product.first_sale_date.year": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.first_sale_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_product.first_sale_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "first_sale_date_hierarchies_have_first_sale_years"
 			        }
 			      ]
 			    },
