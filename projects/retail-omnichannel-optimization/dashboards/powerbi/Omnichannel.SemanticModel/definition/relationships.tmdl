@@ -34,3 +34,12 @@ relationship AutoDetected_8717e10e-b236-4076-9da8-77e8caeed81b
 	fromColumn: fact_sales.ProductKey
 	toColumn: dim_product.ProductKey
 
+relationship 970583e1-cc91-4070-8d8e-f16f52120f40
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_transactions_classified.InvoiceDate
+	toColumn: LocalDateTable_e7a23617-b6ec-4efd-968e-d5ff83c56463.Date
+
+relationship 9c072ec5-7ee1-f37b-9ae2-1b2b1e25c5e7
+	fromColumn: fact_transactions_classified.Date
+	toColumn: dim_date.Date
+

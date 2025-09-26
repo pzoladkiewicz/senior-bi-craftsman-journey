@@ -1125,5 +1125,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "56395ab53828b0324030",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Sales YTD (_2011)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

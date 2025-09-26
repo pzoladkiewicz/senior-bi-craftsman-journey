@@ -68,7 +68,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Domestic (UK)'"
+                                "Value": "'International'"
                               }
                             }
                           ],
@@ -82,7 +82,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'International'"
+                                "Value": "'Domestic (UK)'"
                               }
                             }
                           ]
@@ -749,5 +749,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9a7da313904ae8db19da",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_geography"
+              }
+            },
+            "Property": "Where are customers from"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

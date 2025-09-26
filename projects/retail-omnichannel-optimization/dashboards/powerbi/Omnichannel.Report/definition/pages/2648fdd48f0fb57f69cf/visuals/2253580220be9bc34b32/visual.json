@@ -747,6 +747,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "09e7b6000d089887290b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_slicer Customer Segment - Executive Summary"
+              }
+            },
+            "Property": "Segment"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

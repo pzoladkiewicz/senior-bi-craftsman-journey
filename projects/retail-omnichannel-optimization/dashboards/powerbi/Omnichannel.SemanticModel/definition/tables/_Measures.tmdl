@@ -901,6 +901,31 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: da820f1a-a62d-47a0-9928-44941c37ca6f
 
+	measure 'Net Revenue YTD (_2011)' = ```
+			
+			VAR _anchor = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
+			RETURN
+			    CALCULATE(
+			        SUM(fact_transactions_classified[TotalValue]),
+			        fact_transactions_classified[TransactionCategory] = "ValidSales",
+			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
+			        fact_transactions_classified[Date] <= _anchor
+			    )
+			
+			```
+		lineageTag: c0910f8c-21fa-458f-b7a4-ec8a62c6eb65
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '2. Anchor Date (2011SameMD)' = ```
+			DATE(2011, MONTH(TODAY()), DAY(TODAY()))
+			
+			```
+		formatString: yyyy-mm-dd
+		lineageTag: cab4a4f9-a740-4f66-ba12-b5d977af0bb7
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
 	partition _Measures = m
 		mode: import
 		source =

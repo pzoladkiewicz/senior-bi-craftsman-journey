@@ -1,33 +1,33 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "3d0bf8728e9a67c664b9",
+  "name": "09951b6e21b04420d082",
   "position": {
-    "x": 554,
-    "y": 0,
-    "z": 1000,
-    "height": 688,
-    "width": 496,
-    "tabOrder": 1000
+    "x": 736,
+    "y": 320,
+    "z": 1,
+    "height": 104,
+    "width": 432
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "multiRowCard",
+    "autoSelectVisualType": true,
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_geography"
+                      "Entity": "_Measures"
                     }
                   },
-                  "Property": "Country Group"
+                  "Property": "1. Anchor Date (2011SameMD)"
                 }
               },
-              "queryRef": "dim_geography.Country Group",
-              "nativeQueryRef": "Country Group"
+              "queryRef": "_Measures.1. Anchor Date (2011SameMD)",
+              "nativeQueryRef": "1. Anchor Date (2011SameMD)"
             },
             {
               "field": {
@@ -37,11 +37,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD (_2011)"
+                  "Property": "2. Anchor Date (2011SameMD)"
                 }
               },
-              "queryRef": "_Measures.Sales YTD (_2011)",
-              "nativeQueryRef": "Sales YTD (_2011)"
+              "queryRef": "_Measures.2. Anchor Date (2011SameMD)",
+              "nativeQueryRef": "2. Anchor Date (2011SameMD)"
             }
           ]
         }
@@ -50,16 +50,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dim_geography"
+                    "Entity": "_Measures"
                   }
                 },
-                "Property": "Country Group"
+                "Property": "1. Anchor Date (2011SameMD)"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
