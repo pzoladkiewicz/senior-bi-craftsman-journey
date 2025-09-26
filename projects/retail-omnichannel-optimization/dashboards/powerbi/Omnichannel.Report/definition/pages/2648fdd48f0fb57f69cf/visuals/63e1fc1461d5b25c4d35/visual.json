@@ -1216,5 +1216,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f080e4532d41b6b48896",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "AOV YTD (_2011)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

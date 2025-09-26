@@ -965,7 +965,32 @@ table _Measures
 			    DIVIDE([Net Revenue YTD (_2011)], [Business Gross Revenue YTD (_2011)])
 			```
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: cdd14670-3520-408d-9c19-eb414ee58518
+
+	measure 'Returns YTD (_2011)' =
+			
+			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
+			RETURN
+			    CALCULATE(
+			        SUM(fact_transactions_classified[TotalValue]),
+			        fact_transactions_classified[TransactionCategory] = "Returns" ,
+			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
+			        fact_transactions_classified[Date] <= _anchor
+			    )
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		displayFolder: _2011_Anchor\Sales\transactions_classified
+		lineageTag: 41890455-6456-411e-9860-39bd66ef35c9
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Return rate' = ```
+			
+			    ABS( DIVIDE([Returns YTD (_2011)], [Net Revenue YTD (_2011)]) )
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: _2011_Anchor\Sales\transactions_classified
+		lineageTag: 9f39f66a-529d-478d-bde8-c4497a71edc1
 
 	partition _Measures = m
 		mode: import

@@ -1160,5 +1160,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "55f3be8f3029260dd906",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "UK Sales Share % (2011)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
