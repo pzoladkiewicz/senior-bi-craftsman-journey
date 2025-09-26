@@ -128,6 +128,11 @@ table fact_transactions_classified
 		summarizeBy: none
 		sourceColumn: Date
 
+		variation Variation
+			isDefault
+			relationship: 44952cdc-87a7-402b-911e-e3f8f9ef4025
+			defaultHierarchy: LocalDateTable_65b1114a-e578-4eb8-8673-9d590a94fdaf.'Date Hierarchy'
+
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

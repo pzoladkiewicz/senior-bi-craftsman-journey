@@ -37,11 +37,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "2. Anchor Date (2011SameMD)"
+                  "Property": "2. Anchor Date (2011SameMD) classified"
                 }
               },
               "queryRef": "_Measures.2. Anchor Date (2011SameMD)",
-              "nativeQueryRef": "2. Anchor Date (2011SameMD)"
+              "nativeQueryRef": "2. Anchor Date (2011SameMD) classified"
             }
           ]
         }

@@ -901,30 +901,71 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: da820f1a-a62d-47a0-9928-44941c37ca6f
 
-	measure 'Net Revenue YTD (_2011)' = ```
+	measure 'Business Gross Revenue YTD (_2011)' = ```
 			
 			VAR _anchor = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
 			RETURN
 			    CALCULATE(
 			        SUM(fact_transactions_classified[TotalValue]),
-			        fact_transactions_classified[TransactionCategory] = "ValidSales",
+			        fact_transactions_classified[TransactionCategory] IN {
+			            "ValidSales",
+			            "Postage",
+			            "DCGSProducts",
+			            "TransportCost"
+			            },
 			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
 			        fact_transactions_classified[Date] <= _anchor
 			    )
 			
 			```
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: c0910f8c-21fa-458f-b7a4-ec8a62c6eb65
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
-	measure '2. Anchor Date (2011SameMD)' = ```
-			DATE(2011, MONTH(TODAY()), DAY(TODAY()))
+	measure '2. Anchor Date (2011SameMD) classified' = ```
+			
+			VAR _aktualnyDzien = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
+			VAR _maxDataClassified = 
+			    CALCULATE(
+			        MAX(fact_transactions_classified[Date]),
+			        FILTER(
+			            ALL(fact_transactions_classified),
+			            YEAR(fact_transactions_classified[Date]) = 2011)
+			    )
+			RETURN
+			    MIN(_aktualnyDzien, _maxDataClassified)
 			
 			```
 		formatString: yyyy-mm-dd
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: cab4a4f9-a740-4f66-ba12-b5d977af0bb7
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure 'Net Revenue YTD (_2011)' =
+			
+			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
+			RETURN
+			    CALCULATE(
+			        SUM(fact_transactions_classified[TotalValue]),
+			        fact_transactions_classified[TransactionCategory] = "ValidSales" ,
+			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
+			        fact_transactions_classified[Date] <= _anchor
+			    )
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		displayFolder: _2011_Anchor\Sales\transactions_classified
+		lineageTag: e39b2b09-027e-4138-8d08-747a443401fb
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+
+	measure 'Business Efficiency' = ```
+			
+			    DIVIDE([Net Revenue YTD (_2011)], [Business Gross Revenue YTD (_2011)])
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: cdd14670-3520-408d-9c19-eb414ee58518
 
 	partition _Measures = m
 		mode: import

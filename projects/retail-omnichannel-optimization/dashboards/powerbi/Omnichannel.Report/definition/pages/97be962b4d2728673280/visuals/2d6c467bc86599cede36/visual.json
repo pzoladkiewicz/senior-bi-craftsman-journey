@@ -2,15 +2,14 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "2d6c467bc86599cede36",
   "position": {
-    "x": 464,
-    "y": 0,
+    "x": 64,
+    "y": 512,
     "z": 2,
-    "height": 168,
-    "width": 232
+    "height": 176,
+    "width": 1152
   },
   "visual": {
-    "visualType": "card",
-    "autoSelectVisualType": true,
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
         "Values": {
@@ -28,6 +27,20 @@
               },
               "queryRef": "_Measures.Net Revenue YTD (_2011)",
               "nativeQueryRef": "Net Revenue YTD (_2011)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Business Gross Revenue YTD (_2011)"
+                }
+              },
+              "queryRef": "_Measures.Gross Revenue YTD (_2011)",
+              "nativeQueryRef": "Business Gross Revenue YTD (_2011)"
             }
           ]
         }
@@ -38,7 +51,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c424cd9a0d6cc7d18ce7",
+        "name": "4b2c60ee008a70b41db7",
         "field": {
           "Measure": {
             "Expression": {
@@ -47,6 +60,20 @@
               }
             },
             "Property": "Net Revenue YTD (_2011)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "663be54238eb56ce1000",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Business Gross Revenue YTD (_2011)"
           }
         },
         "type": "Advanced"
