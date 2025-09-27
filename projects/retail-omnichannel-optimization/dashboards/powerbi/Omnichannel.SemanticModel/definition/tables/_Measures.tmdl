@@ -978,7 +978,7 @@ table _Measures
 			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
 			        fact_transactions_classified[Date] <= _anchor
 			    )
-		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		formatString: "£"#,0.0;-"£"#,0.0;"£"#,0.0
 		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 41890455-6456-411e-9860-39bd66ef35c9
 
@@ -991,6 +991,54 @@ table _Measures
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 9f39f66a-529d-478d-bde8-c4497a71edc1
+
+	measure 'Operations Quality Index (_2011)' = ```
+			
+			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
+			VAR _validTransactions = 
+			    CALCULATE(
+			        COUNTA(fact_transactions_classified[Invoice]),
+			        fact_transactions_classified[TransactionCategory] = "ValidSales",
+			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
+			        fact_transactions_classified[Date] <= _anchor
+			    )
+			VAR _qualityIssues = 
+			    CALCULATE(
+			        COUNTA(fact_transactions_classified[Invoice]),
+			        fact_transactions_classified[TransactionCategory] IN {
+			            "DataError",
+			            "ManualAdjustment",
+			            "Unclassified"
+			        },
+			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
+			        fact_transactions_classified[Date] <= _anchor
+			    )
+			VAR _totalTransactions = _validTransactions + _qualityIssues
+			RETURN
+			    DIVIDE(_validTransactions, _totalTransactions, 1)
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: _2011_Anchor\Sales\transactions_classified
+		lineageTag: 950f7cb5-397a-446f-a97a-532ed2e1ac02
+
+	measure 'Quality Cost Impact (_2011)' =
+			
+			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
+			RETURN
+			    CALCULATE(
+			        ABS(SUM(fact_transactions_classified[TotalValue])),
+			        fact_transactions_classified[TransactionCategory] IN {
+			            "ManualAdjustment",
+			            "Unclassified"
+			        },
+			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
+			        fact_transactions_classified[Date] <= _anchor
+			    )
+		formatString: "£"#,0.0;-"£"#,0.0;"£"#,0.0
+		displayFolder: _2011_Anchor\Sales\transactions_classified
+		lineageTag: 0bc331bb-6bfe-4284-ac31-70502f4d71bf
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
 	partition _Measures = m
 		mode: import
