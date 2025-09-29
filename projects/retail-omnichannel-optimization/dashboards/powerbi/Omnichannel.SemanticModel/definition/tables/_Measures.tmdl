@@ -1040,6 +1040,32 @@ table _Measures
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
+	measure 'Efficiency Gap' = ```
+			
+			 VAR _gap = [Business Efficiency] - .95
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _gap > 0, UNICHAR(11165) & " " & FORMAT(_gap, "0.0%"),
+			        _gap < 0, UNICHAR(11167) & " " & FORMAT(_gap, "0.0%"),
+			        FORMAT(_gap, "0.0%")
+			        )
+			
+			```
+		lineageTag: 51b5cedb-cb39-4d41-a8e1-adfc4d8235f7
+
+	measure 'Efficiency Gap Formatted' =
+			
+			VAR _gap = [Business Efficiency] - .95
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _gap > 0, "#00FF00",
+			        _gap < 0, "#FF0000",
+			        "#666666"
+			    )
+		lineageTag: ff7f5563-a37a-48f6-a842-3e24d513ba87
+
 	partition _Measures = m
 		mode: import
 		source =

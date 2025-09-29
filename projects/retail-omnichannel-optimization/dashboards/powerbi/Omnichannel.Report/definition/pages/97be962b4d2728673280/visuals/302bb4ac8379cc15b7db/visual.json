@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "302bb4ac8379cc15b7db",
   "position": {
-    "x": 64,
+    "x": 32,
     "y": 64,
     "z": 3,
     "height": 192,
-    "width": 304,
+    "width": 288,
     "tabOrder": 1
   },
   "visual": {
@@ -610,20 +610,7 @@
           }
         },
         {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Business Efficiency"
-                }
-              }
-            }
-          },
+          "properties": {},
           "selector": {
             "data": [
               {

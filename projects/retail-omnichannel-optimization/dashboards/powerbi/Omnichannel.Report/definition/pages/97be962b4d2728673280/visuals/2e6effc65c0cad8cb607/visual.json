@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "51e94a2946e8698a66ed",
+  "name": "2e6effc65c0cad8cb607",
   "position": {
-    "x": 340,
+    "x": 960,
     "y": 64,
-    "z": 4,
+    "z": 6,
     "height": 192,
-    "width": 290,
-    "tabOrder": 2
+    "width": 288,
+    "tabOrder": 4
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Return rate"
+                  "Property": "Business Efficiency"
                 }
               },
-              "queryRef": "_Measures.Return rate",
-              "nativeQueryRef": "Return rate"
+              "queryRef": "_Measures.Business Efficiency",
+              "nativeQueryRef": "Business Efficiency"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Return rate"
+                "Property": "Business Efficiency"
               }
             },
             "direction": "Descending"
@@ -296,7 +296,7 @@
             "valueArea": {
               "expr": {
                 "Literal": {
-                  "Value": "50D"
+                  "Value": "30D"
                 }
               }
             },
@@ -390,6 +390,20 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "dividerIgnorePadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Business Efficiency"
           }
         }
       ],
@@ -561,6 +575,49 @@
             "id": "field-ba49cafc-e791-ecd3-e07e-0fdec060e676",
             "order": 0
           }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Efficiency Gap"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Business Efficiency",
+            "id": "field-2d91e270-5a8a-2d29-016b-51dc210561c1",
+            "order": 0
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Business Efficiency",
+            "id": "field-8a9a29a2-cdc7-10be-9eb6-36dc1e420b65",
+            "order": 1
+          }
         }
       ],
       "referenceLabelValue": [
@@ -677,6 +734,52 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "showBlankAs": {
+              "expr": {
+                "Literal": {
+                  "Value": "'0'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Business Efficiency",
+            "id": "field-2d91e270-5a8a-2d29-016b-51dc210561c1"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "Efficiency Gap Formatted"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Business Efficiency",
+            "id": "field-2d91e270-5a8a-2d29-016b-51dc210561c1"
+          }
         }
       ],
       "referenceLabelTitle": [
@@ -733,6 +836,28 @@
           "selector": {
             "metadata": "_Measures.Return rate",
             "id": "field-ba49cafc-e791-ecd3-e07e-0fdec060e676"
+          }
+        },
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vs Industry Standard'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Business Efficiency",
+            "id": "field-2d91e270-5a8a-2d29-016b-51dc210561c1"
           }
         }
       ],
@@ -791,6 +916,22 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "referenceLabelDetail": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Business Efficiency"
           }
         }
       ]
@@ -940,7 +1081,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Return Impact'"
+                  "Value": "'Operations Quality Index'"
                 }
               }
             },
