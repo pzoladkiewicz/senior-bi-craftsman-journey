@@ -104,8 +104,17 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     df["InvoiceDate"] = _to_datetime(df["InvoiceDate"])
 
     # Zapewnienie typu tekstowego dla identyfikatorów
-    for col in ["Invoice", "StockCode", "Description", "Country"]:
+    for col in ["Invoice", "Description", "Country"]:
         df[col] = df[col].astype(str).str.strip()
+
+    # W StockCode pojawiają się "duble" w sensie identyczne produkty
+    # różnica jedynie w wielkosci znaku w StockCode
+    df["StockCode"] = (
+        df["StockCode"]
+        .astype(str)
+        .str.strip()
+        .str.upper()
+    )
 
     # Customer ID jako string lub NaN
     df["Customer ID"] = (
@@ -385,10 +394,10 @@ def build_dim_product(df_clean: pd.DataFrame) -> pd.DataFrame:
     ).reset_index()
 
     grp["ProductKey"] = grp["StockCode"].apply(lambda x: _hash_surrogate(str(x), prefix="PRD", length=12))
-    grp["IsGift"] = grp["StockCode"].str.contains("GIFT", na=False).astype(int)
-    grp["IsPostage"] = grp["StockCode"].str.contains("POST", na=False).astype(int)
-    grp["Category"] = np.where(grp["IsGift"] == 1, "Gift",
-                               np.where(grp["IsPostage"] == 1, "Service", "Regular"))
+    #grp["IsGift"] = grp["StockCode"].str.contains("GIFT", na=False).astype(int)
+    #grp["IsPostage"] = grp["StockCode"].str.contains("POST", na=False).astype(int)
+    #grp["Category"] = np.where(grp["IsGift"] == 1, "Gift",
+    #                           np.where(grp["IsPostage"] == 1, "Service", "Regular"))
     return grp
 
 
