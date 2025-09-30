@@ -23,7 +23,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Net Revenue YTD (_2011)"
+                  "Property": "Net Revenue per Product YTD (_2011)"
                 }
               },
               "queryRef": "_Measures.Net Revenue YTD (_2011)",
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Net Revenue YTD (_2011)"
+                "Property": "Net Revenue per Product YTD (_2011)"
               }
             },
             "direction": "Descending"
@@ -1170,7 +1170,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Net Revenue YTD (_2011)"
+            "Property": "Net Revenue per Product YTD (_2011)"
           }
         },
         "type": "Advanced"

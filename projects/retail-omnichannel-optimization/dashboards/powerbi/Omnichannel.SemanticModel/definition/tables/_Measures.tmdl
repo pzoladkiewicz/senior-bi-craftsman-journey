@@ -944,7 +944,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	measure 'Net Revenue YTD (_2011)' =
+	measure 'Net Revenue per Product YTD (_2011)' =
 			
 			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
 			RETURN
@@ -962,7 +962,7 @@ table _Measures
 
 	measure 'Business Efficiency' = ```
 			
-			    DIVIDE([Net Revenue YTD (_2011)], [Business Gross Revenue YTD (_2011)])
+			    DIVIDE([Net Revenue per Product YTD (_2011)], [Business Gross Revenue YTD (_2011)])
 			```
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: _2011_Anchor\Sales\transactions_classified
@@ -986,7 +986,7 @@ table _Measures
 
 	measure 'Return rate' = ```
 			
-			    ABS( DIVIDE([Returns YTD (_2011)], [Net Revenue YTD (_2011)]) )
+			    ABS( DIVIDE([Returns YTD (_2011)], [Net Revenue per Product YTD (_2011)], 0) )
 			```
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: _2011_Anchor\Sales\transactions_classified
@@ -1052,6 +1052,7 @@ table _Measures
 			        )
 			
 			```
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 51b5cedb-cb39-4d41-a8e1-adfc4d8235f7
 
 	measure 'Efficiency Gap Formatted' =
@@ -1060,11 +1061,44 @@ table _Measures
 			RETURN
 			    SWITCH(
 			        TRUE(),
-			        _gap > 0, "#00FF00",
-			        _gap < 0, "#FF0000",
-			        "#666666"
+			        _gap > 0, "Green",
+			        _gap < 0, "Red",
+			        "Grey"
 			    )
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: ff7f5563-a37a-48f6-a842-3e24d513ba87
+
+	measure 'Classified Total Value' = SUM(fact_transactions_classified[TotalValue])
+		lineageTag: 554f7c80-4e00-4d65-9adc-6e1b36679bad
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Product Transaction Volume YTD (_2011)' =
+			
+			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
+			RETURN
+			    CALCULATE(
+			        COUNTA(fact_transactions_classified[Invoice]),
+			        fact_transactions_classified[TransactionCategory] = "ValidSales" ,
+			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
+			        fact_transactions_classified[Date] <= _anchor
+			    )
+		formatString: 0
+		lineageTag: ba468319-c04c-460c-87cd-1e839cb230b5
+
+	measure 'Product AOV (classified) YTD (_2011)' = ```
+			
+			    DIVIDE([Net Revenue per Product YTD (_2011)], [Product Transaction Volume YTD (_2011)], 0)
+			```
+		lineageTag: 31df0272-51d0-49d8-b31f-99f0babb3ba0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Product Revenue Rank (classified) YTD (_2011)' = ```
+			
+			    RANKX()
+			```
+		lineageTag: 1a6ec4e3-830b-4f9e-9e38-5459e18cca53
 
 	partition _Measures = m
 		mode: import

@@ -19,7 +19,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 5,
+          "zIndex": 6,
           "expandedHeight": 296
         },
         {
@@ -33,12 +33,12 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 272.85714285714295,
-            "y": 180.4285714285715
+            "x": 12.857142857142946,
+            "y": 37.9285714285715
           },
           "nodeIndex": "dim_geography",
           "nodeLineageTag": "67304305-ce07-477c-b3a6-66d88d056323",
@@ -46,22 +46,21 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 2,
+          "zIndex": 5,
           "expandedHeight": 272
         },
         {
           "location": {
-            "x": 4.857142857143117,
-            "y": 58.571428571428569
+            "x": 376.10714285714312,
+            "y": 87.321428571428555
           },
           "nodeIndex": "dim_product",
           "nodeLineageTag": "4bc1db63-5cd1-4873-8d69-17694ebd65df",
           "size": {
-            "height": 152,
+            "height": 272,
             "width": 234
           },
-          "zIndex": 3,
-          "expandedHeight": 272
+          "zIndex": 9
         },
         {
           "location": {
@@ -74,7 +73,7 @@
             "height": 176,
             "width": 234
           },
-          "zIndex": 4,
+          "zIndex": 8,
           "expandedHeight": 272
         },
         {
@@ -88,7 +87,7 @@
             "height": 72,
             "width": 234
           },
-          "zIndex": 6,
+          "zIndex": 7,
           "expandedHeight": 932.57142857142878
         },
         {
@@ -102,7 +101,7 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
@@ -114,12 +113,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 1276.8571428571431,
-            "y": 214.78571428571433
+            "x": 673.10714285714312,
+            "y": 351.03571428571433
           },
           "nodeIndex": "fact_transactions_classified",
           "nodeLineageTag": "2621fe02-07e5-4599-a741-4642a8422a71",
@@ -127,11 +126,11 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3
         }
       ],
       "name": "All tables",
-      "zoomValue": 70,
+      "zoomValue": 80,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

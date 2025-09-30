@@ -77,25 +77,17 @@ table dim_product
 
 		annotation SummarizationSetBy = Automatic
 
-	column Category
-		dataType: string
-		lineageTag: d169dd76-8451-45c9-9863-0d7327642f88
-		summarizeBy: none
-		sourceColumn: Category
-
-		annotation SummarizationSetBy = Automatic
-
 	partition dim_product = m
 		mode: import
 		source =
 				let
 				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\retail-omnichannel-optimization\data\processed\dim_product.csv"),[Delimiter=",", Columns=10, Encoding=1250, QuoteStyle=QuoteStyle.None]),
-				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"StockCode", type text}, {"ProductName", type text}, {"AveragePrice", type text}, {"TotalQuantitySold", Int64.Type}, {"FirstSaleDate", type datetime}, {"LastSaleDate", type datetime}, {"ProductKey", Int64.Type}, {"IsGift", Int64.Type}, {"IsPostage", Int64.Type}, {"Category", type text}}),
-				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"AveragePrice", type number}}, "en-GB"),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type with Locale",{"IsGift", "IsPostage"})
+				    #"Removed Columns1" = Table.RemoveColumns(Source,{"Column8", "Column9", "Column10"}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Removed Columns1", [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"StockCode", type text}, {"ProductName", type text}, {"AveragePrice", type text}, {"TotalQuantitySold", Int64.Type}, {"FirstSaleDate", type datetime}, {"LastSaleDate", type datetime}, {"ProductKey", Int64.Type}}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"AveragePrice", type number}}, "en-GB")
 				in
-				    #"Removed Columns"
+				    #"Changed Type with Locale"
 
 	annotation PBI_NavigationStepName = Navigation
 
