@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 208,
     "width": 320,
-    "tabOrder": 13000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1125,23 +1125,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "56395ab53828b0324030",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Sales YTD (_2011)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

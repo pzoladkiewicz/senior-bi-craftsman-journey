@@ -30,17 +30,17 @@
             },
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "fact_transactions_classified"
                     }
                   },
-                  "Property": "Return rate"
+                  "Property": "StockCode"
                 }
               },
-              "queryRef": "_Measures.Return rate",
-              "nativeQueryRef": "Return rate"
+              "queryRef": "fact_transactions_classified.StockCode",
+              "nativeQueryRef": "StockCode"
             },
             {
               "field": {
@@ -69,20 +69,6 @@
               },
               "queryRef": "_Measures.Returns YTD (_2011)",
               "nativeQueryRef": "Returns YTD (_2011)"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Business Efficiency"
-                }
-              },
-              "queryRef": "_Measures.Business Efficiency",
-              "nativeQueryRef": "Business Efficiency"
             }
           ]
         }
@@ -91,16 +77,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "fact_transactions_classified"
+                    "Entity": "_Measures"
                   }
                 },
-                "Property": "Description"
+                "Property": "Net Revenue per Product YTD (_2011)"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -166,12 +152,12 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Return rate"
+                            "Property": "Net Revenue per Product YTD (_2011)"
                           }
                         }
                       }
                     ],
-                    "Top": 20
+                    "Top": 15
                   }
                 }
               },
@@ -209,48 +195,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "e3f7ef7a83b827394423",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Return rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f57bf2cc4a14de85505b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Net Revenue per Product YTD (_2011)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3d3d5c5b6bad4bbbcc22",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Returns YTD (_2011)"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

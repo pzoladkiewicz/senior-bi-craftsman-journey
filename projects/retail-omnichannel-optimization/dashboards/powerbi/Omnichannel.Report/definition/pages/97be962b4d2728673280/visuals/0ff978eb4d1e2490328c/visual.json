@@ -4,10 +4,10 @@
   "position": {
     "x": 32,
     "y": 304,
-    "z": 7,
-    "height": 432,
-    "width": 480,
-    "tabOrder": 5
+    "z": 4000,
+    "height": 496.00000000000006,
+    "width": 288,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "barChart",
@@ -957,66 +957,24 @@
         "type": "Advanced"
       },
       {
-        "name": "0bb9cfbc9d68a78870b9",
+        "name": "74fdeaffe400d8906324",
         "ordinal": 5,
         "field": {
-          "Column": {
+          "Aggregation": {
             "Expression": {
-              "SourceRef": {
-                "Entity": "fact_transactions_classified"
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_transactions_classified"
+                  }
+                },
+                "Property": "Description"
               }
             },
-            "Property": "TransactionCategory"
+            "Function": 3
           }
         },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fact_transactions_classified",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "TransactionCategory"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'ValidSales'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {}
-            }
-          ]
-        }
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

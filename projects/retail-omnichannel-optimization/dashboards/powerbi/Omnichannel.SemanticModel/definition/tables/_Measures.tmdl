@@ -1073,12 +1073,12 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Product Transaction Volume YTD (_2011)' =
+	measure 'Product Transaction Volume (classified) YTD (_2011)' =
 			
 			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
 			RETURN
 			    CALCULATE(
-			        COUNTA(fact_transactions_classified[Invoice]),
+			        COUNTA(fact_transactions_classified[StockCode]),
 			        fact_transactions_classified[TransactionCategory] = "ValidSales" ,
 			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
 			        fact_transactions_classified[Date] <= _anchor
@@ -1088,17 +1088,57 @@ table _Measures
 
 	measure 'Product AOV (classified) YTD (_2011)' = ```
 			
-			    DIVIDE([Net Revenue per Product YTD (_2011)], [Product Transaction Volume YTD (_2011)], 0)
+			    DIVIDE([Net Revenue per Product YTD (_2011)], [Product Transaction Volume (classified) YTD (_2011)], 0)
 			```
+		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
 		lineageTag: 31df0272-51d0-49d8-b31f-99f0babb3ba0
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
 	measure 'Product Revenue Rank (classified) YTD (_2011)' = ```
 			
-			    RANKX()
+			    RANKX(
+			        ALL(fact_transactions_classified[StockCode]),
+			        [Net Revenue per Product YTD (_2011)],
+			        ,DESC
+			        ,Dense
+			    )
 			```
+		formatString: 0
 		lineageTag: 1a6ec4e3-830b-4f9e-9e38-5459e18cca53
+
+	measure 'Product Performance Tier (classified) YTD (_2011)' =
+			
+			VAR _revenue = [Net Revenue per Product YTD (_2011)]
+			VAR _volume = [Product Transaction Volume (classified) YTD (_2011)]
+			VAR _highRevenue = _revenue >= 20000
+			VAR _highVolume = _volume >= 600
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _highRevenue && _highVolume, "Gwiazdy [Stars]",
+			        _highRevenue && NOT(_highVolume), "Premium [Premium]",
+			        NOT(_highRevenue) && _highVolume, "Wolumen [Volume]",
+			        "Standardowe [Standard]"
+			    )
+		lineageTag: 7d88d95d-4b48-4cce-91e9-8c48807139bd
+
+	measure 'Product Performance Tier  Colors' = ```
+			
+			VAR _revenue = [Net Revenue per Product YTD (_2011)]
+			VAR _volume = [Product Transaction Volume (classified) YTD (_2011)]
+			VAR _highRevenue = _revenue >= 20000
+			VAR _highVolume = _volume >= 600
+			RETURN 
+			    SWITCH(
+			        TRUE(),
+			        _highRevenue && _highVolume, "#1f7a1f",
+			        _highRevenue && NOT(_highVolume), "#1f4e79", 
+			        NOT(_highRevenue) && _highVolume, "#d67e00",
+			        "#767676"
+			    )
+			```
+		lineageTag: 39fa1629-5c4a-45ed-b8e1-9035fc05a05d
 
 	partition _Measures = m
 		mode: import

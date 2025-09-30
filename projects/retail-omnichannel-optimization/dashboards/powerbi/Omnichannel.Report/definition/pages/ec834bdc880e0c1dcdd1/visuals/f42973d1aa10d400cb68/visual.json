@@ -1,19 +1,18 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "a0c4bcd8c31a5e22959d",
+  "name": "f42973d1aa10d400cb68",
   "position": {
-    "x": 336,
-    "y": 304,
-    "z": 5000,
-    "height": 496.00000000000006,
-    "width": 608,
-    "tabOrder": 5000
+    "x": 368,
+    "y": 48,
+    "z": 0,
+    "height": 624,
+    "width": 816
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Rows": {
           "projections": [
             {
               "field": {
@@ -27,7 +26,8 @@
                 }
               },
               "queryRef": "fact_transactions_classified.Description",
-              "nativeQueryRef": "Description"
+              "nativeQueryRef": "Description",
+              "active": true
             },
             {
               "field": {
@@ -41,8 +41,13 @@
                 }
               },
               "queryRef": "fact_transactions_classified.StockCode",
-              "nativeQueryRef": "StockCode"
-            },
+              "nativeQueryRef": "StockCode",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -121,6 +126,19 @@
               }
             }
           }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "_Measures.Net Revenue per Product YTD (_2011)"
+          }
         }
       ],
       "columnHeaders": [
@@ -184,15 +202,7 @@
       ],
       "total": [
         {
-          "properties": {
-            "totals": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "columnFormatting": [
@@ -215,6 +225,69 @@
           },
           "selector": {
             "metadata": "fact_transactions_classified.Description"
+          }
+        },
+        {
+          "properties": {
+            "dataBars": {
+              "positiveColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                }
+              },
+              "negativeColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  }
+                }
+              },
+              "axisColor": {
+                "solid": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'foreground'"
+                      }
+                    }
+                  }
+                }
+              },
+              "reverseDirection": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "hideText": {
+                "expr": {
+                  "Literal": {
+                    "Value": "false"
+                  }
+                }
+              },
+              "totalMatchingOption": {
+                "expr": {
+                  "Literal": {
+                    "Value": "1L"
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Net Revenue per Product YTD (_2011)"
           }
         }
       ]
@@ -402,21 +475,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "fcd52d10d4c564cb2ce2",
-        "ordinal": 2,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_transactions_classified"
-              }
-            },
-            "Property": "StockCode"
-          }
-        },
-        "type": "TopN"
-      },
       {
         "name": "2de0e858c72097177060",
         "field": {
