@@ -540,10 +540,9 @@ table _Measures
 			    0
 			)
 			```
+		formatString: 0
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: 7c6fbb7e-4ca2-4f99-a9b7-f7c8765b19c2
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Total Quantity YTD (2011)' = ```
 			
@@ -652,6 +651,7 @@ table _Measures
 			    1 - [Guest Transactions % (2011)]
 			```
 		formatString: 0%;-0%;0%
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: f81790f9-e4e7-4a4b-abeb-0ff5faf1b169
 
 	measure 'Intl Growth Rate' = ```
@@ -761,6 +761,7 @@ table _Measures
 			    [Intl Growth Rate] > 0, "+" &FORMAT([Intl Growth Rate], "0.0%"),
 			    [Intl Growth Rate] < 0, "-" &FORMAT([Intl Growth Rate], "0.0%"),
 			    FORMAT([Intl Growth Rate], "0.0%"))
+		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: 5392eb92-0bc9-4d78-8e58-cb42accb94b2
 
 	measure '_slicer - Sales YTD (_2011)' = ```
@@ -845,6 +846,7 @@ table _Measures
 			        )
 			    )
 		formatString: 0
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 0f34dd8d-d391-4a38-b4f6-ebc7060b6bf0
 
 	measure '_slicer - Orders YTD (_2011)' = ```
@@ -1084,6 +1086,7 @@ table _Measures
 			        fact_transactions_classified[Date] <= _anchor
 			    )
 		formatString: 0
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: ba468319-c04c-460c-87cd-1e839cb230b5
 
 	measure 'Product AOV (classified) YTD (_2011)' = ```
@@ -1091,6 +1094,7 @@ table _Measures
 			    DIVIDE([Net Revenue per Product YTD (_2011)], [Product Transaction Volume (classified) YTD (_2011)], 0)
 			```
 		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 31df0272-51d0-49d8-b31f-99f0babb3ba0
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
@@ -1105,25 +1109,10 @@ table _Measures
 			    )
 			```
 		formatString: 0
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 1a6ec4e3-830b-4f9e-9e38-5459e18cca53
 
-	measure 'Product Performance Tier (classified) YTD (_2011)' =
-			
-			VAR _revenue = [Net Revenue per Product YTD (_2011)]
-			VAR _volume = [Product Transaction Volume (classified) YTD (_2011)]
-			VAR _highRevenue = _revenue >= 20000
-			VAR _highVolume = _volume >= 600
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        _highRevenue && _highVolume, "Gwiazdy [Stars]",
-			        _highRevenue && NOT(_highVolume), "Premium [Premium]",
-			        NOT(_highRevenue) && _highVolume, "Wolumen [Volume]",
-			        "Standardowe [Standard]"
-			    )
-		lineageTag: 7d88d95d-4b48-4cce-91e9-8c48807139bd
-
-	measure 'Product Performance Tier  Colors' = ```
+	measure 'Product Performance Tier Colors (classified) YTD (_2011)' = ```
 			
 			VAR _revenue = [Net Revenue per Product YTD (_2011)]
 			VAR _volume = [Product Transaction Volume (classified) YTD (_2011)]
@@ -1132,13 +1121,50 @@ table _Measures
 			RETURN 
 			    SWITCH(
 			        TRUE(),
-			        _highRevenue && _highVolume, "#1f7a1f",
-			        _highRevenue && NOT(_highVolume), "#1f4e79", 
-			        NOT(_highRevenue) && _highVolume, "#d67e00",
+			        _highRevenue && _highVolume, "#1f7a1f",         -- stars
+			        _highRevenue && NOT(_highVolume), "#1f4e79",    -- premium
+			        NOT(_highRevenue) && _highVolume, "#d67e00",    -- volume
 			        "#767676"
 			    )
 			```
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 39fa1629-5c4a-45ed-b8e1-9035fc05a05d
+
+	measure 'Net Revenue Bars' = [Net Revenue per Product YTD (_2011)]
+		displayFolder: _2011_Anchor\Sales\transactions_classified
+		lineageTag: ff0e037f-871c-4176-aff8-638ca9132d6c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Transparent color' = "#FFFFFF00"
+		lineageTag: 9931f01b-042c-4fc4-9eab-7c6f19335e50
+
+	measure 'Return rate CF color' =
+			
+			SWITCH(
+			    TRUE(),
+			    [Return rate] > .05, "Red",
+			    [Return rate] > .02, "Orange",
+			    "#333333")
+		displayFolder: _2011_Anchor\Sales\transactions_classified
+		lineageTag: ed14f3e5-88be-419f-9d12-72378f0fa425
+
+	measure 'Product Volume vs AOV Tier Colors (classified) YTD (_2011)' = ```
+			
+			VAR _aov = [Product AOV (classified) YTD (_2011)]
+			VAR _volume = [Product Transaction Volume (classified) YTD (_2011)]
+			VAR _highAOV = _aov >= 50
+			VAR _highVolume = _volume >= 600
+			RETURN 
+			    SWITCH(
+			        TRUE(),
+			        _highAOV && _highVolume, "#1f7a1f",         -- green    -- Premium Mass Market
+			        _highAOV && NOT(_highVolume), "#1f4e79",    -- blue     -- Niche Premium
+			        NOT(_highAOV) && _highVolume, "#d67e00",    -- orange   -- Volume Leaders
+			        "#767676"                                   -- grey     -- Evaluate
+			    )
+			```
+		lineageTag: 8d11778f-0aa4-4180-86f5-9e5b9b932b38
 
 	partition _Measures = m
 		mode: import

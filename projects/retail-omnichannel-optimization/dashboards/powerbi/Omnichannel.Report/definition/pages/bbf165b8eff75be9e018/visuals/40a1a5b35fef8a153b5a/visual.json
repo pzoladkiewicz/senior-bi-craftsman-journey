@@ -3,7 +3,7 @@
   "name": "40a1a5b35fef8a153b5a",
   "position": {
     "x": 16,
-    "y": 74,
+    "y": 93,
     "z": 0,
     "height": 208,
     "width": 304,
@@ -1035,6 +1035,27 @@
           "selector": {
             "metadata": "_Measures.UK Sales Share % (2011)",
             "id": "field-31b9b7e3-2db7-352e-33ab-3d8752f80e91"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

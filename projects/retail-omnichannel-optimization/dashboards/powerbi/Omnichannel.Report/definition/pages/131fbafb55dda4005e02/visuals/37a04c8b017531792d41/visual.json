@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "7e0f654c05d68e178800",
+  "name": "37a04c8b017531792d41",
   "position": {
-    "x": 16,
-    "y": 0,
-    "z": 0,
-    "height": 576,
-    "width": 624
+    "x": 48,
+    "y": 64,
+    "z": 1,
+    "height": 528,
+    "width": 640
   },
   "visual": {
     "visualType": "scatterChart",
@@ -41,11 +41,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Product AOV (classified) YTD (_2011)"
+                  "Property": "Net Revenue per Product YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.Product AOV (classified) YTD (_2011)",
-              "nativeQueryRef": "Product AOV (classified) YTD (_2011)"
+              "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
+              "nativeQueryRef": "Net Revenue per Product YTD (_2011)"
             }
           ]
         },
@@ -78,11 +78,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Net Revenue per Product YTD (_2011)"
+                  "Property": "Product AOV (classified) YTD (_2011)"
                 }
               },
-              "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
-              "nativeQueryRef": "Net Revenue per Product YTD (_2011)"
+              "queryRef": "_Measures.Product AOV (classified) YTD (_2011)",
+              "nativeQueryRef": "Product AOV (classified) YTD (_2011)"
             }
           ]
         }
@@ -115,7 +115,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Net Revenue £'"
+                  "Value": "'AOV'"
                 }
               }
             },
@@ -248,7 +248,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Product Performance Tier  Colors"
+                      "Property": "Product Volume vs AOV Tier Colors (classified) YTD (_2011)"
                     }
                   }
                 }
@@ -391,14 +391,28 @@
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "20D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             },
             "right": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "11D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -473,7 +487,7 @@
                         }
                       }
                     ],
-                    "Top": 100
+                    "Top": 50
                   }
                 }
               },
@@ -514,8 +528,54 @@
         "isLockedInViewMode": true
       },
       {
-        "name": "d0235bae7c40638200c4",
+        "name": "2f388baecd6829061734",
         "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Product AOV (classified) YTD (_2011)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9c60ff38793618264e05",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Product Transaction Volume (classified) YTD (_2011)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c7ed092c69c70ba93a02",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Return rate"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "235e13bc092a326d2d49",
+        "ordinal": 4,
         "field": {
           "Measure": {
             "Expression": {
@@ -561,36 +621,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "2f388baecd6829061734",
-        "ordinal": 2,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Product AOV (classified) YTD (_2011)"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "9c60ff38793618264e05",
-        "ordinal": 3,
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Product Transaction Volume (classified) YTD (_2011)"
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

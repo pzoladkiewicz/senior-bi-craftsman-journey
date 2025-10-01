@@ -3,7 +3,7 @@
   "name": "8075995ba10aaa7457ac",
   "position": {
     "x": 960,
-    "y": 74,
+    "y": 93,
     "z": 7000,
     "height": 208,
     "width": 304,
@@ -1063,6 +1063,27 @@
           "selector": {
             "metadata": "_Measures.Intl Growth Rate",
             "id": "field-2463ac1d-b061-59d1-bd17-ee2b0e06d5db"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

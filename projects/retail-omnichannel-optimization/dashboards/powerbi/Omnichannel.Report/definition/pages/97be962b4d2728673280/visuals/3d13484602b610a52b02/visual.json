@@ -1,19 +1,18 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "a0c4bcd8c31a5e22959d",
+  "name": "3d13484602b610a52b02",
   "position": {
-    "x": 336,
+    "x": 32,
     "y": 304,
-    "z": 5000,
-    "height": 496.00000000000006,
-    "width": 608,
-    "tabOrder": 5000
+    "z": 5002,
+    "height": 416.00000000000006,
+    "width": 416.00000000000006
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "scatterChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -27,52 +26,13 @@
                 }
               },
               "queryRef": "fact_transactions_classified.Description",
-              "nativeQueryRef": "Description"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fact_transactions_classified"
-                    }
-                  },
-                  "Property": "StockCode"
-                }
-              },
-              "queryRef": "fact_transactions_classified.StockCode",
-              "nativeQueryRef": "StockCode"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Net Revenue per Product YTD (_2011)"
-                }
-              },
-              "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
-              "nativeQueryRef": "Net Revenue",
-              "displayName": "Net Revenue"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Product Transaction Volume (classified) YTD (_2011)"
-                }
-              },
-              "queryRef": "_Measures.Product Transaction Volume (classified) YTD (_2011)",
-              "nativeQueryRef": "Volume",
-              "displayName": "Volume"
-            },
+              "nativeQueryRef": "Description",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -85,35 +45,115 @@
                 }
               },
               "queryRef": "_Measures.Product AOV (classified) YTD (_2011)",
-              "nativeQueryRef": "AOV",
-              "displayName": "AOV"
+              "nativeQueryRef": "Product AOV (classified) YTD (_2011)"
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Product Transaction Volume (classified) YTD (_2011)"
+                }
+              },
+              "queryRef": "_Measures.Product Transaction Volume (classified) YTD (_2011)",
+              "nativeQueryRef": "Product Transaction Volume (classified) YTD (_2011)",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Net Revenue per Product YTD (_2011)"
+                }
+              },
+              "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
+              "nativeQueryRef": "Net Revenue per Product YTD (_2011)"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
-                  }
-                },
-                "Property": "Net Revenue per Product YTD (_2011)"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
-      "values": [
+      "categoryAxis": [
         {
           "properties": {
-            "wordWrap": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Transaction Volume'"
+                }
+              }
+            },
+            "titleFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Net Revenue £'"
+                }
+              }
+            },
+            "titleFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "logAxisScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "invertAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "gridlineShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -123,69 +163,10 @@
           }
         }
       ],
-      "columnHeaders": [
+      "colorByCategory": [
         {
           "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            },
-            "autoSizeColumnWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "columnWidth": [
-        {
-          "properties": {},
-          "selector": {
-            "metadata": "_Measures.Net Revenue YTD (_2011)"
-          }
-        },
-        {
-          "properties": {},
-          "selector": {
-            "metadata": "_Measures.Product Transaction Volume (classified) YTD (_2011)"
-          }
-        },
-        {
-          "properties": {},
-          "selector": {
-            "metadata": "_Measures.Product AOV (classified) YTD (_2011)"
-          }
-        },
-        {
-          "properties": {},
-          "selector": {
-            "metadata": "fact_transactions_classified.Description"
-          }
-        }
-      ],
-      "grid": [
-        {
-          "properties": {
-            "gridVertical": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "total": [
-        {
-          "properties": {
-            "totals": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -195,26 +176,93 @@
           }
         }
       ],
-      "columnFormatting": [
+      "markers": [
         {
           "properties": {
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Left'"
-                }
-              }
-            },
-            "styleHeader": {
+            "borderColorMatchFill": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "38D"
+                }
+              }
+            },
+            "borderTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbles": [
+        {
+          "properties": {
+            "markerRangeType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'dataRange'"
+                }
+              }
+            },
+            "bubbleSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "-10L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "Product Performance Tier Colors (classified) YTD (_2011)"
+                    }
+                  }
                 }
               }
             }
           },
           "selector": {
-            "metadata": "fact_transactions_classified.Description"
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ]
@@ -223,17 +271,10 @@
       "title": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Product Performance Matrix'"
+                  "Value": "'Core Product Portfolio Analysis'"
                 }
               }
             },
@@ -254,47 +295,33 @@
           }
         }
       ],
-      "spacing": [
+      "subTitle": [
         {
           "properties": {
-            "verticalSpacing": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 50 produktów, przychód <£35k'"
                 }
               }
             }
           }
         }
       ],
-      "padding": [
+      "divider": [
         {
           "properties": {
-            "top": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
-                }
-              }
-            },
-            "left": {
-              "expr": {
-                "Literal": {
-                  "Value": "16D"
+                  "Value": "false"
                 }
               }
             }
@@ -311,13 +338,6 @@
                 }
               }
             },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
@@ -327,6 +347,13 @@
                       "Percent": -0.3
                     }
                   }
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -358,39 +385,34 @@
           }
         }
       ],
-      "visualHeader": [
+      "padding": [
         {
           "properties": {
-            "show": {
+            "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "20D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "visualTooltip": [
-        {
-          "properties": {
-            "show": {
+            },
+            "left": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "20D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "stylePreset": [
-        {
-          "properties": {
-            "name": {
+            },
+            "right": {
               "expr": {
                 "Literal": {
-                  "Value": "'Default'"
+                  "Value": "11D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -403,22 +425,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fcd52d10d4c564cb2ce2",
-        "ordinal": 2,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_transactions_classified"
-              }
-            },
-            "Property": "StockCode"
-          }
-        },
-        "type": "TopN"
-      },
-      {
-        "name": "2de0e858c72097177060",
+        "name": "f373f264020a6b5207e9",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -479,7 +487,7 @@
                         }
                       }
                     ],
-                    "Top": 20
+                    "Top": 50
                   }
                 }
               },
@@ -516,7 +524,87 @@
               }
             }
           ]
+        },
+        "isLockedInViewMode": true
+      },
+      {
+        "name": "d0235bae7c40638200c4",
+        "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Net Revenue per Product YTD (_2011)"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "_",
+              "Entity": "_Measures",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 3,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "_"
+                        }
+                      },
+                      "Property": "Net Revenue per Product YTD (_2011)"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "35000L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
         }
+      },
+      {
+        "name": "2f388baecd6829061734",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Product AOV (classified) YTD (_2011)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "9c60ff38793618264e05",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Product Transaction Volume (classified) YTD (_2011)"
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"
