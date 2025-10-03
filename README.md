@@ -33,7 +33,7 @@ Poniżej znajduje się lista realizowanych projektów. Każdy z nich stanowi kom
 
 | Projekt (Project)                                                                    | Opis (Description)                                                                                                                  | Technologie (Technologies)                  | Status (Status)      |
 | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | -------------------- |
-| **[Projekt 1: Optymalizacja Omnichannel w Sektorze Detalicznym](./projects/Retail-Omnichannel-Optimization/README.md)** | Analiza danych sprzedażowych brytyjskiego detalisty e-commerce w celu budowy rozwiązań BI w Power BI i Tableau. | Python, Pandas, Power BI, Tableau, Git      | W toku (In Progress) |
+| **[Projekt 1: Optymalizacja Omnichannel w Sektorze Detalicznym](./projects/retail-omnichannel-optimization/README.md)** | Analiza danych sprzedażowych brytyjskiego detalisty e-commerce w celu budowy rozwiązań BI w Power BI i Tableau. | Python, Pandas, Power BI, Tableau, Git      | W toku (In Progress) |
 | *Projekt 2: Analiza Efektywności Marketingu (w planach)*                                 | *Analiza danych marketingowych w celu optymalizacji zwrotu z inwestycji (ROI) w różnych kanałach.*                            | *Power BI, SQL, Python*                     | *Planowany (Planned)*    |
 
 ## Metodologia i Standardy (Methodology & Standards)
