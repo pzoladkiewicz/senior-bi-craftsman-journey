@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "f42973d1aa10d400cb68",
+  "name": "b26a4176bcc6dcb5b4e3",
   "position": {
-    "x": 336,
-    "y": 96,
-    "z": 0,
-    "height": 512,
-    "width": 816
+    "x": 763,
+    "y": 638,
+    "z": 6000,
+    "height": 336,
+    "width": 484,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -61,71 +62,27 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Net Revenue Bars"
-                }
-              },
-              "queryRef": "_Measures.Net Revenue Bars",
-              "nativeQueryRef": " ",
-              "displayName": " "
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Net Revenue per Product YTD (_2011)"
-                }
-              },
-              "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
-              "nativeQueryRef": "Net Revenue",
-              "displayName": "Net Revenue"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Product Transaction Volume (classified) YTD (_2011)"
-                }
-              },
-              "queryRef": "_Measures.Product Transaction Volume (classified) YTD (_2011)",
-              "nativeQueryRef": "Volume",
-              "displayName": "Volume"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "Product AOV (classified) YTD (_2011)"
-                }
-              },
-              "queryRef": "_Measures.Product AOV (classified) YTD (_2011)",
-              "nativeQueryRef": "AOV",
-              "displayName": "AOV"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
                   "Property": "Return rate"
                 }
               },
               "queryRef": "_Measures.Return rate",
-              "nativeQueryRef": "Return rate"
+              "nativeQueryRef": "Rate",
+              "displayName": "Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Returns YTD (_2011)"
+                }
+              },
+              "queryRef": "_Measures.Returns YTD (_2011)",
+              "nativeQueryRef": "Value",
+              "displayName": "Value"
             }
           ]
         }
@@ -169,19 +126,6 @@
           }
         },
         {
-          "properties": {},
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ],
-            "metadata": "_Measures.Net Revenue per Product YTD (_2011)"
-          }
-        },
-        {
           "properties": {
             "fontColor": {
               "solid": {
@@ -193,7 +137,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Transparent color"
+                      "Property": "Return rate CF color"
                     }
                   }
                 }
@@ -208,7 +152,7 @@
                 }
               }
             ],
-            "metadata": "_Measures.Net Revenue Bars"
+            "metadata": "_Measures.Return rate"
           }
         }
       ],
@@ -258,35 +202,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "73.39805825242718D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Product Transaction Volume (classified) YTD (_2011)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "84.94174757281553D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Product AOV (classified) YTD (_2011)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "262D"
+                  "Value": "213.92407179642754D"
                 }
               }
             }
@@ -300,35 +216,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "98.18446601941747D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Net Revenue per Product YTD (_2011)"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "89.66990291262135D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Net Revenue Bars"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "86.18446601941747D"
+                  "Value": "76.99170119048922D"
                 }
               }
             }
@@ -342,13 +230,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "76D"
+                  "Value": "66.43967977756137D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "_Measures.Return rate"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.62485096978685D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Returns YTD (_2011)"
           }
         }
       ],
@@ -393,75 +295,6 @@
           }
         },
         {
-          "properties": {},
-          "selector": {
-            "metadata": "_Measures.Net Revenue per Product YTD (_2011)"
-          }
-        },
-        {
-          "properties": {
-            "dataBars": {
-              "positiveColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'maxColor'"
-                      }
-                    }
-                  }
-                }
-              },
-              "negativeColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'minColor'"
-                      }
-                    }
-                  }
-                }
-              },
-              "axisColor": {
-                "solid": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'foreground'"
-                      }
-                    }
-                  }
-                }
-              },
-              "reverseDirection": {
-                "expr": {
-                  "Literal": {
-                    "Value": "false"
-                  }
-                }
-              },
-              "hideText": {
-                "expr": {
-                  "Literal": {
-                    "Value": "false"
-                  }
-                }
-              },
-              "totalMatchingOption": {
-                "expr": {
-                  "Literal": {
-                    "Value": "1L"
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Net Revenue Bars"
-          }
-        },
-        {
           "properties": {
             "alignment": {
               "expr": {
@@ -473,6 +306,12 @@
           },
           "selector": {
             "metadata": "Min(fact_transactions_classified.StockCode)"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "_Measures.Return rate"
           }
         }
       ],
@@ -545,7 +384,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Product Performance Matrix'"
+                  "Value": "'Products requiring quality attention - Return Rate >20%'"
                 }
               }
             },
@@ -650,7 +489,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.3
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -800,98 +639,45 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "2de0e858c72097177060",
+        "name": "fbfad01fc92d010ab650",
         "field": {
-          "Column": {
+          "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "fact_transactions_classified"
+                "Entity": "_Measures"
               }
             },
-            "Property": "Description"
+            "Property": "Return rate"
           }
         },
-        "type": "TopN",
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "f",
-                        "Entity": "fact_transactions_classified",
-                        "Type": 0
-                      },
-                      {
-                        "Name": "_",
-                        "Entity": "_Measures",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "f"
-                            }
-                          },
-                          "Property": "Description"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Measure": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "_"
-                              }
-                            },
-                            "Property": "Net Revenue per Product YTD (_2011)"
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 20
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "f",
-              "Entity": "fact_transactions_classified",
+              "Name": "_",
+              "Entity": "_Measures",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "Description"
-                      }
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "_"
+                        }
+                      },
+                      "Property": "Return rate"
                     }
-                  ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0.2D"
                     }
                   }
                 }

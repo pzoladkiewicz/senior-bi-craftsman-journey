@@ -6,7 +6,8 @@
     "y": 687.99999999999989,
     "z": 500,
     "height": 283,
-    "width": 550
+    "width": 550,
+    "tabOrder": 1000
   },
   "visualGroup": {
     "displayName": "top 10 - table",

@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 304,
     "width": 448,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -322,7 +322,15 @@
           }
         },
         {
-          "properties": {},
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "77.13436444429699D"
+                }
+              }
+            }
+          },
           "selector": {
             "data": [
               {
@@ -380,9 +388,54 @@
           }
         },
         {
-          "properties": {},
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "122.26872724487039D"
+                }
+              }
+            }
+          },
           "selector": {
             "metadata": "dim_geography.Country"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "64.10915033787101D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dim_date"
+                          }
+                        },
+                        "Property": "QuarterName"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Q4'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ],

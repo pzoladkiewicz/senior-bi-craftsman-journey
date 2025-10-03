@@ -1019,7 +1019,7 @@ table _Measures
 			RETURN
 			    DIVIDE(_validTransactions, _totalTransactions, 1)
 			```
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 950f7cb5-397a-446f-a97a-532ed2e1ac02
 
@@ -1071,6 +1071,7 @@ table _Measures
 		lineageTag: ff7f5563-a37a-48f6-a842-3e24d513ba87
 
 	measure 'Classified Total Value' = SUM(fact_transactions_classified[TotalValue])
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 554f7c80-4e00-4d65-9adc-6e1b36679bad
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1164,6 +1165,7 @@ table _Measures
 			        "#767676"                                   -- grey     -- Evaluate
 			    )
 			```
+		displayFolder: _2011_Anchor\Sales\transactions_classified
 		lineageTag: 8d11778f-0aa4-4180-86f5-9e5b9b932b38
 
 	partition _Measures = m

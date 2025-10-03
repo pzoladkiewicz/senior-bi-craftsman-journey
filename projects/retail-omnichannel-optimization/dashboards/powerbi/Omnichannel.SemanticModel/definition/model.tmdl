@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","DaxQueryView_Desktop"]
 
 annotation PBI_QueryOrder = ["dim_customer","dim_date","dim_geography","dim_product","fact_sales","Measures (2)","_Measures","_slicer Customer Segment - Executive Summary","fact_transactions_classified"]
 

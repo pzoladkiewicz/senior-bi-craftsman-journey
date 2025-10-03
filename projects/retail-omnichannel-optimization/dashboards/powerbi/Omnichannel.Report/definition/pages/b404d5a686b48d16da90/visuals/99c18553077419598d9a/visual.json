@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "a92b0b36374d13578e0a",
+  "name": "99c18553077419598d9a",
   "position": {
     "x": 32,
     "y": 15,
@@ -19,12 +19,19 @@
               {
                 "textRuns": [
                   {
-                    "value": "Channel & Market Analysis",
+                    "value": "Product Performance & Quality Analysis",
                     "textStyle": {
                       "fontFamily": "Segoe (Bold)",
                       "fontSize": "20pt",
                       "color": "#1f4e79"
                     }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               }

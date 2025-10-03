@@ -3230,12 +3230,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "product": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "dim artifact": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -3243,16 +3237,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "artifact": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -3283,36 +3267,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "item": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "merchandise": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "produce": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
 			          }
 			        }
 			      ]
@@ -3385,32 +3339,10 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "name": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "ProductName": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "product": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "artifact": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
 			          }
 			        },
 			        {
@@ -3454,36 +3386,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "item": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "merchandise": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "produce": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
 			          "artifact name": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -3502,9 +3404,38 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.582
 			          }
+			        },
+			        {
+			          "merchandise name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "produce name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "Product": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
-			      ],
-			      "NameType": "Name"
+			      ]
 			    },
 			    "dim_product.average_price": {
 			      "Definition": {
@@ -6104,12 +6035,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "value": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "aggregate value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -6137,16 +6062,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "assessment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
 			          }
 			        },
 			        {
@@ -6200,13 +6115,23 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "worth": {
+			          "total importance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "total significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
 			          }
 			        }
 			      ]
@@ -8172,12 +8097,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "value": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "waterfall assessment": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8185,16 +8104,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "assessment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
 			          }
 			        },
 			        {
@@ -8248,33 +8157,43 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "worth": {
+			          "waterfall importance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.475
 			          }
 			        },
 			        {
-			          "cost": {
+			          "waterfall significance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.475
 			          }
 			        },
 			        {
-			          "charge": {
+			          "waterfall usefulness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "waterfall consequence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
 			          }
 			        }
 			      ]
@@ -10631,6 +10550,16 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
+			        },
+			        {
+			          "Value": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -11053,12 +10982,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "value": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "classified aggregate value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -11139,17 +11062,17 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "assessment": {
+			          "classified total importance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "classified total importance": {
+			          "classified total significance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -11584,6 +11507,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "Product": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -12448,12 +12381,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "value": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "aggregate value": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -12481,16 +12408,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "assessment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
 			          }
 			        },
 			        {
@@ -12544,13 +12461,23 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "worth": {
+			          "total importance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "total significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
 			          }
 			        }
 			      ]
@@ -13193,7 +13120,7 @@ cultureInfo en-US
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "entity__measure.product_performance_tier__colors": {
+			    "entity__measure.product_performance_tier_colors_classified_YTD__2011": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -13203,132 +13130,14 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "product performance tier  colors": {
+			          "product performance tier colors (classified) YTD (_2011)": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "product performance tier colors": {
+			          "product performance tier colors (classified) YTD": {
 			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "colors": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "tier colors": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "performance tier colors": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "artifact performance tier color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "item performance tier color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "merchandise performance tier color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "produce performance tier color": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "product performance tier insignia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "product performance tier ensign": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "performance tier insignia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "performance tier ensign": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "tier insignia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "tier ensign": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
+			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -13562,9 +13371,198 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.return_rate_CF_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Return rate CF color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "return rate CF color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "CF color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rate CF color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "return rate cf hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "rate cf hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cf hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "return rate cf tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "return rate cf shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "return rate cf dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "return rate cf paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "return rate cf pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "rate cf tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rate cf shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.product_volume_vs_AOV_tier_colors_classified_YTD__2011": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Product Volume vs AOV Tier Colors (classified) YTD (_2011)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "product volume vs AOV tier colors (classified) YTD (_2011)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product volume vs AOV tier colors (classified) YTD": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "fact_transactions_classified_invoice_date_date_hierarchy_has_fact_transactions_classified_invoice_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_transactions_classified"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transactions_classified.invoice_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified.invoice_date.date_hierarchy"
+			          }
+			        },
+			        "fact_transactions_classified.invoice_date.year": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified.invoice_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transactions_classified.invoice_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact_transactions_classified.invoice_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "invoice_date_hierarchies_have_invoice_years"
+			        }
+			      ]
+			    },
 			    "fact_transactions_classified_invoice_date_has_date_hierarchy": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_transactions_classified"
@@ -14554,6 +14552,72 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "fact_transactions_classified_has_entity__measure_product_volume_vs_AOV_tier_colors_classified_YTD__2011": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_transactions_classified"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transactions_classified": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified"
+			          }
+			        },
+			        "entity__measure.product_volume_vs_AOV_tier_colors_classified_YTD__2011": {
+			          "Target": {
+			            "Entity": "entity__measure.product_volume_vs_AOV_tier_colors_classified_YTD__2011"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transactions_classified"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.product_volume_vs_AOV_tier_colors_classified_YTD__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transactions_classifieds_have_product_volume_vs_AOV_tier_colors_classified_YTD__2011"
+			        }
+			      ]
+			    },
+			    "fact_transactions_classified_has_entity__measure_return_rate_CF_color": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_transactions_classified"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transactions_classified": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified"
+			          }
+			        },
+			        "entity__measure.return_rate_CF_color": {
+			          "Target": {
+			            "Entity": "entity__measure.return_rate_CF_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transactions_classified"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.return_rate_CF_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transactions_classifieds_have_return_rate_CF_color"
+			        }
+			      ]
+			    },
 			    "entity__measure_has_transparent_color": {
 			      "Binding": {
 			        "ConceptualEntity": "_Measures"
@@ -14620,7 +14684,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_transactions_classified_has_entity__measure_product_performance_tier__colors": {
+			    "fact_transactions_classified_has_entity__measure_product_performance_tier_colors_classified_YTD__2011": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_transactions_classified"
 			      },
@@ -14631,9 +14695,9 @@ cultureInfo en-US
 			            "Entity": "fact_transactions_classified"
 			          }
 			        },
-			        "entity__measure.product_performance_tier__colors": {
+			        "entity__measure.product_performance_tier_colors_classified_YTD__2011": {
 			          "Target": {
-			            "Entity": "entity__measure.product_performance_tier__colors"
+			            "Entity": "entity__measure.product_performance_tier_colors_classified_YTD__2011"
 			          }
 			        }
 			      },
@@ -14644,45 +14708,12 @@ cultureInfo en-US
 			              "Role": "fact_transactions_classified"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.product_performance_tier__colors"
+			              "Role": "entity__measure.product_performance_tier_colors_classified_YTD__2011"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_transactions_classifieds_have_product_performance_tier__colors"
-			        }
-			      ]
-			    },
-			    "fact_transactions_classified_has_entity__measure_product_performance_tier_classified_YTD__2011": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_transactions_classified"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transactions_classified": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified"
-			          }
-			        },
-			        "entity__measure.product_performance_tier_classified_YTD__2011": {
-			          "Target": {
-			            "Entity": "entity__measure.product_performance_tier_classified_YTD__2011"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transactions_classified"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.product_performance_tier_classified_YTD__2011"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_transactions_classifieds_have_product_performance_tier_classified_YTD__2011"
+			          "ID": "fact_transactions_classifieds_have_product_performance_tier_colors_classified_YTD__2011"
 			        }
 			      ]
 			    },
@@ -18546,19 +18577,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_products_have_product_names"
-			        },
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "dim_product"
-			            },
-			            "Name": {
-			              "Role": "dim_product.product_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "product_names_are_names_IDs_of_dim_products"
 			        }
 			      ]
 			    },
@@ -19858,39 +19876,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "fact_transactions_classifieds_are_classified_on_2__anchor_date_2011SameMD_classified"
-			        }
-			      ]
-			    },
-			    "fact_transactions_classified_invoice_date_date_hierarchy_has_fact_transactions_classified_invoice_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_transactions_classified"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transactions_classified.invoice_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified.invoice_date.date_hierarchy"
-			          }
-			        },
-			        "fact_transactions_classified.invoice_date.year": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified.invoice_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transactions_classified.invoice_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fact_transactions_classified.invoice_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "invoice_date_hierarchies_have_invoice_years"
 			        }
 			      ]
 			    },

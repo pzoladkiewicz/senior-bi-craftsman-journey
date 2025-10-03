@@ -1,12 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "3d13484602b610a52b02",
+  "name": "41c954c60243020070d7",
   "position": {
     "x": 32,
-    "y": 304,
-    "z": 5002,
-    "height": 416.00000000000006,
-    "width": 416.00000000000006
+    "y": 317,
+    "z": 5000,
+    "height": 288,
+    "width": 598,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -26,8 +27,9 @@
                 }
               },
               "queryRef": "fact_transactions_classified.Description",
-              "nativeQueryRef": "Description",
-              "active": true
+              "nativeQueryRef": "Product",
+              "active": true,
+              "displayName": "Product"
             }
           ]
         },
@@ -45,7 +47,32 @@
                 }
               },
               "queryRef": "_Measures.Product AOV (classified) YTD (_2011)",
-              "nativeQueryRef": "Product AOV (classified) YTD (_2011)"
+              "nativeQueryRef": "AOV",
+              "displayName": "AOV"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_transactions_classified"
+                        }
+                      },
+                      "Property": "StockCode"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(fact_transactions_classified.StockCode)",
+              "nativeQueryRef": "StockCode",
+              "displayName": "StockCode"
             }
           ]
         },
@@ -63,8 +90,9 @@
                 }
               },
               "queryRef": "_Measures.Product Transaction Volume (classified) YTD (_2011)",
-              "nativeQueryRef": "Product Transaction Volume (classified) YTD (_2011)",
-              "active": true
+              "nativeQueryRef": "Volume",
+              "active": true,
+              "displayName": "Volume"
             }
           ]
         },
@@ -82,7 +110,8 @@
                 }
               },
               "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
-              "nativeQueryRef": "Net Revenue per Product YTD (_2011)"
+              "nativeQueryRef": "Net Revenue",
+              "displayName": "Net Revenue"
             }
           ]
         }
@@ -274,7 +303,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Core Product Portfolio Analysis'"
+                  "Value": "'Strategic Product Positioning [Volume vs Revenue Analysis]'"
                 }
               }
             },
@@ -301,7 +330,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -344,7 +373,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.3
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -413,6 +442,68 @@
               "expr": {
                 "Literal": {
                   "Value": "20D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "themedBackground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": -0.5
+                    }
+                  }
+                }
+              }
+            },
+            "themedTitleFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "themedValueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
                 }
               }
             }
