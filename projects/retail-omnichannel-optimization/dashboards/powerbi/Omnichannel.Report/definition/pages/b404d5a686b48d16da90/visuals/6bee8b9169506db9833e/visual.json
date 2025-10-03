@@ -111,7 +111,8 @@
                 }
               },
               "queryRef": "_Measures.Return rate",
-              "nativeQueryRef": "Return rate"
+              "nativeQueryRef": "Returns",
+              "displayName": "Returns"
             }
           ]
         }
@@ -126,7 +127,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Net Revenue per Product YTD (_2011)"
+                "Property": "Return rate"
               }
             },
             "direction": "Descending"
