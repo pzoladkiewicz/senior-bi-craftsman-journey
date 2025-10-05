@@ -1,0 +1,158 @@
+table fact_transactions_classified
+	lineageTag: 2621fe02-07e5-4599-a741-4642a8422a71
+
+	column Invoice
+		dataType: string
+		lineageTag: 5cef655a-799d-4070-812e-a88ab7bcb8b5
+		summarizeBy: none
+		sourceColumn: Invoice
+
+		annotation SummarizationSetBy = Automatic
+
+	column StockCode
+		dataType: string
+		lineageTag: 95f7d369-2af0-47b3-a88a-4269d9889b1a
+		summarizeBy: none
+		sourceColumn: StockCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 45378875-5565-4a09-a716-e99229e92e7e
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 98fefcdb-2e35-452b-95f2-6100f4534dde
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvoiceDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: dade8dca-463e-4fec-9490-78f44adc8d9b
+		summarizeBy: none
+		sourceColumn: InvoiceDate
+
+		variation Variation
+			isDefault
+			relationship: 970583e1-cc91-4070-8d8e-f16f52120f40
+			defaultHierarchy: LocalDateTable_e7a23617-b6ec-4efd-968e-d5ff83c56463.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: double
+		lineageTag: d88c6c9b-d968-46e7-9688-9268c0d70d60
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4945603e-680f-48c6-b50e-eaad55d30fd4
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = User
+
+	column Country
+		dataType: string
+		lineageTag: 1ef491d7-65ae-4b0a-bb61-b36f09021324
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column __sheet_name__
+		dataType: string
+		isHidden
+		lineageTag: 5cfe1a5a-7460-417b-8e72-6c5f7fc8473d
+		summarizeBy: none
+		sourceColumn: __sheet_name__
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalValue
+		dataType: double
+		lineageTag: 95d4e1ed-f92d-4854-ace5-8cc3d0959559
+		summarizeBy: sum
+		sourceColumn: TotalValue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TransactionCategory
+		dataType: string
+		lineageTag: f52092c6-3ec2-41d4-a709-6c745f9a078c
+		summarizeBy: none
+		sourceColumn: TransactionCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClassificationRule
+		dataType: string
+		lineageTag: 66422891-8839-483c-a298-a40b9f77c2a9
+		summarizeBy: none
+		sourceColumn: ClassificationRule
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClassificationStep
+		dataType: int64
+		formatString: 0
+		lineageTag: 695f2c3b-0373-4312-818f-c468a76d40a2
+		summarizeBy: none
+		sourceColumn: ClassificationStep
+
+		annotation SummarizationSetBy = User
+
+	column Date
+		dataType: dateTime
+		formatString: yyyy-mm-dd
+		lineageTag: a48d82f3-c0aa-4b9c-b379-c058b40d8786
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 44952cdc-87a7-402b-911e-e3f8f9ef4025
+			defaultHierarchy: LocalDateTable_65b1114a-e578-4eb8-8673-9d590a94fdaf.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	partition fact_transactions_classified = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\retail-omnichannel-optimization\data\processed\fact_transactions_classified.csv"),[Delimiter=",", Columns=13, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Invoice", type text}, {"StockCode", type text}, {"Description", type text}, {"Quantity", Int64.Type}, {"InvoiceDate", type datetime}, {"Price", type text}, {"CustomerID", Int64.Type}, {"Country", type text}, {"__sheet_name__", type text}, {"TotalValue", type text}, {"TransactionCategory", type text}, {"ClassificationRule", type text}, {"ClassificationStep", Int64.Type}}),
+				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"Price", type number}}, "en-GB"),
+				    #"Changed Type with Locale1" = Table.TransformColumnTypes(#"Changed Type with Locale", {{"TotalValue", type number}}, "en-GB"),
+				    #"Inserted Date" = Table.AddColumn(#"Changed Type with Locale1", "Date", each DateTime.Date([InvoiceDate]), type date)
+				in
+				    #"Inserted Date"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

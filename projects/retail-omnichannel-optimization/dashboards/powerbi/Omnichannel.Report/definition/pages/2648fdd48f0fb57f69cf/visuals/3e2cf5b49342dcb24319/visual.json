@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 208,
     "width": 320,
-    "tabOrder": 12500
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1074,6 +1074,27 @@
           "selector": {
             "metadata": "_Measures.Customers YTD (2011 Anchor)",
             "id": "field-02ae83f6-9340-7e26-f881-943b3588462a"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

@@ -41,7 +41,5 @@ table '_slicer Customer Segment - Executive Summary'
 				in
 				    #"Changed Type"
 
-	changedProperty = Name
-
 	annotation PBI_ResultType = Table
 

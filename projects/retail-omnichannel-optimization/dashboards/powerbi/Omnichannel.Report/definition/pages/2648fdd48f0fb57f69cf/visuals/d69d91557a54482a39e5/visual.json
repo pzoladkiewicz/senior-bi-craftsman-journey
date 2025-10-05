@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 208,
     "width": 320,
-    "tabOrder": 13000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -993,6 +993,27 @@
           },
           "selector": {
             "metadata": "_Measures.Sales YTD (_2011)"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

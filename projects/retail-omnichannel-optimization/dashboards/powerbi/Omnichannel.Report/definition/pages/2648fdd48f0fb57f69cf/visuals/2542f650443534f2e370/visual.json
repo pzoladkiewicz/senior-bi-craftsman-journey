@@ -7,7 +7,7 @@
     "z": 1500,
     "height": 240,
     "width": 368,
-    "tabOrder": 6000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -376,7 +376,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.2
+                      "Percent": -0.1
                     }
                   }
                 }

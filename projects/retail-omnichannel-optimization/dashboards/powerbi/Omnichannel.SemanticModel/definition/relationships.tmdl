@@ -34,3 +34,17 @@ relationship AutoDetected_8717e10e-b236-4076-9da8-77e8caeed81b
 	fromColumn: fact_sales.ProductKey
 	toColumn: dim_product.ProductKey
 
+relationship 970583e1-cc91-4070-8d8e-f16f52120f40
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_transactions_classified.InvoiceDate
+	toColumn: LocalDateTable_e7a23617-b6ec-4efd-968e-d5ff83c56463.Date
+
+relationship 44952cdc-87a7-402b-911e-e3f8f9ef4025
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fact_transactions_classified.Date
+	toColumn: LocalDateTable_65b1114a-e578-4eb8-8673-9d590a94fdaf.Date
+
+relationship 529873e4-74ca-67bb-9eca-4cbb9e89f8d1
+	fromColumn: fact_transactions_classified.StockCode
+	toColumn: dim_product.StockCode
+

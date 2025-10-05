@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 208,
     "width": 320,
-    "tabOrder": 12250
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1084,6 +1084,27 @@
           "selector": {
             "metadata": "_Measures.AOV YTD (_2011)",
             "id": "field-df4090de-f6e2-3ca9-292d-16cfaf58fe90"
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
