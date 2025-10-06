@@ -1,49 +1,55 @@
-# Portfolio Rozwojowe: Senior BI Analyst Journey
+# Praktyczne Projekty BI: Power BI vs Tableau
 
-## Wprowadzenie
+## O czym jest ten projekt
 
-Witaj w moim portfolio. To repozytorium dokumentuje moją ścieżkę rozwoju i transformacji z doświadczonego dewelopera Tableau w eksperta od analizy wieloplatformowej i migracji danych (Migration Expert / Platform Translator), ze strategicznym naciskiem na ekosystem Microsoft Power BI.
+Uczę się Power BI przez praktyczne tworzenie projektów z systematycznym porównaniem do Tableau. Nie tutoriale, nie sztuczne dane - prawdziwe przypadki biznesowe z praktycznymi wnioskami.
 
-Celem tego projektu jest praktyczne zademonstrowanie kompetencji w kluczowych obszarach analityki biznesowej (business analytics), w tym:
+## Aktualne projekty
 
-*   Kompleksowa analiza i profilowanie danych (data profiling & analysis)
-*   Zapewnienie jakości danych i procesy ETL (data quality assurance & ETL)
-*   Modelowanie danych w schemacie gwiazdy (star schema data modeling)
-*   Tworzenie zaawansowanych rozwiązań BI w Power BI i Tableau
-*   Dokumentacja techniczna i biznesowa
+### Analiza e-commerce | `retail-omnichannel-optimization/`
+**Dataset**: Brytyjski detalista, 1M+ transakcji, analiza wielorynkowa  
+**Cel**: Identyczne dashboardy wykonawcze w obu platformach  
+**Status**: Power BI ukończony (3 strony), Tableau w realizacji
 
-## O Mnie
+### Laboratorium Azure SQL + SSIS | `azure-sql-ssis-lab/`  
+**Cel**: Pipeline ETL w chmurze, integracja Azure SQL z SSIS  
+**Status**: Ukończony, w pełni udokumentowany, działający pipeline
 
-Jestem Starszym Analitykiem BI (Senior BI Analyst) z ponad 8-letnim doświadczeniem w branży Business Intelligence. Moje kluczowe kompetencje obejmują zaawansowaną znajomość Tableau i SQL, popartą wieloletnią praktyką w dostarczaniu wartościowych analiz dla biznesu. Obecnie koncentruję się na intensywnym rozwoju umiejętności w zakresie Power BI, aby skutecznie realizować złożone projekty migracyjne i analityczne.
+## Odkryte wnioski (na razie)
 
-*   **Profil LinkedIn**: https://www.linkedin.com/in/pzoladkiewicz/
-*   **Email**: pzoladkiewicz@gmail.com
+**DAX vs Calculated Fields**: Kompletnie różne sposoby podejścia do tworzenia miar przez użytkownika   
+**Workflow rozwoju**: Power BI lepszy do strukturalnych raportów, Tableau szybszy w eksploracji  
+**Wydajność**: Porównywalne na średnich zbiorach danych, różne podejścia do optymalizacji
 
-## Struktura Repozytorium (Repository Structure)
+## Struktura repozytorium
 
-To monorepo zostało zorganizowane w sposób modułowy, aby zapewnić przejrzystość i łatwość nawigacji:
+```
 
-*   `/projects`: Zawiera wszystkie projekty analityczne, od analizy danych po gotowe dashboardy. Każdy projekt posiada własną, szczegółową dokumentację.
-*   `/standards`: Definiuje standardy jakości, nazewnictwa i dobrych praktyk stosowanych w projektach.
-*   `/templates`: Przechowuje szablony dla powtarzalnych elementów, takich jak struktury projektów czy dokumentacja.
+projects/
+├── retail-omnichannel-optimization/    \# Główny projekt e-commerce
+│   ├── dashboards/powerbi/            \# Projekt w formacie PBIP
+│   ├── dashboards/tableau/            \# Skoroszyty Tableau
+│   ├── data/processed/                \# Wynik schematu gwiazdy
+│   ├── notebooks/                     \# Analiza w Pythonie
+│   ├── src/                     	   \# Pierwszy, zarchiwizowany ETL
+│   └── docs/                          \# Reguły biznesowe, odkrycia
+└── azure-sql-ssis-lab/                \# Laboratorium integracji ETL
+	├── sql-scripts/                   \# Skrypty konfiguracji i testów
+	├── ssis-packages/                 \# Pakiety ETL
+	├── ssis-packages/                 \# Zrzuty ekranu z kolejnych faz projektu
+	└── docs/                          \# Przewodniki implementacji
 
-## Projekty (Projects)
+```
 
-Poniżej znajduje się lista realizowanych projektów. Każdy z nich stanowi kompleksowe studium przypadku (case study) demonstrujące konkretne umiejętności techniczne i biznesowe.
+## Wartość biznesowa
 
-| Projekt (Project)                                                                    | Opis (Description)                                                                                                                  | Technologie (Technologies)                  | Status (Status)      |
-| ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | -------------------- |
-| **[Projekt 1: Optymalizacja Omnichannel w Sektorze Detalicznym](./projects/retail-omnichannel-optimization/README.md)** | Analiza danych sprzedażowych brytyjskiego detalisty e-commerce w celu budowy rozwiązań BI w Power BI i Tableau. | Python, Pandas, Power BI, Tableau, Git      | W toku (In Progress) |
-| *Projekt 2: Analiza Efektywności Marketingu (w planach)*                                 | *Analiza danych marketingowych w celu optymalizacji zwrotu z inwestycji (ROI) w różnych kanałach.*                            | *Power BI, SQL, Python*                     | *Planowany (Planned)*    |
+To podejście dostarcza praktyczną wiedzę o migracjach dla:
+- Decyzji o wyborze platformy na podstawie rzeczywistego doświadczenia projektowego
+- Strategii ETL w środowiskach Power BI vs Tableau  
+- Podejścia do szkoleń zespołów przechodzących między platformami
 
-## Metodologia i Standardy (Methodology & Standards)
+Każdy folder projektu ma szczegółowy README z konkretnymi detalami implementacji.
 
-Wszystkie projekty realizowane są w oparciu o najlepsze praktyki branżowe, co gwarantuje wysoką jakość i powtarzalność wyników:
+---
 
-*   **Modelowanie Danych**: Projekty opierają się na schemacie gwiazdy (star schema) jako fundamencie wydajnych i skalowalnych modeli analitycznych.
-*   **Jakość Danych**: Każdy projekt przechodzi przez zdefiniowane bramki jakości (data quality gates), zapewniając wiarygodność i spójność danych.
-*   **Wersjonowanie Kodu**: Cały proces rozwoju jest wersjonowany przy użyciu Git, z zachowaniem standardów opisowych komunikatów (commit messages).
-*   **Dokumentacja**: Każdy artefakt i decyzja projektowa jest udokumentowana, aby zapewnić pełną transparentność procesu.
-
-Zapraszam do zapoznania się ze szczegółami poszczególnych projektów.
-
+*Aktualizacja: październik 2025 r.*
