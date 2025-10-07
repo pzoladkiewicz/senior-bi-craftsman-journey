@@ -319,53 +319,47 @@ table _Measures
 	measure 'New Customers (_2011)' = ```
 			
 			VAR _Anchor = [1. Anchor Date (2011SameMD)]
-			VAR _currentYear = MAX(dim_date[Year])
+			VAR _CurrentRowMonth = MONTH(MAX(dim_date[Date]))  // Kontekst miesięczny z osi X
+			VAR _CurrentRowYear = YEAR(MAX(dim_date[Date]))    // Kontekst roczny z osi X
+			VAR _AnchorMonth = MONTH(_Anchor)                  // Miesiąc kotwicy
+			VAR _AnchorYear = YEAR(_Anchor)                    // Rok kotwicy
 			RETURN
 			IF(
-			    MAX(dim_date[Date]) <= _Anchor && _currentYear = YEAR(_Anchor),
-			        CALCULATE(
-			            DISTINCTCOUNT(dim_customer[CustomerKey]),
-			            FILTER(
-			                dim_customer,
-			                dim_customer[FirstPurchase] >= MIN(dim_date[Date]) &&
-			                dim_customer[FirstPurchase] <= MAX(dim_date[Date])
-			            )
-			        ),
+			    _CurrentRowYear = _AnchorYear && _CurrentRowMonth <= _AnchorMonth,
+			    CALCULATE(
+			        DISTINCTCOUNT(dim_customer[CustomerKey]),
+			        FILTER(
+			            dim_customer,
+			            MONTH(dim_customer[FirstPurchase]) = _CurrentRowMonth &&
+			            YEAR(dim_customer[FirstPurchase]) = _CurrentRowYear
+			        )
+			    ),
 			    BLANK()
 			)
 			
-			/*
-			New Customers (_2011) = 
-			// poniżej dla przypadku, gdy operujemy na danych aktualnych
-			// a nie jak w tym projekcie - archiwalnych
-			CALCULATE(
-			    DISTINCTCOUNT(dim_customer[CustomerKey]),
-			    FILTER(
-			        dim_customer,
-			        dim_customer[FirstPurchase] >= MIN(dim_date[Date]) &&
-			        dim_customer[FirstPurchase] <= MAX(dim_date[Date])
-			    )
-			)
-			*/
 			```
 		formatString: 0
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: a8d0cc1c-ef2b-42a0-9145-7e6ecb9374d7
 
-	measure 'Returning Customers (_2011)' =
+	measure 'Returning Customers (_2011)' = ```
 			
 			VAR _Anchor = [1. Anchor Date (2011SameMD)]
 			VAR _CurrentDate = MAX(dim_date[Date])
-			VAR _PeriodStart = MIN(dim_date[Date])
-			VAR _PeriodEnd = MIN(_CurrentDate, _Anchor)
+			VAR _PeriodStart = MIN(dim_date[Date])                  // Kontekst na wykresie
+			VAR _PeriodEnd = MIN(_CurrentDate, _Anchor)             // Nie starsze niż _Anchor
 			RETURN
 			IF(
-			    _CurrentDate <= _Anchor && YEAR(_CurrentDate) = YEAR(_Anchor),
+			    MONTH(_CurrentDate) <= MONTH(_Anchor) && YEAR(_CurrentDate) = YEAR(_Anchor),
 			    CALCULATE(
-			        DISTINCTCOUNT(fact_sales[CustomerKey]),  // ← Liczymy z fact_sales!
-			        dim_customer[FirstPurchase] < DATE(YEAR(_Anchor), 1, 1),  // Before anchor year
-			        dim_date[Date] >= _PeriodStart,    // Date filters
-			        dim_date[Date] <= _PeriodEnd       // propagate to fact_sales
+			        DISTINCTCOUNT(fact_sales[CustomerKey]),                     // ← Liczymy z fact_sales!
+			        FILTER(
+			            ALL(dim_customer),
+			            dim_customer[FirstPurchase] < DATE(YEAR(_Anchor), 1, 1)
+			        ),    // Sprzed 2011
+			        dim_date[Date] >= _PeriodStart,                             
+			        dim_date[Date] <= _PeriodEnd,
+			        fact_sales[CustomerKey] <> -1  // Exclude guest transactions
 			    ),
 			    BLANK()
 			)
@@ -389,6 +383,7 @@ table _Measures
 			)
 			
 			*/
+			```
 		formatString: 0
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 4d9689ce-2c39-4510-ab3a-7394a0427129

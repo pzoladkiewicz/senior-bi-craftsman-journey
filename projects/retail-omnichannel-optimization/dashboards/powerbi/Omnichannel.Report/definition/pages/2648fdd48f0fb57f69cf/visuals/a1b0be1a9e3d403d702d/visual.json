@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "2011",
+                    "value": "2011 ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt",
@@ -27,7 +27,7 @@
                     }
                   },
                   {
-                    "value": "-over-",
+                    "value": "-over- ",
                     "textStyle": {
                       "fontSize": "12pt"
                     }

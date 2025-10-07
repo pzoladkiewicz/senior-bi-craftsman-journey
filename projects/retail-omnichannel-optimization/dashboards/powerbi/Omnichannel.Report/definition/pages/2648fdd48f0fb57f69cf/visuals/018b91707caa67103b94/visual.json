@@ -654,6 +654,48 @@
             }
           ]
         }
+      },
+      {
+        "name": "93f25e3a7498cd80b60c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "_slicer - Sales YTD (_2011)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "61f85e100060e08b0668",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "_slicer - Sales YTD PY (_2010)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f36c341028a216a8ce08",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "_slicer - Sales YoY (_2011)"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
