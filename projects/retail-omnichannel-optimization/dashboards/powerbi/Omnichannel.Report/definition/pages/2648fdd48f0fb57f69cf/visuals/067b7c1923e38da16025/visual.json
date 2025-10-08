@@ -61,8 +61,9 @@
                 }
               },
               "queryRef": "_Measures.New Customers (_2011)",
-              "nativeQueryRef": "New vs.",
-              "displayName": "New vs."
+              "nativeQueryRef": "New",
+              "displayName": "New",
+              "format": "G"
             },
             {
               "field": {
@@ -77,7 +78,8 @@
               },
               "queryRef": "_Measures.Returning Customers (_2011)",
               "nativeQueryRef": "Returning",
-              "displayName": "Returning"
+              "displayName": "Returning",
+              "format": "G"
             }
           ]
         }
@@ -206,6 +208,20 @@
                   "Value": "2D"
                 }
               }
+            },
+            "showMarker": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "markerSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
             }
           },
           "selector": {
@@ -289,6 +305,48 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "showSeries": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Returning Customers (_2011)"
+          }
+        },
+        {
+          "properties": {
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableValueDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "detailLabelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.New Customers (_2011)"
+          }
         }
       ],
       "seriesLabels": [
@@ -301,6 +359,22 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "markers": [
+        {
+          "properties": {
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.New Customers (_2011)"
           }
         }
       ]
@@ -437,7 +511,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -493,5 +567,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "07a7fb14a06645580031",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_date"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c55fca1e898d41892a0e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_date"
+              }
+            },
+            "Property": "Short Month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8ea6714626b2580d1ae5",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "New Customers (_2011)"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "11d8723360da0dabb72d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Returning Customers (_2011)"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

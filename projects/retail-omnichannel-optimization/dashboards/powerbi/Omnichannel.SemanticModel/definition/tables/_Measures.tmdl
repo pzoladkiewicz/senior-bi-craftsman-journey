@@ -331,7 +331,8 @@ table _Measures
 			        FILTER(
 			            dim_customer,
 			            MONTH(dim_customer[FirstPurchase]) = _CurrentRowMonth &&
-			            YEAR(dim_customer[FirstPurchase]) = _CurrentRowYear
+			            YEAR(dim_customer[FirstPurchase]) = _CurrentRowYear &&
+			            dim_customer[FirstPurchase] <= _Anchor
 			        )
 			    ),
 			    BLANK()
