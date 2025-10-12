@@ -11,6 +11,8 @@ dashboards/powerbi/*.pbi.tmp
 
 # Tableau extracts (duże pliki)
 dashboards/tableau/extracts/
+# temp
+*.twbr
 
 # Python cache lokalnie w projekcie
 __pycache__/
