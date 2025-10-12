@@ -2722,8 +2722,11 @@
       <column caption='31. Business Gross Revenue YTD (_2011)' datatype='real' default-format='c&quot;£&quot;#,##0,,.00M;-&quot;£&quot;#,##0,,.00M' name='[31. Net Revenue per Product YTD (_2011) (copy)_199002871380549639]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='IF [TransactionCategory] IN&#13;&#10;    (&#13;&#10;           &quot;ValidSales&quot;,&#13;&#10;            &quot;Postage&quot;,&#13;&#10;            &quot;DCGSProducts&quot;,&#13;&#10;            &quot;TransportCost&quot;&#13;&#10;)&#13;&#10;    AND YEAR([InvoiceDate]) = 2011&#13;&#10;    AND [Calculation_199002871378493442]&#13;&#10;THEN [TotalValue]&#13;&#10;END' />
       </column>
-      <column caption='34. Efficiency Gap (-)' datatype='real' default-format='*▲0.0%;▼0.0%;0.0%' name='[34. Efficiency Gap (+) (copy)_1570348958062792712]' role='measure' type='quantitative'>
+      <column caption='34.3 Efficiency Gap (-)' datatype='real' default-format='*▲0.0%;▼0.0%;0.0%' name='[34. Efficiency Gap (+) (copy)_1570348958062792712]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='IF ([Calculation_1570348958061527046] - .95) &lt; 0&#13;&#10;THEN ([Calculation_1570348958061527046] - .95)&#13;&#10;END' />
+      </column>
+      <column caption='36.2 Volume vs AOV Tier Colors' datatype='string' name='[36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF [Calculation_1570348958288384010] &gt;= 50  AND [Calculation_1570348958287900681] &gt;= 600 THEN &quot;Premium Mass Market&quot;&#13;&#10;ELSEIF [Calculation_1570348958288384010] &gt;= 50  AND [Calculation_1570348958287900681] &lt; 600 THEN &quot;Niche Premium&quot;&#13;&#10;ELSEIF  [Calculation_1570348958288384010] &lt; 50  AND [Calculation_1570348958287900681] &gt;= 600 THEN &quot;Volume Leaders&quot;    &#13;&#10;ELSEIF [Calculation_1570348958288384010] &lt; 50  AND [Calculation_1570348958287900681] &lt; 600 THEN &quot;Evaluate&quot;&#13;&#10;END' />
       </column>
       <column caption='32. Returns' datatype='real' default-format='c&quot;£&quot;#,##0,.0K;-&quot;£&quot;#,##0,.0K' name='[Calculation_1570348957927321600]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='IF [TransactionCategory] = &quot;Returns&quot;&#13;&#10;    AND YEAR([InvoiceDate]) = 2011&#13;&#10;    AND [Calculation_199002871378493442]&#13;&#10;THEN [TotalValue]&#13;&#10;END' />
@@ -2737,14 +2740,23 @@
       <column caption='33. Quality Cost Impact' datatype='real' default-format='c&quot;£&quot;#,##0,.0K;-&quot;£&quot;#,##0,.0K' name='[Calculation_1570348958056284163]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='ABS(SUM(&#13;&#10;IF [TransactionCategory] IN&#13;&#10;(&#13;&#10;            &quot;ManualAdjustment&quot;,&#13;&#10;            &quot;Unclassified&quot;&#13;&#10;)&#13;&#10;THEN [TotalValue]&#13;&#10;END&#13;&#10;))' />
       </column>
-      <column caption='34. Business Gross Revenue' datatype='real' name='[Calculation_1570348958061088773]' role='measure' type='quantitative'>
+      <column caption='34.1 Business Gross Revenue' datatype='real' name='[Calculation_1570348958061088773]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='SUM(&#13;&#10;IF [TransactionCategory] IN (&#13;&#10;            &quot;ValidSales&quot;,&#13;&#10;            &quot;Postage&quot;,&#13;&#10;            &quot;DCGSProducts&quot;,&#13;&#10;            &quot;TransportCost&quot;&#13;&#10;)&#13;&#10;THEN [TotalValue]&#13;&#10;END&#13;&#10;)' />
       </column>
-      <column caption='34. Business Efficiency' datatype='real' default-format='p0.0%' name='[Calculation_1570348958061527046]' role='measure' type='quantitative'>
+      <column caption='34.2 Business Efficiency' datatype='real' default-format='p0.0%' name='[Calculation_1570348958061527046]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='SUM([Calculation_199002871379718149])&#13;&#10;/&#13;&#10;[Calculation_1570348958061088773]' />
       </column>
-      <column caption='34. Efficiency Gap (+)' datatype='real' default-format='*▲0.0%;▼0.0%;0.0%' name='[Calculation_1570348958062104583]' role='measure' type='quantitative'>
+      <column caption='34.3 Efficiency Gap (+)' datatype='real' default-format='*▲0.0%;▼0.0%;0.0%' name='[Calculation_1570348958062104583]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='IF ([Calculation_1570348958061527046] - .95) &gt;= 0&#13;&#10;THEN ([Calculation_1570348958061527046] - .95)&#13;&#10;END' />
+      </column>
+      <column caption='35.1 Product Transaction Volume' datatype='integer' name='[Calculation_1570348958287900681]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNT(&#13;&#10;    IF [TransactionCategory] = &quot;ValidSales&quot;&#13;&#10;    THEN [StockCode]&#13;&#10;    END&#13;&#10;)' />
+      </column>
+      <column caption='36.1 Product AOV' datatype='real' default-format='C2057%' name='[Calculation_1570348958288384010]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_199002871379718149])&#13;&#10;/&#13;&#10;[Calculation_1570348958287900681]' />
+      </column>
+      <column caption='35.2 Volume vs Revenue Tier Colors' datatype='string' name='[Calculation_1570348958305333259]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='IF SUM([Calculation_199002871379718149]) &gt;= 20000  AND [Calculation_1570348958287900681] &gt;= 600 THEN &quot;stars&quot;&#13;&#10;ELSEIF SUM([Calculation_199002871379718149]) &gt;= 20000  AND [Calculation_1570348958287900681] &lt; 600 THEN &quot;premium&quot;&#13;&#10;ELSEIF  SUM([Calculation_199002871379718149]) &lt; 20000  AND [Calculation_1570348958287900681] &gt;= 600 THEN &quot;volume&quot;    &#13;&#10;ELSEIF SUM([Calculation_199002871379718149]) &lt; 20000  AND [Calculation_1570348958287900681] &lt; 600 THEN &quot;evaluate&quot;&#13;&#10;END' />
       </column>
       <column caption='30. KPI Column' datatype='integer' name='[Calculation_1646347200166387729]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='MIN(0)' />
@@ -2766,6 +2778,8 @@
       <column caption='c_TotalValue' datatype='real' name='[TotalValue]' role='measure' type='quantitative' />
       <column datatype='string' hidden='true' name='[__sheet_name__]' role='dimension' type='nominal' />
       <column caption='fact_transactions_classified.csv' datatype='table' name='[__tableau_internal_object_id__].[fact_transactions_classified.csv_919FCC1B041E49CBB5893049C27D59D5]' role='measure' type='quantitative' />
+      <column-instance column='[36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668]' derivation='User' name='[usr:36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Calculation_1570348958305333259]' derivation='User' name='[usr:Calculation_1570348958305333259:nk]' pivot='key' type='nominal' />
       <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
         <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/pzoladkiewicz/Documents/My Tableau Repository/Datasources/fact_transactions_classified.hyper' default-settings='yes' schema='Extract' sslmode='' update-time='10/11/2025 06:53:50 PM' username='tableau_internal_user'>
           <relation name='Extract' table='[Extract].[Extract]' type='table' />
@@ -2922,6 +2936,47 @@
         </connection>
       </extract>
       <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[usr:Calculation_1570348958305333259:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Niche Premium&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;premium&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;stars&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Evaluate&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;evaluate&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Volume Leaders&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;volume&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Niche Premium&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Premium Mass Market&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Evaluate&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Volume Leaders&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Poland&quot;' />
       </semantic-values>
@@ -3274,16 +3329,16 @@
             <datasource caption='fact_transactions_classified' name='federated.043zsgd03ajrzj1edwg1s0ln338l' />
           </datasources>
           <datasource-dependencies datasource='federated.043zsgd03ajrzj1edwg1s0ln338l'>
-            <column caption='34. Efficiency Gap (-)' datatype='real' default-format='*▲0.0%;▼0.0%;0.0%' name='[34. Efficiency Gap (+) (copy)_1570348958062792712]' role='measure' type='quantitative'>
+            <column caption='34.3 Efficiency Gap (-)' datatype='real' default-format='*▲0.0%;▼0.0%;0.0%' name='[34. Efficiency Gap (+) (copy)_1570348958062792712]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='IF ([Calculation_1570348958061527046] - .95) &lt; 0&#13;&#10;THEN ([Calculation_1570348958061527046] - .95)&#13;&#10;END' />
             </column>
-            <column caption='34. Business Gross Revenue' datatype='real' name='[Calculation_1570348958061088773]' role='measure' type='quantitative'>
+            <column caption='34.1 Business Gross Revenue' datatype='real' name='[Calculation_1570348958061088773]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='SUM(&#13;&#10;IF [TransactionCategory] IN (&#13;&#10;            &quot;ValidSales&quot;,&#13;&#10;            &quot;Postage&quot;,&#13;&#10;            &quot;DCGSProducts&quot;,&#13;&#10;            &quot;TransportCost&quot;&#13;&#10;)&#13;&#10;THEN [TotalValue]&#13;&#10;END&#13;&#10;)' />
             </column>
-            <column caption='34. Business Efficiency' datatype='real' default-format='p0.0%' name='[Calculation_1570348958061527046]' role='measure' type='quantitative'>
+            <column caption='34.2 Business Efficiency' datatype='real' default-format='p0.0%' name='[Calculation_1570348958061527046]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='SUM([Calculation_199002871379718149])&#13;&#10;/&#13;&#10;[Calculation_1570348958061088773]' />
             </column>
-            <column caption='34. Efficiency Gap (+)' datatype='real' default-format='*▲0.0%;▼0.0%;0.0%' name='[Calculation_1570348958062104583]' role='measure' type='quantitative'>
+            <column caption='34.3 Efficiency Gap (+)' datatype='real' default-format='*▲0.0%;▼0.0%;0.0%' name='[Calculation_1570348958062104583]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='IF ([Calculation_1570348958061527046] - .95) &gt;= 0&#13;&#10;THEN ([Calculation_1570348958061527046] - .95)&#13;&#10;END' />
             </column>
             <column caption='30. KPI Column' datatype='integer' name='[Calculation_1646347200166387729]' role='measure' type='quantitative'>
@@ -5194,6 +5249,114 @@
       </table>
       <simple-id uuid='{AF613680-FFE3-4E6B-B21C-6A9C490973B0}' />
     </worksheet>
+    <worksheet name='Pricing Strategy Analysis [AOV vs Demand Volume]'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='9'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_transactions_classified' name='federated.043zsgd03ajrzj1edwg1s0ln338l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.043zsgd03ajrzj1edwg1s0ln338l'>
+            <column caption='36.2 Volume vs AOV Tier Colors' datatype='string' name='[36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF [Calculation_1570348958288384010] &gt;= 50  AND [Calculation_1570348958287900681] &gt;= 600 THEN &quot;Premium Mass Market&quot;&#13;&#10;ELSEIF [Calculation_1570348958288384010] &gt;= 50  AND [Calculation_1570348958287900681] &lt; 600 THEN &quot;Niche Premium&quot;&#13;&#10;ELSEIF  [Calculation_1570348958288384010] &lt; 50  AND [Calculation_1570348958287900681] &gt;= 600 THEN &quot;Volume Leaders&quot;    &#13;&#10;ELSEIF [Calculation_1570348958288384010] &lt; 50  AND [Calculation_1570348958287900681] &lt; 600 THEN &quot;Evaluate&quot;&#13;&#10;END' />
+            </column>
+            <column caption='35.1 Product Transaction Volume' datatype='integer' name='[Calculation_1570348958287900681]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT(&#13;&#10;    IF [TransactionCategory] = &quot;ValidSales&quot;&#13;&#10;    THEN [StockCode]&#13;&#10;    END&#13;&#10;)' />
+            </column>
+            <column caption='36.1 Product AOV' datatype='real' default-format='C2057%' name='[Calculation_1570348958288384010]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_199002871379718149])&#13;&#10;/&#13;&#10;[Calculation_1570348958287900681]' />
+            </column>
+            <column caption='30. T|F 2011SameMD' datatype='boolean' name='[Calculation_199002871378493442]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATE([InvoiceDate]) &lt;= MAKEDATE(2011, MONTH(TODAY()), DAY(TODAY()))' />
+            </column>
+            <column caption='31. Net Revenue per Product YTD (_2011)' datatype='real' default-format='c&quot;£&quot;#,##0,,.00M;-&quot;£&quot;#,##0,,.00M' name='[Calculation_199002871379718149]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [TransactionCategory] = &quot;ValidSales&quot;&#13;&#10;    AND YEAR([InvoiceDate]) = 2011&#13;&#10;    AND [Calculation_199002871378493442]&#13;&#10;THEN [TotalValue]&#13;&#10;END' />
+            </column>
+            <column datatype='datetime' name='[InvoiceDate]' role='dimension' type='ordinal' />
+            <column caption='c_StockCode' datatype='string' name='[StockCode]' role='dimension' type='nominal' />
+            <column caption='c_TotalValue' datatype='real' name='[TotalValue]' role='measure' type='quantitative' />
+            <column datatype='string' name='[TransactionCategory]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_199002871378493442]' derivation='None' name='[none:Calculation_199002871378493442:nk]' pivot='key' type='nominal' />
+            <column-instance column='[StockCode]' derivation='None' name='[none:StockCode:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_199002871379718149]' derivation='Sum' name='[sum:Calculation_199002871379718149:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668]' derivation='User' name='[usr:36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_1570348958287900681]' derivation='User' name='[usr:Calculation_1570348958287900681:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1570348958288384010]' derivation='User' name='[usr:Calculation_1570348958288384010:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[InvoiceDate]' derivation='Year' name='[yr:InvoiceDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:Calculation_199002871378493442:nk]'>
+            <groupfilter function='member' level='[none:Calculation_199002871378493442:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:StockCode:nk]'>
+            <groupfilter count='50' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Calculation_199002871379718149])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:StockCode:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]' included-values='in-range'>
+            <max>35000.0</max>
+          </filter>
+          <filter class='categorical' column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[yr:InvoiceDate:ok]'>
+            <groupfilter function='member' level='[yr:InvoiceDate:ok]' member='2011' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:Calculation_199002871378493442:nk]</column>
+            <column>[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:StockCode:nk]</column>
+            <column>[federated.043zsgd03ajrzj1edwg1s0ln338l].[yr:InvoiceDate:ok]</column>
+            <column>[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958287900681:qk]' field-type='quantitative' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958287900681:qk]' scope='cols' value='Transaction Volume' />
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' field-type='quantitative' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' scope='rows' value='AOV' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]' value='c&quot;£&quot;#,##0,K;-&quot;£&quot;#,##0,K' />
+            <format attr='text-format' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' value='c&quot;£&quot;#,##0;-&quot;£&quot;#,##0' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668:nk]' />
+              <size column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' />
+              <lod column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:StockCode:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8421111106872559' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#555555' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]</rows>
+        <cols>[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958287900681:qk]</cols>
+      </table>
+      <simple-id uuid='{2BA2B83D-5D40-4761-BCB4-E87E3895E006}' />
+    </worksheet>
     <worksheet name='Regional Sales Performance'>
       <layout-options>
         <title>
@@ -5752,6 +5915,113 @@
         <cols total='true'>[federated.043zsgd03ajrzj1edwg1s0ln338l].[mn:InvoiceDate:ok]</cols>
       </table>
       <simple-id uuid='{33791166-128F-406D-B20F-E72DFF2D9A2E}' />
+    </worksheet>
+    <worksheet name='Strategic Product Positioning [Volume vs Revenue Analysis]'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Regular' fontsize='9'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fact_transactions_classified' name='federated.043zsgd03ajrzj1edwg1s0ln338l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.043zsgd03ajrzj1edwg1s0ln338l'>
+            <column caption='35.1 Product Transaction Volume' datatype='integer' name='[Calculation_1570348958287900681]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT(&#13;&#10;    IF [TransactionCategory] = &quot;ValidSales&quot;&#13;&#10;    THEN [StockCode]&#13;&#10;    END&#13;&#10;)' />
+            </column>
+            <column caption='36.1 Product AOV' datatype='real' default-format='C2057%' name='[Calculation_1570348958288384010]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_199002871379718149])&#13;&#10;/&#13;&#10;[Calculation_1570348958287900681]' />
+            </column>
+            <column caption='35.2 Volume vs Revenue Tier Colors' datatype='string' name='[Calculation_1570348958305333259]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='IF SUM([Calculation_199002871379718149]) &gt;= 20000  AND [Calculation_1570348958287900681] &gt;= 600 THEN &quot;stars&quot;&#13;&#10;ELSEIF SUM([Calculation_199002871379718149]) &gt;= 20000  AND [Calculation_1570348958287900681] &lt; 600 THEN &quot;premium&quot;&#13;&#10;ELSEIF  SUM([Calculation_199002871379718149]) &lt; 20000  AND [Calculation_1570348958287900681] &gt;= 600 THEN &quot;volume&quot;    &#13;&#10;ELSEIF SUM([Calculation_199002871379718149]) &lt; 20000  AND [Calculation_1570348958287900681] &lt; 600 THEN &quot;evaluate&quot;&#13;&#10;END' />
+            </column>
+            <column caption='30. T|F 2011SameMD' datatype='boolean' name='[Calculation_199002871378493442]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='DATE([InvoiceDate]) &lt;= MAKEDATE(2011, MONTH(TODAY()), DAY(TODAY()))' />
+            </column>
+            <column caption='31. Net Revenue per Product YTD (_2011)' datatype='real' default-format='c&quot;£&quot;#,##0,,.00M;-&quot;£&quot;#,##0,,.00M' name='[Calculation_199002871379718149]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IF [TransactionCategory] = &quot;ValidSales&quot;&#13;&#10;    AND YEAR([InvoiceDate]) = 2011&#13;&#10;    AND [Calculation_199002871378493442]&#13;&#10;THEN [TotalValue]&#13;&#10;END' />
+            </column>
+            <column datatype='datetime' name='[InvoiceDate]' role='dimension' type='ordinal' />
+            <column caption='c_StockCode' datatype='string' name='[StockCode]' role='dimension' type='nominal' />
+            <column caption='c_TotalValue' datatype='real' name='[TotalValue]' role='measure' type='quantitative' />
+            <column datatype='string' name='[TransactionCategory]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_199002871378493442]' derivation='None' name='[none:Calculation_199002871378493442:nk]' pivot='key' type='nominal' />
+            <column-instance column='[StockCode]' derivation='None' name='[none:StockCode:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_199002871379718149]' derivation='Sum' name='[sum:Calculation_199002871379718149:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1570348958287900681]' derivation='User' name='[usr:Calculation_1570348958287900681:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1570348958288384010]' derivation='User' name='[usr:Calculation_1570348958288384010:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1570348958305333259]' derivation='User' name='[usr:Calculation_1570348958305333259:nk]' pivot='key' type='nominal' />
+            <column-instance column='[InvoiceDate]' derivation='Year' name='[yr:InvoiceDate:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:Calculation_199002871378493442:nk]'>
+            <groupfilter function='member' level='[none:Calculation_199002871378493442:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:StockCode:nk]'>
+            <groupfilter count='50' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Calculation_199002871379718149])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:StockCode:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='quantitative' column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]' included-values='in-range'>
+            <max>35000.0</max>
+          </filter>
+          <filter class='categorical' column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[yr:InvoiceDate:ok]'>
+            <groupfilter function='member' level='[yr:InvoiceDate:ok]' member='2011' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:Calculation_199002871378493442:nk]</column>
+            <column>[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:StockCode:nk]</column>
+            <column>[federated.043zsgd03ajrzj1edwg1s0ln338l].[yr:InvoiceDate:ok]</column>
+            <column>[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]' field-type='quantitative' scope='rows' type='space' />
+            <encoding attr='space' class='0' domain-expand='false' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958287900681:qk]' field-type='quantitative' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]' scope='rows' value='Net Revenue' />
+            <format attr='title' class='0' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958287900681:qk]' scope='cols' value='Transaction Volume' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]' value='c&quot;£&quot;#,##0,K;-&quot;£&quot;#,##0,K' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' field-type='quantitative' max-size='1' min-size='0' type='rangesize' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <color column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958305333259:nk]' />
+              <size column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' />
+              <lod column='[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:StockCode:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8421111106872559' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#555555' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.043zsgd03ajrzj1edwg1s0ln338l].[sum:Calculation_199002871379718149:qk]</rows>
+        <cols>[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958287900681:qk]</cols>
+      </table>
+      <simple-id uuid='{D2A408AD-4DEF-4409-8646-2DDB2F21B326}' />
     </worksheet>
     <worksheet name='Top 10 Selling Products'>
       <layout-options>
@@ -6366,7 +6636,7 @@
       <simple-id uuid='{9F7CBE8F-ADF4-48EE-82E1-755EAECE547A}' />
     </dashboard>
   </dashboards>
-  <windows saved-dpi-scale-factor='1.25' source-height='87'>
+  <windows source-height='72'>
     <window class='worksheet' name='KPI Sales YTD (2)'>
       <cards>
         <edge name='left'>
@@ -6505,20 +6775,20 @@
     <window class='worksheet' name='Net Revenue YTD'>
       <cards>
         <edge name='left'>
-          <strip size='228'>
+          <strip size='285'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='30'>
+          <strip size='38'>
             <card type='columns' />
           </strip>
-          <strip size='30'>
+          <strip size='38'>
             <card type='rows' />
           </strip>
-          <strip size='24'>
+          <strip size='31'>
             <card type='title' />
           </strip>
         </edge>
@@ -6549,7 +6819,7 @@
     <window class='worksheet' name='Return Impact'>
       <cards>
         <edge name='left'>
-          <strip size='228'>
+          <strip size='285'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -6562,7 +6832,7 @@
           <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='24'>
+          <strip size='31'>
             <card type='title' />
           </strip>
         </edge>
@@ -6583,7 +6853,7 @@
     <window class='worksheet' name='Operations Quality Index'>
       <cards>
         <edge name='left'>
-          <strip size='228'>
+          <strip size='285'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
@@ -6596,7 +6866,7 @@
           <strip size='2147483647'>
             <card type='rows' />
           </strip>
-          <strip size='24'>
+          <strip size='30'>
             <card type='title' />
           </strip>
         </edge>
@@ -6616,23 +6886,23 @@
       </viewpoint>
       <simple-id uuid='{3638297F-03EB-4656-A8A3-F42C60BA0B3A}' />
     </window>
-    <window class='worksheet' maximized='true' name='Industry Benchmark Score'>
+    <window class='worksheet' name='Industry Benchmark Score'>
       <cards>
         <edge name='left'>
-          <strip size='228'>
+          <strip size='285'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='2147483647'>
+          <strip size='39'>
             <card type='columns' />
           </strip>
-          <strip size='2147483647'>
+          <strip size='39'>
             <card type='rows' />
           </strip>
-          <strip size='24'>
+          <strip size='30'>
             <card type='title' />
           </strip>
         </edge>
@@ -6655,20 +6925,20 @@
     <window class='worksheet' name='Sheet 21'>
       <cards>
         <edge name='left'>
-          <strip size='160'>
+          <strip size='200'>
             <card type='pages' />
             <card type='filters' />
             <card type='marks' />
           </strip>
         </edge>
         <edge name='top'>
-          <strip size='2147483647'>
+          <strip size='39'>
             <card type='columns' />
           </strip>
-          <strip size='2147483647'>
+          <strip size='39'>
             <card type='rows' />
           </strip>
-          <strip size='30'>
+          <strip size='38'>
             <card type='title' />
           </strip>
         </edge>
@@ -6684,6 +6954,84 @@
         </highlight>
       </viewpoint>
       <simple-id uuid='{CB87434F-407F-44F7-AE67-BDCCC0911B39}' />
+    </window>
+    <window class='worksheet' name='Strategic Product Positioning [Volume vs Revenue Analysis]'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958305333259:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:Calculation_199002871378493442:nk]</field>
+            <field>[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:StockCode:nk]</field>
+            <field>[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958305333259:nk]</field>
+            <field>[federated.043zsgd03ajrzj1edwg1s0ln338l].[yr:InvoiceDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1FA0E187-CE7E-4CFF-A99E-9620FDA951EE}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Pricing Strategy Analysis [AOV vs Demand Volume]'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:Calculation_1570348958288384010:qk]' type='size' />
+            <card pane-specification-id='0' param='[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:Calculation_199002871378493442:nk]</field>
+            <field>[federated.043zsgd03ajrzj1edwg1s0ln338l].[none:StockCode:nk]</field>
+            <field>[federated.043zsgd03ajrzj1edwg1s0ln338l].[usr:36.3 Volume vs AOV Tier Colors (copy)_1570348958308294668:nk]</field>
+            <field>[federated.043zsgd03ajrzj1edwg1s0ln338l].[yr:InvoiceDate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FE607A41-A742-4C31-9F2F-2DD36A4A5B15}' />
     </window>
     <window class='worksheet' hidden='true' name='2011-over-2010 Growth Trend'>
       <cards>
@@ -8281,6 +8629,148 @@
       ANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIgTQCkCYA0AZAmANIEQJoASBMAaQIg
       TQCkCYA0AZAmANIEQJoASBMAaQ8jexFcL4GYBgAAAABJRU5ErkJggg==
     </thumbnail>
+    <thumbnail height='192' name='Pricing Strategy Analysis [AOV vs Demand Volume]' width='192'>
+      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
+    </thumbnail>
     <thumbnail height='192' name='Return Impact' width='192'>
       iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
       AAACLElEQVR4nO3XsRECMQwAQcPQf79O5E+hARzcbqZMyc1Ir3POWRD1vr0A3CQA0j7fw957
@@ -8423,6 +8913,161 @@
       HTs2u72dO3dmwoQJzJo1S/Y9njhxorwtS2OhTP39/eVJV69evf5nIrH/0Rg5ciQjR45sMkyq
       t7c3n376qTw08vDwkPPFxsYSExPTaJpCoeCll15qVdtuijVofXhQNze3ZvngtjZ0580Ii1pT
       U0NpaSkeHh4N2nptKNOWXpfgj4cwhxbYNf8PQMgrPfBM1MUAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Strategic Product Positioning [Volume vs Revenue Analysis]' width='192'>
+      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
+      /sDhcBiz2YyqqlfsE5zpneKXajvnYyYjGxeyP/Xkt2l2/xiACw2fZuuDX1mRslVVYbivC0dF
+      LRZbSU4HAGbbNqWjTCYTNTU1ANfMssp1cilPQPWPXfp/YGyRI9Oj//RbWF5+jAv2rWz8zD+u
+      2HnzkdwfveYxtXf8KT1PjyABztv/dMXOa7TYmZXtYK3IKcHnIhnPB4C10TSupO1i9nOXf7Eb
+      Nd2yNU3D553EWmRH1qW2TepKlLuS9jnVBRKsHqvxhJYkiZKySgCRTnkNCuZFmEAwH0IAgoJG
+      CEBQ0AgBCAoaIQBBQbOis0DpzKguZ/Z1Ldpms2xR54VZMQFIkpTTwXDZtM1m2aLOi7NiAkgn
+      eEySpCUHm61F22yWLeq8OBkbA8ztyDinzLm8glRtY7FYUtmqqqa1wcRc/sJceHA6L4cURUFR
+      lCts0/F7qXVWVTUZdp5unS/3cynX63LbdK/X5eXNnSPVazZ3neb2erv82qdiO+erJEnJMq9V
+      74y9CfZ4PPT19VFUVJRYEDcaxW6309raek3bSCRCV1cXkPhxLRYLqqqyZcuWlMo+c+YMsVgM
+      nU6XvDCdnZ0pPSVOnjxJXV0dQ0NDyQ34amtrqa6+dsZVX18fOp2O2dnZtOscDoc5fvx4cjsq
+      i8VCeXl5SuWOjo7idrsxGo3JqN1Ur1csFuPUqVNomobBYEjrevn9flwuFzqdjlgskWyk1+sJ
+      hUKUlZXR3Ny8oK2iKBw7doxNmzZx4cIFTCYTs7Oz6PV6ZFlm06bF84mPHj3Ktm3bcLlcTE9P
+      o9cnQkDi8fiie1tkrAUIhUJUVVUhy4ntjMxmc/IiXQuDwYDBYCAcDmOxWIDUu1zRaBSPx8Po
+      6Cg1NTXJPc5S7SNWVlYyODiI1Wplenqa6upqgsFgSrZ+v5+RkZEl1dlisVBaWorZbE7Wuaio
+      KCXbeDyO2WxmdnY27eul1+uxWq1MTU2lfb2KioowXsyo0+l0GI1GFEXBZrMRCoUWtZVlmZKS
+      EiwWCyaTKZlwZTAYUmo9KioqUBSFmZkZSkpKqKqqIhAIJP1ZiBULhrsWHo+HmZkZHA4HkiQl
+      V1eY+4EWIxQKMTo6SnV1NTMzM8knWqrbq6qqSjQaZWxsjJqaGqampq7YOmkxRkdHMZlMhMNh
+      SktLGRsbo6GhIaUYnnA4jMfjwWKxpF3nuTRUWZaZnp7GYrEkdqwsufb2qvF4nIGBAWpqavD5
+      fGlfL7fbjdPpZGhoKK3rFQwGmZqaori4ONklMRgMBAIBysvLMS2ySUo8Hmd4eBibzUYgEKCk
+      pIRIJJJsARyOxTdPGR4eRq/XEwgEqKioYHp6moqKCvx+/6KtZsYEIBDkIuJFmKCgEQLIMHMz
+      E+k0vB/tf8/Nas2d4/L/C9JD5ANkGK/Xy+OPP87BgwexWCwMDw/T3NzM4OAgZWVlWCwW+vv7
+      aW9vx+12c/78eTo6OpKDWK/Xy549e3jttdeQJAmHw4HBYMDn87Fp0yYCgQBut5uysjLi8TiN
+      jY0pjRsKFSGADFNWVkZHRwcDAwNs3rwZl8vFmTNnaGlpQdM0gsEgo6OjnD59mi984QtMTk4y
+      OjqKpmn09vbS2tqK3+8nFothNBqZnJxkcHCQeDxOJBJJJv4PDAwwODiIoijL2uI23xGD4Czg
+      8XiAxAIDZ86cobq6GrPZjMfjwWq1JmeaPB4PiqJQVVWFz+dLPvHtdntydsftdienAIeHh2ls
+      bESSJDRNY2JigoqKCsrLy7Nc49xFCEBQ0Px/Wk6w6XrIv/AAAAAASUVORK5CYII=
     </thumbnail>
   </thumbnails>
 </workbook>
