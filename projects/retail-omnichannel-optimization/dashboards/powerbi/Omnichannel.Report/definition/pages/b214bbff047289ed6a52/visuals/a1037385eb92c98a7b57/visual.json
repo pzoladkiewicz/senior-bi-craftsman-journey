@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "a1037385eb92c98a7b57",
+  "position": {
+    "x": 495,
+    "y": 406,
+    "z": 1000,
+    "height": 240,
+    "width": 290,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "Orders UK vs Intl",
+    "groupMode": "ScaleMode",
+    "objects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

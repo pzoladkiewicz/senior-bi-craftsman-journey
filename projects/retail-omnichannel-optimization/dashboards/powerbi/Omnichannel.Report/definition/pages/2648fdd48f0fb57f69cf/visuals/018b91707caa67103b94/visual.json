@@ -37,7 +37,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Sales YTD (_2011)"
+                  "Property": "10. _slicer - Sales CY YTD"
                 }
               },
               "queryRef": "_Measures._slicer - Sales YTD (_2011)",
@@ -52,7 +52,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Sales YTD PY (_2010)"
+                  "Property": "11. _slicer - Sales PY YTD"
                 }
               },
               "queryRef": "_Measures._slicer - Sales YTD PY (_2010)",
@@ -87,7 +87,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "_slicer - Sales YTD (_2011)"
+                "Property": "10. _slicer - Sales CY YTD"
               }
             },
             "direction": "Descending"
@@ -611,7 +611,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Sales YTD (_2011)"
+                            "Property": "01. Sales CY YTD"
                           }
                         }
                       }
@@ -664,7 +664,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "_slicer - Sales YTD (_2011)"
+            "Property": "10. _slicer - Sales CY YTD"
           }
         },
         "type": "Advanced"
@@ -678,7 +678,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "_slicer - Sales YTD PY (_2010)"
+            "Property": "11. _slicer - Sales PY YTD"
           }
         },
         "type": "Advanced"

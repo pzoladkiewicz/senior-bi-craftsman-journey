@@ -23,7 +23,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YTD (_2011)"
+                  "Property": "07. AOV CY YTD"
                 }
               },
               "queryRef": "_Measures.AOV YTD (_2011)",
@@ -43,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "AOV YTD (_2011)"
+                "Property": "07. AOV CY YTD"
               }
             },
             "direction": "Descending"
@@ -1237,5 +1237,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "bb40b4ab62962a17d818",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "07. AOV CY YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

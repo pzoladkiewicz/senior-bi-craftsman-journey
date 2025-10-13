@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "82216a5344e9abde592d",
+  "position": {
+    "x": 864,
+    "y": 406,
+    "z": 750,
+    "height": 240,
+    "width": 368
+  },
+  "visualGroup": {
+    "displayName": "2011 vs 2010 - lines",
+    "groupMode": "ScaleMode",
+    "objects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

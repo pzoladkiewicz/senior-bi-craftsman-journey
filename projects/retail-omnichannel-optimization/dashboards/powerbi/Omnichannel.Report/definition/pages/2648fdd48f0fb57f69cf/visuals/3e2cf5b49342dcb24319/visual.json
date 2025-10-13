@@ -23,7 +23,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers YTD (_2011)"
+                  "Property": "04. Customers CY YTD"
                 }
               },
               "queryRef": "_Measures.Customers YTD (2011 Anchor)",
@@ -44,7 +44,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Customers YTD (_2011)"
+                "Property": "04. Customers CY YTD"
               }
             },
             "direction": "Descending"
@@ -1227,5 +1227,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ed14ba951b4aeb6678de",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "04. Customers CY YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

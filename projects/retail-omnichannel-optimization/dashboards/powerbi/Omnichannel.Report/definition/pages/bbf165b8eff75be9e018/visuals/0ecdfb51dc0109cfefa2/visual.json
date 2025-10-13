@@ -42,7 +42,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers YTD (_2011)"
+                  "Property": "04. Customers CY YTD"
                 }
               },
               "queryRef": "_Measures.Customers YTD (2011 Anchor)",
@@ -56,7 +56,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YTD (_2011)"
+                  "Property": "07. AOV CY YTD"
                 }
               },
               "queryRef": "_Measures.AOV (2011 YTD)",
@@ -74,7 +74,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD (_2011)"
+                  "Property": "01. Sales CY YTD"
                 }
               },
               "queryRef": "_Measures.Sales YTD (2011 Anchor)",
@@ -93,7 +93,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Sales YTD (_2011)"
+                "Property": "01. Sales CY YTD"
               }
             },
             "direction": "Descending"
@@ -509,7 +509,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Sales YTD (_2011)"
+                            "Property": "01. Sales CY YTD"
                           }
                         }
                       }

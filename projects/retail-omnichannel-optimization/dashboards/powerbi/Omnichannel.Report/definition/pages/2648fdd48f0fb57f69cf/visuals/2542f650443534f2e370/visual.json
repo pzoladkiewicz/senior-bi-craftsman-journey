@@ -66,11 +66,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Sales YTD (_2011)"
+                  "Property": "10. _slicer - Sales CY YTD"
                 }
               },
               "queryRef": "WaterfallCategories Table.Sales YTD (_2011) - Slicer",
-              "nativeQueryRef": "_slicer - Sales YTD (_2011)"
+              "nativeQueryRef": "10. _slicer - Sales CY YTD"
             }
           ]
         }
@@ -445,5 +445,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "172912598ce8a9841d48",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_date"
+              }
+            },
+            "Property": "Short Month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f9cc65e063eb19d0205d",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "10. _slicer - Sales CY YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

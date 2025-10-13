@@ -1156,6 +1156,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "7d1e74e39e90d02b294a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "International Market Share"
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

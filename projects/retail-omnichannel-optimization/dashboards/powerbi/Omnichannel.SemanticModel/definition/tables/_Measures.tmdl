@@ -65,7 +65,7 @@ table _Measures
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	/// 1) Data kotwicy: dzisiejszy miesiąc i dzień, rok = 2011 (przycięte do max daty 2011 w tabeli)
-	measure '1. Anchor Date (2011SameMD)' = ```
+	measure '1. Anchor (_2011) Date (2011SameMD)' = ```
 			
 			    VAR AktualnyDzien = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
 			    var Max2011 = 
@@ -83,34 +83,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
-	measure 'Sales YTD (_2011)' = ```
-			
-			VAR _Anchor = [1. Anchor Date (2011SameMD)]
-			RETURN 
-			    CALCULATE(
-			        [Total Sales],
-			        FILTER(
-			            dim_date,
-			            dim_date[Year] = YEAR(_Anchor) &&
-			            dim_date[Date] <= _Anchor
-			        )
-			    )
-			
-			
-			// poniższy kod jest szybszy, ale nie uwzględnia kontekstu dat na wykresie
-			/*
-			VAR startDate = DATE(YEAR(_Anchor), 1, 1)
-			RETURN 
-			    CALCULATE(
-			            [Total Sales],
-			            DATESBETWEEN(
-			                dim_date[Date],
-			                startDate,
-			                Anchor
-			            )
-			    )
-			*/
-			```
+	measure '01. Sales CY YTD' = TOTALYTD([Total Sales], dim_date[Date])
 		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: e1beeafd-5bc5-456c-a93f-515446593cc4
@@ -119,7 +92,7 @@ table _Measures
 
 	measure 'Sales MTD (_2011)' =
 			
-			VAR _Anchor = [1. Anchor Date (2011SameMD)]
+			VAR _Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR _startDate = EOMONTH(_Anchor, -1) + 1
 			RETURN
 			    CALCULATE(
@@ -140,44 +113,21 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Sales YTD PY (_2010)' = ```
+	measure '02. Sales PY YTD' = ```
 			
-			VAR _Anchor = EDATE([1. Anchor Date (2011SameMD)], -12)
-			RETURN 
 			    CALCULATE(
-			        [Total Sales],
-			        FILTER(
-			            dim_date,
-			            dim_date[Year] = YEAR(_Anchor) &&
-			            dim_date[Date] <= _Anchor
+			        [01. Sales CY YTD],
+			        SAMEPERIODLASTYEAR(dim_date[Date])
 			        )
-			    )
-			
-			
-			// poniższy kod jest szybszy, ale nie uwzględnia kontekstu dat na wykresie
-			/*
-			VAR Anchor = EDATE([1. Anchor Date (2011SameMD)], -12)
-			VAR startDate = DATE(YEAR(Anchor), 1, 1)
-			RETURN
-			    CALCULATE(
-			            [Total Sales],
-			            DATESBETWEEN(
-			                dim_date[Date],
-			                startDate,
-			                Anchor
-			            )
-			    )
-			*/
 			```
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: b552353f-c351-4ada-9646-ddaad37cfd19
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Sales YoY % (_2011)' =
+	measure '03. Sales YoY %' =
 			
-			DIVIDE([Sales YTD (_2011)] - [Sales YTD PY (_2010)],
-			    [Sales YTD (_2011)])
+			DIVIDE([01. Sales CY YTD] - [02. Sales PY YTD], [01. Sales CY YTD], 0)
 		formatString: 0.00%;-0.00%;0.00%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 392aaa47-8df7-4bc0-a6ed-c78481e04df5
@@ -193,7 +143,7 @@ table _Measures
 
 	measure 'Sales MTD PM (2011 Anchor)' = ```
 			
-			var Anchor = [1. Anchor Date (2011SameMD)]
+			var Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR StartPrevMonth = EOMONTH(Anchor, -2) + 1
 			VAR StopDate = EDATE(Anchor, -1)
 			RETURN
@@ -211,51 +161,39 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Customers YTD (_2011)' =
+	measure '04. Customers CY YTD' = ```
 			
-			VAR _Anchor = [1. Anchor Date (2011SameMD)]
-			VAR _dateStart = DATE(YEAR(_Anchor), 1, 1)
-			RETURN
 			    CALCULATE(
 			        DISTINCTCOUNT(fact_sales[CustomerKey]),
-			        DATESBETWEEN(
-			            dim_date[Date],
-			            _dateStart,
-			            _Anchor
-			        )
+			        DATESYTD(dim_date[Date])
 			    )
+			```
 		formatString: 0
 		displayFolder: _2011_Anchor\Sales\Base
 		lineageTag: 17a57f06-5fa5-4a82-81c7-ef90a807af1c
 
-	measure 'AOV YTD (_2011)' = ```
+	measure '07. AOV CY YTD' = ```
 			
-			VAR _Anchor = [1. Anchor Date (2011SameMD)]
-			VAR _startDate = DATE(YEAR(_Anchor), 1, 1)
-			RETURN
-			DIVIDE(
-			    [Sales YTD (_2011)], 
-			    CALCULATE(DISTINCTCOUNT(fact_sales[InvoiceNumber]),
-			       DATESBETWEEN(dim_date[Date],
-			       _startDate,
-			       _Anchor
-			       )
+			VAR _InvoiceCount = 
+			    CALCULATE(
+			        DISTINCTCOUNT(fact_sales[InvoiceNumber]),
+			        DATESYTD(dim_date[Date])
 			    )
-			)
+			RETURN
+			DIVIDE([01. Sales CY YTD], _InvoiceCount, 0)
 			```
-		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 9b7336bf-403b-48d2-821c-ebaf45b89cca
 
-		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Sales YoY% - format' =
 			
 			SWITCH(
 			    TRUE(),
-			    [Sales YoY % (_2011)] > 0, UNICHAR(11165) & " " & FORMAT([Sales YoY % (_2011)], "0.0%"),
-			    [Sales YoY % (_2011)] < 0, UNICHAR(11167) & " " & FORMAT([Sales YoY % (_2011)] * -1, "0.0%"),
-			    FORMAT([Sales YoY % (_2011)], "0.0%")
+			    [03. Sales YoY %] > 0, UNICHAR(11165) & " " & FORMAT([03. Sales YoY %], "0.0%"),
+			    [03. Sales YoY %] < 0, UNICHAR(11167) & " " & FORMAT([03. Sales YoY %] * -1, "0.0%"),
+			    FORMAT([03. Sales YoY %], "0.0%")
 			)
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: ad24870a-d8c8-4273-b6ac-11a22cfa13f1
@@ -264,34 +202,25 @@ table _Measures
 			
 			SWITCH(
 			    TRUE(),
-			    [Sales YoY % (_2011)] > 0, "Green",
-			    [Sales YoY % (_2011)] < 0, "Red",
+			    [03. Sales YoY %] > 0, "Green",
+			    [03. Sales YoY %] < 0, "Red",
 			    "Grey")
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: e6047330-58b8-4cd6-b6ad-6a829c16d547
 
-	measure 'AOV YTD PY (_2010)' = ```
+	measure '08. AOV PY YTD' = ```
 			
-			VAR _Anchor = EDATE([1. Anchor Date (2011SameMD)], -12)
-			VAR _startDate = DATE(YEAR(_Anchor), 1, 1)
-			RETURN
-			DIVIDE([Sales YTD PY (_2010)], 
-			       CALCULATE(DISTINCTCOUNT(fact_sales[InvoiceNumber]),
-			           DATESBETWEEN(dim_date[Date],
-			           _startDate,
-			           _Anchor
-			           )
-			       )
-			)
+			    CALCULATE(
+			        [07. AOV CY YTD],
+			        SAMEPERIODLASTYEAR(dim_date[Date]
+			        ))
 			```
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 860d2300-9b91-48df-9521-1ce61247c319
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'AOV YoY %' =
-			
-			DIVIDE([AOV YTD (_2011)] - [AOV YTD PY (_2010)], [AOV YTD (_2011)])
+	measure '09. AOV YoY %' = DIVIDE([07. AOV CY YTD] - [08. AOV PY YTD], [07. AOV CY YTD])
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: a5571698-80b6-495e-9788-1a7c22c770da
@@ -300,9 +229,9 @@ table _Measures
 			
 			SWITCH(
 			    TRUE(),
-			    [AOV YoY %] > 0, UNICHAR(11165) & " " &FORMAT([AOV YoY %], "0.0%"),
-			    [AOV YoY %] < 0, UNICHAR(11167) & " " &FORMAT([AOV YoY %], "0.0%"),
-			    FORMAT([AOV YoY %], "0.0%"))
+			    [09. AOV YoY %] > 0, UNICHAR(11165) & " " &FORMAT([09. AOV YoY %], "0.0%"),
+			    [09. AOV YoY %] < 0, UNICHAR(11167) & " " &FORMAT([09. AOV YoY %], "0.0%"),
+			    FORMAT([09. AOV YoY %], "0.0%"))
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: 6a8bb895-5e51-4c6c-b3b6-3fe26ba636b5
 
@@ -310,15 +239,15 @@ table _Measures
 			
 			SWITCH(
 			    TRUE(),
-			    [AOV YoY %] > 0, "Green",
-			    [AOV YoY %] < 0, "Red",
+			    [09. AOV YoY %] > 0, "Green",
+			    [09. AOV YoY %] < 0, "Red",
 			    "Grey")
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: 4c85434d-2fa0-42de-b81c-352c18dc5eb9
 
 	measure 'New Customers (_2011)' = ```
 			
-			VAR _Anchor = [1. Anchor Date (2011SameMD)]
+			VAR _Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR _CurrentRowMonth = MONTH(MAX(dim_date[Date]))  // Kontekst miesięczny z osi X
 			VAR _CurrentRowYear = YEAR(MAX(dim_date[Date]))    // Kontekst roczny z osi X
 			VAR _AnchorMonth = MONTH(_Anchor)                  // Miesiąc kotwicy
@@ -345,7 +274,7 @@ table _Measures
 
 	measure 'Returning Customers (_2011)' = ```
 			
-			VAR _Anchor = [1. Anchor Date (2011SameMD)]
+			VAR _Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR _CurrentDate = MAX(dim_date[Date])
 			VAR _PeriodStart = MIN(dim_date[Date])                  // Kontekst na wykresie
 			VAR _PeriodEnd = MIN(_CurrentDate, _Anchor)             // Nie starsze niż _Anchor
@@ -391,7 +320,7 @@ table _Measures
 
 	measure 'UK Sales Share % (2011)' =
 			
-			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR UKSales =
 			    CALCULATE(
 			        [Total Sales],
@@ -418,7 +347,7 @@ table _Measures
 
 	measure 'Guest Transactions % (2011)' =
 			
-			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR GuestCustomers =
 			    CALCULATE(
 			        COUNTROWS(fact_sales),
@@ -451,13 +380,13 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '2010 Base Revenue' = [Sales YTD PY (_2010)]
+	measure '2010 Base Revenue' = [02. Sales PY YTD]
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: cbaca7bb-5624-4532-919f-766fee44066d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '2011 Total Revenue' = [Sales YTD (_2011)]
+	measure '2011 Total Revenue' = [01. Sales CY YTD]
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: 87fcabb4-5ae9-4564-9757-f72fc92a236a
 
@@ -465,7 +394,7 @@ table _Measures
 
 	measure 'Volume Effect' =
 			
-			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR Qty2011 =
 			    CALCULATE(
 			        [Total Quantity],
@@ -489,7 +418,7 @@ table _Measures
 
 	measure 'Price Effect' =
 			
-			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR Qty2011 =
 			    CALCULATE(
 			        [Total Quantity],
@@ -542,7 +471,7 @@ table _Measures
 
 	measure 'Total Quantity YTD (2011)' = ```
 			
-			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			RETURN
 			    CALCULATE(
 			        [Total Quantity],
@@ -560,7 +489,7 @@ table _Measures
 			VAR CountryMonthlySales = [Total Sales]
 			VAR TotalMonthlySales =
 			            IF(
-			                MAX(dim_date[Date]) <= [1. Anchor Date (2011SameMD)] && YEAR(MAX(dim_date[Date])) = YEAR([1. Anchor Date (2011SameMD)]),
+			                MAX(dim_date[Date]) <= [1. Anchor (_2011) Date (2011SameMD)] && YEAR(MAX(dim_date[Date])) = YEAR([1. Anchor (_2011) Date (2011SameMD)]),
 			                CALCULATE(
 			                    [Total Sales],
 			                    dim_geography[IsUK] = 0,
@@ -579,26 +508,20 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 4f89c86f-3b4c-4b12-be33-451c045dce73
 
-	measure 'Customers YTD PY (_2010)' =
+	measure '05. Customers PY YTD' = ```
 			
-			VAR _Anchor = EDATE([1. Anchor Date (2011SameMD)], -12)
-			VAR _dateStart = DATE(YEAR(_Anchor), 1, 1)
-			RETURN
 			    CALCULATE(
-			        DISTINCTCOUNT(fact_sales[CustomerKey]),
-			        DATESBETWEEN(
-			            dim_date[Date],
-			            _dateStart,
-			            _Anchor
-			        )
-			    )
+			        [04. Customers CY YTD],
+			        SAMEPERIODLASTYEAR(dim_date[Date]
+			        ))
+			```
 		formatString: 0
 		displayFolder: _2011_Anchor\Sales\Base
 		lineageTag: 1c5b48a2-2b39-4dc5-b720-f1c5c9d40e1b
 
-	measure 'Customers YTD YoY %' =
+	measure '06. Customers YoY %' =
 			
-			DIVIDE([Customers YTD (_2011)] - [Customers YTD PY (_2010)], [Customers YTD (_2011)])
+			DIVIDE([04. Customers CY YTD] - [05. Customers PY YTD], [04. Customers CY YTD], 0)
 		displayFolder: _2011_Anchor\Sales\Base
 		lineageTag: 063a574e-1459-4866-beeb-3df3b5bfcbbf
 
@@ -608,9 +531,9 @@ table _Measures
 			
 			SWITCH(
 			    TRUE(),
-			    [Customers YTD YoY %] > 0, UNICHAR(11165) & " " & FORMAT([Customers YTD YoY %], "0.0%"),
-			    [Customers YTD YoY %] < 0, UNICHAR(11167) & " " & FORMAT([Customers YTD YoY %] * -1, "0.0%"),
-			    FORMAT([Customers YTD YoY %], "0.0%")
+			    [06. Customers YoY %] > 0, UNICHAR(11165) & " " & FORMAT([06. Customers YoY %], "0.0%"),
+			    [06. Customers YoY %] < 0, UNICHAR(11167) & " " & FORMAT([06. Customers YoY %] * -1, "0.0%"),
+			    FORMAT([06. Customers YoY %], "0.0%")
 			)
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: 2fc0d52d-1cad-4f6c-9a0b-87cf49770084
@@ -619,8 +542,8 @@ table _Measures
 			
 			SWITCH(
 			    TRUE(),
-			    [Customers YTD YoY %] > 0, "Green",
-			    [Customers YTD YoY %] < 0, "Red",
+			    [06. Customers YoY %] > 0, "Green",
+			    [06. Customers YoY %] < 0, "Red",
 			    "Grey"
 			)
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
@@ -628,7 +551,7 @@ table _Measures
 
 	measure 'Sales YTD Anchor' =
 			
-			VAR Anchor = [1. Anchor Date (2011SameMD)]
+			VAR Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR RowYear = YEAR(MAX(dim_date[Date]))
 			var RowDate = MAX(dim_date[Date])
 			RETURN
@@ -652,7 +575,7 @@ table _Measures
 
 	measure 'Intl Growth Rate' = ```
 			
-			VAR _anchor = [1. Anchor Date (2011SameMD)]
+			VAR _anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR _anchorPY = EDATE(_anchor, -12)
 			VAR _ytd =
 			    CALCULATE(
@@ -677,7 +600,7 @@ table _Measures
 
 	measure _ytd = ```
 			
-			VAR _anchor = [1. Anchor Date (2011SameMD)]
+			VAR _anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR _anchorPY = EDATE(_anchor, -12)
 			VAR _ytd =
 			    CALCULATE(
@@ -702,7 +625,7 @@ table _Measures
 
 	measure _py = ```
 			
-			VAR _anchor = [1. Anchor Date (2011SameMD)]
+			VAR _anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR _anchorPY = EDATE(_anchor, -12)
 			VAR _ytd =
 			    CALCULATE(
@@ -727,7 +650,7 @@ table _Measures
 
 	measure 'UK Growth Rate' = ```
 			
-			VAR _anchor = [1. Anchor Date (2011SameMD)]
+			VAR _anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR _anchorPY = EDATE(_anchor, -12)
 			VAR _ytd =
 			    CALCULATE(
@@ -760,20 +683,30 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: 5392eb92-0bc9-4d78-8e58-cb42accb94b2
 
-	measure '_slicer - Sales YTD (_2011)' = ```
+	measure '10. _slicer - Sales CY YTD' = ```
 			
 			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Segment - Executive Summary'[CustomerTypeFilter], "All Customers")
 			VAR _filterCondition = 
 			    SWITCH(
 			        _customerSelection,
-			        "All Customers", [Sales YTD (_2011)],
+			        "All Customers", CALCULATE(
+			            [Total Sales],
+			            DATESYTD(dim_date[Date])
+			        ),
 			        "Registered Only", CALCULATE(
-			            [Sales YTD (_2011)], dim_customer[CustomerType] = "Registered"
+			            [Total Sales],
+			            dim_customer[CustomerType] = "Registered",
+			            DATESYTD(dim_date[Date])
 			            ),
 			        "Guest Only", CALCULATE(
-			            [Sales YTD (_2011)], dim_customer[CustomerType] = "Guest"
+			            [Total Sales],
+			            dim_customer[CustomerType] = "Guest",
+			            DATESYTD(dim_date[Date])
 			        ), 
-			        [Sales YTD (_2011)]
+			        CALCULATE(
+			            [Total Sales],
+			            DATESYTD(dim_date[Date])
+			        )
 			    )
 			RETURN
 			    _filterCondition
@@ -785,7 +718,7 @@ table _Measures
 
 	measure 'International Market Share' = ```
 			
-			VAR _anchor = [1. Anchor Date (2011SameMD)]
+			VAR _anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			
 			VAR _total = 
 			    CALCULATE(
@@ -805,20 +738,20 @@ table _Measures
 		formatString: 0%;-0%;0%
 		lineageTag: e58fb0bf-707e-4d2c-8e2d-b317b304c7e0
 
-	measure '_slicer - Sales YTD PY (_2010)' = ```
+	measure '11. _slicer - Sales PY YTD' = ```
 			
 			VAR _customerSelection = SELECTEDVALUE('_slicer Customer Segment - Executive Summary'[CustomerTypeFilter], "All Customers")
 			VAR _filterCondition = 
 			    SWITCH(
 			        _customerSelection,
-			        "All Customers", [Sales YTD PY (_2010)],
+			        "All Customers", [02. Sales PY YTD],
 			        "Registered Only", CALCULATE(
-			            [Sales YTD PY (_2010)], dim_customer[CustomerType] = "Registered"
+			            [02. Sales PY YTD], dim_customer[CustomerType] = "Registered"
 			            ),
 			        "Guest Only", CALCULATE(
-			            [Sales YTD PY (_2010)], dim_customer[CustomerType] = "Guest"
+			            [02. Sales PY YTD], dim_customer[CustomerType] = "Guest"
 			        ), 
-			        [Sales YTD PY (_2010)]
+			        [02. Sales PY YTD]
 			    )
 			RETURN
 			    _filterCondition
@@ -830,7 +763,7 @@ table _Measures
 
 	measure 'Orders YTD (_2011)' =
 			
-			VAR _Anchor = [1. Anchor Date (2011SameMD)]
+			VAR _Anchor = [1. Anchor (_2011) Date (2011SameMD)]
 			VAR _dateStart = DATE(YEAR(_Anchor), 1, 1)
 			RETURN
 			    CALCULATE(
@@ -873,14 +806,14 @@ table _Measures
 			VAR _filterCondition = 
 			    SWITCH(
 			        _customerSelection,
-			        "All Customers", [Sales YoY % (_2011)],
+			        "All Customers", [03. Sales YoY %],
 			        "Registered Only", CALCULATE(
-			            [Sales YoY % (_2011)], dim_customer[CustomerType] = "Registered"
+			            [03. Sales YoY %], dim_customer[CustomerType] = "Registered"
 			            ),
 			        "Guest Only", CALCULATE(
-			            [Sales YoY % (_2011)], dim_customer[CustomerType] = "Guest"
+			            [03. Sales YoY %], dim_customer[CustomerType] = "Guest"
 			        ), 
-			        [Sales YoY % (_2011)]
+			        [03. Sales YoY %]
 			    )
 			RETURN
 			    _filterCondition

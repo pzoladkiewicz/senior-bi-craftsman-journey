@@ -9,7 +9,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YTD (_2011)"
+			          "ConceptualProperty": "01. Sales CY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -35,7 +35,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "AOV YTD (_2011)"
+			          "ConceptualProperty": "07. AOV CY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -61,7 +61,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Customers YTD (_2011)"
+			          "ConceptualProperty": "04. Customers CY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -6833,7 +6833,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "1. Anchor Date (2011SameMD)"
+			          "ConceptualProperty": "1. Anchor (_2011) Date (2011SameMD)"
 			        }
 			      },
 			      "State": "Generated",
@@ -6906,7 +6906,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YTD PY (_2010)"
+			          "ConceptualProperty": "02. Sales PY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -6928,7 +6928,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YoY % (_2011)"
+			          "ConceptualProperty": "03. Sales YoY %"
 			        }
 			      },
 			      "State": "Generated",
@@ -7162,7 +7162,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "AOV YTD PY (_2010)"
+			          "ConceptualProperty": "08. AOV PY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -7184,7 +7184,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "AOV YoY %"
+			          "ConceptualProperty": "09. AOV YoY %"
 			        }
 			      },
 			      "State": "Generated",
@@ -8358,7 +8358,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Customers YTD PY (_2010)"
+			          "ConceptualProperty": "05. Customers PY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -8380,7 +8380,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Customers YTD YoY %"
+			          "ConceptualProperty": "06. Customers YoY %"
 			        }
 			      },
 			      "State": "Generated",
@@ -9612,7 +9612,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_slicer - Sales YTD (_2011)"
+			          "ConceptualProperty": "10. _slicer - Sales CY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -9650,7 +9650,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_slicer - Sales YTD PY (_2010)"
+			          "ConceptualProperty": "11. _slicer - Sales PY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -12700,135 +12700,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.491
-			          }
-			        }
-			      ]
-			    },
-			    "fact_transactions_classified.classification_step": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "fact_transactions_classified",
-			          "ConceptualProperty": "ClassificationStep"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "classification step": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "ClassificationStep": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "step": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "classification stage": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "classification phase": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "classification period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "stage": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "phase": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "classification footstep": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.475
-			          }
-			        },
-			        {
-			          "footstep": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.466
-			          }
-			        },
-			        {
-			          "classification pace": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
-			          }
-			        },
-			        {
-			          "classification stride": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.461
 			          }
 			        }
 			      ]

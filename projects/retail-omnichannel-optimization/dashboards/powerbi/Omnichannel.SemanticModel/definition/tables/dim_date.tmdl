@@ -149,6 +149,16 @@ table dim_date
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Date Offset' = DATEDIFF(TODAY(), dim_date[Date], DAY)
+		formatString: 0
+		lineageTag: 1a21f3fe-682c-4d19-824c-8d44cacdfac4
+		summarizeBy: none
+		sortByColumn: Date
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	hierarchy YearQuarterMonth
 		lineageTag: eac76f93-b3da-4b1d-9e24-e5656e9641e1
 

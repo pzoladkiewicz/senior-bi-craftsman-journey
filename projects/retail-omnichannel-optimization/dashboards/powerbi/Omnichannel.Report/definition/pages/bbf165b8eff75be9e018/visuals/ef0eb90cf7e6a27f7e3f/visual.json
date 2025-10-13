@@ -61,7 +61,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD (_2011)"
+                  "Property": "01. Sales CY YTD"
                 }
               },
               "queryRef": "_Measures.Sales YTD (_2011)",
@@ -883,7 +883,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Sales YTD (_2011)"
+                            "Property": "01. Sales CY YTD"
                           }
                         }
                       }

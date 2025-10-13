@@ -105,12 +105,13 @@
         },
         {
           "location": {
-            "x": 992.85714285714312,
-            "y": 219.50000000000011
+            "x": 1179.1071428571431,
+            "y": 233.25000000000011
           },
           "nodeIndex": "_slicer Customer Segment - Executive Summary",
+          "nodeLineageTag": "6da8ea01-46d6-4dfc-97ff-8c8c01f28e62",
           "size": {
-            "height": 128,
+            "height": 169.25,
             "width": 234
           },
           "zIndex": 2
