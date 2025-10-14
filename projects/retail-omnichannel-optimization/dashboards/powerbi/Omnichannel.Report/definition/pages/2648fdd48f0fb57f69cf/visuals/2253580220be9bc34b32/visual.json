@@ -4,7 +4,7 @@
   "position": {
     "x": 1040,
     "y": 32,
-    "z": 9500,
+    "z": 9000,
     "height": 160,
     "width": 191.99999999999997,
     "tabOrder": 5000
@@ -747,20 +747,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "91474327098ed44c6c0c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_slicer Customer Segment - Executive Summary"
-              }
-            },
-            "Property": "Segment"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

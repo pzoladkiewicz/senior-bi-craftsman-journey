@@ -5,7 +5,7 @@ cultureInfo en-US
 			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "entity__measure.sales_YTD__2011": {
+			    "entity__measure.entity_01__sales_CY_YTD": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -15,8 +15,28 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "sales YTD (_2011)": {
+			          "01. sales CY YTD": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "01. sale cy year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.66
+			          }
+			        },
+			        {
+			          "01. sale cy ytd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
 			          }
 			        },
 			        {
@@ -31,7 +51,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.aov_ytd__2011": {
+			    "entity__measure.entity_07__aov_cy_ytd": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -41,8 +61,18 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "aov ytd (_2011)": {
+			          "07. aov cy ytd": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "07. aov cy year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.66
 			          }
 			        },
 			        {
@@ -57,7 +87,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.customers_YTD__2011": {
+			    "entity__measure.entity_04__customers_CY_YTD": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -67,8 +97,18 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "customers YTD (_2011)": {
+			          "04. customers CY YTD": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "04. customer cy year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.66
 			          }
 			        },
 			        {
@@ -6829,17 +6869,17 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity_1__anchor_date_2011SameMD": {
+			    "entity__measure.entity____anchor__2011_date_2011SameMD": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "1. Anchor (_2011) Date (2011SameMD)"
+			          "ConceptualProperty": "_. Anchor (_2011) Date (2011SameMD)"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "1. anchor date (2011SameMD)": {
+			          "_. anchor (_2011) date (2011SameMD)": {
 			            "State": "Generated"
 			          }
 			        },
@@ -6850,7 +6890,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "1. anchor date": {
+			          "_. anchor (_2011) date": {
 			            "State": "Generated",
 			            "Weight": 0.75
 			          }
@@ -6902,7 +6942,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.sales_YTD_PY__2010": {
+			    "entity__measure.entity_02__sales_PY_YTD": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -6912,19 +6952,33 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "sales YTD PY (_2010)": {
+			          "02. sales PY YTD": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "sales YTD PY": {
-			            "State": "Generated",
-			            "Weight": 0.75
+			          "02. sale py year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.66
+			          }
+			        },
+			        {
+			          "02. sale py ytd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
 			          }
 			        }
 			      ]
 			    },
-			    "entity__measure.sales_YoY___2011": {
+			    "entity__measure.entity_03__sales_YoY_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -6934,14 +6988,38 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "sales YoY % (_2011)": {
+			          "03. sales YoY %": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "sales YoY %": {
-			            "State": "Generated",
-			            "Weight": 0.75
+			          "03. sale yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "03. sale yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "03. sale yoy %": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
 			          }
 			        }
 			      ]
@@ -7158,7 +7236,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.aov_ytd_py__2010": {
+			    "entity__measure.entity_08__aov_py_ytd": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -7168,19 +7246,23 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "aov ytd py (_2010)": {
+			          "08. aov py ytd": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "aov ytd py": {
-			            "State": "Generated",
-			            "Weight": 0.75
+			          "08. aov py year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.66
 			          }
 			        }
 			      ]
 			    },
-			    "entity__measure.AOV_YoY_": {
+			    "entity__measure.entity_09__AOV_YoY_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -7190,28 +7272,28 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "AOV YoY %": {
+			          "09. AOV YoY %": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "aov yoy percentage": {
+			          "09. aov yoy percentage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.762
+			            "Weight": 0.78
 			          }
 			        },
 			        {
-			          "aov yoy pct": {
+			          "09. aov yoy pct": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.739
+			            "Weight": 0.757
 			          }
 			        }
 			      ]
@@ -7292,7 +7374,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "New Customers (_2011)"
+			          "ConceptualProperty": "16. New Customers CY"
 			        }
 			      },
 			      "State": "Generated",
@@ -7324,7 +7406,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Returning Customers (_2011)"
+			          "ConceptualProperty": "17. Returning Customers CY"
 			        }
 			      },
 			      "State": "Generated",
@@ -8354,7 +8436,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.customers_YTD_PY__2010": {
+			    "entity__measure.entity_05__customers_PY_YTD": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -8364,19 +8446,23 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "customers YTD PY (_2010)": {
+			          "05. customers PY YTD": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "customers YTD PY": {
-			            "State": "Generated",
-			            "Weight": 0.75
+			          "05. customer py year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.66
 			          }
 			        }
 			      ]
 			    },
-			    "entity__measure.customers_YTD_YoY_": {
+			    "entity__measure.entity_06__customers_YoY_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -8386,38 +8472,28 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "customers YTD YoY %": {
+			          "06. customers YoY %": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "customer ytd yoy percentage": {
+			          "06. customer yoy percentage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.771
+			            "Weight": 0.78
 			          }
 			        },
 			        {
-			          "customer ytd yoy pct": {
+			          "06. customer yoy pct": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.748
-			          }
-			        },
-			        {
-			          "customer year to date yoy %": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
+			            "Weight": 0.757
 			          }
 			        }
 			      ]
@@ -9608,28 +9684,22 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity__slicer__sales_YTD__2011": {
+			    "entity__measure.entity_10___slicer__sales_CY_monthly": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "10. _slicer - Sales CY YTD"
+			          "ConceptualProperty": "10. _slicer - Sales CY Monthly"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "_slicer - sales YTD (_2011)": {
+			          "10. _slicer - sales CY monthly": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "_slicer - sales YTD": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "_slicer sales YTD (_2011)": {
+			          "10. _slicer sales CY monthly": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -9646,28 +9716,22 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity__slicer__sales_YTD_PY__2010": {
+			    "entity__measure.entity_11___slicer__sales_PY_monthly": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "11. _slicer - Sales PY YTD"
+			          "ConceptualProperty": "11. _slicer - Sales PY Monthly"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "_slicer - sales YTD PY (_2010)": {
+			          "11. _slicer - sales PY monthly": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "_slicer - sales YTD PY": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "_slicer sales YTD PY (_2010)": {
+			          "11. _slicer sales PY monthly": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -9684,50 +9748,48 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.orders_YTD__2011": {
+			    "entity__measure.entity_00__orders_YTD": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Orders YTD (_2011)"
+			          "ConceptualProperty": "00. Orders YTD"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "orders YTD (_2011)": {
+			          "00. orders YTD": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "orders YTD": {
-			            "State": "Generated",
-			            "Weight": 0.75
+			          "00. order year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.643
 			          }
 			        }
 			      ]
 			    },
-			    "entity__measure.entity__slicer__orders_YTD__2011": {
+			    "entity__measure.entity_12___slicer__orders_YTD": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_slicer - Orders YTD (_2011)"
+			          "ConceptualProperty": "12. _slicer - Orders YTD"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "_slicer - orders YTD (_2011)": {
+			          "12. _slicer - orders YTD": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "_slicer - orders YTD": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "_slicer orders YTD (_2011)": {
+			          "12. _slicer orders YTD": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -10019,55 +10081,17 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity__slicer__sales_YoY__2011": {
+			    "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_slicer - Sales YoY (_2011)"
+			          "ConceptualProperty": "15.1 _slicer TOP 10 Sales YoY % CF"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "_slicer - sales YoY (_2011)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "_slicer - sales YoY": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "_slicer sales YoY (_2011)": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "YoY": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.entity__slicer_sales_YoY_CF": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_slicer Sales YoY% CF"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "_slicer sales YoY% CF": {
+			          "15.1 _slicer TOP 10 sales YoY % CF": {
 			            "State": "Generated"
 			          }
 			        }
@@ -13408,75 +13432,365 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "dim_date.date_offset": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_date",
+			          "ConceptualProperty": "Date Offset"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date offset": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "offset": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "moment offset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "period offset": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "date equalizer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "date compensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "equalizer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "compensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "date counterbalance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date balance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date counterpoise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "date equipoise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_00__monthly_sales_CY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "00. Monthly Sales CY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00. monthly sales CY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "00. monthly sale cy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_00___slicer__monthly_sales_CY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "00. _slicer - Monthly Sales CY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00. _slicer - monthly sales CY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "00. _slicer monthly sales CY": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_00__monthly_sales_PY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "00. Monthly Sales PY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00. monthly sales PY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "00. monthly sale py": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "fact_transactions_classified.invoice_date_oryginal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_transactions_classified",
+			          "ConceptualProperty": "InvoiceDate_Oryginal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "invoice date oryginal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "InvoiceDate_Oryginal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "invoice moment oryginal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "invoice period oryginal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_13___slicer__TOP_10_sales_CY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "13. _slicer - TOP 10 Sales CY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "13. _slicer - TOP 10 sales CY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "13. _slicer TOP 10 sales CY": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "CY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_14___slicer__TOP_10_sales_PY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "14. _slicer - TOP 10 Sales PY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "14. _slicer - TOP 10 sales PY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "14. _slicer TOP 10 sales PY": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "PY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_15___slicer__TOP_10_sales_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "15. _slicer - TOP 10 Sales YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "15. _slicer - TOP 10 sales YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "15. _slicer TOP 10 sales YoY %": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "YoY %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "table_measures.column_slicer__sales_yoy__2011": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_slicer - Sales YoY (_2011)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "YoY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "fact_transactions_classified_invoice_date_date_hierarchy_has_fact_transactions_classified_invoice_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_transactions_classified"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transactions_classified.invoice_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified.invoice_date.date_hierarchy"
-			          }
-			        },
-			        "fact_transactions_classified.invoice_date.year": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified.invoice_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transactions_classified.invoice_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "fact_transactions_classified.invoice_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "invoice_date_hierarchies_have_invoice_years"
-			        }
-			      ]
-			    },
-			    "fact_transactions_classified_invoice_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_transactions_classified"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transactions_classified.invoice_date": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified.invoice_date"
-			          }
-			        },
-			        "fact_transactions_classified.invoice_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified.invoice_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transactions_classified.invoice_date"
-			            },
-			            "Object": {
-			              "Role": "fact_transactions_classified.invoice_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "invoice_dates_have_invoice_date_hierarchies"
-			        }
-			      ]
-			    },
 			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_day": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_product"
@@ -14433,6 +14747,501 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "fact_sale_has_entity__measure_entity_15___slicer__TOP_10_sales_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_15___slicer__TOP_10_sales_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_15___slicer__TOP_10_sales_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_15___slicer__TOP_10_sales_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_15___slicer__TOP_10_sales_YoY_"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_15___slicer__TOP_10_sales_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_15___slicer__TOP_10_sales_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_15___slicer__TOP_10_sales_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_15___slicer__TOP_10_sales_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_15___slicer__TOP_10_sales_YoY_"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity_15___slicer__TOP_10_sales_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_segment__executive_summary": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
+			          }
+			        },
+			        "entity__measure.entity_15___slicer__TOP_10_sales_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_15___slicer__TOP_10_sales_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_segment__executive_summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_15___slicer__TOP_10_sales_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_15___slicer__TOP_10_sales_YoY_"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_14___slicer__TOP_10_sales_PY": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_14___slicer__TOP_10_sales_PY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14___slicer__TOP_10_sales_PY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_14___slicer__TOP_10_sales_PY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_14___slicer__TOP_10_sales_PY"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_14___slicer__TOP_10_sales_PY": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_14___slicer__TOP_10_sales_PY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14___slicer__TOP_10_sales_PY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_14___slicer__TOP_10_sales_PY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_14___slicer__TOP_10_sales_PY"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity_14___slicer__TOP_10_sales_PY": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_segment__executive_summary": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
+			          }
+			        },
+			        "entity__measure.entity_14___slicer__TOP_10_sales_PY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14___slicer__TOP_10_sales_PY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_segment__executive_summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_14___slicer__TOP_10_sales_PY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_14___slicer__TOP_10_sales_PY"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_13___slicer__TOP_10_sales_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_13___slicer__TOP_10_sales_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_13___slicer__TOP_10_sales_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_13___slicer__TOP_10_sales_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_13___slicer__TOP_10_sales_CY"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_13___slicer__TOP_10_sales_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_13___slicer__TOP_10_sales_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_13___slicer__TOP_10_sales_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_13___slicer__TOP_10_sales_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_13___slicer__TOP_10_sales_CY"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity_13___slicer__TOP_10_sales_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_segment__executive_summary": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
+			          }
+			        },
+			        "entity__measure.entity_13___slicer__TOP_10_sales_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_13___slicer__TOP_10_sales_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_segment__executive_summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_13___slicer__TOP_10_sales_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_13___slicer__TOP_10_sales_CY"
+			        }
+			      ]
+			    },
+			    "fact_transactions_classified_has_invoice_date_oryginal": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_transactions_classified"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transactions_classified": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified"
+			          }
+			        },
+			        "fact_transactions_classified.invoice_date_oryginal": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified.invoice_date_oryginal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transactions_classified"
+			            },
+			            "Object": {
+			              "Role": "fact_transactions_classified.invoice_date_oryginal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transactions_classifieds_have_invoice_date_oryginals"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_00__monthly_sales_PY": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_00__monthly_sales_PY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_00__monthly_sales_PY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_00__monthly_sales_PY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_00__monthly_sales_PY"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_00___slicer__monthly_sales_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_00___slicer__monthly_sales_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_00___slicer__monthly_sales_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_00___slicer__monthly_sales_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_00___slicer__monthly_sales_CY"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity_00___slicer__monthly_sales_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "entity__slicer_customer_segment__executive_summary": {
+			          "Target": {
+			            "Entity": "entity__slicer_customer_segment__executive_summary"
+			          }
+			        },
+			        "entity__measure.entity_00___slicer__monthly_sales_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_00___slicer__monthly_sales_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "entity__slicer_customer_segment__executive_summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_00___slicer__monthly_sales_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_00___slicer__monthly_sales_CY"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_00__monthly_sales_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_00__monthly_sales_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_00__monthly_sales_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_00__monthly_sales_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_00__monthly_sales_CY"
+			        }
+			      ]
+			    },
+			    "dim_date_has_date_offset": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "dim_date.date_offset": {
+			          "Target": {
+			            "Entity": "dim_date.date_offset"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "dim_date.date_offset"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_date_offsets"
+			        }
+			      ]
+			    },
 			    "fact_transactions_classified_has_entity__measure_product_volume_vs_AOV_tier_colors_classified_YTD__2011": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_transactions_classified"
@@ -14628,39 +15437,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_transactions_classifieds_have_dates"
-			        }
-			      ]
-			    },
-			    "fact_transactions_classified_has_classification_step": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_transactions_classified"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transactions_classified": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified"
-			          }
-			        },
-			        "fact_transactions_classified.classification_step": {
-			          "Target": {
-			            "Entity": "fact_transactions_classified.classification_step"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transactions_classified"
-			            },
-			            "Object": {
-			              "Role": "fact_transactions_classified.classification_step"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_transactions_classifieds_have_classification_steps"
 			        }
 			      ]
 			    },
@@ -15595,7 +16371,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_entity__slicer_sales_YoY_CF": {
+			    "fact_sale_has_entity__measure_entity_15_1__slicer_TOP_10_sales_YoY__CF": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -15606,9 +16382,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.entity__slicer_sales_YoY_CF": {
+			        "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF": {
 			          "Target": {
-			            "Entity": "entity__measure.entity__slicer_sales_YoY_CF"
+			            "Entity": "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF"
 			          }
 			        }
 			      },
@@ -15619,16 +16395,49 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity__slicer_sales_YoY_CF"
+			              "Role": "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have__slicer_sales_YoY_CF"
+			          "ID": "fact_sales_have_15_1__slicer_TOP_10_sales_YoY__CF"
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer_sales_YoY_CF": {
+			    "dim_date_has_entity__measure_entity_15_1__slicer_TOP_10_sales_YoY__CF": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_15_1__slicer_TOP_10_sales_YoY__CF"
+			        }
+			      ]
+			    },
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity_15_1__slicer_TOP_10_sales_YoY__CF": {
 			      "Binding": {
 			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
@@ -15639,9 +16448,9 @@ cultureInfo en-US
 			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
-			        "entity__measure.entity__slicer_sales_YoY_CF": {
+			        "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF": {
 			          "Target": {
-			            "Entity": "entity__measure.entity__slicer_sales_YoY_CF"
+			            "Entity": "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF"
 			          }
 			        }
 			      },
@@ -15652,78 +16461,12 @@ cultureInfo en-US
 			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity__slicer_sales_YoY_CF"
+			              "Role": "entity__measure.entity_15_1__slicer_TOP_10_sales_YoY__CF"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer_sales_YoY_CF"
-			        }
-			      ]
-			    },
-			    "fact_sale_has_entity__measure_entity__slicer__sales_YoY__2011": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_sale": {
-			          "Target": {
-			            "Entity": "fact_sale"
-			          }
-			        },
-			        "entity__measure.entity__slicer__sales_YoY__2011": {
-			          "Target": {
-			            "Entity": "entity__measure.entity__slicer__sales_YoY__2011"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_sale"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.entity__slicer__sales_YoY__2011"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_sales_have__slicer__sales_YoY__2011"
-			        }
-			      ]
-			    },
-			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer__sales_YoY__2011": {
-			      "Binding": {
-			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "entity__slicer_customer_segment__executive_summary": {
-			          "Target": {
-			            "Entity": "entity__slicer_customer_segment__executive_summary"
-			          }
-			        },
-			        "entity__measure.entity__slicer__sales_YoY__2011": {
-			          "Target": {
-			            "Entity": "entity__measure.entity__slicer__sales_YoY__2011"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "entity__slicer_customer_segment__executive_summary"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.entity__slicer__sales_YoY__2011"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer__sales_YoY__2011"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_15_1__slicer_TOP_10_sales_YoY__CF"
 			        }
 			      ]
 			    },
@@ -15806,7 +16549,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_entity__slicer__orders_YTD__2011": {
+			    "fact_sale_has_entity__measure_entity_12___slicer__orders_YTD": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -15817,9 +16560,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.entity__slicer__orders_YTD__2011": {
+			        "entity__measure.entity_12___slicer__orders_YTD": {
 			          "Target": {
-			            "Entity": "entity__measure.entity__slicer__orders_YTD__2011"
+			            "Entity": "entity__measure.entity_12___slicer__orders_YTD"
 			          }
 			        }
 			      },
@@ -15830,16 +16573,16 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity__slicer__orders_YTD__2011"
+			              "Role": "entity__measure.entity_12___slicer__orders_YTD"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have__slicer__orders_YTD__2011"
+			          "ID": "fact_sales_have_12___slicer__orders_YTD"
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer__orders_YTD__2011": {
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity_12___slicer__orders_YTD": {
 			      "Binding": {
 			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
@@ -15850,9 +16593,9 @@ cultureInfo en-US
 			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
-			        "entity__measure.entity__slicer__orders_YTD__2011": {
+			        "entity__measure.entity_12___slicer__orders_YTD": {
 			          "Target": {
-			            "Entity": "entity__measure.entity__slicer__orders_YTD__2011"
+			            "Entity": "entity__measure.entity_12___slicer__orders_YTD"
 			          }
 			        }
 			      },
@@ -15863,16 +16606,16 @@ cultureInfo en-US
 			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity__slicer__orders_YTD__2011"
+			              "Role": "entity__measure.entity_12___slicer__orders_YTD"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer__orders_YTD__2011"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_12___slicer__orders_YTD"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_orders_YTD__2011": {
+			    "fact_sale_has_entity__measure_entity_00__orders_YTD": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -15883,9 +16626,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.orders_YTD__2011": {
+			        "entity__measure.entity_00__orders_YTD": {
 			          "Target": {
-			            "Entity": "entity__measure.orders_YTD__2011"
+			            "Entity": "entity__measure.entity_00__orders_YTD"
 			          }
 			        }
 			      },
@@ -15896,16 +16639,16 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.orders_YTD__2011"
+			              "Role": "entity__measure.entity_00__orders_YTD"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_orders_YTD__2011"
+			          "ID": "fact_sales_have_00__orders_YTD"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_entity__slicer__sales_YTD_PY__2010": {
+			    "fact_sale_has_entity__measure_entity_11___slicer__sales_PY_monthly": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -15916,9 +16659,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.entity__slicer__sales_YTD_PY__2010": {
+			        "entity__measure.entity_11___slicer__sales_PY_monthly": {
 			          "Target": {
-			            "Entity": "entity__measure.entity__slicer__sales_YTD_PY__2010"
+			            "Entity": "entity__measure.entity_11___slicer__sales_PY_monthly"
 			          }
 			        }
 			      },
@@ -15929,16 +16672,16 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity__slicer__sales_YTD_PY__2010"
+			              "Role": "entity__measure.entity_11___slicer__sales_PY_monthly"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have__slicer__sales_YTD_PY__2010"
+			          "ID": "fact_sales_have_11___slicer__sales_PY_monthly"
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer__sales_YTD_PY__2010": {
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity_11___slicer__sales_PY_monthly": {
 			      "Binding": {
 			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
@@ -15949,9 +16692,9 @@ cultureInfo en-US
 			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
-			        "entity__measure.entity__slicer__sales_YTD_PY__2010": {
+			        "entity__measure.entity_11___slicer__sales_PY_monthly": {
 			          "Target": {
-			            "Entity": "entity__measure.entity__slicer__sales_YTD_PY__2010"
+			            "Entity": "entity__measure.entity_11___slicer__sales_PY_monthly"
 			          }
 			        }
 			      },
@@ -15962,16 +16705,16 @@ cultureInfo en-US
 			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity__slicer__sales_YTD_PY__2010"
+			              "Role": "entity__measure.entity_11___slicer__sales_PY_monthly"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer__sales_YTD_PY__2010"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_11___slicer__sales_PY_monthly"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_entity__slicer__sales_YTD__2011": {
+			    "fact_sale_has_entity__measure_entity_10___slicer__sales_CY_monthly": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -15982,9 +16725,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.entity__slicer__sales_YTD__2011": {
+			        "entity__measure.entity_10___slicer__sales_CY_monthly": {
 			          "Target": {
-			            "Entity": "entity__measure.entity__slicer__sales_YTD__2011"
+			            "Entity": "entity__measure.entity_10___slicer__sales_CY_monthly"
 			          }
 			        }
 			      },
@@ -15995,16 +16738,16 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity__slicer__sales_YTD__2011"
+			              "Role": "entity__measure.entity_10___slicer__sales_CY_monthly"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have__slicer__sales_YTD__2011"
+			          "ID": "fact_sales_have_10___slicer__sales_CY_monthly"
 			        }
 			      ]
 			    },
-			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity__slicer__sales_YTD__2011": {
+			    "entity__slicer_customer_segment__executive_summary_has_entity__measure_entity_10___slicer__sales_CY_monthly": {
 			      "Binding": {
 			        "ConceptualEntity": "_slicer Customer Segment - Executive Summary"
 			      },
@@ -16015,9 +16758,9 @@ cultureInfo en-US
 			            "Entity": "entity__slicer_customer_segment__executive_summary"
 			          }
 			        },
-			        "entity__measure.entity__slicer__sales_YTD__2011": {
+			        "entity__measure.entity_10___slicer__sales_CY_monthly": {
 			          "Target": {
-			            "Entity": "entity__measure.entity__slicer__sales_YTD__2011"
+			            "Entity": "entity__measure.entity_10___slicer__sales_CY_monthly"
 			          }
 			        }
 			      },
@@ -16028,12 +16771,12 @@ cultureInfo en-US
 			              "Role": "entity__slicer_customer_segment__executive_summary"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity__slicer__sales_YTD__2011"
+			              "Role": "entity__measure.entity_10___slicer__sales_CY_monthly"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have__slicer__sales_YTD__2011"
+			          "ID": "Phrasing_slicer_customer_segment__executive_summaries_have_10___slicer__sales_CY_monthly"
 			        }
 			      ]
 			    },
@@ -16565,7 +17308,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_customers_YTD_YoY_": {
+			    "fact_sale_has_entity__measure_entity_06__customers_YoY_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -16576,9 +17319,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.customers_YTD_YoY_": {
+			        "entity__measure.entity_06__customers_YoY_": {
 			          "Target": {
-			            "Entity": "entity__measure.customers_YTD_YoY_"
+			            "Entity": "entity__measure.entity_06__customers_YoY_"
 			          }
 			        }
 			      },
@@ -16589,16 +17332,16 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.customers_YTD_YoY_"
+			              "Role": "entity__measure.entity_06__customers_YoY_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_customers_YTD_YoY_"
+			          "ID": "fact_sales_have_06__customers_YoY_"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_customers_YTD_PY__2010": {
+			    "fact_sale_has_entity__measure_entity_05__customers_PY_YTD": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -16609,9 +17352,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.customers_YTD_PY__2010": {
+			        "entity__measure.entity_05__customers_PY_YTD": {
 			          "Target": {
-			            "Entity": "entity__measure.customers_YTD_PY__2010"
+			            "Entity": "entity__measure.entity_05__customers_PY_YTD"
 			          }
 			        }
 			      },
@@ -16622,12 +17365,12 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.customers_YTD_PY__2010"
+			              "Role": "entity__measure.entity_05__customers_PY_YTD"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_customers_YTD_PY__2010"
+			          "ID": "fact_sales_have_05__customers_PY_YTD"
 			        }
 			      ]
 			    },
@@ -16763,6 +17506,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dim_date_has_entity__measure_waterfall_value": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.waterfall_value": {
+			          "Target": {
+			            "Entity": "entity__measure.waterfall_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.waterfall_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_waterfall_value"
+			        }
+			      ]
+			    },
 			    "WaterfallCategories_table_has_entity__measure_waterfall_value": {
 			      "Binding": {
 			        "ConceptualEntity": "WaterfallCategories Table"
@@ -16829,6 +17605,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dim_date_has_entity__measure_mix_effect": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.mix_effect": {
+			          "Target": {
+			            "Entity": "entity__measure.mix_effect"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.mix_effect"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_mix_effect"
+			        }
+			      ]
+			    },
 			    "fact_sale_has_entity__measure_price_effect": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
@@ -16859,6 +17668,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_sales_have_price_effect"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_price_effect": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.price_effect": {
+			          "Target": {
+			            "Entity": "entity__measure.price_effect"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.price_effect"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_price_effect"
 			        }
 			      ]
 			    },
@@ -16895,6 +17737,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dim_date_has_entity__measure_volume_effect": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.volume_effect": {
+			          "Target": {
+			            "Entity": "entity__measure.volume_effect"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.volume_effect"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_volume_effect"
+			        }
+			      ]
+			    },
 			    "fact_sale_has_entity__measure_entity_2011_total_revenue": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
@@ -16928,6 +17803,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dim_date_has_entity__measure_entity_2011_total_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_2011_total_revenue": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_2011_total_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_2011_total_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_2011_total_revenue"
+			        }
+			      ]
+			    },
 			    "fact_sale_has_entity__measure_entity_2010_base_revenue": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
@@ -16958,6 +17866,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_sales_have_2010_base_revenue"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_2010_base_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_2010_base_revenue": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_2010_base_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_2010_base_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_2010_base_revenue"
 			        }
 			      ]
 			    },
@@ -17189,6 +18130,26 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_dates_have_new_customers__2011"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Adjectives": [
+			              {
+			                "New": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity__measure.new_customers__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "new_customers__2011_indicates_how_New_dim_dates_are"
 			        }
 			      ]
 			    },
@@ -17222,6 +18183,26 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_customers_have_new_customers__2011"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dim_customer"
+			            },
+			            "Adjectives": [
+			              {
+			                "New": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity__measure.new_customers__2011"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "new_customers__2011_indicates_how_New_dim_customers_are"
 			        }
 			      ]
 			    },
@@ -17258,6 +18239,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dim_date_has_entity__measure_AOV_YoY_CF": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.AOV_YoY_CF": {
+			          "Target": {
+			            "Entity": "entity__measure.AOV_YoY_CF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.AOV_YoY_CF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_AOV_YoY_CF"
+			        }
+			      ]
+			    },
 			    "fact_sale_has_entity__measure_AOV_YoY__formated": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
@@ -17291,20 +18305,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_AOV_YoY_": {
+			    "dim_date_has_entity__measure_AOV_YoY__formated": {
 			      "Binding": {
-			        "ConceptualEntity": "fact_sales"
+			        "ConceptualEntity": "dim_date"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fact_sale": {
+			        "dim_date": {
 			          "Target": {
-			            "Entity": "fact_sale"
+			            "Entity": "dim_date"
 			          }
 			        },
-			        "entity__measure.AOV_YoY_": {
+			        "entity__measure.AOV_YoY__formated": {
 			          "Target": {
-			            "Entity": "entity__measure.AOV_YoY_"
+			            "Entity": "entity__measure.AOV_YoY__formated"
 			          }
 			        }
 			      },
@@ -17312,19 +18326,19 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fact_sale"
+			              "Role": "dim_date"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.AOV_YoY_"
+			              "Role": "entity__measure.AOV_YoY__formated"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_AOV_YoY_"
+			          "ID": "dim_dates_have_AOV_YoY__formated"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_aov_ytd_py__2010": {
+			    "fact_sale_has_entity__measure_entity_09__AOV_YoY_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -17335,9 +18349,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.aov_ytd_py__2010": {
+			        "entity__measure.entity_09__AOV_YoY_": {
 			          "Target": {
-			            "Entity": "entity__measure.aov_ytd_py__2010"
+			            "Entity": "entity__measure.entity_09__AOV_YoY_"
 			          }
 			        }
 			      },
@@ -17348,12 +18362,111 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.aov_ytd_py__2010"
+			              "Role": "entity__measure.entity_09__AOV_YoY_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_aov_ytd_py__2010"
+			          "ID": "fact_sales_have_09__AOV_YoY_"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_09__AOV_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_09__AOV_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_09__AOV_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_09__AOV_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_09__AOV_YoY_"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_08__aov_py_ytd": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_08__aov_py_ytd": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_08__aov_py_ytd"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_08__aov_py_ytd"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_08__aov_py_ytd"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_08__aov_py_ytd": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_08__aov_py_ytd": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_08__aov_py_ytd"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_08__aov_py_ytd"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_08__aov_py_ytd"
 			        }
 			      ]
 			    },
@@ -17390,6 +18503,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dim_date_has_entity__measure_sales_YoY_CF": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.sales_YoY_CF": {
+			          "Target": {
+			            "Entity": "entity__measure.sales_YoY_CF"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.sales_YoY_CF"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_sales_YoY_CF"
+			        }
+			      ]
+			    },
 			    "fact_sale_has_entity__measure_sales_YoY__format": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
@@ -17420,6 +18566,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_sales_have_sales_YoY__format"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_sales_YoY__format": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.sales_YoY__format": {
+			          "Target": {
+			            "Entity": "entity__measure.sales_YoY__format"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.sales_YoY__format"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_sales_YoY__format"
 			        }
 			      ]
 			    },
@@ -17489,7 +18668,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_sales_YoY___2011": {
+			    "fact_sale_has_entity__measure_entity_03__sales_YoY_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -17500,9 +18679,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.sales_YoY___2011": {
+			        "entity__measure.entity_03__sales_YoY_": {
 			          "Target": {
-			            "Entity": "entity__measure.sales_YoY___2011"
+			            "Entity": "entity__measure.entity_03__sales_YoY_"
 			          }
 			        }
 			      },
@@ -17513,16 +18692,49 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.sales_YoY___2011"
+			              "Role": "entity__measure.entity_03__sales_YoY_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_sales_YoY___2011"
+			          "ID": "fact_sales_have_03__sales_YoY_"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_sales_YTD_PY__2010": {
+			    "dim_date_has_entity__measure_entity_03__sales_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_03__sales_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_03__sales_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_03__sales_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_03__sales_YoY_"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_02__sales_PY_YTD": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -17533,9 +18745,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.sales_YTD_PY__2010": {
+			        "entity__measure.entity_02__sales_PY_YTD": {
 			          "Target": {
-			            "Entity": "entity__measure.sales_YTD_PY__2010"
+			            "Entity": "entity__measure.entity_02__sales_PY_YTD"
 			          }
 			        }
 			      },
@@ -17546,12 +18758,45 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.sales_YTD_PY__2010"
+			              "Role": "entity__measure.entity_02__sales_PY_YTD"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_sales_YTD_PY__2010"
+			          "ID": "fact_sales_have_02__sales_PY_YTD"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_02__sales_PY_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_02__sales_PY_YTD": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_02__sales_PY_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_02__sales_PY_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_02__sales_PY_YTD"
 			        }
 			      ]
 			    },
@@ -17621,7 +18866,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dim_date_has_entity__measure_entity_1__anchor_date_2011SameMD": {
+			    "dim_date_has_entity__measure_entity____anchor__2011_date_2011SameMD": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_date"
 			      },
@@ -17632,9 +18877,9 @@ cultureInfo en-US
 			            "Entity": "dim_date"
 			          }
 			        },
-			        "entity__measure.entity_1__anchor_date_2011SameMD": {
+			        "entity__measure.entity____anchor__2011_date_2011SameMD": {
 			          "Target": {
-			            "Entity": "entity__measure.entity_1__anchor_date_2011SameMD"
+			            "Entity": "entity__measure.entity____anchor__2011_date_2011SameMD"
 			          }
 			        }
 			      },
@@ -17645,12 +18890,12 @@ cultureInfo en-US
 			              "Role": "dim_date"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.entity_1__anchor_date_2011SameMD"
+			              "Role": "entity__measure.entity____anchor__2011_date_2011SameMD"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_dates_have_1__anchor_date_2011SameMD"
+			          "ID": "dim_dates_have____anchor__2011_date_2011SameMD"
 			        }
 			      ]
 			    },
@@ -19352,7 +20597,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_customers_YTD__2011": {
+			    "fact_sale_has_entity__measure_entity_04__customers_CY_YTD": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -19363,9 +20608,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.customers_YTD__2011": {
+			        "entity__measure.entity_04__customers_CY_YTD": {
 			          "Target": {
-			            "Entity": "entity__measure.customers_YTD__2011"
+			            "Entity": "entity__measure.entity_04__customers_CY_YTD"
 			          }
 			        }
 			      },
@@ -19376,16 +20621,16 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.customers_YTD__2011"
+			              "Role": "entity__measure.entity_04__customers_CY_YTD"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_customers_YTD__2011"
+			          "ID": "fact_sales_have_04__customers_CY_YTD"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_aov_ytd__2011": {
+			    "fact_sale_has_entity__measure_entity_07__aov_cy_ytd": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -19396,9 +20641,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.aov_ytd__2011": {
+			        "entity__measure.entity_07__aov_cy_ytd": {
 			          "Target": {
-			            "Entity": "entity__measure.aov_ytd__2011"
+			            "Entity": "entity__measure.entity_07__aov_cy_ytd"
 			          }
 			        }
 			      },
@@ -19409,16 +20654,49 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.aov_ytd__2011"
+			              "Role": "entity__measure.entity_07__aov_cy_ytd"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_aov_ytd__2011"
+			          "ID": "fact_sales_have_07__aov_cy_ytd"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_sales_YTD__2011": {
+			    "dim_date_has_entity__measure_entity_07__aov_cy_ytd": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_07__aov_cy_ytd": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_07__aov_cy_ytd"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_07__aov_cy_ytd"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_07__aov_cy_ytd"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_01__sales_CY_YTD": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -19429,9 +20707,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.sales_YTD__2011": {
+			        "entity__measure.entity_01__sales_CY_YTD": {
 			          "Target": {
-			            "Entity": "entity__measure.sales_YTD__2011"
+			            "Entity": "entity__measure.entity_01__sales_CY_YTD"
 			          }
 			        }
 			      },
@@ -19442,12 +20720,45 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.sales_YTD__2011"
+			              "Role": "entity__measure.entity_01__sales_CY_YTD"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_sales_YTD__2011"
+			          "ID": "fact_sales_have_01__sales_CY_YTD"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_01__sales_CY_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_01__sales_CY_YTD": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_01__sales_CY_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_01__sales_CY_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_01__sales_CY_YTD"
 			        }
 			      ]
 			    },
@@ -19757,6 +21068,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "fact_transactions_classifieds_are_classified_on_2__anchor_date_2011SameMD_classified"
+			        }
+			      ]
+			    },
+			    "fact_transactions_classified_invoice_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_transactions_classified"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transactions_classified.invoice_date": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified.invoice_date"
+			          }
+			        },
+			        "fact_transactions_classified.invoice_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified.invoice_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transactions_classified.invoice_date"
+			            },
+			            "Object": {
+			              "Role": "fact_transactions_classified.invoice_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "invoice_dates_have_invoice_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "fact_transactions_classified_invoice_date_date_hierarchy_has_fact_transactions_classified_invoice_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_transactions_classified"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transactions_classified.invoice_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified.invoice_date.date_hierarchy"
+			          }
+			        },
+			        "fact_transactions_classified.invoice_date.year": {
+			          "Target": {
+			            "Entity": "fact_transactions_classified.invoice_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transactions_classified.invoice_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "fact_transactions_classified.invoice_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "invoice_date_hierarchies_have_invoice_years"
 			        }
 			      ]
 			    },

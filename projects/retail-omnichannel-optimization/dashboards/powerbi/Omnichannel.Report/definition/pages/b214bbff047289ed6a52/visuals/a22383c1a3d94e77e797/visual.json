@@ -66,7 +66,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "10. _slicer - Sales CY YTD"
+                  "Property": "10. _slicer - Sales CY Monthly"
                 }
               },
               "queryRef": "WaterfallCategories Table.Sales YTD (_2011) - Slicer",

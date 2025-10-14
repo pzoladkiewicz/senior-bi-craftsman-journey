@@ -4,7 +4,7 @@
   "position": {
     "x": 665.1126760563377,
     "y": 112.26504481434054,
-    "z": 2000,
+    "z": 5000,
     "height": 208,
     "width": 320,
     "tabOrder": 6000
@@ -1237,23 +1237,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "bb40b4ab62962a17d818",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "07. AOV CY YTD"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 240,
-    "width": 368
+    "width": 368,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -41,11 +42,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "10. _slicer - Sales CY YTD"
+                  "Property": "10. _slicer - Sales CY Monthly"
                 }
               },
               "queryRef": "_Measures._slicer - Sales YTD (_2011)",
-              "nativeQueryRef": "10. _slicer - Sales CY YTD"
+              "nativeQueryRef": "10. _slicer - Sales CY Monthly"
             },
             {
               "field": {
@@ -55,11 +56,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "11. _slicer - Sales PY YTD"
+                  "Property": "11. _slicer - Sales PY Monthly"
                 }
               },
               "queryRef": "_Measures._slicer - Sales YTD PY (_2010)",
-              "nativeQueryRef": "11. _slicer - Sales PY YTD"
+              "nativeQueryRef": "11. _slicer - Sales PY Monthly"
             }
           ]
         }
@@ -401,51 +402,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "25c658e6c17421d0d063",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c0514374a03050264896",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Short Month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1e37a937300a6b970342",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "10. _slicer - Sales CY YTD"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ceda6259e67101a5c5e7",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "11. _slicer - Sales PY YTD"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "25c658e6c17421d0d063"
 }

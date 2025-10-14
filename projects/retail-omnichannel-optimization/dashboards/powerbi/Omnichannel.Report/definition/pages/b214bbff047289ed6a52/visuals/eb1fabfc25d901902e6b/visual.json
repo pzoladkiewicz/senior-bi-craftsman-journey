@@ -42,7 +42,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "10. _slicer - Sales CY YTD"
+                  "Property": "10. _slicer - Sales CY Monthly"
                 }
               },
               "queryRef": "_Measures._slicer - Sales YTD (_2011)",
@@ -56,7 +56,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "11. _slicer - Sales PY YTD"
+                  "Property": "11. _slicer - Sales PY Monthly"
                 }
               },
               "queryRef": "_Measures._slicer - Sales YTD PY (_2010)",

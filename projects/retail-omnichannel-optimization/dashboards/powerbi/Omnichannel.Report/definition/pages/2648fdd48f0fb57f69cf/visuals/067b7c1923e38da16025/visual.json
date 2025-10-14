@@ -57,7 +57,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "New Customers (_2011)"
+                  "Property": "16. New Customers CY"
                 }
               },
               "queryRef": "_Measures.New Customers (_2011)",
@@ -73,7 +73,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Returning Customers (_2011)"
+                  "Property": "17. Returning Customers CY"
                 }
               },
               "queryRef": "_Measures.Returning Customers (_2011)",
@@ -571,7 +571,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "07a7fb14a06645580031",
+        "name": "376894e64eac1d730589",
         "field": {
           "Column": {
             "Expression": {
@@ -585,7 +585,7 @@
         "type": "Advanced"
       },
       {
-        "name": "c55fca1e898d41892a0e",
+        "name": "58c21d1631202ebc896b",
         "field": {
           "Column": {
             "Expression": {
@@ -599,7 +599,7 @@
         "type": "Categorical"
       },
       {
-        "name": "8ea6714626b2580d1ae5",
+        "name": "3ee16d6b8d530a95cbb5",
         "field": {
           "Measure": {
             "Expression": {
@@ -607,13 +607,13 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "New Customers (_2011)"
+            "Property": "16. New Customers CY"
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "11d8723360da0dabb72d",
+        "name": "a68f06bc07a23cbc7148",
         "field": {
           "Measure": {
             "Expression": {
@@ -621,7 +621,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Returning Customers (_2011)"
+            "Property": "17. Returning Customers CY"
           }
         },
         "type": "Advanced"

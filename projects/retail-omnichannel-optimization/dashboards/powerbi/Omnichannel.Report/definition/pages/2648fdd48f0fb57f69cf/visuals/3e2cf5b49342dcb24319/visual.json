@@ -4,7 +4,7 @@
   "position": {
     "x": 348.61267605633816,
     "y": 112.26504481434054,
-    "z": 3000,
+    "z": 6000,
     "height": 208,
     "width": 320,
     "tabOrder": 7000
@@ -1227,23 +1227,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ed14ba951b4aeb6678de",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "04. Customers CY YTD"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

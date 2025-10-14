@@ -4,7 +4,7 @@
   "position": {
     "x": 32.11267605633801,
     "y": 112.26504481434054,
-    "z": 4000,
+    "z": 7000,
     "height": 208,
     "width": 320,
     "tabOrder": 8000
@@ -1146,23 +1146,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6156dd945840e7d8b20c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "01. Sales CY YTD"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

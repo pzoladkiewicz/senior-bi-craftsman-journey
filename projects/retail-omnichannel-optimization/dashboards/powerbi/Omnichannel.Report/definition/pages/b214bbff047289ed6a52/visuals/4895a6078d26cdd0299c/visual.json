@@ -1146,23 +1146,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5e1b5db0b409e8e567d1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "01. Sales CY YTD"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

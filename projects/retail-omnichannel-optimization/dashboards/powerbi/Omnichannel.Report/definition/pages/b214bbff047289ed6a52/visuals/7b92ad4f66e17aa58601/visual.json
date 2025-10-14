@@ -57,7 +57,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "New Customers (_2011)"
+                  "Property": "16. New Customers CY"
                 }
               },
               "queryRef": "_Measures.New Customers (_2011)",
@@ -73,7 +73,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Returning Customers (_2011)"
+                  "Property": "17. Returning Customers CY"
                 }
               },
               "queryRef": "_Measures.Returning Customers (_2011)",

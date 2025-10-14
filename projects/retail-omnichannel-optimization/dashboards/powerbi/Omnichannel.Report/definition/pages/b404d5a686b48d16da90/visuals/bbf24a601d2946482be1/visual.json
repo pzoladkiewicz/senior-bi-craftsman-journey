@@ -6,7 +6,8 @@
     "y": 103,
     "z": 2000,
     "height": 185,
-    "width": 290
+    "width": 290,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1051,23 +1052,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f11d9b40d5e25406bae0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Operations Quality Index (_2011)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

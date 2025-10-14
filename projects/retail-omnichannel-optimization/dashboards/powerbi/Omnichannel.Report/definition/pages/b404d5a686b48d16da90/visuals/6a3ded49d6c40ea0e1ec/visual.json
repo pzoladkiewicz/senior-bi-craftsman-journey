@@ -6,8 +6,7 @@
     "y": 103,
     "z": 3000,
     "height": 185,
-    "width": 288,
-    "tabOrder": 1000
+    "width": 288
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1192,23 +1191,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ab008d6fd3c87576562d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Business Efficiency"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

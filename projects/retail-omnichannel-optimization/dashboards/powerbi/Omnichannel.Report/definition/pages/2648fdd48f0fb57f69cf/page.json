@@ -72,7 +72,7 @@
     {
       "source": "2253580220be9bc34b32",
       "target": "4735c6e19e2af1d062d2",
-      "type": "NoFilter"
+      "type": "DataFilter"
     },
     {
       "source": "2253580220be9bc34b32",

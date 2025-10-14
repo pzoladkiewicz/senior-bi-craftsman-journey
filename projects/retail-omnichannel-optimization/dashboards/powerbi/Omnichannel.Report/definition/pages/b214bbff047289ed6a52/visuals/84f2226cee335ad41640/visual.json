@@ -41,7 +41,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Orders YTD (_2011)"
+                  "Property": "12. _slicer - Orders YTD"
                 }
               },
               "queryRef": "_Measures._slicer - Orders YTD (_2011)",
@@ -60,7 +60,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "_slicer - Orders YTD (_2011)"
+                "Property": "12. _slicer - Orders YTD"
               }
             },
             "direction": "Descending"

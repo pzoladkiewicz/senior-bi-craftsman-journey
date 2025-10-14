@@ -4,13 +4,13 @@
   "position": {
     "x": 48,
     "y": 406,
-    "z": 1500,
+    "z": 4000,
     "height": 240,
     "width": 368,
     "tabOrder": 3000
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -66,11 +66,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "10. _slicer - Sales CY YTD"
+                  "Property": "10. _slicer - Sales CY Monthly"
                 }
               },
-              "queryRef": "WaterfallCategories Table.Sales YTD (_2011) - Slicer",
-              "nativeQueryRef": "10. _slicer - Sales CY YTD"
+              "queryRef": "_Measures.10. _slicer - Sales CY YTD",
+              "nativeQueryRef": "10. _slicer - Sales CY Monthly"
             }
           ]
         }
@@ -445,37 +445,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "172912598ce8a9841d48",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Short Month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f9cc65e063eb19d0205d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "10. _slicer - Sales CY YTD"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

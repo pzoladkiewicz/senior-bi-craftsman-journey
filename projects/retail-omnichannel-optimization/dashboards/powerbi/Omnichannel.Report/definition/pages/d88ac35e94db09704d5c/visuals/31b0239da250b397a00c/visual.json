@@ -1,33 +1,32 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "49a2eecc8a00a1437028",
+  "name": "31b0239da250b397a00c",
   "position": {
-    "x": 896,
+    "x": 208,
     "y": 32,
-    "z": 0,
+    "z": 1000,
     "height": 560,
-    "width": 320
+    "width": 560
   },
   "visual": {
-    "visualType": "multiRowCard",
-    "autoSelectVisualType": true,
+    "visualType": "tableEx",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "_Measures"
+                      "Entity": "dim_date"
                     }
                   },
-                  "Property": "01. Sales CY YTD"
+                  "Property": "Short Month"
                 }
               },
-              "queryRef": "_Measures.01 Sales CY YTD",
-              "nativeQueryRef": "01 Sales CY YTD"
+              "queryRef": "dim_date.Short Month",
+              "nativeQueryRef": "Short Month"
             },
             {
               "field": {
@@ -37,11 +36,25 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "02. Sales PY YTD"
+                  "Property": "10. _slicer - Sales CY Monthly"
                 }
               },
-              "queryRef": "_Measures.02. Sales PY YTD",
-              "nativeQueryRef": "02. Sales PY YTD"
+              "queryRef": "_Measures.10. _slicer - Sales CY Monthly",
+              "nativeQueryRef": "10. _slicer - Sales CY Monthly"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "11. _slicer - Sales PY Monthly"
+                }
+              },
+              "queryRef": "_Measures.11. _slicer - Sales PY Monthly",
+              "nativeQueryRef": "11. _slicer - Sales PY Monthly"
             }
           ]
         }
@@ -50,16 +63,16 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "_Measures"
+                    "Entity": "dim_date"
                   }
                 },
-                "Property": "01. Sales CY YTD"
+                "Property": "Short Month"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }

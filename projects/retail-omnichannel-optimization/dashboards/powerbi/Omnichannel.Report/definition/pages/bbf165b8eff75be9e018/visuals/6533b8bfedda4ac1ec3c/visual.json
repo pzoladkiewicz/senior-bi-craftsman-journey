@@ -7,7 +7,7 @@
     "z": 6000,
     "height": 304,
     "width": 1216,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "ribbonChart",
@@ -1156,20 +1156,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "7d1e74e39e90d02b294a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "International Market Share"
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"
