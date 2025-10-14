@@ -291,60 +291,44 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 4d9689ce-2c39-4510-ab3a-7394a0427129
 
-	measure 'UK Sales Share % (2011)' =
+	measure '21. UK Sales Share %' =
 			
-			VAR Anchor = [_. Anchor (_2011) Date (2011SameMD)]
 			VAR UKSales =
 			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 1,
-			        dim_date[Year] = YEAR(Anchor),
-			        dim_date[Date] <= Anchor
+			        [01. Sales CY YTD],
+			        dim_geography[IsUK] = 1
 			    )
-			VAR TotalSales =
-			    CALCULATE(
-			        [Total Sales],
-			        dim_date[Year] = YEAR(Anchor),
-			        dim_date[Date] <= Anchor
-			    )
+			VAR TotalSales = [01. Sales CY YTD]
 			RETURN
 			    DIVIDE(UKSales, TotalSales)
 		formatString: 0%;-0%;0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: c8f171f3-71ec-481a-b4d6-fe99d1f78077
 
-	measure 'Intl Sales Share % (2011)' = 1 - [UK Sales Share % (2011)]
+	measure '22. Intl Sales Share %' = 1 - [21. UK Sales Share %]
 		formatString: 0%;-0%;0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 7f5ca795-51ec-4cef-aa12-c75b2451c504
 
-	measure 'Guest Transactions % (2011)' =
+	measure '23. Guest Transactions %' =
 			
-			VAR Anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR GuestCustomers =
+			VAR _GuestCustomers =
 			    CALCULATE(
-			        COUNTROWS(fact_sales),
-			        dim_customer[CustomerType] = "Guest",
-			        dim_date[Year] = YEAR(Anchor),
-			        dim_date[Date] <= Anchor
+			        [00. Transactions YTD],
+			        dim_customer[CustomerType] = "Guest"
 			    )
-			VAR TotalCustomers =
-			    CALCULATE(
-			        COUNTROWS(fact_sales),
-			        dim_date[Year] = YEAR(Anchor),
-			        dim_date[Date] <= Anchor
-			    )
+			
 			RETURN
-			    DIVIDE(GuestCustomers, TotalCustomers)
+			    DIVIDE(_GuestCustomers, [00. Transactions YTD], 0)
 		formatString: 0%;-0%;0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: b428c804-a6d5-4318-affc-a05b703fe687
 
-	measure 'Channel Score (2011)' =
+	measure '25. Channel Score' =
 			
-			VAR UKShare = [UK Sales Share % (2011)]
+			VAR UKShare = [21. UK Sales Share %]
 			VAR IntlShare = 1 - UKShare
-			VAR GuestShare = [Guest Transactions % (2011)]
+			VAR GuestShare = [23. Guest Transactions %]
 			VAR RegisteredShare = 1 - GuestShare
 			RETURN
 			    (UKShare * 0.4) + (IntlShare * 0.3) + (RegisteredShare * 0.3)
@@ -538,34 +522,25 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Registered Transactions (_2011)' = ```
-			
-			    1 - [Guest Transactions % (2011)]
-			```
+	measure '24. Registered Cust. Transactions %' = 1 - [23. Guest Transactions %]
 		formatString: 0%;-0%;0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: f81790f9-e4e7-4a4b-abeb-0ff5faf1b169
 
-	measure 'Intl Growth Rate' = ```
+	measure '26. Intl Growth Rate' = ```
 			
-			VAR _anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR _anchorPY = EDATE(_anchor, -12)
-			VAR _ytd =
+			VAR _CY =
 			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 0,
-			        dim_date[Year] = YEAR(_anchor),
-			        dim_date[Date] <= _anchor
+			        [01. Sales CY YTD],
+			        dim_geography[IsUK] = 0
 			    )
-			VAR _py = 
+			VAR _PY = 
 			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 0,
-			        dim_date[Year] = YEAR(_anchorPY),
-			        dim_date[Date] <= _anchorPY
+			        [02. Sales PY YTD],
+			        dim_geography[IsUK] = 0
 			    )
 			return
-			    (_ytd / _py) - 1
+			    (_CY - _PY) / _PY
 			```
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
@@ -621,26 +596,20 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'UK Growth Rate' = ```
+	measure '27. UK Growth Rate' = ```
 			
-			VAR _anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR _anchorPY = EDATE(_anchor, -12)
-			VAR _ytd =
+			VAR _CY =
 			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 1,
-			        dim_date[Year] = YEAR(_anchor),
-			        dim_date[Date] <= _anchor
+			        [01. Sales CY YTD],
+			        dim_geography[IsUK] = 1
 			    )
-			VAR _py = 
+			VAR _PY = 
 			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 1,
-			        dim_date[Year] = YEAR(_anchorPY),
-			        dim_date[Date] <= _anchorPY
+			        [02. Sales PY YTD],
+			        dim_geography[IsUK] = 1
 			    )
 			return
-			    (_ytd / _py) - 1
+			    (_CY - _PY) / _PY
 			```
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
@@ -650,9 +619,9 @@ table _Measures
 			
 			SWITCH(
 			    TRUE(),
-			    [Intl Growth Rate] > 0, "+" &FORMAT([Intl Growth Rate], "0.0%"),
-			    [Intl Growth Rate] < 0, "-" &FORMAT([Intl Growth Rate], "0.0%"),
-			    FORMAT([Intl Growth Rate], "0.0%"))
+			    [26. Intl Growth Rate] > 0, "+" &FORMAT([26. Intl Growth Rate], "0.0%"),
+			    [26. Intl Growth Rate] < 0, "-" &FORMAT([26. Intl Growth Rate], "0.0%"),
+			    FORMAT([26. Intl Growth Rate], "0.0%"))
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: 5392eb92-0bc9-4d78-8e58-cb42accb94b2
 
@@ -1110,6 +1079,17 @@ table _Measures
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: c7f07d39-6ec2-4706-a1ab-403cfe542392
+
+	measure '00. Transactions YTD' = ```
+			
+			    CALCULATE(
+			        COUNTROWS(fact_sales),
+			        DATESYTD(dim_date[Date])
+			        )
+			```
+		formatString: 0
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 619f9300-ac9d-43eb-8971-2c9eb45e9658
 
 	partition _Measures = m
 		mode: import

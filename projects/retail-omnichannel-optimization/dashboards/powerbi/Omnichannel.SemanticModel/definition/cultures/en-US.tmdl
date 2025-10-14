@@ -7370,7 +7370,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.new_customers__2011": {
+			    "entity__measure.entity_16__new_customers_CY": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -7380,14 +7380,8 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "new customers (_2011)": {
+			          "16. new customers CY": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "new customers": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        },
 			        {
@@ -7402,7 +7396,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.returning_customers__2011": {
+			    "entity__measure.entity_17__returning_customers_CY": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
@@ -7412,14 +7406,8 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "returning customers (_2011)": {
+			          "17. returning customers CY": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "returning customers": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        },
 			        {
@@ -7434,24 +7422,18 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.UK_sales_share__2011": {
+			    "entity__measure.entity_21__UK_sales_share_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "UK Sales Share % (2011)"
+			          "ConceptualProperty": "21. UK Sales Share %"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "UK sales share % (2011)": {
+			          "21. UK sales share %": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "UK sales share %": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        },
 			        {
@@ -7466,46 +7448,54 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.intl_sales_share__2011": {
+			    "entity__measure.entity_22__intl_sales_share_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Intl Sales Share % (2011)"
+			          "ConceptualProperty": "22. Intl Sales Share %"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "intl sales share % (2011)": {
+			          "22. intl sales share %": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "intl sales share %": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        }
 			      ]
 			    },
-			    "entity__measure.guest_transactions__2011": {
+			    "entity__measure.entity_23__guest_transactions_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Guest Transactions % (2011)"
+			          "ConceptualProperty": "23. Guest Transactions %"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "guest transactions % (2011)": {
+			          "23. guest transactions %": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "guest transactions %": {
-			            "State": "Generated",
-			            "Weight": 0.75
+			          "23. guest transaction percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "23. guest transaction pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
 			          }
 			        },
 			        {
@@ -7520,24 +7510,128 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.channel_score_2011": {
+			    "entity__measure.entity_25__channel_score": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Channel Score (2011)"
+			          "ConceptualProperty": "25. Channel Score"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "channel score (2011)": {
+			          "25. channel score": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "channel score": {
-			            "State": "Generated",
-			            "Weight": 0.75
+			          "25. channel notch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "25. channel slash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "25. channel groove": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "25. channel nick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "25. channel cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "25. channel mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "25. channel total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "25. channel tally": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "25. channel grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "25. channel result": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "Channel Score": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9031,24 +9125,18 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.registered_transactions__2011": {
+			    "entity__measure.entity_24__registered_cust__transactions_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Registered Transactions (_2011)"
+			          "ConceptualProperty": "24. Registered Cust. Transactions %"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "registered transactions (_2011)": {
+			          "24. registered cust. transactions %": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "registered transactions": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -9222,130 +9310,128 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.intl_growth_rate": {
+			    "entity__measure.entity_26__intl_growth_rate": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Intl Growth Rate"
+			          "ConceptualProperty": "26. Intl Growth Rate"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "intl growth rate": {
+			          "26. intl growth rate": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "growth rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "intl growth degree": {
+			          "26. intl growth degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "intl growth frequency": {
+			          "26. intl growth frequency": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "intl growth percentage": {
+			          "26. intl growth percentage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "intl growth ratio": {
+			          "26. intl growth ratio": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "intl growth quotient": {
+			          "26. intl growth quotient": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "growth degree": {
+			          "26. intl growth amount": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        },
 			        {
-			          "growth frequency": {
+			          "26. intl growth proportion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        },
 			        {
-			          "growth percentage": {
+			          "26. intl growth speed": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        },
 			        {
-			          "growth ratio": {
+			          "26. intl growth level": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        },
 			        {
-			          "growth quotient": {
+			          "26. intl growth scale": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "Intl Growth Rate": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -9392,130 +9478,118 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.UK_growth_rate": {
+			    "entity__measure.entity_27__UK_growth_rate": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "UK Growth Rate"
+			          "ConceptualProperty": "27. UK Growth Rate"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "UK growth rate": {
+			          "27. UK growth rate": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "growth rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "uk growth degree": {
+			          "27. uk growth degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "uk growth frequency": {
+			          "27. uk growth frequency": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "uk growth percentage": {
+			          "27. uk growth percentage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "uk growth ratio": {
+			          "27. uk growth ratio": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "uk growth quotient": {
+			          "27. uk growth quotient": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.52
 			          }
 			        },
 			        {
-			          "growth degree": {
+			          "27. uk growth amount": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        },
 			        {
-			          "growth frequency": {
+			          "27. uk growth proportion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        },
 			        {
-			          "growth percentage": {
+			          "27. uk growth speed": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        },
 			        {
-			          "growth ratio": {
+			          "27. uk growth level": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        },
 			        {
-			          "growth quotient": {
+			          "27. uk growth scale": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.504
 			          }
 			        }
 			      ]
@@ -13768,6 +13842,32 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "entity__measure.entity_00__transactions_YTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "00. Transactions YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "00. transactions YTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "00. transaction year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.643
+			          }
+			        }
+			      ]
+			    },
 			    "table_measures.column_slicer__sales_yoy__2011": {
 			      "Definition": {
 			        "Binding": {
@@ -13791,237 +13891,6 @@ cultureInfo en-US
 			    }
 			  },
 			  "Relationships": {
-			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_day": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.last_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.date_hierarchy"
-			          }
-			        },
-			        "dim_product.last_sale_date.day": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.last_sale_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_product.last_sale_date.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_sale_date_hierarchies_have_last_sale_days"
-			        }
-			      ]
-			    },
-			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.last_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.date_hierarchy"
-			          }
-			        },
-			        "dim_product.last_sale_date.month": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.last_sale_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_product.last_sale_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_sale_date_hierarchies_have_last_sale_months"
-			        }
-			      ]
-			    },
-			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.last_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.date_hierarchy"
-			          }
-			        },
-			        "dim_product.last_sale_date.quarter": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.last_sale_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_product.last_sale_date.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_sale_date_hierarchies_have_last_sale_quarters"
-			        }
-			      ]
-			    },
-			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.last_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.date_hierarchy"
-			          }
-			        },
-			        "dim_product.last_sale_date.year": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.last_sale_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_product.last_sale_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_sale_date_hierarchies_have_last_sale_years"
-			        }
-			      ]
-			    },
-			    "dim_product_last_sale_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.last_sale_date": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date"
-			          }
-			        },
-			        "dim_product.last_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.last_sale_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.last_sale_date"
-			            },
-			            "Object": {
-			              "Role": "dim_product.last_sale_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_sale_dates_have_last_sale_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_day": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.first_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.date_hierarchy"
-			          }
-			        },
-			        "dim_product.first_sale_date.day": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.first_sale_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_product.first_sale_date.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "first_sale_date_hierarchies_have_first_sale_days"
-			        }
-			      ]
-			    },
-			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_product"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_product.first_sale_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.date_hierarchy"
-			          }
-			        },
-			        "dim_product.first_sale_date.month": {
-			          "Target": {
-			            "Entity": "dim_product.first_sale_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_product.first_sale_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dim_product.first_sale_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "first_sale_date_hierarchies_have_first_sale_months"
-			        }
-			      ]
-			    },
 			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_product"
@@ -14744,6 +14613,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_customers_have_fact_sales"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_00__transactions_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_00__transactions_YTD": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_00__transactions_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_00__transactions_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_00__transactions_YTD"
 			        }
 			      ]
 			    },
@@ -16879,7 +16781,40 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_UK_growth_rate": {
+			    "dim_date_has_entity__measure_intl_growth_rate__formated": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.intl_growth_rate__formated": {
+			          "Target": {
+			            "Entity": "entity__measure.intl_growth_rate__formated"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.intl_growth_rate__formated"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_intl_growth_rate__formated"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_27__UK_growth_rate": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -16890,9 +16825,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.UK_growth_rate": {
+			        "entity__measure.entity_27__UK_growth_rate": {
 			          "Target": {
-			            "Entity": "entity__measure.UK_growth_rate"
+			            "Entity": "entity__measure.entity_27__UK_growth_rate"
 			          }
 			        }
 			      },
@@ -16903,12 +16838,45 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.UK_growth_rate"
+			              "Role": "entity__measure.entity_27__UK_growth_rate"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_UK_growth_rate"
+			          "ID": "fact_sales_have_27__UK_growth_rate"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_27__UK_growth_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_27__UK_growth_rate": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_27__UK_growth_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_27__UK_growth_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_27__UK_growth_rate"
 			        }
 			      ]
 			    },
@@ -16978,7 +16946,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_intl_growth_rate": {
+			    "fact_sale_has_entity__measure_entity_26__intl_growth_rate": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -16989,9 +16957,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.intl_growth_rate": {
+			        "entity__measure.entity_26__intl_growth_rate": {
 			          "Target": {
-			            "Entity": "entity__measure.intl_growth_rate"
+			            "Entity": "entity__measure.entity_26__intl_growth_rate"
 			          }
 			        }
 			      },
@@ -17002,12 +16970,45 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.intl_growth_rate"
+			              "Role": "entity__measure.entity_26__intl_growth_rate"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_intl_growth_rate"
+			          "ID": "fact_sales_have_26__intl_growth_rate"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_26__intl_growth_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_26__intl_growth_rate": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_26__intl_growth_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_26__intl_growth_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_26__intl_growth_rate"
 			        }
 			      ]
 			    },
@@ -17077,7 +17078,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_registered_transactions__2011": {
+			    "fact_sale_has_entity__measure_entity_24__registered_cust__transactions_": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -17088,9 +17089,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.registered_transactions__2011": {
+			        "entity__measure.entity_24__registered_cust__transactions_": {
 			          "Target": {
-			            "Entity": "entity__measure.registered_transactions__2011"
+			            "Entity": "entity__measure.entity_24__registered_cust__transactions_"
 			          }
 			        }
 			      },
@@ -17101,12 +17102,12 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.registered_transactions__2011"
+			              "Role": "entity__measure.entity_24__registered_cust__transactions_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_registered_transactions__2011"
+			          "ID": "fact_sales_have_24__registered_cust__transactions_"
 			        }
 			      ]
 			    },
@@ -17902,7 +17903,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_channel_score_2011": {
+			    "fact_sale_has_entity__measure_entity_25__channel_score": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_sales"
 			      },
@@ -17913,9 +17914,9 @@ cultureInfo en-US
 			            "Entity": "fact_sale"
 			          }
 			        },
-			        "entity__measure.channel_score_2011": {
+			        "entity__measure.entity_25__channel_score": {
 			          "Target": {
-			            "Entity": "entity__measure.channel_score_2011"
+			            "Entity": "entity__measure.entity_25__channel_score"
 			          }
 			        }
 			      },
@@ -17926,148 +17927,16 @@ cultureInfo en-US
 			              "Role": "fact_sale"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.channel_score_2011"
+			              "Role": "entity__measure.entity_25__channel_score"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_sales_have_channel_score_2011"
+			          "ID": "fact_sales_have_25__channel_score"
 			        }
 			      ]
 			    },
-			    "fact_sale_has_entity__measure_guest_transactions__2011": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_sale": {
-			          "Target": {
-			            "Entity": "fact_sale"
-			          }
-			        },
-			        "entity__measure.guest_transactions__2011": {
-			          "Target": {
-			            "Entity": "entity__measure.guest_transactions__2011"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_sale"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.guest_transactions__2011"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_sales_have_guest_transactions__2011"
-			        }
-			      ]
-			    },
-			    "fact_sale_has_entity__measure_intl_sales_share__2011": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_sale": {
-			          "Target": {
-			            "Entity": "fact_sale"
-			          }
-			        },
-			        "entity__measure.intl_sales_share__2011": {
-			          "Target": {
-			            "Entity": "entity__measure.intl_sales_share__2011"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_sale"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.intl_sales_share__2011"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_sales_have_intl_sales_share__2011"
-			        }
-			      ]
-			    },
-			    "fact_sale_has_entity__measure_UK_sales_share__2011": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_sale": {
-			          "Target": {
-			            "Entity": "fact_sale"
-			          }
-			        },
-			        "entity__measure.UK_sales_share__2011": {
-			          "Target": {
-			            "Entity": "entity__measure.UK_sales_share__2011"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_sale"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.UK_sales_share__2011"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_sales_have_UK_sales_share__2011"
-			        }
-			      ]
-			    },
-			    "fact_sale_has_entity__measure_returning_customers__2011": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_sale": {
-			          "Target": {
-			            "Entity": "fact_sale"
-			          }
-			        },
-			        "entity__measure.returning_customers__2011": {
-			          "Target": {
-			            "Entity": "entity__measure.returning_customers__2011"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_sale"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.returning_customers__2011"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_sales_have_returning_customers__2011"
-			        }
-			      ]
-			    },
-			    "dim_date_has_entity__measure_returning_customers__2011": {
+			    "dim_date_has_entity__measure_entity_25__channel_score": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_date"
 			      },
@@ -18078,9 +17947,9 @@ cultureInfo en-US
 			            "Entity": "dim_date"
 			          }
 			        },
-			        "entity__measure.returning_customers__2011": {
+			        "entity__measure.entity_25__channel_score": {
 			          "Target": {
-			            "Entity": "entity__measure.returning_customers__2011"
+			            "Entity": "entity__measure.entity_25__channel_score"
 			          }
 			        }
 			      },
@@ -18091,16 +17960,82 @@ cultureInfo en-US
 			              "Role": "dim_date"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.returning_customers__2011"
+			              "Role": "entity__measure.entity_25__channel_score"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_dates_have_returning_customers__2011"
+			          "ID": "dim_dates_have_25__channel_score"
 			        }
 			      ]
 			    },
-			    "dim_date_has_entity__measure_new_customers__2011": {
+			    "fact_sale_has_entity__measure_entity_23__guest_transactions_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_23__guest_transactions_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_23__guest_transactions_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_23__guest_transactions_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_23__guest_transactions_"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_22__intl_sales_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_22__intl_sales_share_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_22__intl_sales_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_22__intl_sales_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_22__intl_sales_share_"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_22__intl_sales_share_": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_date"
 			      },
@@ -18111,9 +18046,9 @@ cultureInfo en-US
 			            "Entity": "dim_date"
 			          }
 			        },
-			        "entity__measure.new_customers__2011": {
+			        "entity__measure.entity_22__intl_sales_share_": {
 			          "Target": {
-			            "Entity": "entity__measure.new_customers__2011"
+			            "Entity": "entity__measure.entity_22__intl_sales_share_"
 			          }
 			        }
 			      },
@@ -18124,12 +18059,177 @@ cultureInfo en-US
 			              "Role": "dim_date"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.new_customers__2011"
+			              "Role": "entity__measure.entity_22__intl_sales_share_"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_dates_have_new_customers__2011"
+			          "ID": "dim_dates_have_22__intl_sales_share_"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_21__UK_sales_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_21__UK_sales_share_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_21__UK_sales_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_21__UK_sales_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_21__UK_sales_share_"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_21__UK_sales_share_": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_21__UK_sales_share_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_21__UK_sales_share_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_21__UK_sales_share_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_21__UK_sales_share_"
+			        }
+			      ]
+			    },
+			    "fact_sale_has_entity__measure_entity_17__returning_customers_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_sale": {
+			          "Target": {
+			            "Entity": "fact_sale"
+			          }
+			        },
+			        "entity__measure.entity_17__returning_customers_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_17__returning_customers_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_sale"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_17__returning_customers_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_sales_have_17__returning_customers_CY"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_17__returning_customers_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_17__returning_customers_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_17__returning_customers_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_17__returning_customers_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_17__returning_customers_CY"
+			        }
+			      ]
+			    },
+			    "dim_date_has_entity__measure_entity_16__new_customers_CY": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "entity__measure.entity_16__new_customers_CY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_16__new_customers_CY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_16__new_customers_CY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_16__new_customers_CY"
 			        },
 			        {
 			          "Adjective": {
@@ -18144,16 +18244,16 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "entity__measure.new_customers__2011"
+			              "Role": "entity__measure.entity_16__new_customers_CY"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "new_customers__2011_indicates_how_New_dim_dates_are"
+			          "ID": "Phrasing16__new_customers_CY_indicates_how_New_dim_dates_are"
 			        }
 			      ]
 			    },
-			    "dim_customer_has_entity__measure_new_customers__2011": {
+			    "dim_customer_has_entity__measure_entity_16__new_customers_CY": {
 			      "Binding": {
 			        "ConceptualEntity": "dim_customer"
 			      },
@@ -18164,9 +18264,9 @@ cultureInfo en-US
 			            "Entity": "dim_customer"
 			          }
 			        },
-			        "entity__measure.new_customers__2011": {
+			        "entity__measure.entity_16__new_customers_CY": {
 			          "Target": {
-			            "Entity": "entity__measure.new_customers__2011"
+			            "Entity": "entity__measure.entity_16__new_customers_CY"
 			          }
 			        }
 			      },
@@ -18177,12 +18277,12 @@ cultureInfo en-US
 			              "Role": "dim_customer"
 			            },
 			            "Object": {
-			              "Role": "entity__measure.new_customers__2011"
+			              "Role": "entity__measure.entity_16__new_customers_CY"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_customers_have_new_customers__2011"
+			          "ID": "dim_customers_have_16__new_customers_CY"
 			        },
 			        {
 			          "Adjective": {
@@ -18197,12 +18297,12 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Measurement": {
-			              "Role": "entity__measure.new_customers__2011"
+			              "Role": "entity__measure.entity_16__new_customers_CY"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "new_customers__2011_indicates_how_New_dim_customers_are"
+			          "ID": "Phrasing16__new_customers_CY_indicates_how_New_dim_customers_are"
 			        }
 			      ]
 			    },
@@ -21068,6 +21168,237 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "fact_transactions_classifieds_are_classified_on_2__anchor_date_2011SameMD_classified"
+			        }
+			      ]
+			    },
+			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.first_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.date_hierarchy"
+			          }
+			        },
+			        "dim_product.first_sale_date.month": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.first_sale_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_product.first_sale_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_sale_date_hierarchies_have_first_sale_months"
+			        }
+			      ]
+			    },
+			    "dim_product_first_sale_date_date_hierarchy_has_dim_product_first_sale_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.first_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.date_hierarchy"
+			          }
+			        },
+			        "dim_product.first_sale_date.day": {
+			          "Target": {
+			            "Entity": "dim_product.first_sale_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.first_sale_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_product.first_sale_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_sale_date_hierarchies_have_first_sale_days"
+			        }
+			      ]
+			    },
+			    "dim_product_last_sale_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.last_sale_date": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date"
+			          }
+			        },
+			        "dim_product.last_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.last_sale_date"
+			            },
+			            "Object": {
+			              "Role": "dim_product.last_sale_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_sale_dates_have_last_sale_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.last_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.date_hierarchy"
+			          }
+			        },
+			        "dim_product.last_sale_date.year": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.last_sale_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_product.last_sale_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_sale_date_hierarchies_have_last_sale_years"
+			        }
+			      ]
+			    },
+			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.last_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.date_hierarchy"
+			          }
+			        },
+			        "dim_product.last_sale_date.quarter": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.last_sale_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_product.last_sale_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_sale_date_hierarchies_have_last_sale_quarters"
+			        }
+			      ]
+			    },
+			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.last_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.date_hierarchy"
+			          }
+			        },
+			        "dim_product.last_sale_date.month": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.last_sale_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_product.last_sale_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_sale_date_hierarchies_have_last_sale_months"
+			        }
+			      ]
+			    },
+			    "dim_product_last_sale_date_date_hierarchy_has_dim_product_last_sale_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_product"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_product.last_sale_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.date_hierarchy"
+			          }
+			        },
+			        "dim_product.last_sale_date.day": {
+			          "Target": {
+			            "Entity": "dim_product.last_sale_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_product.last_sale_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dim_product.last_sale_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_sale_date_hierarchies_have_last_sale_days"
 			        }
 			      ]
 			    },

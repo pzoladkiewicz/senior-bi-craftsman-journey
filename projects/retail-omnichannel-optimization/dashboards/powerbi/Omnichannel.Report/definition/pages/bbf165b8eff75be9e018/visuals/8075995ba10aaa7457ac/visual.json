@@ -23,11 +23,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Intl Growth Rate"
+                  "Property": "26. Intl Growth Rate"
                 }
               },
               "queryRef": "_Measures.Intl Growth Rate",
-              "nativeQueryRef": "Intl Growth Rate"
+              "nativeQueryRef": "Intl Growth Rate",
+              "displayName": "Intl Growth Rate"
             }
           ]
         }
@@ -42,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Intl Growth Rate"
+                "Property": "26. Intl Growth Rate"
               }
             },
             "direction": "Descending"
@@ -549,7 +550,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "UK Growth Rate"
+                  "Property": "27. UK Growth Rate"
                 }
               }
             }
@@ -577,7 +578,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "UK Growth Rate"
+                  "Property": "27. UK Growth Rate"
                 }
               }
             }

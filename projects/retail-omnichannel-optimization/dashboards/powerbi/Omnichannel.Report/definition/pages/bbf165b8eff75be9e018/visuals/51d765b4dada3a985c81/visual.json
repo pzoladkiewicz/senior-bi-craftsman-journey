@@ -23,7 +23,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Channel Score (2011)"
+                  "Property": "25. Channel Score"
                 }
               },
               "queryRef": "_Measures.Channel Score (2011)",
@@ -43,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Channel Score (2011)"
+                "Property": "25. Channel Score"
               }
             },
             "direction": "Descending"
@@ -536,7 +536,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Intl Sales Share % (2011)"
+                  "Property": "22. Intl Sales Share %"
                 }
               }
             }
