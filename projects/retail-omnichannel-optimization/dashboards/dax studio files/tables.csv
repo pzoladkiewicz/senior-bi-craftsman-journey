@@ -1,0 +1,17 @@
+ID;ModelID;Name;DataCategory;Description;IsHidden;TableStorageID;ModifiedTime;StructureModifiedTime;SystemFlags;ShowAsVariationsOnly;IsPrivate;DefaultDetailRowsDefinitionID;AlternateSourcePrecedence;RefreshPolicyID;CalculationGroupID;ExcludeFromModelRefresh;LineageTag;SourceLineageTag;SystemManaged;ExcludeFromAutomaticAggregations
+10;1;"dim_customer";"";"";False;531;2025-09-26 08:28:53,420;2025-09-26 08:28:53,420;0;False;False;;0;;;False;"5e7efa55-1d2d-479a-bf27-d3dec26444a4";"";False;False
+13;1;"DateTableTemplate_5d6ca56e-b6d2-4d8e-acfc-d5281d964f34";"";"";True;533;2025-09-26 08:28:53,426;2025-09-26 08:28:53,426;2;False;True;;0;;;False;"882d542c-8acc-4000-b9e6-26c2e4d3b1ca";"";False;False
+16;1;"LocalDateTable_8c26ec6f-d2b0-4ed1-91c6-804ac0a1b482";"";"";True;535;2025-09-26 08:28:53,426;2025-09-26 08:28:53,426;2;True;False;;0;;;False;"abe9b4e9-2be1-4d9a-922d-77d9328c8293";"";False;False
+19;1;"LocalDateTable_6002a01d-8000-4028-a231-3585b1c4cd97";"";"";True;537;2025-09-26 08:28:53,426;2025-09-26 08:28:53,426;2;True;False;;0;;;False;"8f81be6d-e71d-4e8e-9a27-cd92a2ca114c";"";False;False
+22;1;"dim_date";"Time";"";False;539;2025-09-26 08:28:53,426;2025-09-26 08:28:53,426;0;False;False;;0;;;False;"c92a0811-61a4-45d6-9b4d-858bc37193fc";"";False;False
+25;1;"dim_geography";"";"";False;541;2025-09-26 08:28:53,426;2025-09-26 08:28:53,426;0;False;False;;0;;;False;"67304305-ce07-477c-b3a6-66d88d056323";"";False;False
+28;1;"dim_product";"";"";False;543;2025-09-26 08:28:53,426;2025-09-30 08:23:42,966;0;False;False;;0;;;False;"4bc1db63-5cd1-4873-8d69-17694ebd65df";"";False;False
+31;1;"LocalDateTable_6a8adc81-d213-4f31-93f3-e2185ec86848";"";"";True;545;2025-09-26 08:28:53,426;2025-09-26 08:28:53,426;2;True;False;;0;;;False;"555cfcfd-4ccb-480d-9945-c69f2bc11f1a";"";False;False
+34;1;"LocalDateTable_43a6c7b9-db1e-45e7-9181-3e3b13380e94";"";"";True;547;2025-09-26 08:28:53,426;2025-09-26 08:28:53,426;2;True;False;;0;;;False;"03e72e2c-9595-4f25-a945-00df3cbaceea";"";False;False
+37;1;"fact_sales";"";"";False;549;2025-09-26 08:28:53,426;2025-09-26 08:28:53,426;0;False;False;;0;;;False;"5d2c5d9a-ea13-4d63-880a-36405f1884f2";"";False;False
+40;1;"_Measures";"";"";False;551;2025-09-26 08:28:53,426;2025-10-07 13:34:23,196;0;False;False;;0;;;False;"eabf5964-1bd6-45ed-8404-6194a3df1a25";"";False;False
+43;1;"WaterfallCategories Table";"";"";False;553;2025-09-26 08:28:53,426;2025-09-26 13:04:09,236;2;False;False;;0;;;False;"e8c1e303-c595-4efd-b671-ace9a1eb5f00";"";False;False
+46;1;"_slicer Customer Segment - Executive Summary";"";"";False;555;2025-09-26 08:28:53,426;2025-09-26 08:29:12,276;0;False;False;;0;;;False;"6da8ea01-46d6-4dfc-97ff-8c8c01f28e62";"";False;False
+4307;1;"fact_transactions_classified";"";"";False;4438;2025-09-26 08:39:30,603;2025-09-26 08:39:30,603;0;False;False;;0;;;False;"2621fe02-07e5-4599-a741-4642a8422a71";"";False;False
+4310;1;"LocalDateTable_e7a23617-b6ec-4efd-968e-d5ff83c56463";"";"";True;4440;2025-09-26 08:39:30,603;2025-09-26 08:39:30,603;2;True;False;;0;;;False;"2d62cf94-d2b5-42d9-b5d9-c40874dda9b4";"";False;False
+5437;1;"LocalDateTable_65b1114a-e578-4eb8-8673-9d590a94fdaf";"";"";True;5477;2025-09-26 10:13:51,643;2025-09-26 10:13:51,643;2;True;False;;0;;;False;"b917fcb1-fae0-467a-a2d2-4345584e81ae";"";False;False

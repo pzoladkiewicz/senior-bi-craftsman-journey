@@ -6,7 +6,8 @@
     "y": 93,
     "z": 2000,
     "height": 208,
-    "width": 304
+    "width": 304,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,7 +23,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Guest Transactions % (2011)"
+                  "Property": "22.1 Guest Transactions %"
                 }
               },
               "queryRef": "_Measures.Guest Customers % (2011)",
@@ -42,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Guest Transactions % (2011)"
+                "Property": "22.1 Guest Transactions %"
               }
             },
             "direction": "Descending"
@@ -409,7 +410,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -479,7 +480,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YoY % formated"
+                  "Property": "09.1 AOV YoY % formated"
                 }
               }
             }
@@ -507,7 +508,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -549,7 +550,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Intl Sales Share % (2011)"
+                  "Property": "21.2 Intl Sales Share %"
                 }
               }
             }
@@ -577,7 +578,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Registered Transactions (_2011)"
+                  "Property": "22.2 Registered Cust. Transactions %"
                 }
               }
             }
@@ -691,7 +692,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -736,7 +737,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "AOV YoY% CF"
+                      "Property": "09.2 AOV YoY% CF"
                     }
                   }
                 }
@@ -767,7 +768,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -806,7 +807,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             }
@@ -1076,7 +1077,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             }
@@ -1230,5 +1231,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8ad197cf4a01db18c601",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "22.1 Guest Transactions %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

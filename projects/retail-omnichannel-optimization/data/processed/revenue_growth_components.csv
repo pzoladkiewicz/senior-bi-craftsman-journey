@@ -1,0 +1,6 @@
+ComponentID;ComponentName;ComponentOrder;ComponentType
+1;Base 2010;1;Total
+2;Volume Effect;2;Bridge
+3;Price Effect;3;Bridge  
+4;Mix Effect;4;Bridge
+5;Total 2011;5;Total

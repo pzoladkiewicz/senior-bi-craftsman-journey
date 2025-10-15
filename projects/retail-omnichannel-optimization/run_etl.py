@@ -91,17 +91,39 @@ REQUIRED_RAW_COLS = [
 
 def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     """
-    Kompletny pipeline czyszczenia (Complete cleainng pipeline).
+    Kompletny pipeline czyszczenia.
     """
     _log("Walidacja obecnosci kolumn RAW...")
     _require_columns(df_raw, REQUIRED_RAW_COLS, "RAW")
 
+    # === MODERNIZACJA DAT DO WSPÓŁCZESNEGO KONTEKSTU ===
+    _log("Modernizacja dat do bieżącego roku...")
+    df = df_raw.copy()
+    
+    # Backup oryginalnej daty pod nową nazwą
+    df["InvoiceDate_Oryginal"] = df["InvoiceDate"]
+    
+    # Wyliczenie przesunięcia roku
+    temp_dates = _to_datetime(df["InvoiceDate"])
+    current_year = datetime.now().year
+    source_max_year = temp_dates.dt.year.max()
+    year_offset = current_year - source_max_year
+    
+    # Przesunięcie dat (stara nazwa kolumny = nowe daty)
+    df["InvoiceDate"] = temp_dates + pd.DateOffset(years=year_offset)
+    
+    # Zapewnienie typu datetime
+    df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
+    
+    _log(f"Przesunięcie dat: o {year_offset} lat ({source_max_year} -> {current_year})")
+    _log(f"Nowy zakres dat: {df['InvoiceDate'].min().date()} do {df['InvoiceDate'].max().date()}")
+    # === KONIEC MODERNIZACJI ===
+
     # Rzutowania typów (Type coercions)
     _log("Konwersja typów (Quantity, Price, InvoiceDate)...")
-    df = df_raw.copy()
     df["Quantity"] = _coerce_numeric(df["Quantity"]).astype("Int64")
     df["Price"] = _coerce_numeric(df["Price"]).astype(float)
-    df["InvoiceDate"] = _to_datetime(df["InvoiceDate"])
+    # df["InvoiceDate"] = _to_datetime(df["InvoiceDate"]) - nie potrzebne po modernizacji dat
 
     # Zapewnienie typu tekstowego dla identyfikatorów
     for col in ["Invoice", "Description", "Country"]:
@@ -138,7 +160,9 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     _log("Filtrowanie nieprawidłowych rekordów (zachowując zwroty i korekty)...")
     mask = (
         (df["InvoiceDate"].notna()) &
-        (df["InvoiceDate"] <= datetime.now()) &
+        # usunąć - po modernizacji nie sprawdzamy, czy daty są z przyszłosci
+        # (df["InvoiceDate"] <= datetime.now()) & - usunąć po modernizacji nie sprawdzamy,dat lub co poniżej
+
         (df["Invoice"].notna()) &
         (df["Invoice"] != "") &
         (df["StockCode"].notna()) &
@@ -162,7 +186,7 @@ def clean_raw(df_raw: pd.DataFrame) -> pd.DataFrame:
     checks = {
         # "positive_quantities": (df["Quantity"] > 0).all(),
         # "positive_prices": (df["Price"] > 0).all(),
-        "non_future_dates": (df["InvoiceDate"] <= datetime.now()).all(),
+        # "non_future_dates": (df["InvoiceDate"] <= datetime.now()).all(),
         "non_missing_invoice": df["Invoice"].ne("").all(),
         "non_missing_stockcode": df["StockCode"].ne("").all(),
         # "positive_totalvalue": (df["TotalValue"] > 0).all()

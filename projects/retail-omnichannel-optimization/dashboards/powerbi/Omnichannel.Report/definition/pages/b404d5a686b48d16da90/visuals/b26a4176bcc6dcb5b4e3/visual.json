@@ -7,7 +7,7 @@
     "z": 6000,
     "height": 336,
     "width": 484,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -62,7 +62,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Return rate"
+                  "Property": "33. Return rate"
                 }
               },
               "queryRef": "_Measures.Return rate",
@@ -77,7 +77,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Returns YTD (_2011)"
+                  "Property": "30. Returns CY YTD"
                 }
               },
               "queryRef": "_Measures.Returns YTD (_2011)",
@@ -97,7 +97,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Return rate"
+                "Property": "33. Return rate"
               }
             },
             "direction": "Descending"
@@ -137,7 +137,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Return rate CF color"
+                      "Property": "41. Return rate CF color"
                     }
                   }
                 }
@@ -384,7 +384,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Products requiring quality attention - Return Rate >20%'"
+                  "Value": "'Attention - Return Rate >20% and Value > £50'"
                 }
               }
             },
@@ -647,7 +647,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Return rate"
+            "Property": "33. Return rate"
           }
         },
         "type": "Advanced",
@@ -672,12 +672,93 @@
                           "Source": "_"
                         }
                       },
-                      "Property": "Return rate"
+                      "Property": "33. Return rate"
                     }
                   },
                   "Right": {
                     "Literal": {
                       "Value": "0.2D"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "02afe2789349bcb9740e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_transactions_classified"
+              }
+            },
+            "Property": "Description"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "02e0f0c60e7506c65c5e",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_transactions_classified"
+                  }
+                },
+                "Property": "StockCode"
+              }
+            },
+            "Function": 3
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e71cffe132749ac0c196",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "30. Returns CY YTD"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "_",
+              "Entity": "_Measures",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 3,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "_"
+                        }
+                      },
+                      "Property": "30. Returns CY YTD"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "-50L"
                     }
                   }
                 }

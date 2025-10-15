@@ -112,15 +112,6 @@ table fact_transactions_classified
 
 		annotation SummarizationSetBy = Automatic
 
-	column ClassificationStep
-		dataType: int64
-		formatString: 0
-		lineageTag: 695f2c3b-0373-4312-818f-c468a76d40a2
-		summarizeBy: none
-		sourceColumn: ClassificationStep
-
-		annotation SummarizationSetBy = User
-
 	column Date
 		dataType: dateTime
 		formatString: yyyy-mm-dd
@@ -139,13 +130,31 @@ table fact_transactions_classified
 
 		annotation PBI_FormatHint = {"isDateTimeCustom":true}
 
+	column InvoiceDate_Oryginal
+		dataType: string
+		lineageTag: 4ea49b01-15e5-455e-b52d-d56ee121bdd8
+		summarizeBy: none
+		sourceColumn: InvoiceDate_Oryginal
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'fact_transaction Date Offset' = DATEDIFF(TODAY(), fact_transactions_classified[Date], DAY)
+		formatString: 0
+		lineageTag: 862ea0f0-addd-4fd3-903a-1bcef55e9499
+		summarizeBy: sum
+		sortByColumn: Date
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_transactions_classified = m
 		mode: import
 		source =
 				let
 				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\retail-omnichannel-optimization\data\processed\fact_transactions_classified.csv"),[Delimiter=",", Columns=13, Encoding=1250, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Invoice", type text}, {"StockCode", type text}, {"Description", type text}, {"Quantity", Int64.Type}, {"InvoiceDate", type datetime}, {"Price", type text}, {"CustomerID", Int64.Type}, {"Country", type text}, {"__sheet_name__", type text}, {"TotalValue", type text}, {"TransactionCategory", type text}, {"ClassificationRule", type text}, {"ClassificationStep", Int64.Type}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Invoice", type text}, {"StockCode", type text}, {"Description", type text}, {"Quantity", Int64.Type}, {"InvoiceDate", type datetime}, {"Price", type text}, {"CustomerID", Int64.Type}, {"Country", type text}, {"__sheet_name__", type text}, {"TotalValue", type text}, {"TransactionCategory", type text}, {"ClassificationRule", type text}}),
 				    #"Changed Type with Locale" = Table.TransformColumnTypes(#"Changed Type", {{"Price", type number}}, "en-GB"),
 				    #"Changed Type with Locale1" = Table.TransformColumnTypes(#"Changed Type with Locale", {{"TotalValue", type number}}, "en-GB"),
 				    #"Inserted Date" = Table.AddColumn(#"Changed Type with Locale1", "Date", each DateTime.Date([InvoiceDate]), type date)

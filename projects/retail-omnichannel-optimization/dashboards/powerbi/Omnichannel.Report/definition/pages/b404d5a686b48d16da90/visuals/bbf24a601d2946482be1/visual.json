@@ -6,7 +6,8 @@
     "y": 103,
     "z": 2000,
     "height": 185,
-    "width": 290
+    "width": 290,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Operations Quality Index (_2011)"
+                  "Property": "34. Operations Quality Index"
                 }
               },
               "queryRef": "_Measures.Operations Quality Index (_2011)",
-              "nativeQueryRef": "Operations Quality Index (_2011)"
+              "nativeQueryRef": "34. Operations Quality Index"
             }
           ]
         }
@@ -41,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Operations Quality Index (_2011)"
+                "Property": "34. Operations Quality Index"
               }
             },
             "direction": "Descending"
@@ -431,7 +432,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -487,7 +488,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YoY % formated"
+                  "Property": "09.1 AOV YoY % formated"
                 }
               }
             }
@@ -543,7 +544,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Returns YTD (_2011)"
+                  "Property": "30. Returns CY YTD"
                 }
               }
             }
@@ -571,7 +572,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Quality Cost Impact (_2011)"
+                  "Property": "35. Quality Cost Impact"
                 }
               }
             }
@@ -634,7 +635,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -665,7 +666,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "AOV YoY% CF"
+                      "Property": "09.2 AOV YoY% CF"
                     }
                   }
                 }
@@ -1051,23 +1052,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f11d9b40d5e25406bae0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "Operations Quality Index (_2011)"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

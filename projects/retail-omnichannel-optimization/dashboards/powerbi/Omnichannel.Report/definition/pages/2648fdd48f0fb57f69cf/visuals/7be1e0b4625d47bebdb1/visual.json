@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 240,
-    "width": 368
+    "width": 368,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -41,11 +42,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Sales YTD (_2011)"
+                  "Property": "10. _slicer - Sales CY Monthly"
                 }
               },
               "queryRef": "_Measures._slicer - Sales YTD (_2011)",
-              "nativeQueryRef": "_slicer - Sales YTD (_2011)"
+              "nativeQueryRef": "10. _slicer - Sales CY Monthly"
             },
             {
               "field": {
@@ -55,11 +56,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Sales YTD PY (_2010)"
+                  "Property": "11. _slicer - Sales PY Monthly"
                 }
               },
               "queryRef": "_Measures._slicer - Sales YTD PY (_2010)",
-              "nativeQueryRef": "_slicer - Sales YTD PY (_2010)"
+              "nativeQueryRef": "11. _slicer - Sales PY Monthly"
             }
           ]
         }

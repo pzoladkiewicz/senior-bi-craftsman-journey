@@ -6,8 +6,7 @@
     "y": 11,
     "z": 1000,
     "height": 48,
-    "width": 256,
-    "tabOrder": 1000
+    "width": 256
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +18,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "2011",
+                    "value": "2025 ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt",
@@ -27,13 +26,13 @@
                     }
                   },
                   {
-                    "value": "-over-",
+                    "value": "-over- ",
                     "textStyle": {
                       "fontSize": "12pt"
                     }
                   },
                   {
-                    "value": "2010 ",
+                    "value": "2024 ",
                     "textStyle": {
                       "fontWeight": "bold",
                       "fontSize": "12pt",

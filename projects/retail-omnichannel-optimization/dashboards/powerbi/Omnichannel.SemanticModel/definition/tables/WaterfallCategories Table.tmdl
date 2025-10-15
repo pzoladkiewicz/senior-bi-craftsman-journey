@@ -1,13 +1,6 @@
 table 'WaterfallCategories Table'
 	lineageTag: e8c1e303-c595-4efd-b671-ace9a1eb5f00
 
-	measure Measure
-		lineageTag: 990a416c-c134-4a8e-ba50-b1b5c35ac0ec
-
-		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
-
-		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = To use special characters in a measure name, enclose the entire name in brackets ( [] ) and add a ] to any closing brackets in the name.
-
 	column Category
 		lineageTag: 3498cffb-3f58-44c5-a26a-dc5d3acb6851
 		summarizeBy: none
@@ -34,11 +27,11 @@ table 'WaterfallCategories Table'
 				    "Category", STRING,
 				    "SortOrder", INTEGER,
 				    {
-				        {"2010 Base Revenue", 1},
+				        {"PY Base Revenue", 1},
 				        {"Volume Effect", 2},
 				        {"Price Effect", 3},
 				        {"Mix Effect", 4},
-				        {"2011 Total Revenue", 5}
+				        {"CY Total Revenue", 5}
 				    }
 				)
 				

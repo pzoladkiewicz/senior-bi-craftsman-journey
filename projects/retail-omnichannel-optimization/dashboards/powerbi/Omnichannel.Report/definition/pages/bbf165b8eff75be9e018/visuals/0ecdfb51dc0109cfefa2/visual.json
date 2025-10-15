@@ -7,7 +7,7 @@
     "z": 5000,
     "height": 304,
     "width": 320,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "barChart",
@@ -42,7 +42,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers YTD (_2011)"
+                  "Property": "04. Customers CY YTD"
                 }
               },
               "queryRef": "_Measures.Customers YTD (2011 Anchor)",
@@ -56,7 +56,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YTD (_2011)"
+                  "Property": "07. AOV CY YTD"
                 }
               },
               "queryRef": "_Measures.AOV (2011 YTD)",
@@ -74,7 +74,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YTD (_2011)"
+                  "Property": "01. Sales CY YTD"
                 }
               },
               "queryRef": "_Measures.Sales YTD (2011 Anchor)",
@@ -93,7 +93,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Sales YTD (_2011)"
+                "Property": "01. Sales CY YTD"
               }
             },
             "direction": "Descending"
@@ -509,7 +509,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Sales YTD (_2011)"
+                            "Property": "01. Sales CY YTD"
                           }
                         }
                       }
@@ -606,6 +606,48 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "c70597fa3726b0063e7b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "04. Customers CY YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "395de26955138990e56a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "07. AOV CY YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ec765d45073cc9208be6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "01. Sales CY YTD"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

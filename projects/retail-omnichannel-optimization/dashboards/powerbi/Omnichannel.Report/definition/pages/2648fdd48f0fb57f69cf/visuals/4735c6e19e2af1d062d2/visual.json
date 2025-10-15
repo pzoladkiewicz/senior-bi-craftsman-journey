@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 240,
-    "width": 290
+    "width": 290,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "donutChart",
@@ -40,11 +41,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Orders YTD (_2011)"
+                  "Property": "12. _slicer - Orders YTD"
                 }
               },
               "queryRef": "_Measures._slicer - Orders YTD (_2011)",
-              "nativeQueryRef": "_slicer - Orders YTD (_2011)"
+              "nativeQueryRef": "12. _slicer - Orders YTD"
             }
           ]
         }
@@ -59,7 +60,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "_slicer - Orders YTD (_2011)"
+                "Property": "12. _slicer - Orders YTD"
               }
             },
             "direction": "Descending"

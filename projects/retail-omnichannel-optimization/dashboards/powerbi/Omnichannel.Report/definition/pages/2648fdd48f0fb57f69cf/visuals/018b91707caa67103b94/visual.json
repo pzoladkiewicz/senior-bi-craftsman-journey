@@ -6,7 +6,8 @@
     "y": 0,
     "z": 5500,
     "height": 283,
-    "width": 550
+    "width": 550,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "tableEx",
@@ -37,12 +38,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Sales YTD (_2011)"
+                  "Property": "13. _slicer - TOP 10 Sales CY"
                 }
               },
-              "queryRef": "_Measures._slicer - Sales YTD (_2011)",
-              "nativeQueryRef": "2011",
-              "displayName": "2011"
+              "queryRef": "_Measures.13. _slicer - TOP 10 Sales CY",
+              "nativeQueryRef": "CY",
+              "displayName": "CY"
             },
             {
               "field": {
@@ -52,12 +53,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Sales YTD PY (_2010)"
+                  "Property": "14. _slicer - TOP 10 Sales PY"
                 }
               },
-              "queryRef": "_Measures._slicer - Sales YTD PY (_2010)",
-              "nativeQueryRef": "2010",
-              "displayName": "2010"
+              "queryRef": "_Measures.14. _slicer - TOP 10 Sales PY",
+              "nativeQueryRef": "PY",
+              "displayName": "PY"
             },
             {
               "field": {
@@ -67,12 +68,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "_slicer - Sales YoY (_2011)"
+                  "Property": "15. _slicer - TOP 10 Sales YoY %"
                 }
               },
-              "queryRef": "_Measures._slicer - Sales YoY (_2011)",
-              "nativeQueryRef": "YoY",
-              "displayName": "YoY"
+              "queryRef": "_Measures.15. _slicer - TOP 10 Sales YoY %",
+              "nativeQueryRef": "YoY %",
+              "displayName": "YoY %"
             }
           ]
         }
@@ -87,7 +88,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "_slicer - Sales YTD (_2011)"
+                "Property": "13. _slicer - TOP 10 Sales CY"
               }
             },
             "direction": "Descending"
@@ -158,7 +159,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -188,7 +189,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "_slicer Sales YoY% CF"
+                      "Property": "15.1 _slicer TOP 10 Sales YoY % CF"
                     }
                   }
                 }
@@ -203,7 +204,7 @@
                 }
               }
             ],
-            "metadata": "_Measures._slicer - Sales YoY (_2011)"
+            "metadata": "_Measures.15. _slicer - TOP 10 Sales YoY %"
           }
         }
       ],
@@ -611,7 +612,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Sales YTD (_2011)"
+                            "Property": "01. Sales CY YTD"
                           }
                         }
                       }

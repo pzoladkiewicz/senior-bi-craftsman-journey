@@ -7,7 +7,7 @@
     "z": 0,
     "height": 185,
     "width": 288,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Net Revenue per Product YTD (_2011)"
+                  "Property": "31. Net Revenue per Product CY YTD"
                 }
               },
               "queryRef": "_Measures.Net Revenue YTD (_2011)",
-              "nativeQueryRef": "Net Revenue YTD (_2011)"
+              "nativeQueryRef": "31. Net Revenue per Product CY YTD"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Net Revenue per Product YTD (_2011)"
+                "Property": "31. Net Revenue per Product CY YTD"
               }
             },
             "direction": "Descending"
@@ -479,7 +479,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -535,7 +535,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YoY % formated"
+                  "Property": "09.1 AOV YoY % formated"
                 }
               }
             }
@@ -591,7 +591,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Business Gross Revenue YTD (_2011)"
+                  "Property": "32. Business Gross Revenue CY YTD"
                 }
               }
             }
@@ -683,7 +683,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -714,7 +714,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "AOV YoY% CF"
+                      "Property": "09.2 AOV YoY% CF"
                     }
                   }
                 }
@@ -1119,7 +1119,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Net Revenue YTD'"
+                  "Value": "'Net Revenue'"
                 }
               }
             },
@@ -1181,5 +1181,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5622df1dade9613c07ab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "31. Net Revenue per Product CY YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

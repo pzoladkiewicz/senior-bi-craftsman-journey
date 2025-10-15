@@ -5,6 +5,59 @@
   "displayOption": "FitToPage",
   "height": 1000,
   "width": 1280,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2eac8c5adbc208c52ae2",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_date"
+              }
+            },
+            "Property": "dim_date Date Offset"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_date",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 4,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "d"
+                        }
+                      },
+                      "Property": "dim_date Date Offset"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
+  },
   "objects": {
     "filterCard": [
       {
@@ -72,7 +125,7 @@
     {
       "source": "2253580220be9bc34b32",
       "target": "4735c6e19e2af1d062d2",
-      "type": "NoFilter"
+      "type": "DataFilter"
     },
     {
       "source": "2253580220be9bc34b32",
