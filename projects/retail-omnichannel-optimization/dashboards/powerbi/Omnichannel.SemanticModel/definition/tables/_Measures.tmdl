@@ -18,7 +18,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Total Quantity' = SUM(fact_sales[Quantity])
+	measure '00. Total Quantity' = SUM(fact_sales[Quantity])
 		formatString: 0
 		displayFolder: Sales\Base
 		lineageTag: e6bfda44-33b1-4f92-bdaf-020a04d717a0
@@ -291,7 +291,7 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 4d9689ce-2c39-4510-ab3a-7394a0427129
 
-	measure '21. UK Sales Share %' =
+	measure '21.1 UK Sales Share %' =
 			
 			VAR UKSales =
 			    CALCULATE(
@@ -305,12 +305,12 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: c8f171f3-71ec-481a-b4d6-fe99d1f78077
 
-	measure '22. Intl Sales Share %' = 1 - [21. UK Sales Share %]
+	measure '21.2 Intl Sales Share %' = 1 - [21.1 UK Sales Share %]
 		formatString: 0%;-0%;0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 7f5ca795-51ec-4cef-aa12-c75b2451c504
 
-	measure '23. Guest Transactions %' =
+	measure '22.1 Guest Transactions %' =
 			
 			VAR _GuestCustomers =
 			    CALCULATE(
@@ -324,11 +324,11 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: b428c804-a6d5-4318-affc-a05b703fe687
 
-	measure '25. Channel Score' =
+	measure '23. Channel Score' =
 			
-			VAR UKShare = [21. UK Sales Share %]
+			VAR UKShare = [21.1 UK Sales Share %]
 			VAR IntlShare = 1 - UKShare
-			VAR GuestShare = [23. Guest Transactions %]
+			VAR GuestShare = [22.1 Guest Transactions %]
 			VAR RegisteredShare = 1 - GuestShare
 			RETURN
 			    (UKShare * 0.4) + (IntlShare * 0.3) + (RegisteredShare * 0.3)
@@ -337,88 +337,64 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '2010 Base Revenue' = [02. Sales PY YTD]
+	measure '25.1 PY Base Revenue' = [02. Sales PY YTD]
+		formatString: 0
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: cbaca7bb-5624-4532-919f-766fee44066d
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure '2011 Total Revenue' = [01. Sales CY YTD]
+	measure '25.2 CY Total Revenue' = [01. Sales CY YTD]
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: 87fcabb4-5ae9-4564-9757-f72fc92a236a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Volume Effect' =
+	measure '25.3 Volume Effect' =
 			
-			VAR Anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR Qty2011 =
-			    CALCULATE(
-			        [Total Quantity],
-			        dim_date[Year] = YEAR(Anchor),
-			        dim_date[Date] <= Anchor
-			    )
-			VAR Qty2010 =
-			    CALCULATE(
-			        [Total Quantity],
-			        dim_date[Year] = YEAR(EDATE(Anchor, -12)),
-			        dim_date[Date] <= EDATE(Anchor, -12)
-			    )
-			VAR AvgPrice2010 =
-			    DIVIDE([2010 Base Revenue], Qty2010)
+			VAR _CY_QTY = [00. Total Quantity CY YTD]
+			VAR _PY_QTY = [00. Total Quantity PY YTD]
+			VAR _PY_AvgPrice = DIVIDE([25.1 PY Base Revenue], _PY_QTY)
 			RETURN
-			    (Qty2011 - Qty2010) * AvgPrice2010
+			    (_CY_QTY - _PY_QTY) * _PY_AvgPrice
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: f629cb91-2061-48eb-8cb1-bbf323043ada
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Price Effect' =
+	measure '25.4 Price Effect' =
 			
-			VAR Anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR Qty2011 =
-			    CALCULATE(
-			        [Total Quantity],
-			        dim_date[Year] = YEAR(Anchor),
-			        dim_date[Date] <= Anchor
-			    )
-			VAR Qty2010 =
-			    CALCULATE(
-			        [Total Quantity],
-			        dim_date[Year] = YEAR(EDATE(Anchor, -12)),
-			        dim_date[Date] <= EDATE(Anchor, -12)
-			    )
-			VAR AvgPrice2010 =
-			    DIVIDE([2010 Base Revenue], Qty2010)
-			VAR AvgPrice2011 =
-			    DIVIDE([2011 Total Revenue], Qty2011)
+			VAR _CY_QTY = [00. Total Quantity CY YTD]
+			VAR _PY_QTY = [00. Total Quantity PY YTD]
+			VAR _PY_AVGPrice = DIVIDE([25.1 PY Base Revenue], _PY_QTY)
+			VAR _CY_AVGPrice = DIVIDE([25.2 CY Total Revenue], _CY_QTY)
 			RETURN
-			    Qty2011 * (AvgPrice2011 - AvgPrice2010)
+			    _CY_QTY * (_CY_AVGPrice - _PY_AVGPrice)
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: f9076c6b-b02e-4cd0-b468-27f54999dc42
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Mix Effect' =
+	measure '25.5 Mix Effect' =
 			
-			VAR TotalCalculated = [2010 Base Revenue] + [Volume Effect] + [Price Effect]
-			VAR ActualTotal = [2011 Total Revenue]
+			VAR _TotalCalculated = [25.1 PY Base Revenue] + [25.3 Volume Effect] + [25.4 Price Effect]
+			VAR _ActualTotal = [25.2 CY Total Revenue]
 			RETURN
-			    ActualTotal - TotalCalculated
+			    _ActualTotal - _TotalCalculated
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: 87d84886-223e-4475-a4fc-cfe2b7b729e5
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Waterfall Value' = ```
+	measure '25.6 Waterfall Value' = ```
 			
 			SWITCH(
 			    SELECTEDVALUE('WaterfallCategories Table'[Category]),
-			    "2010 Base Revenue", [2010 Base Revenue],
-			    "Volume Effect", [Volume Effect],
-			    "Price Effect", [Price Effect], 
-			    "Mix Effect", [Mix Effect],
-			    "2011 Total Revenue", [2011 Total Revenue],
+			    "PY Base Revenue", [25.1 PY Base Revenue],
+			    "Volume Effect", [25.3 Volume Effect],
+			    "Price Effect", [25.4 Price Effect], 
+			    "Mix Effect", [25.5 Mix Effect],
+			    "CY Total Revenue", [25.2 CY Total Revenue],
 			    0
 			)
 			```
@@ -426,15 +402,8 @@ table _Measures
 		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
 		lineageTag: 7c6fbb7e-4ca2-4f99-a9b7-f7c8765b19c2
 
-	measure 'Total Quantity YTD (2011)' = ```
-			
-			VAR Anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			RETURN
-			    CALCULATE(
-			        [Total Quantity],
-			        dim_date[Year] = YEAR(Anchor),
-			        dim_date[Date] <= Anchor
-			    )
+	measure '00. Total Quantity CY YTD' = ```
+			TOTALYTD([00. Total Quantity], dim_date[Date])
 			
 			```
 		formatString: 0
@@ -522,12 +491,12 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '24. Registered Cust. Transactions %' = 1 - [23. Guest Transactions %]
+	measure '22.2 Registered Cust. Transactions %' = 1 - [22.1 Guest Transactions %]
 		formatString: 0%;-0%;0%
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: f81790f9-e4e7-4a4b-abeb-0ff5faf1b169
 
-	measure '26. Intl Growth Rate' = ```
+	measure '24.1 Intl Growth Rate' = ```
 			
 			VAR _CY =
 			    CALCULATE(
@@ -596,7 +565,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '27. UK Growth Rate' = ```
+	measure '24.2 UK Growth Rate' = ```
 			
 			VAR _CY =
 			    CALCULATE(
@@ -619,9 +588,9 @@ table _Measures
 			
 			SWITCH(
 			    TRUE(),
-			    [26. Intl Growth Rate] > 0, "+" &FORMAT([26. Intl Growth Rate], "0.0%"),
-			    [26. Intl Growth Rate] < 0, "-" &FORMAT([26. Intl Growth Rate], "0.0%"),
-			    FORMAT([26. Intl Growth Rate], "0.0%"))
+			    [24.1 Intl Growth Rate] > 0, "+" &FORMAT([24.1 Intl Growth Rate], "0.0%"),
+			    [24.1 Intl Growth Rate] < 0, "-" &FORMAT([24.1 Intl Growth Rate], "0.0%"),
+			    FORMAT([24.1 Intl Growth Rate], "0.0%"))
 		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
 		lineageTag: 5392eb92-0bc9-4d78-8e58-cb42accb94b2
 
@@ -641,26 +610,30 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'International Market Share' = ```
+	measure '27. International Market Share' = ```
 			
-			VAR _anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			
-			VAR _total = 
+			VAR _NoUK =
 			    CALCULATE(
-			        SUM(fact_sales[TotalValue]),
-			        dim_geography[IsUK] = 0,
-			        REMOVEFILTERS(dim_geography[Country Group]
-			        )
+			        [00. Monthly Sales CY],
+			        dim_geography[IsUK] = 0
 			    )
-			VAR _group = SUM(fact_sales[TotalValue])
+			VAR _Total = 
+			    CALCULATE(
+			        [00. Monthly Sales CY],
+			        dim_geography[IsUK] = 0,
+			        REMOVEFILTERS(dim_customer[Country]),
+			        REMOVEFILTERS(dim_geography[Country Group])
+			    )
+			
 			RETURN
 			    IF(
-			        MAX(dim_date[Date]) <= _anchor && MAX(dim_date[Year]) = YEAR(_anchor),
-			        DIVIDE(_group, _total),
+			        _Total > 0,
+			        DIVIDE(_NoUK, _Total),
 			        BLANK()
 			    )
 			```
 		formatString: 0%;-0%;0%
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: e58fb0bf-707e-4d2c-8e2d-b317b304c7e0
 
 	measure '11. _slicer - Sales PY Monthly' = ```
@@ -1090,6 +1063,30 @@ table _Measures
 		formatString: 0
 		displayFolder: _2011_Anchor\Sales\Time Intelligence
 		lineageTag: 619f9300-ac9d-43eb-8971-2c9eb45e9658
+
+	measure '00. Total Quantity PY YTD' = ```
+			
+			    CALCULATE(
+			        [00. Total Quantity CY YTD],
+			        SAMEPERIODLASTYEAR(dim_date[Date])
+			    )
+			```
+		formatString: 0
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 4b7c5ee3-087d-40c7-9018-706e19d21003
+
+	measure '26. Regional Sales by Q' = ```
+			
+			    CALCULATE(
+			        [Total Sales],
+			        dim_date[Year] = YEAR(TODAY())
+			    )
+			```
+		formatString: #,0
+		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		lineageTag: 6b6ed7a7-1b36-4a64-90b5-b9175bed74ce
+
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	partition _Measures = m
 		mode: import

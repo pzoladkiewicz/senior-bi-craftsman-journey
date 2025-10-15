@@ -23,7 +23,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "23. Guest Transactions %"
+                  "Property": "22.1 Guest Transactions %"
                 }
               },
               "queryRef": "_Measures.Guest Customers % (2011)",
@@ -43,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "23. Guest Transactions %"
+                "Property": "22.1 Guest Transactions %"
               }
             },
             "direction": "Descending"
@@ -550,7 +550,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "22. Intl Sales Share %"
+                  "Property": "21.2 Intl Sales Share %"
                 }
               }
             }
@@ -578,7 +578,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "24. Registered Cust. Transactions %"
+                  "Property": "22.2 Registered Cust. Transactions %"
                 }
               }
             }
@@ -1243,7 +1243,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "23. Guest Transactions %"
+            "Property": "22.1 Guest Transactions %"
           }
         },
         "type": "Advanced"

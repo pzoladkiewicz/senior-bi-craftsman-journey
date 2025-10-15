@@ -23,7 +23,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "21. UK Sales Share %"
+                  "Property": "21.1 UK Sales Share %"
                 }
               },
               "queryRef": "_Measures.UK Sales Share % (2011)",
@@ -43,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "21. UK Sales Share %"
+                "Property": "21.1 UK Sales Share %"
               }
             },
             "direction": "Descending"
@@ -550,7 +550,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "22. Intl Sales Share %"
+                  "Property": "21.2 Intl Sales Share %"
                 }
               }
             }
@@ -1181,5 +1181,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "dd90d90540109679895b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "21.1 UK Sales Share %"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

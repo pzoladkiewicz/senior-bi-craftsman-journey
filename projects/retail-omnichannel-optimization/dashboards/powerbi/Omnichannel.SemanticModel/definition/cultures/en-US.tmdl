@@ -6459,7 +6459,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Total Quantity"
+			          "ConceptualProperty": "00. Total Quantity"
 			        }
 			      },
 			      "State": "Generated",
@@ -7426,7 +7426,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "21. UK Sales Share %"
+			          "ConceptualProperty": "21.1 UK Sales Share %"
 			        }
 			      },
 			      "State": "Generated",
@@ -7452,7 +7452,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "22. Intl Sales Share %"
+			          "ConceptualProperty": "21.2 Intl Sales Share %"
 			        }
 			      },
 			      "State": "Generated",
@@ -7468,7 +7468,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "23. Guest Transactions %"
+			          "ConceptualProperty": "22.1 Guest Transactions %"
 			        }
 			      },
 			      "State": "Generated",
@@ -7514,7 +7514,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "25. Channel Score"
+			          "ConceptualProperty": "23. Channel Score"
 			        }
 			      },
 			      "State": "Generated",
@@ -7640,7 +7640,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "2010 Base Revenue"
+			          "ConceptualProperty": "25.1 PY Base Revenue"
 			        }
 			      },
 			      "State": "Generated",
@@ -7768,7 +7768,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "2011 Total Revenue"
+			          "ConceptualProperty": "25.2 CY Total Revenue"
 			        }
 			      },
 			      "State": "Generated",
@@ -7896,7 +7896,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Volume Effect"
+			          "ConceptualProperty": "25.3 Volume Effect"
 			        }
 			      },
 			      "State": "Generated",
@@ -8018,7 +8018,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Price Effect"
+			          "ConceptualProperty": "25.4 Price Effect"
 			        }
 			      },
 			      "State": "Generated",
@@ -8140,7 +8140,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Mix Effect"
+			          "ConceptualProperty": "25.5 Mix Effect"
 			        }
 			      },
 			      "State": "Generated",
@@ -8262,7 +8262,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Waterfall Value"
+			          "ConceptualProperty": "25.6 Waterfall Value"
 			        }
 			      },
 			      "State": "Generated",
@@ -8378,7 +8378,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Total Quantity YTD (2011)"
+			          "ConceptualProperty": "00. Total Quantity CY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -9129,7 +9129,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "24. Registered Cust. Transactions %"
+			          "ConceptualProperty": "22.2 Registered Cust. Transactions %"
 			        }
 			      },
 			      "State": "Generated",
@@ -9314,7 +9314,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "26. Intl Growth Rate"
+			          "ConceptualProperty": "24.1 Intl Growth Rate"
 			        }
 			      },
 			      "State": "Generated",
@@ -9482,7 +9482,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "27. UK Growth Rate"
+			          "ConceptualProperty": "24.2 UK Growth Rate"
 			        }
 			      },
 			      "State": "Generated",
@@ -9634,7 +9634,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "International Market Share"
+			          "ConceptualProperty": "27. International Market Share"
 			        }
 			      },
 			      "State": "Generated",
@@ -11273,82 +11273,6 @@ cultureInfo en-US
 			          "product revenue rank (classified) YTD": {
 			            "State": "Generated",
 			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
-			    "WaterfallCategories_table.measure": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "WaterfallCategories Table",
-			          "ConceptualProperty": "Measure"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "measure": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "degree": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "quota": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "extent": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "portion": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "ration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "size": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
 			          }
 			        }
 			      ]

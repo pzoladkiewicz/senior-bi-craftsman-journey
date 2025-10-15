@@ -1,0 +1,100 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "5d7d88d40d6165c11dd5",
+  "position": {
+    "x": 240,
+    "y": 0,
+    "z": 0,
+    "height": 400,
+    "width": 528
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_date"
+                    }
+                  },
+                  "Property": "Short Month"
+                }
+              },
+              "queryRef": "dim_date.Short Month",
+              "nativeQueryRef": "Short Month"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "27. International Market Share"
+                }
+              },
+              "queryRef": "_Measures.27. International Market Share",
+              "nativeQueryRef": "27. International Market Share"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_date"
+                  }
+                },
+                "Property": "Short Month"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "84dc6cf41880c566203a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_date"
+              }
+            },
+            "Property": "Short Month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7893ae0c9e0a6dc543a6",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "27. International Market Share"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

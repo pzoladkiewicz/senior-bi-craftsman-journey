@@ -61,12 +61,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "01. Sales CY YTD"
+                  "Property": "26. Regional Sales by Q"
                 }
               },
-              "queryRef": "_Measures.Sales YTD (_2011)",
-              "nativeQueryRef": "Sales YTD (_2011)",
-              "format": "#,0"
+              "queryRef": "_Measures.26. Regional Sales by Q",
+              "nativeQueryRef": "26. Regional Sales by Q"
             }
           ]
         }
@@ -470,50 +469,6 @@
             }
           }
         }
-      ],
-      "columnFormatting": [
-        {
-          "properties": {
-            "styleTotal": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "styleValues": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "styleSubtotals": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Sales YTD (_2011)"
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -537,7 +492,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Regional Sales Performance'"
+                  "Value": "'Regional Sales Performance (£)'"
                 }
               }
             },
@@ -855,8 +810,8 @@
                         "Type": 0
                       },
                       {
-                        "Name": "_",
-                        "Entity": "_Measures",
+                        "Name": "f",
+                        "Entity": "fact_sales",
                         "Type": 0
                       }
                     ],
@@ -877,13 +832,18 @@
                       {
                         "Direction": 2,
                         "Expression": {
-                          "Measure": {
+                          "Aggregation": {
                             "Expression": {
-                              "SourceRef": {
-                                "Source": "_"
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "f"
+                                  }
+                                },
+                                "Property": "TotalValue"
                               }
                             },
-                            "Property": "01. Sales CY YTD"
+                            "Function": 0
                           }
                         }
                       }
@@ -927,6 +887,48 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "3ba6d7962d90620ae07b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_date"
+              }
+            },
+            "Property": "QuarterName"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "027c4ebbceb613daeee5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_geography"
+              }
+            },
+            "Property": "Country"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "34ca22210250ce2ed307",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "26. Regional Sales by Q"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
