@@ -43,7 +43,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Net Revenue per Product YTD (_2011)"
+                  "Property": "31. Net Revenue per Product CY YTD"
                 }
               },
               "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
@@ -62,7 +62,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Product Transaction Volume (classified) YTD (_2011)"
+                  "Property": "38. Product Transaction Volume"
                 }
               },
               "queryRef": "_Measures.Product Transaction Volume (classified) YTD (_2011)",
@@ -82,7 +82,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Product AOV (classified) YTD (_2011)"
+                  "Property": "39. Product AOV"
                 }
               },
               "queryRef": "_Measures.Product AOV (classified) YTD (_2011)",
@@ -260,7 +260,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Product Volume vs AOV Tier Colors (classified) YTD (_2011)"
+                      "Property": "40. AOV vs. Volume Tier Colors"
                     }
                   }
                 }
@@ -286,7 +286,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Pricing Strategy Analysis [AOV vs Demand Volume]'"
+                  "Value": "'Pricing Strategy [AOV vs. Volume]'"
                 }
               }
             },
@@ -549,7 +549,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Net Revenue per Product YTD (_2011)"
+                            "Property": "31. Net Revenue per Product CY YTD"
                           }
                         }
                       }
@@ -604,7 +604,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Product AOV (classified) YTD (_2011)"
+            "Property": "39. Product AOV"
           }
         },
         "type": "Advanced"
@@ -619,7 +619,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Product Transaction Volume (classified) YTD (_2011)"
+            "Property": "38. Product Transaction Volume"
           }
         },
         "type": "Advanced"
@@ -634,7 +634,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Return rate"
+            "Property": "33. Return rate"
           }
         },
         "type": "Advanced",
@@ -650,7 +650,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Net Revenue per Product YTD (_2011)"
+            "Property": "31. Net Revenue per Product CY YTD"
           }
         },
         "type": "Advanced",
@@ -675,7 +675,7 @@
                           "Source": "_"
                         }
                       },
-                      "Property": "Net Revenue per Product YTD (_2011)"
+                      "Property": "31. Net Revenue per Product CY YTD"
                     }
                   },
                   "Right": {

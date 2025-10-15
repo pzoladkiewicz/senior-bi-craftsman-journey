@@ -425,7 +425,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -495,7 +495,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YoY % formated"
+                  "Property": "09.1 AOV YoY % formated"
                 }
               }
             }
@@ -523,7 +523,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -565,7 +565,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Customers YoY% - formated"
+                  "Property": "06.1 Customers YoY% - formated"
                 }
               }
             }
@@ -679,7 +679,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -724,7 +724,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "AOV YoY% CF"
+                      "Property": "09.2 AOV YoY% CF"
                     }
                   }
                 }
@@ -755,7 +755,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -816,7 +816,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Customers YoY% CF"
+                      "Property": "06.2 Customers YoY% CF"
                     }
                   }
                 }
@@ -1227,5 +1227,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "81bfaa88b02072b705e0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "04. Customers CY YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -138,6 +138,16 @@ table fact_transactions_classified
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'fact_transaction Date Offset' = DATEDIFF(TODAY(), fact_transactions_classified[Date], DAY)
+		formatString: 0
+		lineageTag: 862ea0f0-addd-4fd3-903a-1bcef55e9499
+		summarizeBy: sum
+		sortByColumn: Date
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_transactions_classified = m
 		mode: import
 		source =

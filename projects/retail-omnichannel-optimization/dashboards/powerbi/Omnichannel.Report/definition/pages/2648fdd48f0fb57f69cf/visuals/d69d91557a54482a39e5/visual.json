@@ -433,7 +433,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -489,7 +489,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YoY % formated"
+                  "Property": "09.1 AOV YoY % formated"
                 }
               }
             }
@@ -575,7 +575,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -638,7 +638,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -669,7 +669,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "AOV YoY% CF"
+                      "Property": "09.2 AOV YoY% CF"
                     }
                   }
                 }
@@ -700,7 +700,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -1146,5 +1146,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "aa3a817d069c933540a0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "01. Sales CY YTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

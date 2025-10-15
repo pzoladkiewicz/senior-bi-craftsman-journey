@@ -43,7 +43,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Product AOV (classified) YTD (_2011)"
+                  "Property": "39. Product AOV"
                 }
               },
               "queryRef": "_Measures.Product AOV (classified) YTD (_2011)",
@@ -86,7 +86,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Product Transaction Volume (classified) YTD (_2011)"
+                  "Property": "38. Product Transaction Volume"
                 }
               },
               "queryRef": "_Measures.Product Transaction Volume (classified) YTD (_2011)",
@@ -106,7 +106,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Net Revenue per Product YTD (_2011)"
+                  "Property": "31. Net Revenue per Product CY YTD"
                 }
               },
               "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
@@ -144,7 +144,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Net Revenue £'"
+                  "Value": "'Net Revenue'"
                 }
               }
             },
@@ -277,7 +277,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Product Performance Tier Colors (classified) YTD (_2011)"
+                      "Property": "39.1 Products Positioning Tier Colors"
                     }
                   }
                 }
@@ -303,7 +303,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Strategic Product Positioning [Volume vs Revenue Analysis]'"
+                  "Value": "'Strategic Product Positioning [Revenue vs. Volume]'"
                 }
               }
             },
@@ -573,7 +573,7 @@
                                 "Source": "_"
                               }
                             },
-                            "Property": "Net Revenue per Product YTD (_2011)"
+                            "Property": "31. Net Revenue per Product CY YTD"
                           }
                         }
                       }
@@ -628,7 +628,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Net Revenue per Product YTD (_2011)"
+            "Property": "31. Net Revenue per Product CY YTD"
           }
         },
         "type": "Advanced",
@@ -653,7 +653,7 @@
                           "Source": "_"
                         }
                       },
-                      "Property": "Net Revenue per Product YTD (_2011)"
+                      "Property": "31. Net Revenue per Product CY YTD"
                     }
                   },
                   "Right": {
@@ -677,7 +677,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Product AOV (classified) YTD (_2011)"
+            "Property": "39. Product AOV"
           }
         },
         "type": "Advanced"
@@ -692,7 +692,26 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Product Transaction Volume (classified) YTD (_2011)"
+            "Property": "38. Product Transaction Volume"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "663862e44b944a536c04",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_transactions_classified"
+                  }
+                },
+                "Property": "StockCode"
+              }
+            },
+            "Function": 3
           }
         },
         "type": "Advanced"

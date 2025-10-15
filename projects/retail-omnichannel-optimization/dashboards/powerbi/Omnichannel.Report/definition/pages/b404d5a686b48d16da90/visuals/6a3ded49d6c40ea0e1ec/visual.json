@@ -22,11 +22,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Business Efficiency"
+                  "Property": "36. Business Efficiency"
                 }
               },
               "queryRef": "_Measures.Business Efficiency",
-              "nativeQueryRef": "Business Efficiency"
+              "nativeQueryRef": "36. Business Efficiency"
             }
           ]
         }
@@ -41,7 +41,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Business Efficiency"
+                "Property": "36. Business Efficiency"
               }
             },
             "direction": "Descending"
@@ -445,7 +445,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -501,7 +501,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YoY % formated"
+                  "Property": "09.1 AOV YoY % formated"
                 }
               }
             }
@@ -557,7 +557,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Returns YTD (_2011)"
+                  "Property": "30. Returns CY YTD"
                 }
               }
             }
@@ -585,7 +585,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Efficiency Gap"
+                  "Property": "37. Efficiency Gap"
                 }
               }
             }
@@ -663,7 +663,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -694,7 +694,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "AOV YoY% CF"
+                      "Property": "09.2 AOV YoY% CF"
                     }
                   }
                 }
@@ -761,7 +761,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Efficiency Gap Formatted"
+                      "Property": "37.1 Efficiency Gap Formatted"
                     }
                   }
                 }
@@ -1191,5 +1191,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ad88947307d9b51ea74c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "36. Business Efficiency"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

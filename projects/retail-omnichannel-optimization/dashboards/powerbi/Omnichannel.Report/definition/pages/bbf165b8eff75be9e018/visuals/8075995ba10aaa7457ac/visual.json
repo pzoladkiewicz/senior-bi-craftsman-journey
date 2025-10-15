@@ -166,6 +166,20 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Intl Growth Rate"
+          }
         }
       ],
       "fillCustom": [
@@ -410,7 +424,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -480,7 +494,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YoY % formated"
+                  "Property": "09.1 AOV YoY % formated"
                 }
               }
             }
@@ -508,7 +522,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -578,7 +592,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "24.2 UK Growth Rate"
+                  "Property": "24.3 UK Growth Rate % formated"
                 }
               }
             }
@@ -692,7 +706,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -737,7 +751,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "AOV YoY% CF"
+                      "Property": "09.2 AOV YoY% CF"
                     }
                   }
                 }
@@ -768,7 +782,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -815,6 +829,66 @@
           "selector": {
             "metadata": "_Measures.Intl Growth Rate % formated",
             "id": "field-1dc9d4d9-8f9d-97f4-9e28-4ca7fcf1c9fd"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Intl Growth Rate"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Intl Growth Rate",
+            "id": "field-2463ac1d-b061-59d1-bd17-ee2b0e06d5db"
+          }
+        },
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "24.4 UK Growth Rate % CF"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.Intl Growth Rate",
+            "id": "field-2463ac1d-b061-59d1-bd17-ee2b0e06d5db"
           }
         }
       ],
@@ -1059,11 +1133,32 @@
                   "Value": "'UK Rate'"
                 }
               }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           },
           "selector": {
             "metadata": "_Measures.Intl Growth Rate",
             "id": "field-2463ac1d-b061-59d1-bd17-ee2b0e06d5db"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Intl Growth Rate"
           }
         }
       ],
@@ -1210,5 +1305,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "53508e23890a26ae08b3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "24.1 Intl Growth Rate"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

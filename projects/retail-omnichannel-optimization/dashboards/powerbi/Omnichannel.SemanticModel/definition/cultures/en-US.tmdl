@@ -6271,127 +6271,11 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.orders": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Orders"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "orders": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "instruction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "guideline": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "preparation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "direction": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "command": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "tip": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "briefing": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "remit": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "mission": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "directive": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.total_sales": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Total Sales"
+			          "ConceptualProperty": "00. Total Sales"
 			        }
 			      },
 			      "State": "Generated",
@@ -6435,22 +6319,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.aov": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "AOV"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "aov": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -6571,377 +6439,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.customers": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Customers"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "customers": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "clientele": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "patron": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "client": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "consumer": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "punter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "regular": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "custom": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "trade": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "business": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "following": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.sales_PY_live": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales PY (Live)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales PY (live)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales PY": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "sale py (live)": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.sales_YoY__live": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YoY % (Live)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales YoY % (live)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales YoY %": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.sales_PM_live": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales PM (Live)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales PM (live)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales PM": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "sale pm (live)": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.sales_MoM__live": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales MoM % (Live)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales MoM % (live)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales MoM %": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.sales_YTD_live": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YTD (Live)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales YTD (live)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales YTD": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "sale ytd (live)": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "sale year to date (live)": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.528
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.sales_MTD_live": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales MTD (Live)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales MTD (live)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales MTD": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "sale mtd (live)": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.entity____anchor__2011_date_2011SameMD": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_. Anchor (_2011) Date (2011SameMD)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "_. anchor (_2011) date (2011SameMD)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "_. anchor (_2011) date": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "entity__measure.sales_MTD__2011": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales MTD (_2011)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales MTD (_2011)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales MTD": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.sales_YTD_PY_live": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YTD PY (Live)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales YTD PY (live)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales YTD PY": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.entity_02__sales_PY_YTD": {
 			      "Definition": {
 			        "Binding": {
@@ -7024,55 +6521,11 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.sales_MoM_MTD__2011_anchor": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales MoM MTD % (2011 Anchor)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales MoM MTD % (2011 anchor)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales MoM MTD %": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.sales_MTD_PM_2011_anchor": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales MTD PM (2011 Anchor)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales MTD PM (2011 anchor)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "sales MTD PM": {
-			            "State": "Generated",
-			            "Weight": 0.75
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.sales_YoY__format": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YoY% - format"
+			          "ConceptualProperty": "03.1 Sales YoY% - format"
 			        }
 			      },
 			      "State": "Generated",
@@ -7194,7 +6647,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YoY% CF"
+			          "ConceptualProperty": "03.2 Sales YoY% CF"
 			        }
 			      },
 			      "State": "Generated",
@@ -7302,7 +6755,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "AOV YoY % formated"
+			          "ConceptualProperty": "09.1 AOV YoY % formated"
 			        }
 			      },
 			      "State": "Generated",
@@ -7338,7 +6791,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "AOV YoY% CF"
+			          "ConceptualProperty": "09.2 AOV YoY% CF"
 			        }
 			      },
 			      "State": "Generated",
@@ -8396,140 +7849,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.country_sales_share_by_month": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Country Sales Share by Month"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "country sales share by month": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "share": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "sales share": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "country sales share": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "nation sale share by month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "location sale share by month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "country sale share by mth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "nation sale share": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "location sale share": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "country sale share by month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "country sale share": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "sale share": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "country sale part by month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "country sale portion by month": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.entity_05__customers_PY_YTD": {
 			      "Definition": {
 			        "Binding": {
@@ -8596,7 +7915,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Customers YoY% - formated"
+			          "ConceptualProperty": "06.1 Customers YoY% - formated"
 			        }
 			      },
 			      "State": "Generated",
@@ -8658,7 +7977,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Customers YoY% CF"
+			          "ConceptualProperty": "06.2 Customers YoY% CF"
 			        }
 			      },
 			      "State": "Generated",
@@ -8997,134 +8316,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.sales_YTD_anchor": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Sales YTD Anchor"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "sales YTD anchor": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "anchor": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "YTD anchor": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "sale ytd anchor": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "sale ytd newscaster": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "sale ytd commentator": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "sale ytd presenter": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "sale ytd announcer": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "sale ytd broadcaster": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "sale ytd journalist": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "sale ytd anchorperson": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "sale ytd anchorman": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "sale ytd anchorwoman": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.entity_24__registered_cust__transactions_": {
 			      "Definition": {
 			        "Binding": {
@@ -9436,48 +8627,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity__ytd": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_ytd"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "_ytd": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "_ year to date": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.entity__py": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "_py"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "_py": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.entity_27__UK_growth_rate": {
 			      "Definition": {
 			        "Binding": {
@@ -9598,7 +8747,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Intl Growth Rate % formated"
+			          "ConceptualProperty": "24.3 UK Growth Rate % formated"
 			        }
 			      },
 			      "State": "Generated",
@@ -9777,16 +8926,6 @@ cultureInfo en-US
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
-			        },
-			        {
-			          "2011": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -9808,16 +8947,6 @@ cultureInfo en-US
 			          "11. _slicer sales PY monthly": {
 			            "State": "Generated",
 			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "2010": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -10434,7 +9563,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Business Gross Revenue YTD (_2011)"
+			          "ConceptualProperty": "32. Business Gross Revenue CY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -10452,34 +9581,11 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity_2__anchor_date_2011SameMD_classified": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "2. Anchor Date (2011SameMD) classified"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "2. anchor date (2011SameMD) classified": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
 			    "entity__measure.net_revenue_per_product_YTD__2011": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Net Revenue per Product YTD (_2011)"
+			          "ConceptualProperty": "31. Net Revenue per Product CY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -10511,7 +9617,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Business Efficiency"
+			          "ConceptualProperty": "36. Business Efficiency"
 			        }
 			      },
 			      "State": "Generated",
@@ -10633,7 +9739,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Returns YTD (_2011)"
+			          "ConceptualProperty": "30. Returns CY YTD"
 			        }
 			      },
 			      "State": "Generated",
@@ -10665,7 +9771,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Return rate"
+			          "ConceptualProperty": "33. Return rate"
 			        }
 			      },
 			      "State": "Generated",
@@ -10797,7 +9903,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Operations Quality Index (_2011)"
+			          "ConceptualProperty": "34. Operations Quality Index"
 			        }
 			      },
 			      "State": "Generated",
@@ -10819,7 +9925,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Quality Cost Impact (_2011)"
+			          "ConceptualProperty": "35. Quality Cost Impact"
 			        }
 			      },
 			      "State": "Generated",
@@ -10841,7 +9947,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Efficiency Gap"
+			          "ConceptualProperty": "37. Efficiency Gap"
 			        }
 			      },
 			      "State": "Generated",
@@ -10963,7 +10069,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Efficiency Gap Formatted"
+			          "ConceptualProperty": "37.1 Efficiency Gap Formatted"
 			        }
 			      },
 			      "State": "Generated",
@@ -11075,127 +10181,11 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.classified_total_value": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Classified Total Value"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "classified total value": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "classified aggregate value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "classified overall value": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "classified total assessment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "classified total worth": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "classified total price": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "classified total cost": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "classified total charge": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "classified total rate": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "classified total importance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "classified total significance": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.product_transaction_volume_classified_YTD__2011": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Product Transaction Volume (classified) YTD (_2011)"
+			          "ConceptualProperty": "38. Product Transaction Volume"
 			        }
 			      },
 			      "State": "Generated",
@@ -11227,7 +10217,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Product AOV (classified) YTD (_2011)"
+			          "ConceptualProperty": "39. Product AOV"
 			        }
 			      },
 			      "State": "Generated",
@@ -11251,28 +10241,6 @@ cultureInfo en-US
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.product_revenue_rank_classified_YTD__2011": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Product Revenue Rank (classified) YTD (_2011)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "product revenue rank (classified) YTD (_2011)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "product revenue rank (classified) YTD": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -13027,7 +11995,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Product Performance Tier Colors (classified) YTD (_2011)"
+			          "ConceptualProperty": "39.1 Products Positioning Tier Colors"
 			        }
 			      },
 			      "State": "Generated",
@@ -13045,241 +12013,11 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.net_revenue_bars": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Net Revenue Bars"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "net revenue bars": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "bars": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "revenue bars": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "net income bar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "income bar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "net profit bar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "net turnover bar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "net yield bar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "profit bar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "turnover bar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "yield bar": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.transparent_color": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Transparent color"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "transparent color": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "color": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "transparent hue": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "hue": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "transparent tint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "transparent shade": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "transparent dye": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "transparent paint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "transparent pigment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "tint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "shade": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
-			          "dye": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.return_rate_CF_color": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Return rate CF color"
+			          "ConceptualProperty": "41. Return rate CF color"
 			        }
 			      },
 			      "State": "Generated",
@@ -13413,7 +12151,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Product Volume vs AOV Tier Colors (classified) YTD (_2011)"
+			          "ConceptualProperty": "40. AOV vs. Volume Tier Colors"
 			        }
 			      },
 			      "State": "Generated",
@@ -13435,7 +12173,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dim_date",
-			          "ConceptualProperty": "Date Offset"
+			          "ConceptualProperty": "dim_date Date Offset"
 			        }
 			      },
 			      "State": "Generated",
@@ -13575,28 +12313,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.entity_00___slicer__monthly_sales_CY": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "00. _slicer - Monthly Sales CY"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "00. _slicer - monthly sales CY": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "00. _slicer monthly sales CY": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]
@@ -13799,19 +12515,7 @@ cultureInfo en-US
 			          "ConceptualProperty": "_slicer - Sales YoY (_2011)"
 			        }
 			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "YoY": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
+			      "State": "Generated"
 			    }
 			  },
 			  "Relationships": {

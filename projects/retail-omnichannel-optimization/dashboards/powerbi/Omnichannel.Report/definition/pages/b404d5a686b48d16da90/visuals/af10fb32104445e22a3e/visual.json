@@ -23,11 +23,11 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Return rate"
+                  "Property": "33. Return rate"
                 }
               },
               "queryRef": "_Measures.Return rate",
-              "nativeQueryRef": "Return rate"
+              "nativeQueryRef": "33. Return rate"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Return rate"
+                "Property": "33. Return rate"
               }
             },
             "direction": "Descending"
@@ -432,7 +432,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Sales YoY% - format"
+                  "Property": "03.1 Sales YoY% - format"
                 }
               }
             }
@@ -488,7 +488,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "AOV YoY % formated"
+                  "Property": "09.1 AOV YoY % formated"
                 }
               }
             }
@@ -544,7 +544,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Returns YTD (_2011)"
+                  "Property": "30. Returns CY YTD"
                 }
               }
             }
@@ -607,7 +607,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Sales YoY% CF"
+                      "Property": "03.2 Sales YoY% CF"
                     }
                   }
                 }
@@ -638,7 +638,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "AOV YoY% CF"
+                      "Property": "09.2 AOV YoY% CF"
                     }
                   }
                 }
@@ -1002,5 +1002,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2c5c94e4e845b7100e0e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "33. Return rate"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

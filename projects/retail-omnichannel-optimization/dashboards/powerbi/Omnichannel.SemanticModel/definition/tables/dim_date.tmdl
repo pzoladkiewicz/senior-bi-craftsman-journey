@@ -149,7 +149,7 @@ table dim_date
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'Date Offset' = DATEDIFF(TODAY(), dim_date[Date], DAY)
+	column 'dim_date Date Offset' = DATEDIFF(TODAY(), dim_date[Date], DAY)
 		formatString: 0
 		lineageTag: 1a21f3fe-682c-4d19-824c-8d44cacdfac4
 		summarizeBy: none

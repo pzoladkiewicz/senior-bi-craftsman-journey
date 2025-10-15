@@ -1,117 +1,23 @@
 table _Measures
 	lineageTag: eabf5964-1bd6-45ed-8404-6194a3df1a25
 
-	measure Orders = DISTINCTCOUNT(fact_sales[InvoiceNumber])
-		formatString: 0
-		displayFolder: Sales\Base
-		lineageTag: e14ef7db-ab85-4629-b88e-1c235d0fdbf1
-
-	measure 'Total Sales' = SUM(fact_sales[TotalValue])
-		displayFolder: Sales\Base
+	measure '00. Total Sales' = SUM(fact_sales[TotalValue])
+		displayFolder: fact_sales
 		lineageTag: 2434790d-1466-47f5-be94-94ea45d91250
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure AOV = DIVIDE([Total Sales],[Orders])
-		displayFolder: Sales\Base
-		lineageTag: 4ce9331a-fbfe-47c3-aa72-bf9b5e441449
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '00. Total Quantity' = SUM(fact_sales[Quantity])
 		formatString: 0
-		displayFolder: Sales\Base
+		displayFolder: fact_sales
 		lineageTag: e6bfda44-33b1-4f92-bdaf-020a04d717a0
 
-	measure Customers = DISTINCTCOUNT(fact_sales[CustomerKey])
-		formatString: 0
-		displayFolder: Sales\Base
-		lineageTag: 99dceed5-5fed-4866-bc5d-81cd7ca83e14
-
-	measure 'Sales PY (Live)' = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(dim_date[Date]))
-		displayFolder: Live\Sales\Time Intelligence
-		lineageTag: 14446660-40fe-40b2-affe-cd582529303c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Sales YoY % (Live)' = DIVIDE([Total Sales] - [Sales PY (Live)], [Sales PY (Live)])
-		displayFolder: Live\Sales\Time Intelligence
-		lineageTag: 78d4c415-21ef-435b-b7a5-4529f9f22913
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Sales PM (Live)' = CALCULATE([Total Sales], DATEADD(dim_date[Date], -1, MONTH))
-		displayFolder: Live\Sales\Time Intelligence
-		lineageTag: 54481ddb-328f-4968-bcfb-9853a72a3984
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Sales MoM % (Live)' = DIVIDE([Total Sales] - [Sales PM (Live)], [Sales PM (Live)])
-		displayFolder: Live\Sales\Time Intelligence
-		lineageTag: 1ab00c36-52a8-403b-b083-cbbf218dd101
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Sales YTD (Live)' = TOTALYTD([Total Sales], dim_date[Date])
-		displayFolder: Live\Sales\Time Intelligence
-		lineageTag: 530a76c7-0bde-44f5-9639-52fc8d19c534
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Sales MTD (Live)' = TOTALMTD([Total Sales], dim_date[Date])
-		displayFolder: Live\Sales\Time Intelligence
-		lineageTag: b4005d6b-82c7-4c9d-907a-75c2e99e5cd5
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	/// 1) Data kotwicy: dzisiejszy miesiąc i dzień, rok = 2011 (przycięte do max daty 2011 w tabeli)
-	measure '_. Anchor (_2011) Date (2011SameMD)' = ```
-			
-			    VAR AktualnyDzien = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
-			    var Max2011 = 
-			        CALCULATE(
-			            MAX(dim_date[Date]),
-			            FILTER( ALL(dim_date), dim_date[Year] = 2011)
-			        )
-			    RETURN MIN(AktualnyDzien, Max2011)
-			
-			    //  Data kotwicy: dzisiejszy miesiąc i dzień, rok  2011 (przycięte do max daty 2011 w tabeli)
-			```
-		formatString: yyyy-mm-dd
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
-		lineageTag: 997661ff-f904-431d-a598-c82b0d071582
-
-		annotation PBI_FormatHint = {"isDateTimeCustom":true}
-
-	measure '01. Sales CY YTD' = TOTALYTD([Total Sales], dim_date[Date])
+	measure '01. Sales CY YTD' = TOTALYTD([00. Total Sales], dim_date[Date])
 		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: e1beeafd-5bc5-456c-a93f-515446593cc4
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
-
-	measure 'Sales MTD (_2011)' =
-			
-			VAR _Anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR _startDate = EOMONTH(_Anchor, -1) + 1
-			RETURN
-			    CALCULATE(
-			        [Total Sales],
-			        DATESBETWEEN(dim_date[Date],
-			        _startDate,
-			        _Anchor
-			    )
-			)
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
-		lineageTag: e6ef2945-4b07-481d-88d8-9d1259d42c1d
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Sales YTD PY (Live)' = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(DATESYTD(dim_date[Date])))
-		displayFolder: Live\Sales\Time Intelligence
-		lineageTag: 7dea1c0c-ac0d-41fc-9c56-0d81e10f6a15
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '02. Sales PY YTD' = ```
 			
@@ -120,7 +26,7 @@ table _Measures
 			        SAMEPERIODLASTYEAR(dim_date[Date])
 			        )
 			```
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: b552353f-c351-4ada-9646-ddaad37cfd19
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -129,37 +35,8 @@ table _Measures
 			
 			DIVIDE([01. Sales CY YTD] - [02. Sales PY YTD], [01. Sales CY YTD], 0)
 		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 392aaa47-8df7-4bc0-a6ed-c78481e04df5
-
-	measure 'Sales MoM MTD % (2011 Anchor)' =
-			
-			DIVIDE([Sales MTD (_2011)] - [Sales MTD PM (2011 Anchor)],
-			    [Sales MTD PM (2011 Anchor)])
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
-		lineageTag: cc23cfc7-4fc0-42df-a2a5-8d7c26989eb7
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Sales MTD PM (2011 Anchor)' = ```
-			
-			var Anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR StartPrevMonth = EOMONTH(Anchor, -2) + 1
-			VAR StopDate = EDATE(Anchor, -1)
-			RETURN
-			    CALCULATE(
-			        [Total Sales],
-			        DATESBETWEEN(
-			            dim_date[Date],
-			            StartPrevMonth,
-			            StopDate)
-			    )
-			
-			```
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
-		lineageTag: c8c2b4bf-414c-4495-812f-8e249560d407
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '04. Customers CY YTD' = ```
 			
@@ -169,7 +46,7 @@ table _Measures
 			    )
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Base
+		displayFolder: fact_sales
 		lineageTag: 17a57f06-5fa5-4a82-81c7-ef90a807af1c
 
 	measure '07. AOV CY YTD' = ```
@@ -183,12 +60,12 @@ table _Measures
 			DIVIDE([01. Sales CY YTD], _InvoiceCount, 0)
 			```
 		formatString: "£"#,0;-"£"#,0;"£"#,0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 9b7336bf-403b-48d2-821c-ebaf45b89cca
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
-	measure 'Sales YoY% - format' =
+	measure '03.1 Sales YoY% - format' =
 			
 			SWITCH(
 			    TRUE(),
@@ -196,17 +73,17 @@ table _Measures
 			    [03. Sales YoY %] < 0, UNICHAR(11167) & " " & FORMAT([03. Sales YoY %] * -1, "0.0%"),
 			    FORMAT([03. Sales YoY %], "0.0%")
 			)
-		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
+		displayFolder: fact_sales
 		lineageTag: ad24870a-d8c8-4273-b6ac-11a22cfa13f1
 
-	measure 'Sales YoY% CF' =
+	measure '03.2 Sales YoY% CF' =
 			
 			SWITCH(
 			    TRUE(),
 			    [03. Sales YoY %] > 0, "Green",
 			    [03. Sales YoY %] < 0, "Red",
 			    "Grey")
-		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
+		displayFolder: fact_sales
 		lineageTag: e6047330-58b8-4cd6-b6ad-6a829c16d547
 
 	measure '08. AOV PY YTD' = ```
@@ -216,34 +93,34 @@ table _Measures
 			        SAMEPERIODLASTYEAR(dim_date[Date]
 			        ))
 			```
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 860d2300-9b91-48df-9521-1ce61247c319
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '09. AOV YoY %' = DIVIDE([07. AOV CY YTD] - [08. AOV PY YTD], [07. AOV CY YTD])
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: a5571698-80b6-495e-9788-1a7c22c770da
 
-	measure 'AOV YoY % formated' =
+	measure '09.1 AOV YoY % formated' =
 			
 			SWITCH(
 			    TRUE(),
 			    [09. AOV YoY %] > 0, UNICHAR(11165) & " " &FORMAT([09. AOV YoY %], "0.0%"),
 			    [09. AOV YoY %] < 0, UNICHAR(11167) & " " &FORMAT([09. AOV YoY %], "0.0%"),
 			    FORMAT([09. AOV YoY %], "0.0%"))
-		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
+		displayFolder: fact_sales
 		lineageTag: 6a8bb895-5e51-4c6c-b3b6-3fe26ba636b5
 
-	measure 'AOV YoY% CF' =
+	measure '09.2 AOV YoY% CF' =
 			
 			SWITCH(
 			    TRUE(),
 			    [09. AOV YoY %] > 0, "Green",
 			    [09. AOV YoY %] < 0, "Red",
 			    "Grey")
-		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
+		displayFolder: fact_sales
 		lineageTag: 4c85434d-2fa0-42de-b81c-352c18dc5eb9
 
 	measure '16. New Customers CY' = ```
@@ -263,7 +140,7 @@ table _Measures
 			)
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: a8d0cc1c-ef2b-42a0-9145-7e6ecb9374d7
 
 	measure '17. Returning Customers CY' = ```
@@ -288,7 +165,7 @@ table _Measures
 			)
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 4d9689ce-2c39-4510-ab3a-7394a0427129
 
 	measure '21.1 UK Sales Share %' =
@@ -302,12 +179,12 @@ table _Measures
 			RETURN
 			    DIVIDE(UKSales, TotalSales)
 		formatString: 0%;-0%;0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: c8f171f3-71ec-481a-b4d6-fe99d1f78077
 
 	measure '21.2 Intl Sales Share %' = 1 - [21.1 UK Sales Share %]
 		formatString: 0%;-0%;0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 7f5ca795-51ec-4cef-aa12-c75b2451c504
 
 	measure '22.1 Guest Transactions %' =
@@ -321,7 +198,7 @@ table _Measures
 			RETURN
 			    DIVIDE(_GuestCustomers, [00. Transactions YTD], 0)
 		formatString: 0%;-0%;0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: b428c804-a6d5-4318-affc-a05b703fe687
 
 	measure '23. Channel Score' =
@@ -332,20 +209,20 @@ table _Measures
 			VAR RegisteredShare = 1 - GuestShare
 			RETURN
 			    (UKShare * 0.4) + (IntlShare * 0.3) + (RegisteredShare * 0.3)
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: e29fa000-6ce1-46e3-b135-d29a5d8a653f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '25.1 PY Base Revenue' = [02. Sales PY YTD]
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		displayFolder: fact_sales\Waterfall
 		lineageTag: cbaca7bb-5624-4532-919f-766fee44066d
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
 	measure '25.2 CY Total Revenue' = [01. Sales CY YTD]
-		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		displayFolder: fact_sales\Waterfall
 		lineageTag: 87fcabb4-5ae9-4564-9757-f72fc92a236a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -357,7 +234,7 @@ table _Measures
 			VAR _PY_AvgPrice = DIVIDE([25.1 PY Base Revenue], _PY_QTY)
 			RETURN
 			    (_CY_QTY - _PY_QTY) * _PY_AvgPrice
-		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		displayFolder: fact_sales\Waterfall
 		lineageTag: f629cb91-2061-48eb-8cb1-bbf323043ada
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -370,7 +247,7 @@ table _Measures
 			VAR _CY_AVGPrice = DIVIDE([25.2 CY Total Revenue], _CY_QTY)
 			RETURN
 			    _CY_QTY * (_CY_AVGPrice - _PY_AVGPrice)
-		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		displayFolder: fact_sales\Waterfall
 		lineageTag: f9076c6b-b02e-4cd0-b468-27f54999dc42
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -381,7 +258,7 @@ table _Measures
 			VAR _ActualTotal = [25.2 CY Total Revenue]
 			RETURN
 			    _ActualTotal - _TotalCalculated
-		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		displayFolder: fact_sales\Waterfall
 		lineageTag: 87d84886-223e-4475-a4fc-cfe2b7b729e5
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -399,7 +276,7 @@ table _Measures
 			)
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Charts\Waterfall
+		displayFolder: fact_sales\Waterfall
 		lineageTag: 7c6fbb7e-4ca2-4f99-a9b7-f7c8765b19c2
 
 	measure '00. Total Quantity CY YTD' = ```
@@ -407,32 +284,8 @@ table _Measures
 			
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 1a2f7cc3-c7db-48ca-8cfb-3f010b849d82
-
-	measure 'Country Sales Share by Month' =
-			
-			VAR CountryMonthlySales = [Total Sales]
-			VAR TotalMonthlySales =
-			            IF(
-			                MAX(dim_date[Date]) <= [_. Anchor (_2011) Date (2011SameMD)] && YEAR(MAX(dim_date[Date])) = YEAR([_. Anchor (_2011) Date (2011SameMD)]),
-			                CALCULATE(
-			                    [Total Sales],
-			                    dim_geography[IsUK] = 0,
-			                    ALLSELECTED(dim_geography[Country])
-			                    ,FILTER(
-			                        dim_date,
-			                        dim_date[Date] >= MIN(dim_date[Date]) &&
-			                        dim_date[Date] <= max(dim_date[Date])
-			                    )
-			                ),
-			                BLANK()
-			            )
-			RETURN
-			    DIVIDE(CountryMonthlySales, TotalMonthlySales)
-		formatString: 0.00%;-0.00%;0.00%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
-		lineageTag: 4f89c86f-3b4c-4b12-be33-451c045dce73
 
 	measure '05. Customers PY YTD' = ```
 			
@@ -442,18 +295,18 @@ table _Measures
 			        ))
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Base
+		displayFolder: fact_sales
 		lineageTag: 1c5b48a2-2b39-4dc5-b720-f1c5c9d40e1b
 
 	measure '06. Customers YoY %' =
 			
 			DIVIDE([04. Customers CY YTD] - [05. Customers PY YTD], [04. Customers CY YTD], 0)
-		displayFolder: _2011_Anchor\Sales\Base
+		displayFolder: fact_sales
 		lineageTag: 063a574e-1459-4866-beeb-3df3b5bfcbbf
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Customers YoY% - formated' =
+	measure '06.1 Customers YoY% - formated' =
 			
 			SWITCH(
 			    TRUE(),
@@ -461,10 +314,10 @@ table _Measures
 			    [06. Customers YoY %] < 0, UNICHAR(11167) & " " & FORMAT([06. Customers YoY %] * -1, "0.0%"),
 			    FORMAT([06. Customers YoY %], "0.0%")
 			)
-		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
+		displayFolder: fact_sales
 		lineageTag: 2fc0d52d-1cad-4f6c-9a0b-87cf49770084
 
-	measure 'Customers YoY% CF' =
+	measure '06.2 Customers YoY% CF' =
 			
 			SWITCH(
 			    TRUE(),
@@ -472,28 +325,12 @@ table _Measures
 			    [06. Customers YoY %] < 0, "Red",
 			    "Grey"
 			)
-		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
+		displayFolder: fact_sales
 		lineageTag: 473af1cc-a295-4efc-b25d-563a53a7b9c3
-
-	measure 'Sales YTD Anchor' =
-			
-			VAR Anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR RowYear = YEAR(MAX(dim_date[Date]))
-			var RowDate = MAX(dim_date[Date])
-			RETURN
-			    IF(
-			        RowYear = YEAR(Anchor) && RowDate <= Anchor,
-			        [Total Sales],
-			        BLANK()
-			    )
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
-		lineageTag: 7a4d27ee-0e25-4e0f-b90b-cef213b6f2e3
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '22.2 Registered Cust. Transactions %' = 1 - [22.1 Guest Transactions %]
 		formatString: 0%;-0%;0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: f81790f9-e4e7-4a4b-abeb-0ff5faf1b169
 
 	measure '24.1 Intl Growth Rate' = ```
@@ -512,58 +349,8 @@ table _Measures
 			    (_CY - _PY) / _PY
 			```
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 5169abd9-ece4-44dd-961e-a02a8c46842c
-
-	measure _ytd = ```
-			
-			VAR _anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR _anchorPY = EDATE(_anchor, -12)
-			VAR _ytd =
-			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 0,
-			        dim_date[Year] = YEAR(_anchor),
-			        dim_date[Date] <= _anchor
-			    )
-			VAR _py = 
-			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 0,
-			        dim_date[Year] = YEAR(_anchorPY),
-			        dim_date[Date] <= _anchorPY
-			    )
-			return
-			    _ytd
-			```
-		lineageTag: 08ab6d78-ed0e-4942-89c9-79cb09f72ea6
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure _py = ```
-			
-			VAR _anchor = [_. Anchor (_2011) Date (2011SameMD)]
-			VAR _anchorPY = EDATE(_anchor, -12)
-			VAR _ytd =
-			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 0,
-			        dim_date[Year] = YEAR(_anchor),
-			        dim_date[Date] <= _anchor
-			    )
-			VAR _py = 
-			    CALCULATE(
-			        [Total Sales],
-			        dim_geography[IsUK] = 0,
-			        dim_date[Year] = YEAR(_anchorPY),
-			        dim_date[Date] <= _anchorPY
-			    )
-			return
-			    _py
-			```
-		lineageTag: bedc681c-fc19-4b96-9a85-6113d75e851b
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '24.2 UK Growth Rate' = ```
 			
@@ -581,17 +368,17 @@ table _Measures
 			    (_CY - _PY) / _PY
 			```
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 293364b2-aca0-4e19-8cd3-6c3651f6bdaa
 
-	measure 'Intl Growth Rate % formated' =
+	measure '24.3 UK Growth Rate % formated' =
 			
 			SWITCH(
 			    TRUE(),
-			    [24.1 Intl Growth Rate] > 0, "+" &FORMAT([24.1 Intl Growth Rate], "0.0%"),
-			    [24.1 Intl Growth Rate] < 0, "-" &FORMAT([24.1 Intl Growth Rate], "0.0%"),
-			    FORMAT([24.1 Intl Growth Rate], "0.0%"))
-		displayFolder: _2011_Anchor\Sales\Visuals - Measure format & CF
+			    [24.2 UK Growth Rate] > 0,UNICHAR(11165) & " " & FORMAT([24.2 UK Growth Rate], "0.0%"),
+			    [24.2 UK Growth Rate]< 0, UNICHAR(11167) & " " & FORMAT([24.2 UK Growth Rate] * -1, "0.0%"),
+			    FORMAT([24.2 UK Growth Rate], "0.0%"))
+		displayFolder: fact_sales
 		lineageTag: 5392eb92-0bc9-4d78-8e58-cb42accb94b2
 
 	measure '10. _slicer - Sales CY Monthly' = ```
@@ -605,7 +392,7 @@ table _Measures
 			        [00. Monthly Sales CY]
 			        )
 			```
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: f9f2c659-af5f-44a7-bed7-9c46d4a7faad
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -633,7 +420,7 @@ table _Measures
 			    )
 			```
 		formatString: 0%;-0%;0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: e58fb0bf-707e-4d2c-8e2d-b317b304c7e0
 
 	measure '11. _slicer - Sales PY Monthly' = ```
@@ -647,7 +434,7 @@ table _Measures
 			        [00. Monthly Sales PY]
 			        )
 			```
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: db1bb8c2-c98f-4534-b575-b7572242d567
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -660,7 +447,7 @@ table _Measures
 			        )
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 0f34dd8d-d391-4a38-b4f6-ebc7060b6bf0
 
 	measure '12. _slicer - Orders YTD' = ```
@@ -677,7 +464,7 @@ table _Measures
 			    _filterCondition
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: b41ee5b7-9c88-4612-af1a-eed57dfd149c
 
 	measure '15.1 _slicer TOP 10 Sales YoY % CF' =
@@ -687,13 +474,11 @@ table _Measures
 			    [15. _slicer - TOP 10 Sales YoY %] > 0, "Green",
 			    [15. _slicer - TOP 10 Sales YoY %] < 0, "Red",
 			    "Grey")
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: da820f1a-a62d-47a0-9928-44941c37ca6f
 
-	measure 'Business Gross Revenue YTD (_2011)' = ```
+	measure '32. Business Gross Revenue CY YTD' = ```
 			
-			VAR _anchor = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
-			RETURN
 			    CALCULATE(
 			        SUM(fact_transactions_classified[TotalValue]),
 			        fact_transactions_classified[TransactionCategory] IN {
@@ -702,94 +487,62 @@ table _Measures
 			            "DCGSProducts",
 			            "TransportCost"
 			            },
-			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
-			        fact_transactions_classified[Date] <= _anchor
+			        DATESYTD(fact_transactions_classified[Date])
 			    )
 			
 			```
 		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: c0910f8c-21fa-458f-b7a4-ec8a62c6eb65
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
-	measure '2. Anchor Date (2011SameMD) classified' = ```
+	measure '31. Net Revenue per Product CY YTD' = ```
 			
-			VAR _aktualnyDzien = DATE(2011, MONTH(TODAY()), DAY(TODAY()))
-			VAR _maxDataClassified = 
-			    CALCULATE(
-			        MAX(fact_transactions_classified[Date]),
-			        FILTER(
-			            ALL(fact_transactions_classified),
-			            YEAR(fact_transactions_classified[Date]) = 2011)
-			    )
-			RETURN
-			    MIN(_aktualnyDzien, _maxDataClassified)
-			
-			```
-		formatString: yyyy-mm-dd
-		displayFolder: _2011_Anchor\Sales\transactions_classified
-		lineageTag: cab4a4f9-a740-4f66-ba12-b5d977af0bb7
-
-		annotation PBI_FormatHint = {"isDateTimeCustom":true}
-
-	measure 'Net Revenue per Product YTD (_2011)' =
-			
-			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
-			RETURN
 			    CALCULATE(
 			        SUM(fact_transactions_classified[TotalValue]),
 			        fact_transactions_classified[TransactionCategory] = "ValidSales" ,
-			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
-			        fact_transactions_classified[Date] <= _anchor
+			        DATESYTD(fact_transactions_classified[Date])
 			    )
+			```
 		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: e39b2b09-027e-4138-8d08-747a443401fb
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
-	measure 'Business Efficiency' = ```
-			
-			    DIVIDE([Net Revenue per Product YTD (_2011)], [Business Gross Revenue YTD (_2011)])
-			```
+	measure '36. Business Efficiency' = DIVIDE([31. Net Revenue per Product CY YTD], [32. Business Gross Revenue CY YTD], 0)
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: cdd14670-3520-408d-9c19-eb414ee58518
 
-	measure 'Returns YTD (_2011)' =
+	measure '30. Returns CY YTD' = ```
 			
-			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
-			RETURN
 			    CALCULATE(
 			        SUM(fact_transactions_classified[TotalValue]),
 			        fact_transactions_classified[TransactionCategory] = "Returns" ,
-			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
-			        fact_transactions_classified[Date] <= _anchor
+			        DATESYTD(fact_transactions_classified[Date])
 			    )
+			```
 		formatString: "£"#,0.0;-"£"#,0.0;"£"#,0.0
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: 41890455-6456-411e-9860-39bd66ef35c9
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
-	measure 'Return rate' = ```
-			
-			    ABS( DIVIDE([Returns YTD (_2011)], [Net Revenue per Product YTD (_2011)], 0) )
-			```
+	measure '33. Return rate' = ABS( DIVIDE([30. Returns CY YTD], [31. Net Revenue per Product CY YTD], 0) )
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: 9f39f66a-529d-478d-bde8-c4497a71edc1
 
-	measure 'Operations Quality Index (_2011)' = ```
+	measure '34. Operations Quality Index' = ```
 			
-			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
+			
 			VAR _validTransactions = 
 			    CALCULATE(
 			        COUNTA(fact_transactions_classified[Invoice]),
 			        fact_transactions_classified[TransactionCategory] = "ValidSales",
-			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
-			        fact_transactions_classified[Date] <= _anchor
+			        DATESYTD(fact_transactions_classified[Date])
 			    )
 			VAR _qualityIssues = 
 			    CALCULATE(
@@ -799,39 +552,36 @@ table _Measures
 			            "ManualAdjustment",
 			            "Unclassified"
 			        },
-			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
-			        fact_transactions_classified[Date] <= _anchor
+			        DATESYTD(fact_transactions_classified[Date])
 			    )
 			VAR _totalTransactions = _validTransactions + _qualityIssues
 			RETURN
 			    DIVIDE(_validTransactions, _totalTransactions, 1)
 			```
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: 950f7cb5-397a-446f-a97a-532ed2e1ac02
 
-	measure 'Quality Cost Impact (_2011)' =
+	measure '35. Quality Cost Impact' = ```
 			
-			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
-			RETURN
 			    CALCULATE(
 			        ABS(SUM(fact_transactions_classified[TotalValue])),
 			        fact_transactions_classified[TransactionCategory] IN {
 			            "ManualAdjustment",
 			            "Unclassified"
 			        },
-			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
-			        fact_transactions_classified[Date] <= _anchor
+			        DATESYTD(fact_transactions_classified[Date])
 			    )
+			```
 		formatString: "£"#,0.0;-"£"#,0.0;"£"#,0.0
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: 0bc331bb-6bfe-4284-ac31-70502f4d71bf
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
-	measure 'Efficiency Gap' = ```
+	measure '37. Efficiency Gap' = ```
 			
-			 VAR _gap = [Business Efficiency] - .95
+			 VAR _gap = [36. Business Efficiency] - .95
 			RETURN
 			    SWITCH(
 			        TRUE(),
@@ -841,12 +591,12 @@ table _Measures
 			        )
 			
 			```
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: 51b5cedb-cb39-4d41-a8e1-adfc4d8235f7
 
-	measure 'Efficiency Gap Formatted' =
+	measure '37.1 Efficiency Gap Formatted' =
 			
-			VAR _gap = [Business Efficiency] - .95
+			VAR _gap = [36. Business Efficiency] - .95
 			RETURN
 			    SWITCH(
 			        TRUE(),
@@ -854,93 +604,61 @@ table _Measures
 			        _gap < 0, "Red",
 			        "Grey"
 			    )
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: ff7f5563-a37a-48f6-a842-3e24d513ba87
 
-	measure 'Classified Total Value' = SUM(fact_transactions_classified[TotalValue])
-		displayFolder: _2011_Anchor\Sales\transactions_classified
-		lineageTag: 554f7c80-4e00-4d65-9adc-6e1b36679bad
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Product Transaction Volume (classified) YTD (_2011)' =
+	measure '38. Product Transaction Volume' = ```
 			
-			VAR _anchor = [2. Anchor Date (2011SameMD) classified]
-			RETURN
 			    CALCULATE(
 			        COUNTA(fact_transactions_classified[StockCode]),
 			        fact_transactions_classified[TransactionCategory] = "ValidSales" ,
-			        YEAR(fact_transactions_classified[Date]) = YEAR(_anchor),
-			        fact_transactions_classified[Date] <= _anchor
+			        DATESYTD(fact_transactions_classified[Date])
 			    )
+			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: ba468319-c04c-460c-87cd-1e839cb230b5
 
-	measure 'Product AOV (classified) YTD (_2011)' = ```
-			
-			    DIVIDE([Net Revenue per Product YTD (_2011)], [Product Transaction Volume (classified) YTD (_2011)], 0)
-			```
+	measure '39. Product AOV' = DIVIDE([31. Net Revenue per Product CY YTD], [38. Product Transaction Volume], 0)
 		formatString: "£"#,0.00;-"£"#,0.00;"£"#,0.00
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: 31df0272-51d0-49d8-b31f-99f0babb3ba0
 
 		annotation PBI_FormatHint = {"currencyCulture":"en-GB"}
 
-	measure 'Product Revenue Rank (classified) YTD (_2011)' = ```
+	measure '39.1 Products Positioning Tier Colors' = ```
 			
-			    RANKX(
-			        ALL(fact_transactions_classified[StockCode]),
-			        [Net Revenue per Product YTD (_2011)],
-			        ,DESC
-			        ,Dense
-			    )
+			    VAR _revenue = [31. Net Revenue per Product CY YTD]
+			    VAR _volume = [38. Product Transaction Volume]
+			    VAR _highRevenue = _revenue >= 20000
+			    VAR _highVolume = _volume >= 600
+			    RETURN 
+			        SWITCH(
+			            TRUE(),
+			            _highRevenue && _highVolume, "#1f7a1f",         -- stars
+			            _highRevenue && NOT(_highVolume), "#1f4e79",    -- premium
+			            NOT(_highRevenue) && _highVolume, "#d67e00",    -- volume
+			            "#767676"
+			        )
 			```
-		formatString: 0
-		displayFolder: _2011_Anchor\Sales\transactions_classified
-		lineageTag: 1a6ec4e3-830b-4f9e-9e38-5459e18cca53
-
-	measure 'Product Performance Tier Colors (classified) YTD (_2011)' = ```
-			
-			VAR _revenue = [Net Revenue per Product YTD (_2011)]
-			VAR _volume = [Product Transaction Volume (classified) YTD (_2011)]
-			VAR _highRevenue = _revenue >= 20000
-			VAR _highVolume = _volume >= 600
-			RETURN 
-			    SWITCH(
-			        TRUE(),
-			        _highRevenue && _highVolume, "#1f7a1f",         -- stars
-			        _highRevenue && NOT(_highVolume), "#1f4e79",    -- premium
-			        NOT(_highRevenue) && _highVolume, "#d67e00",    -- volume
-			        "#767676"
-			    )
-			```
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: 39fa1629-5c4a-45ed-b8e1-9035fc05a05d
 
-	measure 'Net Revenue Bars' = [Net Revenue per Product YTD (_2011)]
-		displayFolder: _2011_Anchor\Sales\transactions_classified
-		lineageTag: ff0e037f-871c-4176-aff8-638ca9132d6c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Transparent color' = "#FFFFFF00"
-		lineageTag: 9931f01b-042c-4fc4-9eab-7c6f19335e50
-
-	measure 'Return rate CF color' =
+	measure '41. Return rate CF color' = ```
 			
-			SWITCH(
-			    TRUE(),
-			    [Return rate] > .05, "Red",
-			    [Return rate] > .02, "Orange",
-			    "#333333")
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+			    SWITCH(
+			        TRUE(),
+			        [33. Return rate] > .05, "Red",
+			        [33. Return rate] > .02, "Orange",
+			        "#333333")
+			```
+		displayFolder: transactions_classified
 		lineageTag: ed14f3e5-88be-419f-9d12-72378f0fa425
 
-	measure 'Product Volume vs AOV Tier Colors (classified) YTD (_2011)' = ```
+	measure '40. AOV vs. Volume Tier Colors' = ```
 			
-			VAR _aov = [Product AOV (classified) YTD (_2011)]
-			VAR _volume = [Product Transaction Volume (classified) YTD (_2011)]
+			VAR _aov = [39. Product AOV]
+			VAR _volume = [38. Product Transaction Volume]
 			VAR _highAOV = _aov >= 50
 			VAR _highVolume = _volume >= 600
 			RETURN 
@@ -952,13 +670,13 @@ table _Measures
 			        "#767676"                                   -- grey     -- Evaluate
 			    )
 			```
-		displayFolder: _2011_Anchor\Sales\transactions_classified
+		displayFolder: transactions_classified
 		lineageTag: 8d11778f-0aa4-4180-86f5-9e5b9b932b38
 
 	measure '00. Monthly Sales CY' = ```
 			
 			CALCULATE(
-			    [Total Sales],
+			    [00. Total Sales],
 			    FILTER(
 			        dim_date,
 			        dim_date[Year] = YEAR(TODAY()) &&
@@ -968,32 +686,15 @@ table _Measures
 			)
 			
 			```
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: bb5369f8-10cd-4341-b88c-19d34674e5e5
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '00. _slicer - Monthly Sales CY' = ```
-			
-			VAR _Customer = SELECTEDVALUE('_slicer Customer Segment - Executive Summary'[CustomerTypeFilter], "All Customers")
-			RETURN 
-			    SWITCH(
-			        _Customer,
-			        "Registered Only", CALCULATE([00. Monthly Sales PY], dim_customer[CustomerType] = "Registered"),
-			        "Guest Only", CALCULATE([00. Monthly Sales PY], dim_customer[CustomerType] = "Guest"),
-			        [00. Monthly Sales PY]
-			        )
-			
-			
-			```
-		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
-		lineageTag: f2c77359-5078-42b7-8ed4-fb438243410c
-
 	measure '00. Monthly Sales PY' =
 			
 			CALCULATE(
-			    [Total Sales],
+			    [00. Total Sales],
 			    FILTER(
 			        dim_date,
 			        dim_date[Year] = YEAR(TODAY()) -1  &&
@@ -1001,7 +702,7 @@ table _Measures
 			        dim_date[Date] <= EDATE(TODAY(), -12)
 			    )
 			)
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 8e99c266-dde7-43bd-880f-f06fadacdc1d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1017,7 +718,7 @@ table _Measures
 			        [01. Sales CY YTD]
 			        )
 			```
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 9c083c7e-16cf-4f5a-9684-69cf9232dec2
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1033,7 +734,7 @@ table _Measures
 			        [02. Sales PY YTD]
 			        )
 			```
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 710ccaa8-1520-4f9e-8922-44c1f2a3d589
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1050,7 +751,7 @@ table _Measures
 			        )
 			```
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: c7f07d39-6ec2-4706-a1ab-403cfe542392
 
 	measure '00. Transactions YTD' = ```
@@ -1061,7 +762,7 @@ table _Measures
 			        )
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 619f9300-ac9d-43eb-8971-2c9eb45e9658
 
 	measure '00. Total Quantity PY YTD' = ```
@@ -1072,21 +773,32 @@ table _Measures
 			    )
 			```
 		formatString: 0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 4b7c5ee3-087d-40c7-9018-706e19d21003
 
 	measure '26. Regional Sales by Q' = ```
 			
 			    CALCULATE(
-			        [Total Sales],
+			        [00. Total Sales],
 			        dim_date[Year] = YEAR(TODAY())
 			    )
 			```
 		formatString: #,0
-		displayFolder: _2011_Anchor\Sales\Time Intelligence
+		displayFolder: fact_sales
 		lineageTag: 6b6ed7a7-1b36-4a64-90b5-b9175bed74ce
 
 		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure '24.4 UK Growth Rate % CF' =
+			
+			SWITCH(
+			    TRUE(),
+			    [24.2 UK Growth Rate] > 0, "Green",
+			    [24.2 UK Growth Rate]< 0, "Red",
+			    "Grey"
+				)
+		displayFolder: fact_sales
+		lineageTag: c97126e0-54f9-488c-a527-280ebf49fe51
 
 	partition _Measures = m
 		mode: import

@@ -445,5 +445,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "632935eb9205c31b9eae",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_date"
+              }
+            },
+            "Property": "Short Month"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6d531390b35783581514",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "10. _slicer - Sales CY Monthly"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
