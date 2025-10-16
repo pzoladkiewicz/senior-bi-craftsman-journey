@@ -33,10 +33,11 @@ table _Measures
 
 	measure '03. Sales YoY %' =
 			
-			DIVIDE([01. Sales CY YTD] - [02. Sales PY YTD], [01. Sales CY YTD], 0)
-		formatString: 0.00%;-0.00%;0.00%
+			DIVIDE([01. Sales CY YTD] - [02. Sales PY YTD], [02. Sales PY YTD], 0)
 		displayFolder: fact_sales
 		lineageTag: 392aaa47-8df7-4bc0-a6ed-c78481e04df5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '04. Customers CY YTD' = ```
 			
@@ -98,7 +99,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '09. AOV YoY %' = DIVIDE([07. AOV CY YTD] - [08. AOV PY YTD], [07. AOV CY YTD])
+	measure '09. AOV YoY %' = DIVIDE([07. AOV CY YTD] - [08. AOV PY YTD], [08. AOV PY YTD])
 		formatString: 0.0%;-0.0%;0.0%
 		displayFolder: fact_sales
 		lineageTag: a5571698-80b6-495e-9788-1a7c22c770da
@@ -300,7 +301,7 @@ table _Measures
 
 	measure '06. Customers YoY %' =
 			
-			DIVIDE([04. Customers CY YTD] - [05. Customers PY YTD], [04. Customers CY YTD], 0)
+			DIVIDE([04. Customers CY YTD] - [05. Customers PY YTD], [05. Customers PY YTD], 0)
 		displayFolder: fact_sales
 		lineageTag: 063a574e-1459-4866-beeb-3df3b5bfcbbf
 
