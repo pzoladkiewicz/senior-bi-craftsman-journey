@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "2b0bdffb9826af81f596",
   "position": {
     "x": 32,
     "y": 320,
     "z": 3000,
     "height": 304,
-    "width": 320
+    "width": 320,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "SimpleWaterfall",
@@ -934,37 +935,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9a57bea0d1a0927d0c2c",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "WaterfallCategories Table"
-              }
-            },
-            "Property": "Category"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "920a8e8f8b017c602729",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "25.6 Waterfall Value"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

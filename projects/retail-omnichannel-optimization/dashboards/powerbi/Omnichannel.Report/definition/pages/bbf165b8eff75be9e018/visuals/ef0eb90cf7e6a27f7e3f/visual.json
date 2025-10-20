@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "ef0eb90cf7e6a27f7e3f",
   "position": {
     "x": 416,
@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 304,
     "width": 448,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -292,7 +292,15 @@
       ],
       "columnWidth": [
         {
-          "properties": {},
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "63.52368771857581D"
+                }
+              }
+            }
+          },
           "selector": {
             "data": [
               {
@@ -358,7 +366,15 @@
           }
         },
         {
-          "properties": {},
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "64.80409746508423D"
+                }
+              }
+            }
+          },
           "selector": {
             "data": [
               {
@@ -391,7 +407,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "122.26872724487039D"
+                  "Value": "132.48975263382877D"
                 }
               }
             }
@@ -405,7 +421,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "64.10915033787101D"
+                  "Value": "66.66622555823054D"
                 }
               }
             }
@@ -467,6 +483,22 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.26. Regional Sales by Q"
           }
         }
       ]
@@ -887,48 +919,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "3ba6d7962d90620ae07b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "QuarterName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "027c4ebbceb613daeee5",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_geography"
-              }
-            },
-            "Property": "Country"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "34ca22210250ce2ed307",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "26. Regional Sales by Q"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

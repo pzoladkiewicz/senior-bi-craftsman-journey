@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "018b91707caa67103b94",
   "position": {
     "x": 0,
     "y": 0,
     "z": 5500,
     "height": 283,
-    "width": 550,
-    "tabOrder": 1000
+    "width": 550
   },
   "visual": {
     "visualType": "tableEx",
@@ -43,7 +42,8 @@
               },
               "queryRef": "_Measures.13. _slicer - TOP 10 Sales CY",
               "nativeQueryRef": "CY",
-              "displayName": "CY"
+              "displayName": "CY",
+              "format": "#,0"
             },
             {
               "field": {
@@ -72,8 +72,8 @@
                 }
               },
               "queryRef": "_Measures.15. _slicer - TOP 10 Sales YoY %",
-              "nativeQueryRef": "YoY %",
-              "displayName": "YoY %"
+              "nativeQueryRef": "YoY",
+              "displayName": "YoY"
             }
           ]
         }
@@ -231,6 +231,13 @@
                   "Value": "'Right'"
                 }
               }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
@@ -317,6 +324,55 @@
           "selector": {
             "metadata": "dim_product.ProductName"
           }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.13. _slicer - TOP 10 Sales CY"
+          }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.14. _slicer - TOP 10 Sales PY"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.15. _slicer - TOP 10 Sales YoY %"
+          }
         }
       ],
       "columnWidth": [
@@ -367,13 +423,55 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "307.09474954719406D"
+                  "Value": "314.19548799443226D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "dim_product.ProductName"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "62.59218335247489D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.13. _slicer - TOP 10 Sales CY"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "62.57815185100357D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.14. _slicer - TOP 10 Sales PY"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "65.89059005676931D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.15. _slicer - TOP 10 Sales YoY %"
           }
         }
       ]

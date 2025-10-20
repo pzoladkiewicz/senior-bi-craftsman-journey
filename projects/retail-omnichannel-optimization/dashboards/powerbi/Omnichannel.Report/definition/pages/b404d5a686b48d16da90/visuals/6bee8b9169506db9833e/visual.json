@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "6bee8b9169506db9833e",
   "position": {
     "x": 32,
@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 336,
     "width": 710,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -127,7 +127,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "33. Return rate"
+                "Property": "31. Net Revenue per Product CY YTD"
               }
             },
             "direction": "Descending"
@@ -245,7 +245,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "55.81513176106059D"
+                  "Value": "64.80812782642317D"
                 }
               }
             }
@@ -287,7 +287,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "98.18446601941747D"
+                  "Value": "86.68095005158598D"
                 }
               }
             }
@@ -366,7 +366,22 @@
           }
         },
         {
-          "properties": {},
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
           "selector": {
             "metadata": "_Measures.Net Revenue per Product YTD (_2011)"
           }
@@ -389,6 +404,20 @@
           "properties": {},
           "selector": {
             "metadata": "_Measures.Return rate"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Product AOV (classified) YTD (_2011)"
           }
         }
       ],
@@ -815,81 +844,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "ced8b2b677c27118ad0d",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fact_transactions_classified"
-                  }
-                },
-                "Property": "StockCode"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b16690137531837ccce0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "31. Net Revenue per Product CY YTD"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "fe06f2c04d20996009ce",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "38. Product Transaction Volume"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "31938f0790408ea2b1a2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "39. Product AOV"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b758bbd0b5300e262240",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "33. Return rate"
-          }
-        },
-        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

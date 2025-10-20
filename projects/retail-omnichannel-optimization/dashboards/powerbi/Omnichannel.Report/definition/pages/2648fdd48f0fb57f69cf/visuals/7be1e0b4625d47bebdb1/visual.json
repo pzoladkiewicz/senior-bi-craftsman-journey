@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "7be1e0b4625d47bebdb1",
   "position": {
     "x": 0,
     "y": 0,
     "z": 0,
     "height": 240,
-    "width": 368,
-    "tabOrder": 1000
+    "width": 368
   },
   "visual": {
     "visualType": "lineChart",
@@ -29,6 +28,38 @@
               "queryRef": "dim_date.Short_name",
               "nativeQueryRef": "Short Month",
               "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "10. _slicer - Sales CY Monthly"
+                }
+              },
+              "queryRef": "_Measures._slicer - Sales YTD (_2011)",
+              "nativeQueryRef": "10. _slicer - Sales CY Monthly"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "11. _slicer - Sales PY Monthly"
+                }
+              },
+              "queryRef": "_Measures._slicer - Sales YTD PY (_2010)",
+              "nativeQueryRef": "11. _slicer - Sales PY Monthly"
             }
           ]
         },
@@ -393,6 +424,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Default'"
                 }
               }
             }

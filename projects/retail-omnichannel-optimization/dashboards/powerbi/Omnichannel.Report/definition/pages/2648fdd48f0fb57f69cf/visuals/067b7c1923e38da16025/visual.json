@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "067b7c1923e38da16025",
   "position": {
     "x": 687.99999999999989,
     "y": 687.99999999999989,
     "z": 0,
     "height": 283,
-    "width": 544,
-    "tabOrder": 13000
+    "width": 544
   },
   "visual": {
     "visualType": "hundredPercentStackedAreaChart",
@@ -567,65 +566,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "376894e64eac1d730589",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "58c21d1631202ebc896b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Short Month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "3ee16d6b8d530a95cbb5",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "16. New Customers CY"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a68f06bc07a23cbc7148",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "17. Returning Customers CY"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

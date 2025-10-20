@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "524f8b7f0ae355442004",
   "position": {
     "x": 650,
@@ -7,7 +7,7 @@
     "z": 7000,
     "height": 288,
     "width": 598,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -49,6 +49,30 @@
               "queryRef": "_Measures.Net Revenue per Product YTD (_2011)",
               "nativeQueryRef": "Net Revenue",
               "displayName": "Net Revenue"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dim_product"
+                        }
+                      },
+                      "Property": "StockCode"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(dim_product.StockCode)",
+              "nativeQueryRef": "StockCode",
+              "displayName": "StockCode"
             }
           ]
         },

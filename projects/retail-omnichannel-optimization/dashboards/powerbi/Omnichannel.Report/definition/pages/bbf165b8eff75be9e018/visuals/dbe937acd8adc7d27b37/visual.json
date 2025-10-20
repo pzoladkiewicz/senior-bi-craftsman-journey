@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "dbe937acd8adc7d27b37",
   "position": {
     "x": 330.66666666666669,
@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 208,
     "width": 304,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1231,23 +1231,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8ad197cf4a01db18c601",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "22.1 Guest Transactions %"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "69f64d26a9030b50c533",
   "position": {
     "x": 32,
     "y": 103,
     "z": 0,
     "height": 185,
-    "width": 288,
-    "tabOrder": 1000
+    "width": 288
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1181,23 +1180,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5622df1dade9613c07ab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "31. Net Revenue per Product CY YTD"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

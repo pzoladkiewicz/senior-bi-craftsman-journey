@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "2542f650443534f2e370",
   "position": {
     "x": 48,
@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 240,
     "width": 368,
-    "tabOrder": 3000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "columnChart",
@@ -445,37 +445,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "632935eb9205c31b9eae",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_date"
-              }
-            },
-            "Property": "Short Month"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6d531390b35783581514",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "10. _slicer - Sales CY Monthly"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "0ecdfb51dc0109cfefa2",
   "position": {
     "x": 928,
@@ -7,7 +7,7 @@
     "z": 5000,
     "height": 304,
     "width": 320,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "barChart",
@@ -606,48 +606,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "c70597fa3726b0063e7b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "04. Customers CY YTD"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "395de26955138990e56a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "07. AOV CY YTD"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "ec765d45073cc9208be6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "01. Sales CY YTD"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

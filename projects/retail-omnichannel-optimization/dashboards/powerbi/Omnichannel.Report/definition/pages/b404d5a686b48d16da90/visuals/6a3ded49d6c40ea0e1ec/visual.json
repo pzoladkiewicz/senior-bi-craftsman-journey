@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "6a3ded49d6c40ea0e1ec",
   "position": {
     "x": 960,
     "y": 103,
     "z": 3000,
     "height": 185,
-    "width": 288
+    "width": 288,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1191,23 +1192,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ad88947307d9b51ea74c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "36. Business Efficiency"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

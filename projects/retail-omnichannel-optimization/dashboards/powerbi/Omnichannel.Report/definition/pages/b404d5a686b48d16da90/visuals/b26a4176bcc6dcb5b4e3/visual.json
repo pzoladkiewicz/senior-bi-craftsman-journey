@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "b26a4176bcc6dcb5b4e3",
   "position": {
     "x": 763,
@@ -7,7 +7,7 @@
     "z": 6000,
     "height": 336,
     "width": 484,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -82,7 +82,8 @@
               },
               "queryRef": "_Measures.Returns YTD (_2011)",
               "nativeQueryRef": "Value",
-              "displayName": "Value"
+              "displayName": "Value",
+              "format": "\"£\"#,0;\"£\"#,0;\"£\"#,0"
             }
           ]
         }
@@ -97,10 +98,10 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "33. Return rate"
+                "Property": "30. Returns CY YTD"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -309,9 +310,31 @@
           }
         },
         {
-          "properties": {},
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
           "selector": {
             "metadata": "_Measures.Return rate"
+          }
+        },
+        {
+          "properties": {
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.Returns YTD (_2011)"
           }
         }
       ],
@@ -685,39 +708,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "02afe2789349bcb9740e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_transactions_classified"
-              }
-            },
-            "Property": "Description"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "02e0f0c60e7506c65c5e",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fact_transactions_classified"
-                  }
-                },
-                "Property": "StockCode"
-              }
-            },
-            "Function": 3
-          }
-        },
-        "type": "Advanced"
       },
       {
         "name": "e71cffe132749ac0c196",

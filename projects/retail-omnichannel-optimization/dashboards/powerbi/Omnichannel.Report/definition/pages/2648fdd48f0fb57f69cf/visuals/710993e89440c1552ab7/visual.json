@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "710993e89440c1552ab7",
   "position": {
     "x": 1040,
     "y": 215,
-    "z": 8000,
+    "z": 9625,
     "height": 125,
     "width": 192,
-    "tabOrder": 4000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -742,23 +742,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ddc45614a0be04e04771",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_geography"
-              }
-            },
-            "Property": "Where are customers from"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

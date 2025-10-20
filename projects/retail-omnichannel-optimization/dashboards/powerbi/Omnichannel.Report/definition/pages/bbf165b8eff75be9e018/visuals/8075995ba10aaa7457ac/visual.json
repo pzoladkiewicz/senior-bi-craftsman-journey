@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "8075995ba10aaa7457ac",
   "position": {
     "x": 960,
     "y": 93,
     "z": 7000,
     "height": 208,
-    "width": 304,
-    "tabOrder": 1000
+    "width": 304
   },
   "visual": {
     "visualType": "cardVisual",
@@ -1305,23 +1304,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "53508e23890a26ae08b3",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "24.1 Intl Growth Rate"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
