@@ -4,12 +4,12 @@ Uczę się Power BI przez praktyczne tworzenie projektów z systematycznym poró
 
 ## Aktualne projekty
 
-### Analiza e-commerce | `retail-omnichannel-optimization/`
+### Analiza e-commerce | [retail-omnichannel-optimization](https://github.com/pzoladkiewicz/senior-bi-craftsman-journey/tree/main/projects/retail-omnichannel-optimization)
 **Dataset**: Brytyjski detalista, 1M+ transakcji, analiza wielorynkowa  
 **Cel**: Identyczne dashboardy wykonawcze w obu platformach  
-**Status**: Power BI ukończony (3 strony), Tableau ukończone
+**Status**: Power BI ukończony, Tableau ukończone
 
-### Laboratorium Azure SQL + SSIS | `azure-sql-ssis-lab/`  
+### Laboratorium Azure SQL + SSIS | [azure-sql-ssis-lab](https://github.com/pzoladkiewicz/senior-bi-craftsman-journey/tree/main/projects/azure-sql-ssis-lab)
 **Cel**: Pipeline ETL w chmurze, integracja Azure SQL z SSIS  
 **Status**: Ukończony, w pełni udokumentowany, działający pipeline
 
