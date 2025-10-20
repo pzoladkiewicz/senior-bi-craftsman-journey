@@ -1,6 +1,4 @@
-# Praktyczne Projekty BI: Power BI vs Tableau
-
-## O czym jest ten projekt
+# Czego dotyczy repozytorium
 
 Uczę się Power BI przez praktyczne tworzenie projektów z systematycznym porównaniem do Tableau. Nie tutoriale, nie sztuczne dane - prawdziwe przypadki biznesowe z praktycznymi wnioskami.
 
@@ -9,17 +7,12 @@ Uczę się Power BI przez praktyczne tworzenie projektów z systematycznym poró
 ### Analiza e-commerce | `retail-omnichannel-optimization/`
 **Dataset**: Brytyjski detalista, 1M+ transakcji, analiza wielorynkowa  
 **Cel**: Identyczne dashboardy wykonawcze w obu platformach  
-**Status**: Power BI ukończony (3 strony), Tableau w realizacji
+**Status**: Power BI ukończony (3 strony), Tableau ukończone
 
 ### Laboratorium Azure SQL + SSIS | `azure-sql-ssis-lab/`  
 **Cel**: Pipeline ETL w chmurze, integracja Azure SQL z SSIS  
 **Status**: Ukończony, w pełni udokumentowany, działający pipeline
 
-## Odkryte wnioski (na razie)
-
-**DAX vs Calculated Fields**: Kompletnie różne sposoby podejścia do tworzenia miar przez użytkownika   
-**Workflow rozwoju**: Power BI lepszy do strukturalnych raportów, Tableau szybszy w eksploracji  
-**Wydajność**: Porównywalne na średnich zbiorach danych, różne podejścia do optymalizacji
 
 ## Struktura repozytorium
 
@@ -41,12 +34,6 @@ projects/
 
 ```
 
-## Wartość biznesowa
-
-To podejście dostarcza praktyczną wiedzę o migracjach dla:
-- Decyzji o wyborze platformy na podstawie rzeczywistego doświadczenia projektowego
-- Strategii ETL w środowiskach Power BI vs Tableau  
-- Podejścia do szkoleń zespołów przechodzących między platformami
 
 Każdy folder projektu ma szczegółowy README z konkretnymi detalami implementacji.
 
