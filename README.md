@@ -1,12 +1,13 @@
 # Czego dotyczy repozytorium
 
-Uczę się Power BI przez praktyczne tworzenie projektów z systematycznym porównaniem do Tableau. Nie tutoriale, nie sztuczne dane - prawdziwe przypadki biznesowe z praktycznymi wnioskami.
+Systematycznie uczę się Power BI przez praktyczne projekty. Porównuję z Tableau, który znam od 8 lat.
 
 ## Aktualne projekty
 
-### Analiza e-commerce | [retail-omnichannel-optimization](https://github.com/pzoladkiewicz/senior-bi-craftsman-journey/tree/main/projects/retail-omnichannel-optimization)
+### Analiza e-commerce | Power BI vs Tableau | [retail-omnichannel-optimization](https://github.com/pzoladkiewicz/senior-bi-craftsman-journey/tree/main/projects/retail-omnichannel-optimization)
 **Dataset**: Brytyjski detalista, 1M+ transakcji, analiza wielorynkowa  
 **Cel**: Identyczne dashboardy wykonawcze w obu platformach  
+**Technologie:** Python ETL, format PBIP, obliczenia LOD, schemat gwiazdy (Star)  
 **Status**: Power BI ukończony, Tableau ukończone
 
 ### Laboratorium Azure SQL + SSIS | [azure-sql-ssis-lab](https://github.com/pzoladkiewicz/senior-bi-craftsman-journey/tree/main/projects/azure-sql-ssis-lab)
