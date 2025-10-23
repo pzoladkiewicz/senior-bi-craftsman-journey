@@ -4,7 +4,7 @@
   "artifacts": [
     {
       "report": {
-        "path": "Omnichannel.Report"
+        "path": "retail-omnichannel-optimization.Report"
       }
     }
   ],
