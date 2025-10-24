@@ -1,0 +1,6 @@
+CREATE DATABASE SupplyChainDB;
+GO
+USE SupplyChainDB;
+GO
+CREATE SCHEMA staging;
+GO
