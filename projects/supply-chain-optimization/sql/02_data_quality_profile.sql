@@ -141,3 +141,66 @@ GROUP BY
 ORDER BY Record_Count DESC;
 
 -- SEKCJA 7: QUALITY SUMMARY REPORT
+PRINT '=== DATA HEALTH SUMMARY REPORT ===';
+
+with Quality_Summary as (
+    SELECT
+        COUNT(*) AS Total_Records
+
+        -- Completness Score (% non-null critical fields)
+        ,CAST(COUNT(Order_Id) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS Order_Completness_Rate
+        ,CAST(COUNT(Customer_Id) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS Customer_Completness_Rate
+        ,CAST(COUNT(Product_Name) * 100.0 / COUNT(*) AS DECIMAL (5,2)) AS Product_Completness_Rate
+        
+        -- Validity Score (% records passing business rules)
+        ,CAST(SUM(CASE WHEN Order_Item_Quantity > 0 THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS  Quantity_Validity_Rate
+        ,CAST(SUM(CASE WHEN Order_Date IS NOT NULL AND Order_Date <= GETDATE() THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS Order_Date_Validity_Rate
+        ,CAST(SUM(CASE WHEN Shipping_Date IS NOT NULL AND Shipping_Date >= Order_Date THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS Shipping_Date_Validity_Rate 
+        
+        -- Consistency Score (% records with consistent geo data)
+        ,CAST(SUM(CASE WHEN Customer_Country = Order_Country THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS Geo_Consistency_Rate
+
+    FROM staging.DataCo_Raw)
+
+SELECT 
+     'TOTAL RECORDS' AS metric
+     ,CAST(Total_Records as nvarchar(20)) as value
+     ,'Count' AS unit
+FROM Quality_Summary
+UNION ALL
+SELECT 
+     'NULL ORDER ID RATE' AS metric
+    ,CAST(Order_Completness_Rate as nvarchar(20)) as value
+    ,'Percentage' AS unit
+FROM Quality_Summary
+UNION ALL
+SELECT 
+     'NULL ORDER ID RATE' AS metric
+    ,CAST(Customer_Completness_Rate as nvarchar(20)) as value
+    ,'Percentage' AS unit
+FROM Quality_Summary
+UNION ALL
+SELECT 
+     'NULL CUSTOMER ID RATE' AS metric
+    ,CAST(Product_Completness_Rate AS nvarchar(20)) as value
+    ,'Percentage' AS unit
+FROM Quality_Summary
+UNION ALL
+SELECT 
+     'QUANTITY VALIDITY RATE' AS metric
+    ,CAST(Quantity_Validity_Rate AS nvarchar(20)) as value
+    ,'Percentage' AS unit
+FROM Quality_Summary
+UNION ALL
+SELECT 
+     'ORDER DATE VALIDITY RATE' AS metric
+    ,CAST(Order_Date_Validity_Rate AS nvarchar(20)) as value
+    ,'Percentage' AS unit
+FROM Quality_Summary
+UNION ALL
+SELECT 
+     'GEO CONSISTENCY RATE' AS metric
+    ,CAST(Geo_Consistency_Rate AS nvarchar(20)) as value
+    ,'Percentage' AS unit 
+FROM Quality_Summary;
+
