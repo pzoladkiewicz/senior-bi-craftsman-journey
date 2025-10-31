@@ -33,10 +33,10 @@ Developer skills: SQL ETL, model gwiazdy, Power BI, analiza e-commerce.
 - Pipeline danych w Python (pandas, pyodbc)
 
 ## Status
-✅ Staging załadowany: 180k+ rekordów
-🔄 Jakość danych: W trakcie
-⭕ Schema DWH: Nie rozpoczęto
-⭕ Power BI: Nie rozpoczęto
+✅ Staging załadowany: 180k+ rekordów  
+🔄 Jakość danych: W trakcie  
+⭕ Schema DWH: Nie rozpoczęto  
+⭕ Power BI: Nie rozpoczęto  
 
 ---
 *Projekt w portfolio - Senior BI/SQL Developer*
