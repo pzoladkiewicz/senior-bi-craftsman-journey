@@ -7,7 +7,7 @@ Developer skills: SQL ETL, model gwiazdy, Power BI, analiza e-commerce.
 
 ## Zakres danych
 - **Wolumen:** 180k+ transakcji e-commerce
-- **Zakres czasu:** 2017-2018
+- **Zakres czasu:** styczeń 2015 - styczeń 2018 (3+ lata)
 - **Zakres terytorialny:** 5 rynków globalnych (Azja, Europa, Afryka, Ameryka Północna i Południowa)
 - **Segmenty:** B2B + B2C (Consumer 51%, Corporate 30%, Home Office 19%)
 
