@@ -166,38 +166,38 @@ Dane zawierają **180,519 rekordów** transakcji e-commerce z globalnej platform
 
 ### Zoptymalizowany schemt gwiazdy (Star Schema - 4 wymiary)
 ```
-┌─────────────────┐ ┌─────────────────┐
-│ D_DATE │ │ D_CUSTOMER │
-│ ─────────────── │ │ ─────────────── │
-│ DateKey (PK) │ │ CustomerKey(PK) │
-│ Date, Year │ │ CustomerId │
-│ Quarter, Month │ │ CustomerSegment │
-│ FiscalPeriods │ │ Geography │
-└─────────────────┘ └─────────────────┘
-│ │
-│ 1:N │ 1:N
-│ │
+┌─────────────────┐     ┌─────────────────┐
+│ D_DATE          │     │ D_CUSTOMER      │
+│ ─────────────── │     │ ─────────────── │
+│ DateKey (PK)    │     │ CustomerKey(PK) │
+│ Date, Year      │     │ CustomerId      │
+│ Quarter, Month  │     │ CustomerSegment │
+│ FiscalPeriods   │     │ Geography       │
+└─────────────────┘     └─────────────────┘
+    │                       │
+    │ 1:N                   │ 1:N
+    │                       │
 ┌─────────────────────────────────────────────────────┐
-│ F_ORDER │
+│ F_ORDER                                             │
 │ ─────────────────────────────────────────────────── │
-│ OrderDateKey (FK) │ CustomerKey (FK) │
-│ ShippingDateKey (FK) │ ProductKey (FK) │
-│ LocationKey (FK) │ OrderId + OrderItemId (PK) │
-│ ──────────────────────────────────────────────────── │
-│ MEASURES: Sales, Quantity, Profit, Discount, │
-│ Delivery_Days, Margin_Pct, Risk_Flags │
+│ OrderDateKey (FK)     │ CustomerKey (FK)            │
+│ ShippingDateKey (FK)  │ ProductKey (FK)             │
+│ LocationKey (FK)      │ OrderId + OrderItemId (PK)  │
+│ ────────────────────────────────────────────────────│
+│ MEASURES: Sales, Quantity, Profit, Discount,        │
+│ Delivery_Days, Margin_Pct, Risk_Flags               │
 └─────────────────────────────────────────────────────┘
-│ 1:N │ 1:N
-│ │
-┌─────────────────┐ ┌─────────────────┐
-│ D_PRODUCT │ │ D_ORDER_LOCATION│
-│ ─────────────── │ │ ─────────────── │
-│ ProductKey (PK) │ │ LocationKey(PK) │
-│ ProductName │ │ Market │
-│ CategoryName │ │ Country, Region │
-│ DepartmentName │ ←── │ City, State │
-│ Price, Status │ 3-LEVEL HIERARCHY │
-└─────────────────┘ └─────────────────┘
+    │ 1:N                    │ 1:N
+    │                        │
+┌─────────────────┐     ┌───────────────────┐
+│ D_PRODUCT       │     │ D_ORDER_LOCATION  │
+│ ─────────────── │     │ ──────────────────│
+│ ProductKey (PK) │     │ LocationKey(PK)   │
+│ ProductName     │     │ Market            │
+│ CategoryName    │     │ Country, Region   │ 
+│ DepartmentName  │ ←── │ City, State       │
+│ Price, Status         │ 3-LEVEL HIERARCHY │
+└─────────────────┘     └───────────────────┘
 ```
 
 
