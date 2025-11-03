@@ -131,13 +131,13 @@ ORDER BY Distinct_Countries DESC;
 
 -- Category/Department alignment
 SELECT 
-    Category_Name
-    ,Department_Name
+     Department_Name
+    ,Category_Name
     ,COUNT(*) AS Record_Count
 FROM staging.DataCo_Raw
 GROUP BY 
-     Category_Name
-    ,Department_Name
+     Department_Name
+    ,Category_Name
 ORDER BY Record_Count DESC;
 
 -- SEKCJA 7: QUALITY SUMMARY REPORT
@@ -156,10 +156,6 @@ with Quality_Summary as (
         ,CAST(SUM(CASE WHEN Order_Item_Quantity > 0 THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS  Quantity_Validity_Rate
         ,CAST(SUM(CASE WHEN Order_Date IS NOT NULL AND Order_Date <= GETDATE() THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS Order_Date_Validity_Rate
         ,CAST(SUM(CASE WHEN Shipping_Date IS NOT NULL AND Shipping_Date >= Order_Date THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS Shipping_Date_Validity_Rate 
-        
-        -- Consistency Score (% records with consistent geo data)
-        ,CAST(SUM(CASE WHEN Customer_Country = Order_Country THEN 1 ELSE 0 END) * 100.0 / COUNT(*) AS DECIMAL(5,2)) AS Geo_Consistency_Rate
-
     FROM staging.DataCo_Raw)
 
 SELECT 
@@ -169,19 +165,19 @@ SELECT
 FROM Quality_Summary
 UNION ALL
 SELECT 
-     'NULL ORDER ID RATE' AS metric
+     'CORRECT ORDER ID RATE' AS metric
     ,CAST(Order_Completness_Rate as nvarchar(20)) as value
     ,'Percentage' AS unit
 FROM Quality_Summary
 UNION ALL
 SELECT 
-     'NULL ORDER ID RATE' AS metric
+     'CORRECT CUSTOMER ID RATE' AS metric
     ,CAST(Customer_Completness_Rate as nvarchar(20)) as value
     ,'Percentage' AS unit
 FROM Quality_Summary
 UNION ALL
 SELECT 
-     'NULL CUSTOMER ID RATE' AS metric
+     'NOT NULL PRODUCT NAME RATE' AS metric
     ,CAST(Product_Completness_Rate AS nvarchar(20)) as value
     ,'Percentage' AS unit
 FROM Quality_Summary
@@ -197,10 +193,3 @@ SELECT
     ,CAST(Order_Date_Validity_Rate AS nvarchar(20)) as value
     ,'Percentage' AS unit
 FROM Quality_Summary
-UNION ALL
-SELECT 
-     'GEO CONSISTENCY RATE' AS metric
-    ,CAST(Geo_Consistency_Rate AS nvarchar(20)) as value
-    ,'Percentage' AS unit 
-FROM Quality_Summary;
-

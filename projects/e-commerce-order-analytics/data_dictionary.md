@@ -81,12 +81,12 @@ Dane zawierają **180,519 rekordów** transakcji e-commerce z globalnej platform
 | Pole | Typ danych | Opis biznesowy |
 |------|------------|----------------|
 | **Market** | nvarchar(100) | **Rynek globalny:** Pacific Asia, Europe, LATAM, USCA, Africa |
-| **Order_City | nvarchar(100) | Miasto realizacji zamówienia |
-| **Order_State | nvarchar(100) | Stan/region realizacji zamówienia |
-| **Order_Country | nvarchar(100) | Kraj realizacji zamówienia |
-| **Order_Region | nvarchar(100) | Region realizacji zamówienia |
-| **Order_ZipCode | nvarchar(20) | Kod pocztowy realizacji zamówienia |
-| **Order_Customer_Id | int | Id klienta powiązanego z zamówieniem |
+| **Order_City** | nvarchar(100) | Miasto realizacji zamówienia |
+| **Order_State** | nvarchar(100) | Stan/region realizacji zamówienia |
+| **Order_Country** | nvarchar(100) | Kraj realizacji zamówienia |
+| **Order_Region** | nvarchar(100) | Region realizacji zamówienia |
+| **Order_ZipCode** | nvarchar(20) | Kod pocztowy realizacji zamówienia |
+| **Order_Customer_Id** | int | Id klienta powiązanego z zamówieniem |
 
 ### LOGISTYKA I DOSTAWY
 
