@@ -62,17 +62,17 @@ CREATE TABLE dwh.D_Customer (
         ,CustomerID                 INT             NOT NULL                               -- Identyfikator klienta z staging
     
         -- Atrybuty klienta (Zamaskowane dane demo dla portfolio)
-        ,CustomerFirstName          VARCHAR(100)    NULL DEFAULT 'DEMO_DATA'               -- Imię klienta
-        ,CustomerLastName           VARCHAR(100)    NULL DEFAULT 'DEMO_DATA'               -- Nazwisko klienta
-        ,CustomerEmail              VARCHAR(255)    NULL DEFAULT 'demo@example.com'        -- Adres email klienta
-        ,CustomerSegment            VARCHAR(50)     NOT NULL                               -- Segment klienta (Consumer/Corporate/Home Office)
+        ,CustomerFirstName          NVARCHAR(100)    NULL DEFAULT 'DEMO_DATA'               -- Imię klienta
+        ,CustomerLastName           NVARCHAR(100)    NULL DEFAULT 'DEMO_DATA'               -- Nazwisko klienta
+        ,CustomerEmail              NVARCHAR(255)    NULL DEFAULT 'demo@example.com'        -- Adres email klienta
+        ,CustomerSegment            NVARCHAR(50)     NOT NULL                               -- Segment klienta (Consumer/Corporate/Home Office)
 
         -- Atrybuty geograficzne
-        ,CustomerStreet             VARCHAR(255)    NULL                                   -- Ulicy
-        ,CustomerCity               VARCHAR(100)    NULL                                   -- Miasto
-        ,CustomerState              VARCHAR(100)    NULL                                   -- Województwo/Stan
-        ,CustomerCountry            VARCHAR(100)    NULL                                   -- Kraj
-        ,CustomerZipcode            VARCHAR(20)     NULL                                   -- Kod pocztowy
+        ,CustomerStreet             NVARCHAR(255)    NULL                                   -- Ulicy
+        ,CustomerCity               NVARCHAR(100)    NULL                                   -- Miasto
+        ,CustomerState              NVARCHAR(100)    NULL                                   -- Województwo/Stan
+        ,CustomerCountry            NVARCHAR(100)    NULL                                   -- Kraj
+        ,CustomerZipcode            NVARCHAR(20)     NULL                                   -- Kod pocztowy
 
         -- SCD Typu 1
         ,CreatedDate                DATETIME2       NOT NULL DEFAULT GETDATE()             -- Data utworzenia rekordu klienta
@@ -96,17 +96,17 @@ CREATE TABLE dwh.D_Product (
         ,ProductCardId          INT             NOT NULL                            -- Identyfikator produktu z staging
         
         -- Atrybuty produktu
-        ,ProductName            VARCHAR(255)    NOT NULL                            -- Nazwa produktu - poziom 3 hierarchii
-        ,ProductDescription     VARCHAR(4000)   NULL                                -- Opis produktu
-        ,ProductImage           VARCHAR(4000)   NULL                                -- URL obrazu produktu
+        ,ProductName            NVARCHAR(255)    NOT NULL                            -- Nazwa produktu - poziom 3 hierarchii
+        ,ProductDescription     NVARCHAR(4000)   NULL                                -- Opis produktu
+        ,ProductImage           NVARCHAR(4000)   NULL                                -- URL obrazu produktu
         ,ProductPrice           DECIMAL(18, 4)  NOT NULL                            -- Cena produktu
         ,ProductStatus          INT             NOT NULL                            -- Status produktu (0 = Available, 1 = Not Available)
 
         -- Hierarchia katalogowa produktu (3 poziomy)
         ,DepartmentId           INT             NOT NULL                            -- poziom 1
-        ,DepartmentName         VARCHAR(100)    NOT NULL                            -- Nazwa działu - (Fitness, Technology...)
+        ,DepartmentName         NVARCHAR(100)    NOT NULL                            -- Nazwa działu - (Fitness, Technology...)
         ,CategoryId             INT             NOT NULL                            -- poziom 2
-        ,CategoryName           VARCHAR(100)    NOT NULL                            -- Nazwa kategorii - (Sporting Goods, Electronics...)
+        ,CategoryName           NVARCHAR(100)    NOT NULL                            -- Nazwa kategorii - (Sporting Goods, Electronics...)
 
         -- Atrybuty produktu
 
@@ -130,12 +130,12 @@ DROP TABLE IF EXISTS dwh.D_OrderLocation;
 CREATE TABLE dwh.D_OrderLocation(
          LocationKey        INT             PRIMARY KEY IDENTITY(1,1)           -- Klucz lokalizacji zamówienia
 
-        ,Market             VARCHAR(100)    NULL                                -- Pacific Asia, Europe, LATAM, USCA, Africa
+        ,Market             NVARCHAR(100)    NULL                                -- Pacific Asia, Europe, LATAM, USCA, Africa
         ,OrderRegion        NVARCHAR(100)   NULL                                -- Western Europe, South Asia, Central America...
-        ,OrderCountry       VARCHAR(100)    NULL                                -- Kraj
-        ,OrderState         VARCHAR(100)    NULL                                -- Województwo/Stan
-        ,OrderCity          VARCHAR(100)    NULL                                -- Miasto
-        ,OrderZipcode       VARCHAR(20)     NULL                                -- Kod pocztowy
+        ,OrderCountry       NVARCHAR(100)    NULL                                -- Kraj
+        ,OrderState         NVARCHAR(100)    NULL                                -- Województwo/Stan
+        ,OrderCity          NVARCHAR(100)    NULL                                -- Miasto
+        ,OrderZipcode       NVARCHAR(20)     NULL                                -- Kod pocztowy
 
         ,CreatedDate        DATETIME2       NOT NULL DEFAULT GETDATE()          -- Data utworzenia rekordu lokalizacji
         ,ModifiedDate       DATETIME2       NOT NULL DEFAULT GETDATE()          -- Data modyfikacji rekordu lokalizacji
