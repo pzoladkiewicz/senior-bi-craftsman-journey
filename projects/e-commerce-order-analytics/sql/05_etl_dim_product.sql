@@ -42,11 +42,11 @@ THEN UPDATE SET
         ,tgt.DepartmentName = src.Department_Name
         ,tgt.CategoryId = src.Category_Id
         ,tgt.CategoryName = src.Category_Name
-        ,tgt.LastUpdated_At = SYSUTCDATETIME()
+        ,tgt.ModifiedDate = SYSUTCDATETIME()
 WHEN NOT MATCHED BY TARGET
     THEN INSERT
     (
-         ProductCard_Id
+         ProductCardId
         ,ProductName
         ,ProductDescription
         ,ProductImage
@@ -56,6 +56,7 @@ WHEN NOT MATCHED BY TARGET
         ,DepartmentName
         ,CategoryId
         ,CategoryName
+        ,CreatedDate
         ,ModifiedDate
             )
     VALUES
@@ -70,5 +71,6 @@ WHEN NOT MATCHED BY TARGET
         ,src.Department_Name
         ,src.Category_Id
         ,src.Category_Name
-        ,GETDATE()
+        ,SYSUTCDATETIME()
+        ,SYSUTCDATETIME()
     );
