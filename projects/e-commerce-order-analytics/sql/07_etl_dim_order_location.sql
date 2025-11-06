@@ -17,19 +17,19 @@ MERGE dwh.D_OrderLocation AS tgt
 USING src AS src
         ON tgt.Market = src.Market
 WHEN MATCHED AND (
-        ISNULL(tgt.OrderRegion, '') <> ISNULL(src.Order_Region, '')
-    AND ISNULL(tgt.OrderCountry, '') <> ISNULL(src.Order_Country, '')
-    AND ISNULL(tgt.OrderState, '') <> ISNULL(src.Order_state, '')
-    AND ISNULL(tgt.OrderCity, '') <> ISNULL(src.Order_City, '')
-    AND ISNULL(tgt.OrderZipCode, '') <> ISNULL(src.Order_ZipCode, '')
+        ISNULL(tgt.OrderRegion, '')     <> ISNULL(src.Order_Region, '')
+    AND ISNULL(tgt.OrderCountry, '')    <> ISNULL(src.Order_Country, '')
+    AND ISNULL(tgt.OrderState, '')      <> ISNULL(src.Order_state, '')
+    AND ISNULL(tgt.OrderCity, '')       <> ISNULL(src.Order_City, '')
+    AND ISNULL(tgt.OrderZipCode, '')    <> ISNULL(src.Order_ZipCode, '')
 )
 THEN UPDATE SET
-         tgt.OrderRegion = src.Order_Region
-        ,tgt.OrderCountry = src.Order_Country
-        ,tgt.OrderState = src.Order_state
-        ,tgt.OrderCity = src.Order_City
-        ,tgt.OrderZipCode = src.Order_ZipCode
-        ,tgt.ModifiedDate = SYSUTCDATETIME()
+         tgt.OrderRegion    = src.Order_Region
+        ,tgt.OrderCountry   = src.Order_Country
+        ,tgt.OrderState     = src.Order_state
+        ,tgt.OrderCity      = src.Order_City
+        ,tgt.OrderZipCode   = src.Order_ZipCode
+        ,tgt.ModifiedDate   = SYSUTCDATETIME()
 WHEN NOT MATCHED BY TARGET
 THEN INSERT (
              Market

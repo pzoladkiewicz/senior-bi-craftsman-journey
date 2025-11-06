@@ -21,27 +21,27 @@ MERGE dwh.D_Customer AS tgt
 USING src AS src
     ON tgt.CustomerId = src.Customer_Id
 WHEN MATCHED AND (
-       ISNULL(tgt.CustomerFirstName, '') <> ISNULL(src.Customer_Fname, '')
-    OR ISNULL(tgt.CustomerLastName, '') <> ISNULL(src.Customer_Lname, '')
-    OR ISNULL(tgt.CustomerEmail, '') <> ISNULL(src.Customer_Email, '')
-    OR ISNULL(tgt.CustomerSegment, '') <> ISNULL(src.Customer_Segment, '')
-    OR ISNULL(tgt.CustomerStreet, '') <> ISNULL(src.Customer_Street, '')
-    OR ISNULL(tgt.CustomerCity, '') <> ISNULL(src.Customer_City, '')
-    OR ISNULL(tgt.CustomerState, '') <> ISNULL(src.Customer_State, '')
-    OR ISNULL(tgt.CustomerCountry, '') <> ISNULL(src.Customer_Country, '')
-    OR ISNULL(tgt.CustomerZipcode, '') <> ISNULL(src.Customer_Zipcode, '')
+       ISNULL(tgt.CustomerFirstName, '')    <> ISNULL(src.Customer_Fname, '')
+    OR ISNULL(tgt.CustomerLastName, '')     <> ISNULL(src.Customer_Lname, '')
+    OR ISNULL(tgt.CustomerEmail, '')        <> ISNULL(src.Customer_Email, '')
+    OR ISNULL(tgt.CustomerSegment, '')      <> ISNULL(src.Customer_Segment, '')
+    OR ISNULL(tgt.CustomerStreet, '')       <> ISNULL(src.Customer_Street, '')
+    OR ISNULL(tgt.CustomerCity, '')         <> ISNULL(src.Customer_City, '')
+    OR ISNULL(tgt.CustomerState, '')        <> ISNULL(src.Customer_State, '')
+    OR ISNULL(tgt.CustomerCountry, '')      <> ISNULL(src.Customer_Country, '')
+    OR ISNULL(tgt.CustomerZipcode, '')      <> ISNULL(src.Customer_Zipcode, '')
 )
     THEN UPDATE SET
-         tgt.CustomerFirstName = src.Customer_Fname
-        ,tgt.CustomerLastName = src.Customer_Lname
-        ,tgt.CustomerEmail = src.Customer_Email
-        ,tgt.CustomerSegment = src.Customer_Segment
-        ,tgt.CustomerStreet = src.Customer_Street
-        ,tgt.CustomerCity = src.Customer_City
-        ,tgt.CustomerState = src.Customer_State
-        ,tgt.CustomerCountry = src.Customer_Country
-        ,tgt.CustomerZipcode = src.Customer_Zipcode
-        ,tgt.ModifiedDate = SYSUTCDATETIME()
+         tgt.CustomerFirstName  = src.Customer_Fname
+        ,tgt.CustomerLastName   = src.Customer_Lname
+        ,tgt.CustomerEmail      = src.Customer_Email
+        ,tgt.CustomerSegment    = src.Customer_Segment
+        ,tgt.CustomerStreet     = src.Customer_Street
+        ,tgt.CustomerCity       = src.Customer_City
+        ,tgt.CustomerState      = src.Customer_State
+        ,tgt.CustomerCountry    = src.Customer_Country
+        ,tgt.CustomerZipcode    = src.Customer_Zipcode
+        ,tgt.ModifiedDate       = SYSUTCDATETIME()
 WHEN NOT MATCHED BY TARGET
     THEN INSERT (
          CustomerId
