@@ -1,0 +1,158 @@
+table 'dwh D_Customer'
+	lineageTag: a62e0bab-d6be-4a6f-883f-8f294980008c
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: edadbca2-44e1-4107-8df3-66219ca0ccea
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerID
+		dataType: int64
+		formatString: 0
+		lineageTag: e92b7bb2-ff62-4658-b4e7-6ea7abe45b01
+		summarizeBy: none
+		sourceColumn: CustomerID
+
+		annotation SummarizationSetBy = User
+
+	column CustomerFirstName
+		dataType: string
+		lineageTag: 0bbf3195-7639-4d61-ae65-406abe9d14e3
+		summarizeBy: none
+		sourceColumn: CustomerFirstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerLastName
+		dataType: string
+		lineageTag: f2e97190-4a12-45d4-ae44-cff6fce5fb28
+		summarizeBy: none
+		sourceColumn: CustomerLastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerEmail
+		dataType: string
+		isHidden
+		lineageTag: 8772acc6-1b63-4a17-8f11-295e26533cba
+		summarizeBy: none
+		sourceColumn: CustomerEmail
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerSegment
+		dataType: string
+		lineageTag: 20a89dbd-b1c5-478f-b0a7-a90e5f3ffb99
+		summarizeBy: none
+		sourceColumn: CustomerSegment
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerStreet
+		dataType: string
+		lineageTag: 23ea3a23-55fe-4103-a11c-760673323848
+		summarizeBy: none
+		sourceColumn: CustomerStreet
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCity
+		dataType: string
+		lineageTag: 5887dccc-26dc-495b-92e9-688dffc31e24
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: CustomerCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerState
+		dataType: string
+		lineageTag: ff5cd2d8-8e22-4b9f-a097-d3de9d2e56f4
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: CustomerState
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCountry
+		dataType: string
+		lineageTag: df125ae9-8fa2-40e9-9124-ff151d908c11
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: CustomerCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerZipcode
+		dataType: string
+		lineageTag: 328a9635-a842-47f3-a2bc-de0050686b04
+		summarizeBy: none
+		sourceColumn: CustomerZipcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: f5b03d75-5492-48d0-a772-e87f1e7fe7c6
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 73d0f0f9-d3a6-406d-886c-006af7446aa4
+			defaultHierarchy: LocalDateTable_2b8b65b9-0637-4c2d-ab5e-00e09404beba.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 4052183f-da1f-439a-b4bf-e84aa4ad36e0
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 37786195-f12f-45f3-886e-98491c6e48af
+			defaultHierarchy: LocalDateTable_a6909dab-329f-41dd-bbb5-7cd152471dbc.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 4b4c536d-165d-442e-8c2e-c668d070fa3a
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh D_Customer' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_D_Customer = Source{[Schema="dwh",Item="D_Customer"]}[Data]
+				in
+				    dwh_D_Customer
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

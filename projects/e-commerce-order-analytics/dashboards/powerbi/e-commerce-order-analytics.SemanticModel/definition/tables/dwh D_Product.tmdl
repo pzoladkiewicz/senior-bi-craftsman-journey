@@ -1,0 +1,157 @@
+table 'dwh D_Product'
+	lineageTag: c66606c5-0aa0-46f3-ba1c-63f352715f52
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0fbfe2e0-e26c-4e8d-906c-a78b8fc36acc
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCardId
+		dataType: int64
+		formatString: 0
+		lineageTag: edb41f8c-0307-494c-b9ee-d78f12658b4a
+		summarizeBy: none
+		sourceColumn: ProductCardId
+
+		annotation SummarizationSetBy = User
+
+	column ProductName
+		dataType: string
+		lineageTag: 9dc10d1d-a6b5-4cd0-bb41-76fc08297545
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductDescription
+		dataType: string
+		lineageTag: db90cd54-520e-44a5-9085-a6c1e7694215
+		summarizeBy: none
+		sourceColumn: ProductDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductImage
+		dataType: string
+		lineageTag: fc0764e9-1c01-482a-9ac6-98b0274baf02
+		summarizeBy: none
+		sourceColumn: ProductImage
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductPrice
+		dataType: double
+		lineageTag: 1fac860a-ecaa-4a8f-b97d-f73cd6522a7d
+		summarizeBy: sum
+		sourceColumn: ProductPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductStatus
+		dataType: int64
+		formatString: 0
+		lineageTag: a5577b92-efbd-4357-a772-e1854d98e9d0
+		summarizeBy: none
+		sourceColumn: ProductStatus
+
+		annotation SummarizationSetBy = User
+
+	column DepartmentId
+		dataType: int64
+		formatString: 0
+		lineageTag: 1cae44cf-d699-4435-aebe-0c7993e99da2
+		summarizeBy: none
+		sourceColumn: DepartmentId
+
+		annotation SummarizationSetBy = User
+
+	column DepartmentName
+		dataType: string
+		lineageTag: 34388119-02d3-42ba-a8bc-795dd630ebb8
+		summarizeBy: none
+		sourceColumn: DepartmentName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryId
+		dataType: int64
+		formatString: 0
+		lineageTag: cc8c814a-603c-4dc8-bf9d-cb6be9895c3a
+		summarizeBy: none
+		sourceColumn: CategoryId
+
+		annotation SummarizationSetBy = User
+
+	column CategoryName
+		dataType: string
+		lineageTag: 08f1bdf2-f66e-467c-8a68-1394c2e9cfca
+		summarizeBy: none
+		sourceColumn: CategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CreatedDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 81b1e6a2-3b02-409a-b5a5-264e0a1735de
+		summarizeBy: none
+		sourceColumn: CreatedDate
+
+		variation Variation
+			isDefault
+			relationship: 12229b4d-b71f-46ab-86bd-9475e12c2d71
+			defaultHierarchy: LocalDateTable_e2991d40-7df2-4d59-b089-e43d8da1c901.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 5910fa16-9090-4bff-a5df-e00f8b40a6ac
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: 16fdac20-dee2-4a08-8b14-9d85f2483476
+			defaultHierarchy: LocalDateTable_12b31238-d89c-445a-b161-2b03a0b004e8.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsActive
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: ffe9a7c3-5e69-40dc-a44e-61f486b1ae8e
+		summarizeBy: none
+		sourceColumn: IsActive
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh D_Product' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_D_Product = Source{[Schema="dwh",Item="D_Product"]}[Data]
+				in
+				    dwh_D_Product
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

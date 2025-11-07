@@ -1,0 +1,171 @@
+table 'dwh D_Date'
+	lineageTag: 7dc17038-690e-44ad-9668-fcd7b17672fb
+	dataCategory: Time
+
+	column DateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 391d27db-90b7-415a-b272-f2d7b33be896
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: 7ef17eef-b7cd-4276-a79f-ae8952993af4
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: bcfdfb83-9ab1-4154-9c28-697c52652fe0
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 82754ff7-bfe1-4698-8da2-8bf1f263f3bb
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 60f5670a-f104-4007-8a07-a3309a7fe111
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column WeekOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 89440bee-b4c4-4489-9e75-92c9f98914da
+		summarizeBy: none
+		sourceColumn: WeekOfYear
+
+		annotation SummarizationSetBy = User
+
+	column DayOfMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 7820f9b8-381a-4448-936d-0a2eabf45976
+		summarizeBy: none
+		sourceColumn: DayOfMonth
+
+		annotation SummarizationSetBy = User
+
+	column DayOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c4b5d9c-2ee2-4195-a213-51bb33755e64
+		summarizeBy: none
+		sourceColumn: DayOfWeek
+
+		annotation SummarizationSetBy = User
+
+	column DayOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 230aafcb-1ace-4d88-9090-927483f48304
+		summarizeBy: none
+		sourceColumn: DayOfYear
+
+		annotation SummarizationSetBy = User
+
+	column IsWeekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 97f78905-14ca-4e43-8da0-5811c658ef8e
+		summarizeBy: none
+		sourceColumn: IsWeekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsHoliday
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 86d7a1af-241a-4b7d-b409-8ed26aab82a9
+		summarizeBy: none
+		sourceColumn: IsHoliday
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: f308f0bc-b277-4ac4-986d-147d9e420a89
+		summarizeBy: none
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = User
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: a80b8659-324a-4c8e-a0fb-200847504001
+		summarizeBy: none
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = User
+
+	column DateModern =
+			
+			VAR _CY = YEAR(TODAY())
+			VAR _YearOffset = _CY - 2017
+			VAR _Result = DATE('dwh D_Date'[Year] + _YearOffset, 'dwh D_Date'[Month], 'dwh D_Date'[DayOfMonth])
+			RETURN
+			    _Result
+		formatString: Long Date
+		lineageTag: 1130261f-9d60-4af5-877a-0761cf3f32ae
+		summarizeBy: none
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YearModern = YEAR('dwh D_Date'[DateModern])
+		formatString: 0
+		lineageTag: 3a31b7ad-af2a-4afa-a32d-a0ac660088d6
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'YTD Only' = IF ( 'dwh D_Date'[DateModern] <= TODAY(), 1, 0 )
+		formatString: 0
+		lineageTag: b85bc47f-3ab0-441f-ad3d-ec7bbccdf92f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh D_Date' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_D_Date = Source{[Schema="dwh",Item="D_Date"]}[Data]
+				in
+				    dwh_D_Date
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

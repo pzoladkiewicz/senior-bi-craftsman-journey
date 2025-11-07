@@ -1,0 +1,299 @@
+table 'dwh F_Order'
+	lineageTag: efcf69bb-4a93-4872-9cd0-fbecd33d6cdd
+
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8163ac94-dc61-4596-b780-900669a2c853
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShippingDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8147d2c8-3d5e-4c90-99c1-146b6fb3f0b7
+		summarizeBy: count
+		sourceColumn: ShippingDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d50e852a-638a-4871-92ab-aec26625176c
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8ea74a99-0bcc-4c3e-a21e-c2af3b2088d1
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderLocationKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 684a6e18-d0cb-4546-b4b5-4d8a9e4485df
+		summarizeBy: none
+		sourceColumn: OrderLocationKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderID
+		dataType: int64
+		formatString: 0
+		lineageTag: 0849d92d-29c3-492a-a3db-6b733a5bdae8
+		summarizeBy: none
+		sourceColumn: OrderID
+
+		annotation SummarizationSetBy = User
+
+	column OrderItemID
+		dataType: int64
+		formatString: 0
+		lineageTag: 496c62d9-1948-4b8e-88fc-c4fcd53e4578
+		summarizeBy: none
+		sourceColumn: OrderItemID
+
+		annotation SummarizationSetBy = User
+
+	column OrderStatus
+		dataType: string
+		lineageTag: 64e93389-56c0-4c62-8d5f-2acdf708fbd4
+		summarizeBy: none
+		sourceColumn: OrderStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryStatus
+		dataType: string
+		lineageTag: 8e9d3f09-ca7b-4200-a861-3259c06d9119
+		summarizeBy: none
+		sourceColumn: DeliveryStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShippingMode
+		dataType: string
+		lineageTag: 9a5a42cb-53a8-489b-87aa-4b13111553ed
+		summarizeBy: none
+		sourceColumn: ShippingMode
+
+		annotation SummarizationSetBy = Automatic
+
+	column TransactionType
+		dataType: string
+		lineageTag: a4cc9984-e550-46bb-a4e7-6a3df734a9e0
+		summarizeBy: none
+		sourceColumn: TransactionType
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderItemQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: b622e45f-a9b6-4b92-877d-e97a4332254a
+		summarizeBy: sum
+		sourceColumn: OrderItemQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesAmount
+		dataType: double
+		lineageTag: 8769e44e-2ac8-4a4d-8b2d-cc3da0a54159
+		summarizeBy: sum
+		sourceColumn: SalesAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderItemTotal
+		dataType: double
+		lineageTag: 50113a82-78fc-44a4-a079-0818c3691972
+		summarizeBy: sum
+		sourceColumn: OrderItemTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderItemDiscount
+		dataType: double
+		lineageTag: 06462002-6564-47dc-9d24-d24892fc02ef
+		summarizeBy: sum
+		sourceColumn: OrderItemDiscount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BenefitPerOrder
+		dataType: double
+		lineageTag: e8b61507-2901-484b-bf88-f0d71c5df9d3
+		summarizeBy: sum
+		sourceColumn: BenefitPerOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderProfitPerOrder
+		dataType: double
+		lineageTag: 318f0a51-7f04-4c4b-a929-a5f8d5d39650
+		summarizeBy: sum
+		sourceColumn: OrderProfitPerOrder
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalesPerCustomer
+		dataType: double
+		lineageTag: 161b3ada-a16e-4cd6-88e3-14736b23ce36
+		summarizeBy: sum
+		sourceColumn: SalesPerCustomer
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductPrice
+		dataType: double
+		lineageTag: 0386d0cd-f071-43f5-abfb-13ed8804c384
+		summarizeBy: sum
+		sourceColumn: ProductPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderItemDiscountRate
+		dataType: double
+		lineageTag: 952c80a8-78c0-4782-bd5a-9f8cce46910b
+		summarizeBy: sum
+		sourceColumn: OrderItemDiscountRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderItemProfitRate
+		dataType: double
+		lineageTag: 24a5891d-242d-45e3-9b50-6fe5ba477687
+		summarizeBy: sum
+		sourceColumn: OrderItemProfitRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DaysForShippingReal
+		dataType: int64
+		formatString: 0
+		lineageTag: 81a5b79e-92b3-4f25-b6fd-7dcdcc9565f7
+		summarizeBy: sum
+		sourceColumn: DaysForShippingReal
+
+		annotation SummarizationSetBy = Automatic
+
+	column DaysForShippmentScheduled
+		dataType: int64
+		formatString: 0
+		lineageTag: 3af01b15-8737-43ad-84de-81534b38e72f
+		summarizeBy: sum
+		sourceColumn: DaysForShippmentScheduled
+
+		annotation SummarizationSetBy = Automatic
+
+	column LateDeliveryRisk
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: cd968bb1-b5f7-4ae3-842c-86a07abeaa6d
+		summarizeBy: none
+		sourceColumn: LateDeliveryRisk
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreLatitude
+		dataType: double
+		lineageTag: e2164998-2293-4a28-a71b-7a8b3ba381c8
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: StoreLatitude
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StoreLongitude
+		dataType: double
+		lineageTag: 8a61f6e2-0184-4d0d-bcc8-3a4b08bb778c
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: StoreLongitude
+
+		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LoadDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: d5b3e0d4-e0f0-457f-836c-0824a283daaa
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: 739f611a-e8e3-40d9-b119-d5e7f1e96438
+			defaultHierarchy: LocalDateTable_fb583e0a-09bc-4ad3-b3e7-1d223c10501f.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataSource
+		dataType: string
+		lineageTag: e473dd47-a8d9-4bfc-a307-295b0d5eba0c
+		summarizeBy: none
+		sourceColumn: DataSource
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh F_Order' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_F_Order = Source{[Schema="dwh",Item="F_Order"]}[Data]
+				in
+				    dwh_F_Order
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
