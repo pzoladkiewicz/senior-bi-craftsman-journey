@@ -14,7 +14,7 @@ WITH src AS (
         ,r.Customer_City
         ,r.Customer_State
         ,r.Customer_Country
-        ,r.Customer_Zipcode
+        ,REPLACE(CAST(r.Customer_Zipcode as nvarchar(20)), '.0', '') AS Customer_Zipcode
     FROM staging.DataCo_Raw AS r
 )
 MERGE dwh.D_Customer AS tgt
@@ -40,8 +40,7 @@ WHEN MATCHED AND (
         ,tgt.CustomerCity       = src.Customer_City
         ,tgt.CustomerState      = src.Customer_State
         ,tgt.CustomerCountry    = src.Customer_Country
-        ,tgt.CustomerZipcode    = src.Customer_Zipcode
-        ,tgt.ModifiedDate       = SYSUTCDATETIME()
+        ,tgt.CustomerZipcode    = CAST(src.Customer_Zipcode as NVARCHAR(20))
 WHEN NOT MATCHED BY TARGET
     THEN INSERT (
          CustomerId
@@ -66,7 +65,7 @@ WHEN NOT MATCHED BY TARGET
         ,src.Customer_City
         ,src.Customer_State
         ,src.Customer_Country
-        ,src.Customer_Zipcode
+        ,CAST(src.Customer_Zipcode as NVARCHAR(20))
         ,SYSUTCDATETIME()
         ,SYSUTCDATETIME()
     ); 

@@ -145,6 +145,7 @@ THEN UPDATE SET
         ,t.DaysForShippmentScheduled    = s.DaysForShipmentScheduled
         ,t.LateDeliveryRisk             = s.LateDeliveryRisk
         ,t.StoreLatitude                = s.StoreLatitude
+        ,t.StoreLongitude               = s.StoreLongitude
 
 WHEN NOT MATCHED BY TARGET
 THEN INSERT (
@@ -173,6 +174,7 @@ THEN INSERT (
         ,DaysForShippmentScheduled
         ,LateDeliveryRisk
         ,StoreLatitude
+        ,StoreLongitude
     )
     VALUES (
          s.OrderDateKey
@@ -200,6 +202,7 @@ THEN INSERT (
         ,s.DaysForShipmentScheduled
         ,s.LateDeliveryRisk
         ,s.StoreLatitude
+        ,s.StoreLongitude
     );
 
 
