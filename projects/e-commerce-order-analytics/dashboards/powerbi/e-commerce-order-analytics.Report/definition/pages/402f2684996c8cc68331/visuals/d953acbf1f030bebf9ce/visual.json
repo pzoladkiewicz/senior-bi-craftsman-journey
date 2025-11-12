@@ -1,0 +1,73 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "d953acbf1f030bebf9ce",
+  "position": {
+    "x": 688,
+    "y": 95.999999999999986,
+    "z": 2,
+    "height": 304,
+    "width": 528,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "columnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh D_Date"
+                    }
+                  },
+                  "Property": "Month Name Short"
+                }
+              },
+              "queryRef": "dwh D_Date.Month Name Short",
+              "nativeQueryRef": "Month Name Short"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dwh D_Customer"
+                    }
+                  },
+                  "Property": "11. 0TEST Max Min"
+                }
+              },
+              "queryRef": "dwh D_Customer.11. 0TEST Max Min",
+              "nativeQueryRef": "11. 0TEST Max Min"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dwh D_Customer"
+                  }
+                },
+                "Property": "11. 0TEST Max Min"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -125,14 +125,63 @@ table 'dwh D_Date'
 
 		annotation SummarizationSetBy = User
 
+	column MonthShort = FORMAT('dwh D_Date'[Date], "MMM")
+		lineageTag: 599041a1-6131-40b0-82b8-5bfb0c282b37
+		summarizeBy: none
+		sortByColumn: 'Month Name'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: c523824f-ee20-478f-b7e1-5aef9506e87e
+		summarizeBy: none
+		sourceColumn: Month Name
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonthSort = 'dwh D_Date'[Year] * 100 + 'dwh D_Date'[Month]
+		formatString: 0
+		lineageTag: 2690938e-28df-4cc8-a102-5c86ab0779cc
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name Short'
+		dataType: string
+		lineageTag: 2f6bb0e8-c844-4256-8b50-0acfa796200e
+		summarizeBy: none
+		sourceColumn: Month Name Short
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name Initials'
+		dataType: string
+		lineageTag: 3cef4032-3f09-4588-b18e-5132eed7221b
+		summarizeBy: none
+		sourceColumn: Month Name Initials
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'dwh D_Date' = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
-				    dwh_D_Date = Source{[Schema="dwh",Item="D_Date"]}[Data]
+				    dwh_D_Date = Source{[Schema="dwh",Item="D_Date"]}[Data],
+				    #"Inserted Month Name" = Table.AddColumn(dwh_D_Date, "Month Name", each Date.MonthName([Date]), type text),
+				    #"Added Custom" = Table.AddColumn(#"Inserted Month Name", "Month Name Short", each Date.ToText([Date], "MMM")),
+				    #"Added Custom1" = Table.AddColumn(#"Added Custom", "Month Name Initials", each Text.Start( Date.ToText ([Date], "MMM"), 1))
 				in
-				    dwh_D_Date
+				    #"Added Custom1"
 
 	annotation PBI_NavigationStepName = Navigation
 

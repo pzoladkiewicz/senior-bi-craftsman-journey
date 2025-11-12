@@ -1,6 +1,88 @@
 table 'dwh D_Customer'
 	lineageTag: a62e0bab-d6be-4a6f-883f-8f294980008c
 
+	measure '11.1 Sales Text' = FORMAT([00_Total Sales]/1000000, "$ #,###.##M")
+		lineageTag: d13674ed-7bba-4b7c-8ba7-1855582ac25d
+
+	measure '11.2 YOY Sales' = ```
+			
+			VAR _CY = [00_Total Sales]
+			VAR _PY = CALCULATE(
+			    [00_Total Sales],
+			    DATEADD('dwh D_Date'[Date], -1, YEAR)
+			)
+			VAR _change = FORMAT( _CY - _PY, "+$#,###;-$#,###")
+			VAR _perc = DIVIDE(_CY - _PY, _PY)
+			VAR _percFormat = FORMAT(_perc, "0.0%; 0.0%")
+			VAR _condn = 
+			    IF(
+			        _perc > 0,
+			        UNICHAR(129029) & _percFormat & "(" & _change & " from previous year)",
+			        UNICHAR(129031) & _percFormat & "(" & _change & " from previous year)"
+			    )
+			RETURN
+			    _condn
+			```
+		lineageTag: a1d6b325-2fd1-42c0-b756-ae998f04f621
+
+	measure '11.3 CF YOY Sales' =
+			
+			VAR _CY = [00_Total Sales]
+			VAR _PY = CALCULATE(
+			    [00_Total Sales],
+			    DATEADD('dwh D_Date'[Date], -1, YEAR)
+			)
+			VAR _perc = DIVIDE(_CY - _PY, _PY)
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, "Green",
+			        _perc < 0, "Red",
+			        "Grey"
+			    )
+		lineageTag: 2a870e4c-185d-4be3-ae4e-62bafeb87bc1
+
+	measure '11.4 CF Bars' = ```
+			
+			VAR _currentSales = [00_Total Sales]
+			VAR _selectedYear = SELECTEDVALUE('dwh D_Date'[Year])
+			VAR _maxval =
+			    CALCULATE(
+			        MAXX(
+			            VALUES('dwh D_Date'[Month Name Short]),
+			            [00_Total Sales]
+			        ),
+			        'dwh D_Date'[Year] = _selectedYear
+			    )
+			VAR _minval =
+			    CALCULATE(
+			        MINX(
+			            VALUES('dwh D_Date'[Month Name Short]),
+			            [00_Total Sales]
+			        ),
+			        'dwh D_Date'[Year] = _selectedYear
+			    )
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _currentSales = _maxval, "Green",
+			        _currentSales = _minval, "Red",
+			        "Light Grey"
+			    )
+			
+			```
+		lineageTag: 91fa8a31-a53f-4e79-935b-f4fc80b4d695
+
+	measure '11. 0TEST Max Min' = ```
+			
+			VAR _maxval = MAXX(ALLSELECTED('dwh D_Date'[Month Name Short]), CALCULATE([00_Total Sales]))
+			VAR _minval = MINX(ALLSELECTED('dwh D_Date'[Month Name Short]), CALCULATE([00_Total Sales]))
+			RETURN
+			    "Max: " & _maxval & " | Min: " & _minval
+			
+			```
+		lineageTag: 4d1992bd-2226-4220-8b24-6e876dd5758d
+
 	column CustomerKey
 		dataType: int64
 		isHidden
