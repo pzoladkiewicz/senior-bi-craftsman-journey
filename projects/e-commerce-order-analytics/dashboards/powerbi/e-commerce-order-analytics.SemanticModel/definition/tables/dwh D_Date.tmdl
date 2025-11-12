@@ -125,37 +125,6 @@ table 'dwh D_Date'
 
 		annotation SummarizationSetBy = User
 
-	column DateModern =
-			
-			VAR _CY = YEAR(TODAY())
-			VAR _YearOffset = _CY - 2017
-			VAR _Result = DATE('dwh D_Date'[Year] + _YearOffset, 'dwh D_Date'[Month], 'dwh D_Date'[DayOfMonth])
-			RETURN
-			    _Result
-		formatString: Long Date
-		lineageTag: 1130261f-9d60-4af5-877a-0761cf3f32ae
-		summarizeBy: none
-
-		changedProperty = DataType
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
-	column YearModern = YEAR('dwh D_Date'[DateModern])
-		formatString: 0
-		lineageTag: 3a31b7ad-af2a-4afa-a32d-a0ac660088d6
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'YTD Only' = IF ( 'dwh D_Date'[DateModern] <= TODAY(), 1, 0 )
-		formatString: 0
-		lineageTag: b85bc47f-3ab0-441f-ad3d-ec7bbccdf92f
-		summarizeBy: none
-
-		annotation SummarizationSetBy = Automatic
-
 	partition 'dwh D_Date' = m
 		mode: import
 		source =

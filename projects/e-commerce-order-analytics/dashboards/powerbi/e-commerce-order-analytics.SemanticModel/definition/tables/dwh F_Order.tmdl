@@ -1,6 +1,16 @@
 table 'dwh F_Order'
 	lineageTag: efcf69bb-4a93-4872-9cd0-fbecd33d6cdd
 
+	measure '00_Total Sales' = SUM('dwh F_Order'[SalesAmount])
+		lineageTag: 063bfb39-4ba4-4075-8aa2-3cab9a58cc69
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '00_Total Profit' = sum('dwh F_Order'[OrderProfitPerOrder])
+		lineageTag: 161ed710-db12-4fa1-87fa-b1ba8c1e5b64
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column OrderDateKey
 		dataType: int64
 		isHidden

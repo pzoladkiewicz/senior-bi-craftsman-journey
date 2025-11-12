@@ -25,7 +25,6 @@ ref table 'dwh D_Customer'
 ref table LocalDateTable_2b8b65b9-0637-4c2d-ab5e-00e09404beba
 ref table LocalDateTable_a6909dab-329f-41dd-bbb5-7cd152471dbc
 ref table 'dwh D_Date'
-ref table _Measures
 
 ref cultureInfo en-US
 
