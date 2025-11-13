@@ -2,6 +2,43 @@ table 'dwh D_Date'
 	lineageTag: 7dc17038-690e-44ad-9668-fcd7b17672fb
 	dataCategory: Time
 
+	measure _LatestYearWithSales = ```
+			
+			VAR _YearsWithData = 
+			    CALCULATETABLE(
+			        VALUES('dwh D_Date'[Year]),
+			        KEEPFILTERS('dwh F_Order')
+			    )
+			VAR _MaxYear = MAXX(_YearsWithData, 'dwh D_Date'[Year])
+			RETURN
+			    _MaxYear
+			```
+		formatString: 0
+		lineageTag: 4447182d-c73a-48b2-9b2c-5526b336e27e
+
+	measure _LatestFullYearWithSales = ```
+			
+			VAR _MaxYearWithSales = 
+			    CALCULATE(
+			        MAX('dwh D_Date'[Year]),
+			        KEEPFILTERS('dwh F_Order')
+			    )
+			VAR _MonthsInMaxYear = 
+			    CALCULATE(
+			        COUNTROWS(
+			            FILTER(
+			                VALUES('dwh D_Date'[Month]),
+			                CALCULATE(COUNTROWS('dwh F_Order')) > 0
+			            )
+			        ),
+			        'dwh D_Date'[Year] = _MaxYearWithSales
+			    )
+			RETURN
+			    IF(_MonthsInMaxYear = 12, _MaxYearWithSales, _MaxYearWithSales - 1)
+			```
+		formatString: 0
+		lineageTag: 05600238-615e-4044-8f4e-260973b9271e
+
 	column DateKey
 		dataType: int64
 		isHidden
@@ -124,15 +161,6 @@ table 'dwh D_Date'
 		sourceColumn: FiscalQuarter
 
 		annotation SummarizationSetBy = User
-
-	column MonthShort = FORMAT('dwh D_Date'[Date], "MMM")
-		lineageTag: 599041a1-6131-40b0-82b8-5bfb0c282b37
-		summarizeBy: none
-		sortByColumn: 'Month Name'
-
-		changedProperty = SortByColumn
-
-		annotation SummarizationSetBy = Automatic
 
 	column 'Month Name'
 		dataType: string
