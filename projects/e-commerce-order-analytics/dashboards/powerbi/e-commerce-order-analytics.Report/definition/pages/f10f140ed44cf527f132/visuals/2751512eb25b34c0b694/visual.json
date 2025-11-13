@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "ce08fb503ec127f44049",
+  "name": "2751512eb25b34c0b694",
   "position": {
     "x": 128,
     "y": 368,
-    "z": 2,
+    "z": 1,
     "height": 336,
     "width": 1072,
-    "tabOrder": 1000
+    "tabOrder": 1
   },
   "visual": {
     "visualType": "hundredPercentStackedColumnChart",
@@ -158,5 +158,65 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "0425b0205226e68d4c8d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh D_Date"
+              }
+            },
+            "Property": "Month Name Short"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2da2e32e7d8bd00ac19c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh F_Order"
+              }
+            },
+            "Property": "00_Total Profit"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "06aff5fe0de761a2030d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh D_OrderLocation"
+              }
+            },
+            "Property": "Market"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "95ae4c97e7e5c1109406",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh D_Date"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
