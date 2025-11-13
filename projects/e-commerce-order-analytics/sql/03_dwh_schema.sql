@@ -221,8 +221,4 @@ ALTER TABLE dwh.F_Order
         FOREIGN KEY (OrderLocationKey) REFERENCES dwh.D_OrderLocation(LocationKey);
 
 
--- ===================================================================
--- Indeksy wydajnościowe
 
-
--- ===================================================================
