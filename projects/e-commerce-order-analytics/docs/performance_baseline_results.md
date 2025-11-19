@@ -7,7 +7,27 @@
 
 ---
 
-## 📊 Metryki Baseline
+### Tabela porównawcza
+
+| # | Zapytanie | PRZED Elapsed | PO Elapsed | Δ (ms) | Δ (%) | PRZED F_Order | PO F_Order | Δ Reads | Δ (%) | Index Used |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | CLV Analysis | 171ms | 80ms | -91 | **-53%** | 6854 | 1448 | -5406 | **-79%** | IX_Customer_Perf |
+| 2 | Product Perf | 169ms | 59ms | -110 | **-65%** | 6854 | 1052 | -5802 | **-85%** | IX_Product_Perf |
+| 3 | Monthly Trend | 48ms | 182ms | +134 | ???% | 6854 | 297 | -6557 | **-96%*** | IX_TimeSeries |
+| 4 | Geography | 61ms | 157ms | +96 | **+157%** | 6854 | 297 | -6557 | **-96%**% | IX_Geography |
+| 5 | Shipping | 16ms | 22ms | +6 | **+38%** | 6854 | 625 | -6229 | **-91%** | IX_Shipping |
+| 6 | Top Products | 23ms | 25ms | +2 | **+9%** | 6854 | 439 | -6415 | **-94%** | IX_Product_Perf |
+| 7 | Segments | 297ms | 336ms | +39 | ???% | 6854 | 1448 | -5416 | **-79%** | IX_Customer_Perf |
+
+**Łącznie**:
+- Średnia elapsed PRZED: 112ms → PO: ???ms (**Δ -??%**)
+- Średnia F_Order reads PRZED: 6854 → PO: ??? (**Δ -??%**)
+- Tempdb spill (Z7): 122,684 pages → ??? (**Δ -??%**)
+
+---
+## 📊 Metryki szczegółowe
+
+### PRZED optymalizacją (2025-11-18)
 
 | # | Zapytanie | Scenariusz biznesowy | Elapsed Time (ms) | CPU Time (ms) | Logical Reads F_Order | Logical Reads Wymiary | Scan Count | Plan Screenshot |
 |---|---|---|---|---|---|---|---|---|

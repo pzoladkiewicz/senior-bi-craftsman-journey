@@ -47,6 +47,7 @@ INCLUDE (
     ,OrderItemQuantity
     ,OrderItemDiscount
     ,BenefitPerOrder
+    ,OrderItemProfitRate
     )
 WHERE OrderStatus = 'COMPLETE';
 GO
@@ -55,8 +56,9 @@ GO
 -- INDEX 3: Time-Series Analysis (Z3)
 -- ============================================================================
 
-CREATE NONCLUSTERED  INDEX IX_F_Order_TimeSeries
-ON dwh.F_Order(OrderDateKey, ShippingDateKey)
+-- DROP INDEX IX_F_Order_TimeSeries ON dwh.F_Order
+CREATE NONCLUSTERED INDEX IX_F_Order_TimeSeries
+ON dwh.F_Order(OrderDateKey, OrderID)
 INCLUDE (
      SalesAmount
     ,BenefitPerOrder
@@ -137,3 +139,20 @@ WHERE 1=1
     AND i.name = 'PK_F_Order'
 GROUP BY
     i.name
+
+
+
+
+
+-- Update statistics na F_Order
+UPDATE STATISTICS dwh.F_Order WITH FULLSCAN;
+GO
+
+-- Update statistics na wszystkich indexach
+UPDATE STATISTICS dwh.F_Order IX_F_Order_Product_Performance WITH FULLSCAN;
+GO
+
+
+-- OPTION 1: Clear cache tylko dla tego query (bezpieczne)
+DBCC FREEPROCCACHE;
+GO
