@@ -37,13 +37,13 @@
 
 | \# | Zapytanie | Elapsed (ms) | CPU (ms) | F_Order Reads | Wymiary Reads | Worktable | Rows | Plan |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 1 | CLV | 171 | 811 | 6854 | 557 | 0 | 100 | [📸](../portfolio_assets/query_plans/baseline/query_01_clv_baseline.png) |
-| 2 | Product | 169 | 722 | 6854 | 7 | 0 | 51 | [📸](../portfolio_assets/query_plans/baseline/query_02_product_baseline.png) |
-| 3 | Monthly | 48 | 206 | 6854 | 82 | 0 | 37 | [📸](../portfolio_assets/query_plans/baseline/query_03_monthly_baseline.png) |
-| 4 | Geography | 61 | 295 | 6854 | 202 | 0 | 154 | [📸](../portfolio_assets/query_plans/baseline/query_04_geography_baseline.png) |
-| 5 | Shipping | 16 | 79 | 6854 | 0 | 0 | 8 | [📸](../portfolio_assets/query_plans/baseline/query_05_shipping_baseline.png) |
-| 6 | Top Products | 23 | 82 | 6854 | 236 | 0 | 10 | [📸](../portfolio_assets/query_plans/baseline/query_06_top_products_baseline.png) |
-| 7 | Segments | 297 | 379 | 6854 | 557 | **122,684** | 3 | [📸](../portfolio_assets/query_plans/baseline/query_07_segments_baseline.png) |
+| 1 | CLV | 171 | 811 | 6854 | 557 | 0 | 100 | [📸 Screenshot](portfolio_assets/query_plans/baseline/query_01_clv_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_01_clv_baseline.sqlplan) |
+| 2 | Product | 169 | 722 | 6854 | 7 | 0 | 51 | [📸 Screenshot](portfolio_assets/query_plans/baseline/query_02_product_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_02_product_baseline.sqlplan) |
+| 3 | Monthly | 48 | 206 | 6854 | 82 | 0 | 37 | [📸 Screenshot](portfolio_assets/query_plans/baseline/query_03_monthly_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_03_monthly_baseline.sqlplan) |
+| 4 | Geography | 61 | 295 | 6854 | 202 | 0 | 154 | [📸 Screenshot](portfolio_assets/query_plans/baseline/query_04_geography_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_04_geography_baseline.sqlplan) |
+| 5 | Shipping | 16 | 79 | 6854 | 0 | 0 | 8 | [📸 Screenshot](portfolio_assets/query_plans/baseline/query_05_shipping_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_05_shipping_baseline.sqlplan) |
+| 6 | Top Products | 23 | 82 | 6854 | 236 | 0 | 10 | [📸 Screenshot](portfolio_assets/query_plans/baseline/query_06_top_products_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_06_top_products_baseline.sqlplan) |
+| 7 | Segments | 297 | 379 | 6854 | 557 | **122,684** | 3 | [📸 Screenshot](portfolio_assets/query_plans/baseline/query_07_segments_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_07_segments_baseline.sqlplan) |
 
 
 ***
@@ -52,15 +52,15 @@
 
 | \# | Zapytanie | Elapsed (ms) | CPU (ms) | F_Order Reads | Wymiary Reads | Worktable | Rows | Plan |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
-| 1 | CLV | 80 | 293 | 1448 | 557 | 0 | 100 | [📸](../portfolio_assets/query_plans/optimized/query_01_clv_optimized.png) |
-| 2 | Product | 59 | 270 | 1052 | 7 | 0 | 51 | [📸](../portfolio_assets/query_plans/optimized/query_02_product_optimized.png) |
-| 3 | Monthly | 182 | 127 | 297 | 10 | **121,618** | 37 | [📸](../portfolio_assets/query_plans/optimized/query_03_monthly_optimized.png) |
-| 4 | Geography | 157 | 156 | 297 | 69 | 0* | 154 | [📸](../portfolio_assets/query_plans/optimized/query_04_geography_optimized.png) |
-| 5 | Shipping | 22 | 20 | 625 | 0 | 0 | 8 | [📸](../portfolio_assets/query_plans/optimized/query_05_shipping_optimized.png) |
-| 6 | Top Products | 25 | 28 | 439 | 7 | 0 | 10 | [📸](../portfolio_assets/query_plans/optimized/query_06_top_products_optimized.png) |
-| 7 | Segments | 336 | 504 | 1448 | 557 | **122,684** | 3 | [📸](../portfolio_assets/query_plans/optimized/query_07_segments_optimized.png) |
+| 1 | CLV | 80 | 293 | 1448 | 557 | 0 | 100 | [📸 Screenshot](portfolio_assets/query_plans/optimized/query_01_clv_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_01_clv_optimized.sqlplan) |
+| 2 | Product | 59 | 270 | 1052 | 7 | 0 | 51 | [📸 Screenshot](portfolio_assets/query_plans/optimized/query_02_product_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_02_product_optimized.sqlplan) |
+| 3 | Monthly | 182 | 127 | 297 | 10 | **121,618** | 37 | [📸 Screenshot](portfolio_assets/query_plans/optimized/query_03_monthly_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_03_monthly_optimized.sqlplan) |
+| 4 | Geography | 157 | 156 | 297 | 69 | 0* | 154 | [📸 Screenshot](portfolio_assets/query_plans/optimized/query_04_geography_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_04_geography_optimized.sqlplan) |
+| 5 | Shipping | 22 | 20 | 625 | 0 | 0 | 8 | [📸 Screenshot](portfolio_assets/query_plans/optimized/query_05_shipping_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_05_shipping_optimized.sqlplan) |
+| 6 | Top Products | 25 | 28 | 439 | 7 | 0 | 10 | [📸 Screenshot](portfolio_assets/query_plans/optimized/query_06_top_products_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_06_top_products_optimized.sqlplan) |
+| 7 | Segments | 336 | 504 | 1448 | 557 | **122,684** | 3 | [📸 Screenshot](portfolio_assets/query_plans/optimized/query_07_segments_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_07_segments_optimized.sqlplan) |
 
-*\*Z4: spill do tempdb widoczny w planie (operator Hash Match), mimo że statystyki IO pokazują 0.*
+*\*Z4: Spill do tempdb widoczny w planie (operator Hash Match), mimo że statystyki IO pokazują 0.*
 
 ***
 
@@ -70,99 +70,360 @@
 
 #### PRZED (Baseline - 18.11.2025)
 
-**Plan**: [📸 Screenshot](../portfolio_assets/query_plans/baseline/query_01_clv_baseline.png)
+**Metryki**:
 
-**Kluczowe operatory**:
+- Elapsed: 171ms, CPU: 811ms
+- F_Order reads: 6854 stron
+- D_Customer reads: 557 stron
 
-- **Clustered Index Scan** [F_Order].[PK_F_Order]
-    - Koszt: 46%
-    - Wiersze: 180K (szacowane i rzeczywiste)
-    - Odczyty logiczne: 6854 stron (~55 MB)
-    - Operacja: Pełny skan tabeli
-- **Hash Match (Aggregate)** × 2
-    - Koszt: 18% łącznie
-    - Dwupoziomowa agregacja
+**Struktura planu**:
 
-**Wąskie gardło**: Clustered Index Scan dominuje koszt i I/O.
+- **Clustered Index Scan** [F_Order].[PK_F_Order]: 46% kosztu, 180K wierszy, 6854 strony
+- Hash Match Join (F_Order ⋈ D_Customer): ~10% kosztu
+- Hash Match Aggregate (2 poziomy): 18% kosztu
+- Parallelism overhead: 11% kosztu
+- Sort + Top: ~15% kosztu
+
+**Wąskie gardło**: Clustered Scan dominuje koszt i I/O.
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/baseline/query_01_clv_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_01_clv_baseline.sqlplan)
 
 ***
 
 #### PO (Optimized - 19.11.2025)
 
-**Plan**: [📸 Screenshot](../portfolio_assets/query_plans/optimized/query_01_clv_optimized.png)
+**Metryki**:
 
-**Kluczowe operatory**:
+- Elapsed: 171ms → 80ms (**-53%**)
+- CPU: 811ms → 293ms (**-64%**)
+- F_Order reads: 6854 → 1448 stron (**-79%**)
 
-- **Index Scan (NonClustered)** [F_Order].[IX_F_Order_Customer_Performance]
-    - Koszt: 3% (vs 46% w baseline = **redukcja o 93%!**)
-    - Wiersze: 59,491 (przefiltrowane przez WHERE OrderStatus='COMPLETE')
-    - Odczyty logiczne: 1448 stron (vs 6854 w baseline = **redukcja -79%**)
-- **Korzyści z Covering Index**:
-    - ✅ Lista wyjściowa: CustomerKey, SalesAmount, BenefitPerOrder, OrderItemQuantity, OrderItemProfitRate
-    - ✅ **Zero Key Lookups** (wszystkie kolumny w indeksie)
-    - ✅ Filtered Index: tylko zamówienia COMPLETE (357K wierszy w indeksie vs 180K w całej tabeli)
+**Struktura planu**:
 
-**Dlaczego Index SCAN (a nie Seek)?**
+- **Index Scan (NonClustered)** [F_Order].[IX_F_Order_Customer_Performance]: **3% kosztu** (vs 46% baseline)
+    - Wiersze: 59,491 (przefiltrowane przez index)
+    - Odczyty: 1448 stron (vs 6854 baseline)
+    - **Covering Index**: CustomerKey + INCLUDE (SalesAmount, BenefitPerOrder, OrderItemQuantity, OrderItemProfitRate)
+    - **Zero Key Lookups** ✅
 
-- Zapytanie grupuje po `CustomerKey` bez warunku `WHERE CustomerKey = X`.
-- SQL musi przeskanować wszystkich klientów w indeksie.
-- **Index Scan indeksu pokrywającego** jest optymalny dla tego wzorca zapytania.
+**Dlaczego Index SCAN (nie Seek)?**
 
-**Wnioski**: ✅ **Sukces** — Prawidłowe użycie indeksu, eliminacja Key Lookups.
+- `GROUP BY CustomerKey` bez `WHERE CustomerKey = X`
+- SQL musi przeskanować **wszystkich klientów** → pełny scan indeksu konieczny
+- **Index Scan pokrywającego indeksu** jest **optymalny** dla tego wzorca
+
+**Improvements**:
+
+- Cost: 46% → 3% (**-93%** w dominującym operatorze)
+- Reads: 6854 → 1448 (**-79%**)
+- Time: 171ms → 80ms (**-53%**)
+
+**Werdykt**: ✅ **Sukces** — Index Scan to expected behavior, covering index eliminuje Key Lookups.
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/optimized/query_01_clv_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_01_clv_optimized.sqlplan)
 
 ***
 
 ### Zapytanie 2: Product Performance
+
+#### PRZED (Baseline - 18.11.2025)
+
+**Metryki**:
+
+- Elapsed: 169ms
+- CPU: 722ms
+- F_Order reads: 6854 stron
+- D_Product reads: 7 stron
+
+**Struktura planu**:
+
+- **Clustered Index Scan** [F_Order].[PK_F_Order]: 46% kosztu, 180K wierszy, 6854 strony
+- Hash Match Join (F_Order ⋈ D_Product): ~10% kosztu
+- Hash Match Aggregate: 18% kosztu
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/baseline/query_02_product_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_02_product_baseline.sqlplan)
+
+***
 
 #### PO (Optimized - 19.11.2025)
 
 **Metryki**:
 
 - Elapsed: 169ms → **59ms** (**-65%** ✅✅ Najlepsza poprawa)
+- CPU: 722ms → 270ms (**-63%**)
 - F_Order reads: 6854 → **1052** (**-85%** ✅✅ Najlepsza redukcja)
 
-**Kluczowa naprawa (Critical Fix)**:
+**Kluczowa naprawa**:
 
-- **Problem początkowy**: Zapytanie używało `AVG(fo.OrderItemProfitRate)`, ale kolumny tej brakowało w sekcji INCLUDE indeksu.
-- **Zachowanie SQL**: Brak pokrycia (covering) → wymagałoby Key Lookup → optymalizator wybrał tańszy Clustered Scan.
+- **Problem początkowy**: Brak kolumny `OrderItemProfitRate` w sekcji INCLUDE indeksu.
+- **Zachowanie SQL**: Brak pokrycia → wymaga Key Lookup → optymalizator wybrał tańszy Clustered Scan.
 - **Naprawa**: DROP + RECREATE indeksu z dodaniem `OrderItemProfitRate` do INCLUDE.
-- **Wynik**: Indeks stał się pokrywający → SQL wybrał Index Scan → **redukcja odczytów o 85%**.
+- **Wynik**: Indeks pokrywający → SQL wybrał Index Scan → **85% redukcja odczytów**.
 
-**Wniosek**: **100% pokrycia** (coverage) jest wymagane — brak choćby jednej kolumny powoduje pełny skan tabeli.
+**Improvements**:
 
-**Werdykt**: ✅✅ **Najlepsza optymalizacja** — zmiana z najwolniejszego (anomalia) na najlepiej zoptymalizowane!
+- Elapsed: -65% (najlepsza)
+- Reads: -85% (najlepsza)
+
+**Werdykt**: ✅✅ **Perfekcyjna optymalizacja** — Z2 z najwolniejszych → najlepiej zoptymalizowane!
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/optimized/query_02_product_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_02_product_optimized.sqlplan)
 
 ***
 
 ### Zapytanie 3: Monthly Trend
 
+#### PRZED (Baseline - 18.11.2025)
+
+**Metryki**:
+
+- Elapsed: 48ms
+- CPU: 206ms
+- F_Order reads: 6854 stron
+- D_Date reads: 82 strony
+
+**Struktura planu**:
+
+- **Clustered Index Scan** [F_Order].[PK_F_Order]: 46% kosztu, 180K wierszy, 6854 strony
+- Hash Match Join (F_Order ⋈ D_Date): ~8% kosztu
+- Hash Match Aggregate: 20% kosztu
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/baseline/query_03_monthly_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_03_monthly_baseline.sqlplan)
+
+***
+
 #### PO (Optimized - 19.11.2025) — ZIDENTYFIKOWANY PROBLEM
 
-**Metryki** (PO ponownym utworzeniu indeksu):
+**Metryki** (po pierwszym utworzeniu indeksu):
 
-- Elapsed: 48ms → 33ms (niezadowalające)
+- Elapsed: 48ms → 33ms (**-40%** ⚠️ niewystarczający)
 - F_Order reads: 6854 → **13,341 stron** (**+95%** ❌)
-- Scan count: 9 → 4,018 (**+446×** ❌)
+- Scan count: 9 → **4,018** (**+446×** ❌)
 
 **Przyczyna źródłowa**:
 
 - Zapytanie używa `COUNT(DISTINCT fo.OrderID)`, ale **OrderID nie było w indeksie**.
-- Indeks miał tylko miary finansowe w INCLUDE.
+- Index IX_F_Order_TimeSeries miał tylko miary finansowe w INCLUDE.
 - SQL musiał wykonywać **Key Lookup** do Clustered Index dla każdego wiersza, aby pobrać OrderID.
 - **4,018 lookupów** = 4,018 skanów indeksu + 4,018 lookupów = **13,341 stron** (gorzej niż baseline!).
+
+**Plan wykonania** (screenshot):
+
+- **Index Seek** [IX_F_Order_TimeSeries] (Koszt: 20%)
+- **Key Lookup** [PK_F_Order] (Koszt: **30%**) ← **Dominujące wąskie gardło**
+- **4,018 lookupów** = 4,018 skanów indeksu + 4,018 lookupów do clustered
+
+**Root cause**:
+
+- Covering index incomplete — brakująca jedna kolumna = wymusza lookup
+- **Koszt Key Lookup** > Clustered Scan → optymalizator wybiera suboptimalny plan
+- Odczyty: 13,341 > 6,854 baseline!
 
 **Naprawa**:
 
 - DROP + RECREATE indeksu z **OrderID** w INCLUDE (lub jako klucz).
-- Wynik po naprawie: oczekiwane reads ~600-900 stron.
+- Wynik po naprawie: Oczekiwane odczyty ~600-900 stron.
 
-**Ważne**: **100% pokrycia** jest krytyczne — brak jednej kolumny kluczowej może pogorszyć wydajność względem braku indeksu.
+**Lekcja**: **100% pokrycia** jest krytyczne — brak jednej kolumny kluczowej może pogorszyć wydajność względem braku indeksu.
 
 **Werdykt (po poprawkach)**: ✅ **Indeks działa perfekcyjnie** — ale ujawnił problem z pamięcią (patrz niżej).
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/optimized/query_03_monthly_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_03_monthly_optimized.sqlplan)
+
+***
+
+### Zapytanie 4: Geography Performance
+
+#### PRZED (Baseline - 18.11.2025)
+
+**Metryki**:
+
+- Elapsed: 61ms
+- CPU: 295ms
+- F_Order reads: 6854 stron
+- D_OrderLocation reads: 202 strony
+
+**Struktura planu**:
+
+- **Clustered Index Scan** [F_Order].[PK_F_Order]: 46% kosztu, 180K wierszy, 6854 strony
+- Hash Match Join (F_Order ⋈ D_OrderLocation): ~12% kosztu
+- Hash Match Aggregate: 18% kosztu
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/baseline/query_04_geography_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_04_geography_baseline.sqlplan)
+
+***
+
+#### PO (Optimized - 19.11.2025)
+
+**Metryki**:
+
+- Elapsed: 61ms → **157ms** (+96ms, **+157%**)
+- CPU: 295ms → **156ms** (-139ms, **-47%**)
+- F_Order reads: 6854 → **297 stron** (-96% ✅)
+- D_OrderLocation reads: 202 → 69 (-66% ✅)
+- Worktable: 0* (stats) → **Hash Match** w planie = tempdb overhead
+
+**Użyty Index**: IX_F_Order_Geography (OrderLocationKey, OrderID) INCLUDE (SalesAmount, BenefitPerOrder)
+
+**Struktura planu**:
+
+- **Index Seek** [IX_F_Order_Geography]: 5% kosztu, 297 stron
+- **Key Lookup** [PK_F_Order]: **30% kosztu** (dla COUNT DISTINCT?) ← ⚠️
+- **Hash Match Aggregate**: 50% kosztu (tempdb spill)
+
+**Root cause (same as Z3)**:
+
+- **COUNT(DISTINCT OrderID)** wymaga **hash aggregate**
+- Index Seek zwraca **więcej danych** → **większa tablica hash** → **presja na pamięć** → **zrzut do tempdb**
+- I/O z tempdb = **10× wolniejszy** niż RAM → dominuje czas wykonania
+
+**Wnioski**:
+
+- I/O: -96% (perfekcyjne indeksowanie)
+- CPU: -47% (mniej I/O)
+- **Ale** tempdb spill → **+157% elapsed** (ogólnie wolniej)
+
+**Werdykt**: ✅ **Indeks działa idealnie**, ale **wzorzec zapytania** (COUNT DISTINCT) wymaga **zmiany architektonicznej**.
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/optimized/query_04_geography_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_04_geography_optimized.sqlplan)
+
+***
+
+### Zapytanie 5: Shipping Performance
+
+#### PRZED (Baseline - 18.11.2025)
+
+**Metryki**:
+
+- Elapsed: 16ms
+- CPU: 79ms
+- F_Order reads: 6854 stron
+
+**Struktura planu**:
+
+- **Clustered Index Scan** [F_Order].[PK_F_Order]: 46% kosztu, 180K wierszy, 6854 strony
+- Filter (WHERE DeliveryStatus = 'COMPLETE'): 5% kosztu
+- Top N Sort: 10% kosztu
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/baseline/query_05_shipping_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_05_shipping_baseline.sqlplan)
+
+***
+
+#### PO (Optimized - 19.11.2025)
+
+**Metryki**:
+
+- Elapsed: 16ms → **22ms** (+6ms, +38%)
+- CPU: 79ms → **20ms** (-59ms, **-75%** ✅)
+- F_Order reads: 6854 → **625 stron** (-6,229, **-91%**)
+
+**Użyty Index**: IX_F_Order_Shipping (DeliveryStatus, ShippingMode, OrderDateKey) INCLUDE (DaysForShippingReal, LateDeliveryRisk)
+
+**Struktura planu**:
+
+- **Index Seek** [IX_F_Order_Shipping]: 3% kosztu, 625 stron
+- **Top N Sort**: 15% kosztu
+- **Serial execution** (Scan count: 1)
+
+**Analiza**:
+
+- **Index Seek** jest bardziej selektywny → mniej wierszy
+- Optymalizator wybrał **wykonanie szeregowe (serial)** → **mniej narzutu CPU** (20ms vs 79ms)
+- **Serial** = lepsza efektywność CPU → **lepsze dla serwera**
+- **Elapsed +6ms** = koszt marginalny (wciąż <30ms)
+
+**Wnioski**:
+
+- I/O: -91% (fantastyczne)
+- CPU: -75% (super)
+- **Elapsed +6ms** = akceptowalny trade-off
+
+**Werdykt**: ✅ **Indeks działa perfekcyjnie** — optymalizacja I/O + CPU, minor elapsed trade-off.
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/optimized/query_05_shipping_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_05_shipping_optimized.sqlplan)
+
+***
+
+### Zapytanie 6: Top Products
+
+#### PRZED (Baseline - 18.11.2025)
+
+**Metryki**:
+
+- Elapsed: 23ms
+- CPU: 82ms
+- F_Order reads: 6854 stron
+- D_Product reads: 236 stron
+
+**Struktura planu**:
+
+- **Clustered Index Scan** [F_Order].[PK_F_Order]: 46% kosztu, 180K wierszy, 6854 strony
+- Hash Match Join (F_Order ⋈ D_Product): ~15% kosztu
+- Top N Sort: 10% kosztu
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/baseline/query_06_top_products_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_06_top_products_baseline.sqlplan)
+
+***
+
+#### PO (Optimized - 19.11.2025)
+
+**Metryki**:
+
+- Elapsed: 23ms → **25ms** (+2ms, +9%)
+- CPU: 82ms → **28ms** (-54ms, **-66%** ✅)
+- F_Order reads: 6854 → **439 stron** (-6,415, **-94%** ✅✅)
+- D_Product reads: 236 → **7 stron** (-229, **-97%** ✅✅)
+
+**Użyty Index**: IX_F_Order_Product_Performance (ProductKey, OrderDateKey) INCLUDE (SalesAmount, OrderItemQuantity, OrderItemDiscount, BenefitPerOrder, OrderItemProfitRate)
+
+**Struktura planu**:
+
+- **Index Seek** [IX_F_Order_Product_Performance]: 3% kosztu, 439 stron
+- **Top N Sort**: 10% kosztu
+- **Serial execution** (Scan count: 1)
+
+**Analiza**:
+
+- **Index Seek** jest bardziej selektywny → mniej wierszy
+- Optymalizator wybrał **wykonanie szeregowe (serial)** → **mniej narzutu CPU** (28ms vs 82ms)
+- **Serial** = lepsza efektywność CPU → **lepsze dla serwera**
+- **Elapsed +2ms** = koszt marginalny (wciąż <30ms)
+
+**Wnioski**:
+
+- I/O: -94% (fantastyczne)
+- D_Product I/O: -97% (dobry index na wymiarze)
+- CPU: -66% (super)
+- **Overall**: **CPU+I/O optimization wins**
+
+**Werdykt**: ✅✅ **Perfekcyjna optymalizacja** — TOP N Sort + covering index = idealne.
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/optimized/query_06_top_products_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_06_top_products_optimized.sqlplan)
 
 ***
 
 ### Zapytanie 7: Segment Comparison 🔴 TEMPDB SPILL
+
+#### PRZED (Baseline - 18.11.2025)
+
+**Metryki**:
+
+- Elapsed: 297ms
+- CPU: 379ms
+- F_Order reads: 6854 stron
+- D_Customer reads: 557 stron
+- **Worktable reads: 122,684 stron** (tempdb spill)
+
+**Struktura planu**:
+
+- **Clustered Index Scan** [F_Order].[PK_F_Order]: 46% kosztu, 180K wierszy, 6854 strony
+- Hash Match Join (F_Order ⋈ D_Customer): ~10% kosztu
+- **Hash Match Aggregate**: 30% kosztu
+- **Tempdb Spill** (Worktable): 122,684 strony
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/baseline/query_07_segments_baseline.png) \| [📄 .sqlplan](portfolio_assets/query_plans/baseline/query_07_segments_baseline.sqlplan)
+
+***
 
 #### PO (Optimized - 19.11.2025)
 
@@ -170,16 +431,31 @@
 
 - Elapsed: 297ms → **336ms** (+39ms, **+13%** ❌)
 - CPU: 379ms → **504ms** (+125ms, **+33%** ❌)
-- F_Order reads: 6854 → 1448 stron (-5416, **-79%** ✅)
+- F_Order reads: 6854 → **1448 stron** (-5416, **-79%** ✅)
+- D_Customer reads: 557 → 557 (bez zmian)
 - **Worktable reads: 122,684 stron** (**brak poprawy!** 🔴)
+- **Workfile reads: 32 strony** (minimalnie więcej)
 
-**Użyty Indeks**: IX_F_Order_Customer_Performance
+**Użyty Index**: IX_F_Order_Customer_Performance
+
+**Struktura planu**:
+
+- **Index Seek** [IX_F_Order_Customer_Performance]: 5% kosztu, 1448 stron
+- **Stream Aggregate** → **Hash Match** → **Tempdb Spill** (Koszt: 85%)
+- **Zero Key Lookups** (✅ covering index działa!)
+- **Tempdb spill** = 122,684 stron
 
 **Przyczyna źródłowa**:
 
 - **COUNT(DISTINCT OrderID)** wymaga operacji **Hash Aggregate**.
 - Index Seek zwraca **więcej unikalnych OrderID** szybciej → **większa tablica hash** → **presja na pamięć** → **zrzut do tempdb (spill)**.
-- I/O Tempdb jest **10× wolniejsze** niż RAM → dominuje czas wykonania.
+- I/O z tempdb jest **10× wolniejsze** niż RAM → dominuje czas wykonania.
+
+**Wnioski**:
+
+- I/O: -79% (1448 vs 6854 strony) — **perfekcyjne indeksowanie**
+- CPU: +33% (gorzej, bo overhead na hash i spill)
+- **Tempdb spill**: **122,684 stron** (identycznie jak baseline!)
 
 **Dlaczego spill nie znika?**
 
@@ -188,6 +464,8 @@
 - **Indeks nie rozwiązuje** wąskiego gardła pamięci — to problem wzorca zapytania.
 
 **Werdykt**: ✅ **Indeks działa idealnie** (redukcja I/O tabeli), ale **wzorzec zapytania** (COUNT DISTINCT) wymaga **zmiany architektonicznej** (więcej RAM, Columnstore lub pre-agregacja).
+
+**Plan**: [📸 Screenshot](portfolio_assets/query_plans/optimized/query_07_segments_optimized.png) \| [📄 .sqlplan](portfolio_assets/query_plans/optimized/query_07_segments_optimized.sqlplan)
 
 ***
 
@@ -224,6 +502,7 @@
     * Z3, Z4, Z7 wymagają monitorowania lub wdrożenia cache (np. Redis).
 
 ***
+
 
 *Autor: Paweł Żołądkiewicz | Senior BI/SQL Developer*
 *Data: 19.11.2025 | Wersja: 1.0*
