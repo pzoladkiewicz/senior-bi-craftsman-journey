@@ -32,11 +32,48 @@ Developer skills: SQL ETL, model gwiazdy, Power BI, analiza e-commerce.
 - Zaawansowany Power BI (DAX, relacje, wydajność)
 - Pipeline danych w Python (pandas, pyodbc)
 
-## Status
+## Performance Tuning F_Order (SQL Server)
+
+Optymalizacja wydajności tabeli faktów F_Order w modelu gwiazdy, zrealizowana zgodnie z benchmarkiem projektów enterprise BI dla rynku polskiego.
+
+**Efekty:**
+- Redukcja I/O (`logical reads`): średnio o 82% na zapytanie (np. z 6854 do 1207 stron).
+- Redukcja obciążenia CPU: średnio o 50% (porównanie statystyk SQL Server przed/po tuning).
+- Uzyskano pełne pokrycie 6/7 najważniejszych scenariuszy BI jednym indeksem per pattern logiczny.
+- Zapytania typu COUNT(DISTINCT) (Z3, Z4, Z7) — zidentyfikowano bottleneck na warstwie RAM/tempdb (hash aggregate spill), co jest naturalną granicą architektury SQL Server OLAP.
+
+**Zastosowane techniki:**
+- 5 indeksów pokrywających (covering/filtered) na kluczowe wzorce: po kliencie/produkcie/czasie/geografii/sposobie dostawy.
+- INCLUDE: pełna lista kolumn używanych w SELECT/WHERE/GROUP BY — eliminacja Key Lookup.
+- Filtry WHERE (OrderStatus = 'COMPLETE') pozwalające na minimalizację rozmiaru indeksów oraz szybkie skany.
+- Mapowanie logiczne: jeden indeks fizyczny obsługuje kilka powiązanych zapytań (np. Z2 + Z6, Z1 + Z7).
+
+**Plan wykonania, wyniki i analizy:**
+- Szczegółowy raport: [docs/performance_baseline_results.md](docs/performance_baseline_results.md)
+- Plany wykonania (.sqlplan, .png) – folder `docs/portfolio_assets/query_plans/`
+- Mapping indeksów do zapytań: opisany w komentarzach w `sql/09b_indexes.sql`
+
+**Kluczowe wnioski:**
+- Indeksy covering eliminują 80–90% I/O przy analizie BI na dużych tabelach faktów.
+- Wzorce zapytań typu GROUP BY + COUNT(DISTINCT) wymagają świadomego podejścia (często architectural fix — np. columnstore/pre-aggregation).
+- Minimalizacja liczby indeksów poprzez mapping logiczny jest skalowalnym i audytowalnym podejściem (1 fizyczny index = kilka biznesowych KPI).
+
+---
+
+
+## Status projektu (22.11.2025)
 ✅ Staging załadowany: 180k+ rekordów  
-🔄 Jakość danych: W trakcie  
-⭕ Schema DWH: Nie rozpoczęto  
-⭕ Power BI: Nie rozpoczęto  
+✅ Model gwiazdy (DWH) w pełni wdrożony  
+✅ 180k+ transakcji po oczyszczeniu  
+✅ Pełny audyt metryk i KPI  
+✅ Performance tuning F_Order (SQL Server):  
+  • 5 indeksów covering/filtered (Customer, Product, Time, Geo, Shipping)  
+  • 82% mniej I/O (średnia), 50% mniej CPU  
+  • Bottleneck COUNT(DISTINCT): naturalna granica OLAP (opisane w raporcie)
+
+➡️ Kolejny etap:  
+  • Analityczne widoki SQL pod BI  
+  • Dashbord PBIP na widokach  
 
 ---
 *Projekt w portfolio - Senior BI/SQL Developer*
