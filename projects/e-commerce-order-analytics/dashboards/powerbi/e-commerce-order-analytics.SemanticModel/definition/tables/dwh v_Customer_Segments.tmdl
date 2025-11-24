@@ -1,24 +1,6 @@
 table 'dwh v_Customer_Segments'
 	lineageTag: 95c2817d-10c8-4126-8528-eb10e05b10cf
 
-	column Year
-		dataType: int64
-		formatString: 0
-		lineageTag: 9d22b8e3-cdb6-4646-9a77-80d5cd6d05b9
-		summarizeBy: sum
-		sourceColumn: Year
-
-		annotation SummarizationSetBy = Automatic
-
-	column Month
-		dataType: int64
-		formatString: 0
-		lineageTag: 0c043d7e-b147-448d-8bd4-ecd8b74909ef
-		summarizeBy: sum
-		sourceColumn: Month
-
-		annotation SummarizationSetBy = Automatic
-
 	column CustomerSegment
 		dataType: string
 		lineageTag: 9a5bd323-708f-4e69-b5c9-bfe2f37e9cc6
@@ -74,15 +56,26 @@ table 'dwh v_Customer_Segments'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e5bac70b-ebeb-428b-a7ac-76dc572e8cd1
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'dwh v_Customer_Segments' = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
-				    dwh_v_Customer_Segments = Source{[Schema="dwh",Item="v_Customer_Segments"]}[Data],
-				    #"Filtered Rows" = Table.SelectRows(dwh_v_Customer_Segments, each ([Year] <> 2018))
+				    dwh_v_Customer_Segments = Source{[Schema="dwh",Item="v_Customer_Segments"]}[Data]
 				in
-				    #"Filtered Rows"
+				    dwh_v_Customer_Segments
 
 	annotation PBI_ResultType = Table
 

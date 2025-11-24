@@ -1,40 +1,14 @@
 table 'dwh v_Customer_CLV'
 	lineageTag: db705c03-36bf-437a-9c44-3bbaaf358342
 
-	column Year
-		dataType: int64
-		formatString: 0
-		lineageTag: 1a856d9b-0059-4845-89ac-05f603c10224
-		summarizeBy: none
-		sourceColumn: Year
-
-		annotation SummarizationSetBy = User
-
-	column Month
-		dataType: int64
-		formatString: 0
-		lineageTag: 5c7fd816-c81c-4a56-adf4-ad1af9ce1fea
-		summarizeBy: none
-		sourceColumn: Month
-
-		annotation SummarizationSetBy = User
-
 	column CustomerKey
 		dataType: int64
 		formatString: 0
 		lineageTag: 1c7def08-f5e8-4dc9-9a7e-7af13882af10
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CustomerKey
 
-		annotation SummarizationSetBy = Automatic
-
-	column CustomerName
-		dataType: string
-		lineageTag: 8584744a-5c7c-4073-b9fe-a720d05843b4
-		summarizeBy: none
-		sourceColumn: CustomerName
-
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column CustomerSegment
 		dataType: string
@@ -101,15 +75,26 @@ table 'dwh v_Customer_CLV'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b42600c0-7345-415c-8671-a6996577547a
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'dwh v_Customer_CLV' = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
-				    dwh_v_Customer_CLV = Source{[Schema="dwh",Item="v_Customer_CLV"]}[Data],
-				    #"Filtered Rows" = Table.SelectRows(dwh_v_Customer_CLV, each ([Year] <> 2018))
+				    dwh_v_Customer_CLV = Source{[Schema="dwh",Item="v_Customer_CLV"]}[Data]
 				in
-				    #"Filtered Rows"
+				    dwh_v_Customer_CLV
 
 	annotation PBI_NavigationStepName = Navigation
 

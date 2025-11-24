@@ -1,24 +1,6 @@
 table 'dwh v_Order_TimeSeries'
 	lineageTag: e2ad1226-a044-41c0-a52c-1a45ed070fba
 
-	column Year
-		dataType: int64
-		formatString: 0
-		lineageTag: 44d2e666-6f30-4687-ab20-7db0560928fd
-		summarizeBy: sum
-		sourceColumn: Year
-
-		annotation SummarizationSetBy = Automatic
-
-	column Month
-		dataType: int64
-		formatString: 0
-		lineageTag: 7532355b-f058-458d-85c8-5185c6c64e92
-		summarizeBy: sum
-		sourceColumn: Month
-
-		annotation SummarizationSetBy = Automatic
-
 	column OrderCount
 		dataType: int64
 		formatString: 0
@@ -57,15 +39,26 @@ table 'dwh v_Order_TimeSeries'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: ce963304-ddbf-49e8-9015-9eb232a41033
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'dwh v_Order_TimeSeries' = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
-				    dwh_v_Order_TimeSeries = Source{[Schema="dwh",Item="v_Order_TimeSeries"]}[Data],
-				    #"Filtered Rows" = Table.SelectRows(dwh_v_Order_TimeSeries, each ([Year] <> 2018))
+				    dwh_v_Order_TimeSeries = Source{[Schema="dwh",Item="v_Order_TimeSeries"]}[Data]
 				in
-				    #"Filtered Rows"
+				    dwh_v_Order_TimeSeries
 
 	annotation PBI_ResultType = Table
 

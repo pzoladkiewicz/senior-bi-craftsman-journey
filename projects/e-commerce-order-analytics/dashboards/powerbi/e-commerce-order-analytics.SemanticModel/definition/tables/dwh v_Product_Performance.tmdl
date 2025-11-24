@@ -1,30 +1,15 @@
 table 'dwh v_Product_Performance'
 	lineageTag: d59e1f42-ca98-40aa-853e-9e159a77776c
 
-	column Year
-		dataType: int64
-		formatString: 0
-		lineageTag: 0d33584c-6e8e-40d7-a5de-95d670d15a6e
-		summarizeBy: sum
-		sourceColumn: Year
-
-		annotation SummarizationSetBy = Automatic
-
-	column Month
-		dataType: int64
-		formatString: 0
-		lineageTag: 12d879e7-8836-4f22-9530-7a80da9820a9
-		summarizeBy: sum
-		sourceColumn: Month
-
-		annotation SummarizationSetBy = Automatic
-
 	column ProductKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 27a9c26b-e763-487f-9050-c30dfec918ae
 		summarizeBy: count
 		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -91,15 +76,26 @@ table 'dwh v_Product_Performance'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: a90fb36a-ccc8-4ec5-9bba-4c1a760674c9
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'dwh v_Product_Performance' = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
-				    dwh_v_Product_Performance = Source{[Schema="dwh",Item="v_Product_Performance"]}[Data],
-				    #"Filtered Rows" = Table.SelectRows(dwh_v_Product_Performance, each ([Year] <> 2018))
+				    dwh_v_Product_Performance = Source{[Schema="dwh",Item="v_Product_Performance"]}[Data]
 				in
-				    #"Filtered Rows"
+				    dwh_v_Product_Performance
 
 	annotation PBI_ResultType = Table
 

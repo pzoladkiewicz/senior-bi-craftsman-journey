@@ -16,41 +16,44 @@
           "nodeIndex": "dwh v_Customer_CLV",
           "nodeLineageTag": "db705c03-36bf-437a-9c44-3bbaaf358342",
           "size": {
-            "height": 300,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1,
+          "expandedHeight": 300
         },
         {
           "location": {
-            "x": 284,
-            "y": 14
+            "x": 335,
+            "y": 0
           },
           "nodeIndex": "dwh v_Customer_Segments",
           "nodeLineageTag": "95c2817d-10c8-4126-8528-eb10e05b10cf",
           "size": {
-            "height": 272,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2,
+          "expandedHeight": 272
         },
         {
           "location": {
-            "x": 568,
-            "y": 14
+            "x": 717,
+            "y": 0
           },
           "nodeIndex": "dwh v_Geography_Performance",
           "nodeLineageTag": "667e804d-6b56-405a-b7cd-8d98d0a9e99c",
           "size": {
-            "height": 272,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 3,
+          "expandedHeight": 272
         },
         {
           "location": {
-            "x": 852,
-            "y": 38
+            "x": 0,
+            "y": 458
           },
           "nodeIndex": "dwh v_Order_TimeSeries",
           "nodeLineageTag": "e2ad1226-a044-41c0-a52c-1a45ed070fba",
@@ -58,46 +61,49 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         },
         {
           "location": {
-            "x": 1136,
-            "y": 0
+            "x": 787,
+            "y": 334
           },
           "nodeIndex": "dwh v_Product_Performance",
           "nodeLineageTag": "d59e1f42-ca98-40aa-853e-9e159a77776c",
           "size": {
-            "height": 300,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 5,
+          "expandedHeight": 300
         },
         {
           "location": {
-            "x": 1420,
-            "y": 26
+            "x": 377,
+            "y": 524
           },
           "nodeIndex": "dwh v_Shipping_KPI",
           "nodeLineageTag": "fef757c4-e24d-4ff4-8b6b-0f771402ab38",
           "size": {
-            "height": 248,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 6,
+          "expandedHeight": 248
         },
         {
           "location": {
-            "x": 1704,
-            "y": 26
+            "x": 351,
+            "y": 243
           },
-          "nodeIndex": "dwh v_Top_Products",
-          "nodeLineageTag": "eac5acd0-461f-4046-83ee-f01ed4285bce",
+          "nodeIndex": "dwh D_Date",
+          "nodeLineageTag": "a22aece8-9ba2-4778-b1ad-136f4a3f4640",
           "size": {
-            "height": 248,
+            "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 300
         }
       ],
       "name": "All tables",

@@ -1,0 +1,141 @@
+table 'dwh D_Date'
+	lineageTag: a22aece8-9ba2-4778-b1ad-136f4a3f4640
+	dataCategory: Time
+
+	column DateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: bfbcd112-4098-47f0-918e-02f5ecc3e514
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: 1a4b6511-f7e6-4017-9966-b73fc92f7e86
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 82292d42-4b4a-4881-964b-0f30f1a1c4ba
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 46c2bbca-7fc0-4180-9aa2-7990e212a065
+		summarizeBy: none
+		sourceColumn: Quarter
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: a98f88af-2b10-4623-947e-3bcaa11f46ed
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column WeekOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: f58921d5-521a-4fc3-a94c-e488c9410f76
+		summarizeBy: none
+		sourceColumn: WeekOfYear
+
+		annotation SummarizationSetBy = User
+
+	column DayOfMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 3cdb868d-fab2-4a91-8169-a2d1d2069ea6
+		summarizeBy: none
+		sourceColumn: DayOfMonth
+
+		annotation SummarizationSetBy = User
+
+	column DayOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: 7811d4dc-eedf-422b-b938-658605d17421
+		summarizeBy: none
+		sourceColumn: DayOfWeek
+
+		annotation SummarizationSetBy = User
+
+	column DayOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cf4c461-c6da-4c60-9bf8-9869d52165ee
+		summarizeBy: none
+		sourceColumn: DayOfYear
+
+		annotation SummarizationSetBy = User
+
+	column IsWeekend
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 882a38c5-8bef-471b-9f48-cfdc9ec9c7a4
+		summarizeBy: none
+		sourceColumn: IsWeekend
+
+		annotation SummarizationSetBy = Automatic
+
+	column IsHoliday
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: e7c64f70-e8b6-4d84-bd0f-df727b1016ac
+		summarizeBy: none
+		sourceColumn: IsHoliday
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 33d98778-e6d0-4dd8-849e-621ff8e46941
+		summarizeBy: none
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = User
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b7ceabd-221a-45fd-b637-6d1174fb6adb
+		summarizeBy: none
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = User
+
+	partition 'dwh D_Date' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_D_Date = Source{[Schema="dwh",Item="D_Date"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dwh_D_Date, each ([Year] = 2015 or [Year] = 2016 or [Year] = 2017))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

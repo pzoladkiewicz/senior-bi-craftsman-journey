@@ -1,24 +1,6 @@
 table 'dwh v_Shipping_KPI'
 	lineageTag: fef757c4-e24d-4ff4-8b6b-0f771402ab38
 
-	column Year
-		dataType: int64
-		formatString: 0
-		lineageTag: 8f3aa5e6-6333-4f31-b18e-08e1ed7558e0
-		summarizeBy: sum
-		sourceColumn: Year
-
-		annotation SummarizationSetBy = Automatic
-
-	column Month
-		dataType: int64
-		formatString: 0
-		lineageTag: 1b7dce54-64dc-4e04-903f-193b9bb27eb6
-		summarizeBy: sum
-		sourceColumn: Month
-
-		annotation SummarizationSetBy = Automatic
-
 	column DeliveryStatus
 		dataType: string
 		lineageTag: e0151608-ec4a-4447-b739-6b2ffa4ca4ea
@@ -63,15 +45,26 @@ table 'dwh v_Shipping_KPI'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d3e22f46-c3b8-4dc6-a70e-4238d1fae7c8
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'dwh v_Shipping_KPI' = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
-				    dwh_v_Shipping_KPI = Source{[Schema="dwh",Item="v_Shipping_KPI"]}[Data],
-				    #"Filtered Rows" = Table.SelectRows(dwh_v_Shipping_KPI, each ([Year] <> 2018))
+				    dwh_v_Shipping_KPI = Source{[Schema="dwh",Item="v_Shipping_KPI"]}[Data]
 				in
-				    #"Filtered Rows"
+				    dwh_v_Shipping_KPI
 
 	annotation PBI_ResultType = Table
 

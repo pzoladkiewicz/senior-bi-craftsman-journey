@@ -19,7 +19,6 @@ GO
 CREATE OR ALTER VIEW dwh.v_Customer_CLV AS
 SELECT
      c.CustomerKey
-    ,c.CustomerFirstName + ' ' + c.CustomerLastName             AS CustomerName
     ,c.CustomerSegment
     ,c.CustomerCountry
     ,f.OrderDateKey
@@ -34,7 +33,6 @@ JOIN dwh.D_Customer AS c
 WHERE f.OrderStatus = 'COMPLETE'
 GROUP BY
      c.CustomerKey
-    ,c.CustomerFirstName + ' ' + c.CustomerLastName
     ,c.CustomerSegment
     ,c.CustomerCountry
     ,f.OrderDateKey;
@@ -137,8 +135,11 @@ GO
 
 -- =================================
 -- 6. v_Top_Products
+-- po zmianie zasad grupowania, RANK wg roku traci sens,
+-- a wtedy ten widok pokrywa się z v_Product_Performance
+-- DECYZJA: usuwam ten widok w ogóle
 -- =================================
-
+/*
 CREATE OR ALTER VIEW dwh.v_Top_Products AS 
 SELECT
      p.ProductKey
@@ -157,7 +158,7 @@ GROUP BY
     ,p.CategoryName
     ,f.OrderDateKey;
 GO
-
+*/
 
 -- =================================
 -- 7. v_Customer_Segments

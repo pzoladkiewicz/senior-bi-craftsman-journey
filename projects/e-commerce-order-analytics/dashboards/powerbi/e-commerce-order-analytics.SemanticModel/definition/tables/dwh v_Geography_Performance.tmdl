@@ -1,24 +1,6 @@
 table 'dwh v_Geography_Performance'
 	lineageTag: 667e804d-6b56-405a-b7cd-8d98d0a9e99c
 
-	column Year
-		dataType: int64
-		formatString: 0
-		lineageTag: b98c205c-3a3c-43a6-bec1-2e6b9a2ca489
-		summarizeBy: sum
-		sourceColumn: Year
-
-		annotation SummarizationSetBy = Automatic
-
-	column Month
-		dataType: int64
-		formatString: 0
-		lineageTag: 2c5da4a3-c5c1-4e76-8cbc-9aefbe734ebe
-		summarizeBy: sum
-		sourceColumn: Month
-
-		annotation SummarizationSetBy = Automatic
-
 	column Market
 		dataType: string
 		lineageTag: 432fb7c5-327b-4ae8-ae72-8340e4002ece
@@ -72,15 +54,26 @@ table 'dwh v_Geography_Performance'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cbaddde6-f9cd-4bb7-84e1-3b9eea34ff2f
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'dwh v_Geography_Performance' = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
-				    dwh_v_Geography_Performance = Source{[Schema="dwh",Item="v_Geography_Performance"]}[Data],
-				    #"Filtered Rows" = Table.SelectRows(dwh_v_Geography_Performance, each ([Year] <> 2018))
+				    dwh_v_Geography_Performance = Source{[Schema="dwh",Item="v_Geography_Performance"]}[Data]
 				in
-				    #"Filtered Rows"
+				    dwh_v_Geography_Performance
 
 	annotation PBI_ResultType = Table
 

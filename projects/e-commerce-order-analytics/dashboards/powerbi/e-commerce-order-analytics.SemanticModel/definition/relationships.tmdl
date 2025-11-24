@@ -1,0 +1,24 @@
+relationship 2913c1c3-c2af-09d5-245f-9f59d9f46332
+	fromColumn: 'dwh v_Customer_CLV'.OrderDateKey
+	toColumn: 'dwh D_Date'.DateKey
+
+relationship 286ff0e9-01c0-3786-1255-89ee2dcb5d20
+	fromColumn: 'dwh v_Customer_Segments'.OrderDateKey
+	toColumn: 'dwh D_Date'.DateKey
+
+relationship d0176940-d9b1-57ee-fbda-71360580780b
+	fromColumn: 'dwh v_Geography_Performance'.OrderDateKey
+	toColumn: 'dwh D_Date'.DateKey
+
+relationship 8d11d5c5-3f46-218f-b9e8-d979f567e7ce
+	fromColumn: 'dwh v_Product_Performance'.OrderDateKey
+	toColumn: 'dwh D_Date'.DateKey
+
+relationship ca3e3925-4cc5-4966-70ea-7d64c8081a02
+	fromColumn: 'dwh v_Shipping_KPI'.OrderDateKey
+	toColumn: 'dwh D_Date'.DateKey
+
+relationship c514a6f1-8a10-6513-6ded-d3685beae3dc
+	fromColumn: 'dwh v_Order_TimeSeries'.OrderDateKey
+	toColumn: 'dwh D_Date'.DateKey
+
