@@ -1,0 +1,88 @@
+table 'dwh v_Geography_Performance'
+	lineageTag: 667e804d-6b56-405a-b7cd-8d98d0a9e99c
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: b98c205c-3a3c-43a6-bec1-2e6b9a2ca489
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c5da4a3-c5c1-4e76-8cbc-9aefbe734ebe
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Market
+		dataType: string
+		lineageTag: 432fb7c5-327b-4ae8-ae72-8340e4002ece
+		summarizeBy: none
+		sourceColumn: Market
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderRegion
+		dataType: string
+		lineageTag: 5d0b6461-70c0-4f93-aa16-e823bf6aea7d
+		summarizeBy: none
+		sourceColumn: OrderRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCountry
+		dataType: string
+		lineageTag: 31b8f54a-25d4-4d59-ad25-844783dbd441
+		summarizeBy: none
+		sourceColumn: OrderCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCount
+		dataType: int64
+		formatString: 0
+		lineageTag: e78dae5d-1328-4516-a9d0-bb514d064271
+		summarizeBy: sum
+		sourceColumn: OrderCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalRevenue
+		dataType: double
+		lineageTag: a9c1820a-28ce-4d37-a499-787882979f60
+		summarizeBy: sum
+		sourceColumn: TotalRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalProfit
+		dataType: double
+		lineageTag: e50dd6fa-cffa-4674-a650-3e8048f72271
+		summarizeBy: sum
+		sourceColumn: TotalProfit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'dwh v_Geography_Performance' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_v_Geography_Performance = Source{[Schema="dwh",Item="v_Geography_Performance"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dwh_v_Geography_Performance, each ([Year] <> 2018))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

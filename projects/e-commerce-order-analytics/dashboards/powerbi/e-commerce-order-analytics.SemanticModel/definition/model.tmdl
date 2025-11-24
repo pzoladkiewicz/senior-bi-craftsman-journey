@@ -8,23 +8,17 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["dwh F_Order","dwh D_Product","dwh D_OrderLocation","dwh D_Customer","dwh D_Date","_Measures"]
+annotation PBI_QueryOrder = ["dwh v_Customer_CLV","dwh v_Customer_Segments","dwh v_Geography_Performance","dwh v_Order_TimeSeries","dwh v_Product_Performance","dwh v_Shipping_KPI","dwh v_Top_Products"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
-ref table 'dwh F_Order'
-ref table DateTableTemplate_394e6edd-6cb6-4cd6-8f53-332ec64acf36
-ref table LocalDateTable_fb583e0a-09bc-4ad3-b3e7-1d223c10501f
-ref table 'dwh D_Product'
-ref table LocalDateTable_e2991d40-7df2-4d59-b089-e43d8da1c901
-ref table LocalDateTable_12b31238-d89c-445a-b161-2b03a0b004e8
-ref table 'dwh D_OrderLocation'
-ref table LocalDateTable_8386aed6-ee96-45cf-846a-b0d8c992fe99
-ref table LocalDateTable_16a50f9d-f0aa-4460-9cd4-29193825ccf4
-ref table 'dwh D_Customer'
-ref table LocalDateTable_2b8b65b9-0637-4c2d-ab5e-00e09404beba
-ref table LocalDateTable_a6909dab-329f-41dd-bbb5-7cd152471dbc
-ref table 'dwh D_Date'
+ref table 'dwh v_Customer_CLV'
+ref table 'dwh v_Customer_Segments'
+ref table 'dwh v_Geography_Performance'
+ref table 'dwh v_Order_TimeSeries'
+ref table 'dwh v_Product_Performance'
+ref table 'dwh v_Shipping_KPI'
+ref table 'dwh v_Top_Products'
 
 ref cultureInfo en-US
 

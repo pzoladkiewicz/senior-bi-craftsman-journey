@@ -1,0 +1,79 @@
+table 'dwh v_Top_Products'
+	lineageTag: eac5acd0-461f-4046-83ee-f01ed4285bce
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: e23e073b-44f8-41a1-9fc0-a345fdde3d57
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f839c82-a12c-4f4c-bf52-fc213a8ee059
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d80efc1-6055-46fc-9d6e-219ad837ee62
+		summarizeBy: count
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 2a130e59-bcb3-4a3c-8574-d7885ca910f2
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryName
+		dataType: string
+		lineageTag: 5a757b80-a734-47b1-87f2-d14749f331b1
+		summarizeBy: none
+		sourceColumn: CategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revenue
+		dataType: double
+		lineageTag: d4bae564-ae11-425b-800b-ace588d0dde4
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductRank
+		dataType: int64
+		formatString: 0
+		lineageTag: e31b0a98-0682-4118-85be-2f873d0d6248
+		summarizeBy: sum
+		sourceColumn: ProductRank
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh v_Top_Products' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_v_Top_Products = Source{[Schema="dwh",Item="v_Top_Products"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dwh_v_Top_Products, each ([Year] <> 2018))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

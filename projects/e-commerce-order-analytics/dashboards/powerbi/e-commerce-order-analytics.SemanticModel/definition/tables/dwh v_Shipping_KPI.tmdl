@@ -1,0 +1,79 @@
+table 'dwh v_Shipping_KPI'
+	lineageTag: fef757c4-e24d-4ff4-8b6b-0f771402ab38
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 8f3aa5e6-6333-4f31-b18e-08e1ed7558e0
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b7dce54-64dc-4e04-903f-193b9bb27eb6
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryStatus
+		dataType: string
+		lineageTag: e0151608-ec4a-4447-b739-6b2ffa4ca4ea
+		summarizeBy: none
+		sourceColumn: DeliveryStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShippingMode
+		dataType: string
+		lineageTag: cae93d14-0215-4f9e-a35e-b5e4962d7933
+		summarizeBy: none
+		sourceColumn: ShippingMode
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 7d35e819-d0db-44a1-a66d-0f88573aad24
+		summarizeBy: sum
+		sourceColumn: DeliveryCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column AvgShipDays
+		dataType: int64
+		formatString: 0
+		lineageTag: bda4eb6c-0149-47e2-a4f2-5b1365353f7e
+		summarizeBy: sum
+		sourceColumn: AvgShipDays
+
+		annotation SummarizationSetBy = Automatic
+
+	column LateRiskPercent
+		dataType: double
+		lineageTag: 464ae81d-6721-4dda-90f5-da6628ba63f5
+		summarizeBy: sum
+		sourceColumn: LateRiskPercent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'dwh v_Shipping_KPI' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_v_Shipping_KPI = Source{[Schema="dwh",Item="v_Shipping_KPI"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dwh_v_Shipping_KPI, each ([Year] <> 2018))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

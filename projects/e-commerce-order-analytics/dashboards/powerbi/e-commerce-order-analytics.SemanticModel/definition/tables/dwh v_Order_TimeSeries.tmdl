@@ -1,0 +1,73 @@
+table 'dwh v_Order_TimeSeries'
+	lineageTag: e2ad1226-a044-41c0-a52c-1a45ed070fba
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 44d2e666-6f30-4687-ab20-7db0560928fd
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 7532355b-f058-458d-85c8-5185c6c64e92
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCount
+		dataType: int64
+		formatString: 0
+		lineageTag: bbe0b56d-300f-4c8f-b27c-35ab33b807a9
+		summarizeBy: sum
+		sourceColumn: OrderCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsSold
+		dataType: int64
+		formatString: 0
+		lineageTag: 32abb560-44c3-4a57-8128-377b196afae3
+		summarizeBy: sum
+		sourceColumn: UnitsSold
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalRevenue
+		dataType: double
+		lineageTag: 127e73bf-7620-4a8b-9776-917840a5fa47
+		summarizeBy: sum
+		sourceColumn: TotalRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalProfit
+		dataType: double
+		lineageTag: 632f1c67-8eea-4c00-b4bc-397cc15a79be
+		summarizeBy: sum
+		sourceColumn: TotalProfit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'dwh v_Order_TimeSeries' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_v_Order_TimeSeries = Source{[Schema="dwh",Item="v_Order_TimeSeries"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dwh_v_Order_TimeSeries, each ([Year] <> 2018))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,90 @@
+table 'dwh v_Customer_Segments'
+	lineageTag: 95c2817d-10c8-4126-8528-eb10e05b10cf
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 9d22b8e3-cdb6-4646-9a77-80d5cd6d05b9
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c043d7e-b147-448d-8bd4-ecd8b74909ef
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerSegment
+		dataType: string
+		lineageTag: 9a5bd323-708f-4e69-b5c9-bfe2f37e9cc6
+		summarizeBy: none
+		sourceColumn: CustomerSegment
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCountry
+		dataType: string
+		lineageTag: 013cd30d-8ed7-4933-a8fe-fa70e7324efe
+		summarizeBy: none
+		sourceColumn: CustomerCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 855d2d0c-5062-443c-8c61-ed13711795c4
+		summarizeBy: sum
+		sourceColumn: OrderCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revenue
+		dataType: double
+		lineageTag: 8000bfd0-1edd-41f5-ad14-891e7f048221
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Profit
+		dataType: double
+		lineageTag: 89fedb58-71a9-4bbd-a02c-1735085a2f36
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProfitMargin
+		dataType: double
+		lineageTag: 0a9268c9-6e0d-4f5d-981d-e898e698cb0d
+		summarizeBy: sum
+		sourceColumn: ProfitMargin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'dwh v_Customer_Segments' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_v_Customer_Segments = Source{[Schema="dwh",Item="v_Customer_Segments"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dwh_v_Customer_Segments, each ([Year] <> 2018))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

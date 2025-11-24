@@ -1,0 +1,117 @@
+table 'dwh v_Customer_CLV'
+	lineageTag: db705c03-36bf-437a-9c44-3bbaaf358342
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a856d9b-0059-4845-89ac-05f603c10224
+		summarizeBy: none
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = User
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c7fd816-c81c-4a56-adf4-ad1af9ce1fea
+		summarizeBy: none
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = User
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 1c7def08-f5e8-4dc9-9a7e-7af13882af10
+		summarizeBy: count
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerName
+		dataType: string
+		lineageTag: 8584744a-5c7c-4073-b9fe-a720d05843b4
+		summarizeBy: none
+		sourceColumn: CustomerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerSegment
+		dataType: string
+		lineageTag: b558c08f-9ba3-4158-a41f-c453b813755f
+		summarizeBy: none
+		sourceColumn: CustomerSegment
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCountry
+		dataType: string
+		lineageTag: aea2dc69-4c61-429c-bc49-4f90223d51d2
+		summarizeBy: none
+		sourceColumn: CustomerCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCount
+		dataType: int64
+		formatString: 0
+		lineageTag: a40611db-aa6a-44e2-a2d7-9f4a4d862056
+		summarizeBy: sum
+		sourceColumn: OrderCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revenue
+		dataType: double
+		lineageTag: 47323eae-fa8d-48a7-add5-f46f58aa14b7
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Profit
+		dataType: double
+		lineageTag: 7f74ff6d-a8a8-4c23-a5b2-27b412520326
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProfitMargin
+		dataType: double
+		lineageTag: 4754e228-152d-4870-aa0e-0bbc2a1d6b46
+		summarizeBy: sum
+		sourceColumn: ProfitMargin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CLV
+		dataType: double
+		lineageTag: 45e131bb-5ac8-4887-aaf5-cb7dbb7f76b4
+		summarizeBy: sum
+		sourceColumn: CLV
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'dwh v_Customer_CLV' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_v_Customer_CLV = Source{[Schema="dwh",Item="v_Customer_CLV"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dwh_v_Customer_CLV, each ([Year] <> 2018))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

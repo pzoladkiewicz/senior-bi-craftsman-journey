@@ -1,0 +1,107 @@
+table 'dwh v_Product_Performance'
+	lineageTag: d59e1f42-ca98-40aa-853e-9e159a77776c
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 0d33584c-6e8e-40d7-a5de-95d670d15a6e
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 12d879e7-8836-4f22-9530-7a80da9820a9
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 27a9c26b-e763-487f-9050-c30dfec918ae
+		summarizeBy: count
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: f5427cb1-3fdb-4464-8b5c-3acdaea6deaa
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryName
+		dataType: string
+		lineageTag: 267e4e3f-d6f9-4aa4-9aab-7c56f2b02991
+		summarizeBy: none
+		sourceColumn: CategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column DepartmentName
+		dataType: string
+		lineageTag: 4920e880-e776-442d-9cc4-e2b12e7a8be0
+		summarizeBy: none
+		sourceColumn: DepartmentName
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitsSold
+		dataType: int64
+		formatString: 0
+		lineageTag: 85c9be72-2874-4c7c-8c89-7d9bfb9b8dfc
+		summarizeBy: sum
+		sourceColumn: UnitsSold
+
+		annotation SummarizationSetBy = Automatic
+
+	column Revenue
+		dataType: double
+		lineageTag: 464d4416-ee53-459b-a0c1-709cc52b4fb7
+		summarizeBy: sum
+		sourceColumn: Revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Profit
+		dataType: double
+		lineageTag: a1bfb74d-31ca-422a-9762-162cb9eb7d1a
+		summarizeBy: sum
+		sourceColumn: Profit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProfitMargin
+		dataType: double
+		lineageTag: 1bc1b340-458f-495e-bdcc-0e01fa40b338
+		summarizeBy: sum
+		sourceColumn: ProfitMargin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'dwh v_Product_Performance' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_v_Product_Performance = Source{[Schema="dwh",Item="v_Product_Performance"]}[Data],
+				    #"Filtered Rows" = Table.SelectRows(dwh_v_Product_Performance, each ([Year] <> 2018))
+				in
+				    #"Filtered Rows"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

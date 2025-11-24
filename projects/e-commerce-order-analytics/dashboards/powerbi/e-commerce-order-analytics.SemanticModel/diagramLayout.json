@@ -10,85 +10,98 @@
       "nodes": [
         {
           "location": {
-            "x": 1134.4971240811028,
-            "y": 551.68604064143278
-          },
-          "nodeIndex": "dwh D_Customer",
-          "nodeLineageTag": "a62e0bab-d6be-4a6f-883f-8f294980008c",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 41.200854798387894,
+            "x": 0,
             "y": 0
           },
-          "nodeIndex": "dwh D_Date",
-          "nodeLineageTag": "7dc17038-690e-44ad-9668-fcd7b17672fb",
+          "nodeIndex": "dwh v_Customer_CLV",
+          "nodeLineageTag": "db705c03-36bf-437a-9c44-3bbaaf358342",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 0
         },
         {
           "location": {
-            "x": 77.396935284959483,
-            "y": 569.45928361650147
+            "x": 284,
+            "y": 14
           },
-          "nodeIndex": "dwh D_OrderLocation",
-          "nodeLineageTag": "fcba65ce-0138-4cf7-9d56-d672f71ba204",
+          "nodeIndex": "dwh v_Customer_Segments",
+          "nodeLineageTag": "95c2817d-10c8-4126-8528-eb10e05b10cf",
           "size": {
-            "height": 300,
+            "height": 272,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 0
         },
         {
           "location": {
-            "x": 847.32932266025182,
+            "x": 568,
+            "y": 14
+          },
+          "nodeIndex": "dwh v_Geography_Performance",
+          "nodeLineageTag": "667e804d-6b56-405a-b7cd-8d98d0a9e99c",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 38
+          },
+          "nodeIndex": "dwh v_Order_TimeSeries",
+          "nodeLineageTag": "e2ad1226-a044-41c0-a52c-1a45ed070fba",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136,
             "y": 0
           },
-          "nodeIndex": "dwh D_Product",
-          "nodeLineageTag": "c66606c5-0aa0-46f3-ba1c-63f352715f52",
+          "nodeIndex": "dwh v_Product_Performance",
+          "nodeLineageTag": "d59e1f42-ca98-40aa-853e-9e159a77776c",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 0
         },
         {
           "location": {
-            "x": 466.75981899837723,
-            "y": 205.4006004744106
+            "x": 1420,
+            "y": 26
           },
-          "nodeIndex": "dwh F_Order",
-          "nodeLineageTag": "efcf69bb-4a93-4872-9cd0-fbecd33d6cdd",
+          "nodeIndex": "dwh v_Shipping_KPI",
+          "nodeLineageTag": "fef757c4-e24d-4ff4-8b6b-0f771402ab38",
           "size": {
-            "height": 631.85347617508489,
-            "width": 288.05189195276
+            "height": 248,
+            "width": 234
           },
-          "zIndex": 3
+          "zIndex": 0
         },
         {
           "location": {
-            "x": 1143.4904110684506,
-            "y": 67.217435293302685
+            "x": 1704,
+            "y": 26
           },
-          "nodeIndex": "_Measures",
-          "nodeLineageTag": "9086740a-3821-43b2-a09a-a395a6716de2",
+          "nodeIndex": "dwh v_Top_Products",
+          "nodeLineageTag": "eac5acd0-461f-4046-83ee-f01ed4285bce",
           "size": {
-            "height": 104,
+            "height": 248,
             "width": 234
           },
           "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 79.553182037699813,
+      "zoomValue": 100,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
