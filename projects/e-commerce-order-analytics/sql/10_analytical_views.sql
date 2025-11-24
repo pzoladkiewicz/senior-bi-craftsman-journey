@@ -18,12 +18,11 @@ GO
 
 CREATE OR ALTER VIEW dwh.v_Customer_CLV AS
 SELECT
-     d.[Year]
-    ,d.Month
-    ,c.CustomerKey
+     c.CustomerKey
     ,c.CustomerFirstName + ' ' + c.CustomerLastName             AS CustomerName
     ,c.CustomerSegment
     ,c.CustomerCountry
+    ,f.OrderDateKey
     ,COUNT(DISTINCT f.OrderID)                                  AS OrderCount
     ,SUM(f.SalesAmount)                                         AS Revenue
     ,SUM(f.BenefitPerOrder)                                     AS Profit
@@ -32,16 +31,13 @@ SELECT
 FROM dwh.F_Order AS f
 JOIN dwh.D_Customer AS c
     ON f.CustomerKey = c.CustomerKey
-JOIN dwh.D_Date AS d
-    ON f.OrderDateKey = d.DateKey 
 WHERE f.OrderStatus = 'COMPLETE'
 GROUP BY
-     d.[Year]
-    ,d.Month
-    ,c.CustomerKey
+     c.CustomerKey
     ,c.CustomerFirstName + ' ' + c.CustomerLastName
     ,c.CustomerSegment
-    ,c.CustomerCountry;
+    ,c.CustomerCountry
+    ,f.OrderDateKey;
 GO
 
 
@@ -51,12 +47,11 @@ GO
 
 CREATE OR ALTER VIEW dwh.v_Product_Performance AS
 SELECT
-     d.[Year]
-    ,d.Month
-    ,p.ProductKey
+     p.ProductKey
     ,p.ProductName
     ,p.CategoryName
     ,p.DepartmentName
+    ,f.OrderDateKey
     ,SUM(f.OrderItemQuantity) AS UnitsSold
     ,SUM(f.SalesAmount) AS Revenue
     ,SUM(f.BenefitPerOrder) AS Profit
@@ -64,16 +59,13 @@ SELECT
 FROM dwh.F_Order AS f
 JOIN dwh.D_Product AS p
     ON f.ProductKey = p.ProductKey
-JOIN dwh.D_Date AS d
-    ON f.OrderDateKey = d.DateKey 
 WHERE f.OrderStatus = 'COMPLETE'
 GROUP BY
-     d.[Year]
-    ,d.Month
-    ,p.ProductKey
+     p.ProductKey
     ,p.ProductName
     ,p.CategoryName
-    ,p.DepartmentName;
+    ,p.DepartmentName
+    ,f.OrderDateKey;
 GO
 
 
@@ -83,8 +75,7 @@ GO
 
 CREATE OR ALTER VIEW dwh.v_Order_TimeSeries AS
 SELECT
-     d.[Year]
-    ,d.Month
+     f.OrderDateKey
     ,COUNT(DISTINCT f.OrderID) AS OrderCount
     ,SUM(f.OrderItemQuantity) AS UnitsSold
     ,SUM(f.SalesAmount) AS TotalRevenue
@@ -94,8 +85,7 @@ JOIN dwh.D_Date AS d
     ON f.OrderDateKey = d.DateKey
 WHERE f.OrderStatus = 'COMPLETE'
 GROUP BY
-     d.[Year]
-    ,d.Month;
+     f.OrderDateKey;
 GO
 
 
@@ -105,26 +95,22 @@ GO
 
 CREATE OR ALTER VIEW dwh.v_Geography_Performance AS
 SELECT
-     d.[Year]
-    ,d.Month
-    ,l.Market
+     l.Market
     ,l.OrderRegion
     ,l.OrderCountry
+    ,f.OrderDateKey
     ,COUNT(DISTINCT f.OrderID) AS OrderCount
     ,SUM(f.SalesAmount) AS TotalRevenue
     ,SUM(f.BenefitPerOrder) AS TotalProfit
 FROM dwh.F_Order AS f
 JOIN dwh.D_OrderLocation AS l
     ON f.OrderLocationKey = l.LocationKey
-JOIN dwh.D_Date AS d
-    ON f.OrderDateKey = d.DateKey 
 WHERE f.OrderStatus = 'COMPLETE'
 GROUP BY
-     d.[Year]
-    ,d.Month
-    ,l.Market
+     l.Market
     ,l.OrderRegion
-    ,l.OrderCountry;
+    ,l.OrderCountry
+    ,f.OrderDateKey;
 GO
 
 
@@ -134,22 +120,18 @@ GO
 
 CREATE OR ALTER VIEW dwh.v_Shipping_KPI AS 
 SELECT
-     d.[Year]
-    ,d.Month
-    ,f.DeliveryStatus
+     f.DeliveryStatus
     ,f.ShippingMode
+    ,f.OrderDateKey
     ,COUNT(*) AS DeliveryCount
     ,AVG(f.DaysForShippingReal) AS AvgShipDays
     ,SUM(CASE WHEN f.LateDeliveryRisk = 1 THEN 1 ELSE 0 END) * 1.0 / COUNT(*) AS LateRiskPercent
 FROM dwh.F_Order AS f
-JOIN dwh.D_Date AS d
-    ON f.OrderDateKey = d.DateKey
 WHERE f.OrderStatus = 'COMPLETE'
 GROUP BY
-     d.[Year]
-    ,d.Month
-    ,f.DeliveryStatus
-    ,f.ShippingMode;
+     f.DeliveryStatus
+    ,f.ShippingMode
+    ,f.OrderDateKey;
 GO
 
 
@@ -159,25 +141,21 @@ GO
 
 CREATE OR ALTER VIEW dwh.v_Top_Products AS 
 SELECT
-     d.[Year]
-    ,d.Month
-    ,p.ProductKey
+     p.ProductKey
     ,p.ProductName
     ,p.CategoryName
+    ,f.OrderDateKey
     ,SUM(f.SalesAmount) AS Revenue
     ,DENSE_RANK() OVER (PARTITION BY d.Year ORDER BY SUM(f.SalesAmount) DESC) AS ProductRank
 FROM dwh.F_Order AS f
 JOIN dwh.D_Product AS p
     ON f.ProductKey = p.ProductKey
-JOIN dwh.D_Date AS d
-    ON f.OrderDateKey = d.DateKey
 WHERE f.OrderStatus = 'COMPLETE'
 GROUP BY
-     d.[Year]
-    ,d.Month
-    ,p.ProductKey
+     p.ProductKey
     ,p.ProductName
-    ,p.CategoryName;
+    ,p.CategoryName
+    ,f.OrderDateKey;
 GO
 
 
@@ -187,10 +165,9 @@ GO
 
 CREATE OR ALTER VIEW dwh.v_Customer_Segments AS 
 SELECT 
-     d.[Year]
-    ,d.Month
-    ,c.CustomerSegment
+     c.CustomerSegment
     ,c.CustomerCountry
+    ,f.OrderDateKey
     ,COUNT(DISTINCT f.OrderID) AS OrderCount
     ,SUM(f.SalesAmount) AS Revenue
     ,SUM(f.BenefitPerOrder) As Profit
@@ -198,12 +175,9 @@ SELECT
 FROM dwh.F_Order AS f
 JOIN dwh.D_Customer AS c
     ON f.CustomerKey = c.CustomerKey
-JOIN dwh.D_Date AS d
-    ON f.OrderDateKey = d.DateKey 
 WHERE f.OrderStatus = 'COMPLETE'
 GROUP BY
-     d.[Year]
-    ,d.Month
-    ,c.CustomerSegment
-    ,c.CustomerCountry;
+     c.CustomerSegment
+    ,c.CustomerCountry
+    ,f.OrderDateKey;
 GO
