@@ -19,7 +19,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 1,
+          "zIndex": 2,
           "expandedHeight": 300
         },
         {
@@ -33,7 +33,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 2,
+          "zIndex": 3,
           "expandedHeight": 272
         },
         {
@@ -47,7 +47,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 3,
+          "zIndex": 4,
           "expandedHeight": 272
         },
         {
@@ -61,7 +61,7 @@
             "height": 224,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 5
         },
         {
           "location": {
@@ -74,7 +74,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 5,
+          "zIndex": 6,
           "expandedHeight": 300
         },
         {
@@ -88,7 +88,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 6,
+          "zIndex": 7,
           "expandedHeight": 248
         },
         {
@@ -102,8 +102,20 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0,
+          "zIndex": 1,
           "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 954,
+            "y": 126
+          },
+          "nodeIndex": "01. Revenue",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

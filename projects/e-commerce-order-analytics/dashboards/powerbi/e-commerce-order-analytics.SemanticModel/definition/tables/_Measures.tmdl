@@ -1,0 +1,54 @@
+table _Measures
+	lineageTag: 703fd2a7-2cbd-4370-8991-c18dfce70120
+
+	measure '01. Revenue' = SUM('dwh v_Order_TimeSeries'[TotalRevenue])
+		lineageTag: a8a7b211-4a47-425d-9500-e83fe70d8725
+
+		formatStringDefinition = pbi.NumberFormat()
+
+	measure '02. Revenue PY' =
+			
+			CALCULATE(
+			    [01. Revenue],
+			    SAMEPERIODLASTYEAR('dwh D_Date'[Date])
+			)
+		lineageTag: d120827d-57ab-4fc9-b5a9-b015b9f1a546
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '03. Revenue YoY %' = ```
+			
+			VAR _CY = [01. Revenue]
+			VAR _PY = [02. Revenue PY]
+			RETURN
+			    IF(ISBLANK(_PY), BLANK(), DIVIDE(_CY - _PY, _PY)) 
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a600a5d1-52cd-4def-9d1a-e06670fe0a9f
+
+	measure '03.1 CF Revenue YoY %' =
+			
+			VAR _CY = [01. Revenue]
+			VAR _PY = [02. Revenue PY]
+			VAR _perc = DIVIDE(_CY - _PY, _PY)
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, pbi.ThemeColor("pos"),
+			        _perc < 0, pbi.ThemeColor("neg"),
+			        "Grey"
+			        )
+		lineageTag: 0a6ec2db-3a06-4100-8cfc-27cdf84652c5
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+

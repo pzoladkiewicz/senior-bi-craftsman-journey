@@ -1,0 +1,38 @@
+function 'pbi.NumberFormat' =
+		() =>
+		VAR _value = SELECTEDMEASURE()
+		VAR _absValue = ABS(_value)
+		VAR _fstring =
+			SWITCH(
+				TRUE(),
+				_absValue >= 1e9, "#,##0,,,.00M",
+				_absValue >= 1e6, "#,##0,,.0M",
+				_absValue >= 1e3, "#,##0,.0K",
+				"#,##0"
+			)
+		RETURN
+			_fstring
+	lineageTag: d0c88287-63d1-455b-91e7-52c53975e41f
+
+function 'pbi.ThemeColor' = ```
+		(
+			ThemeColorNr : scalar val
+		) =>
+		SWITCH(
+			ThemeColorNr,
+				1, "#3498DB", 
+				2, "#27AE60", 
+				3, "#E74C3C", 
+				4, "#F1C40F", 
+				5, "#8E44AD", 
+				6, "#34495E", 
+				7, "#16A085", 
+				8, "#D35400",
+				9, "#2C3E50",
+				10, "#FFFFFF",
+				"neg", "#E74C3C ",
+				"pos", "E#27AE60"
+			)
+		```
+	lineageTag: 1a5b5980-0632-45a2-a732-2c42e274b5bc
+
