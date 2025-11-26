@@ -6,30 +6,31 @@ table _Measures
 
 		formatStringDefinition = pbi.NumberFormat()
 
-	measure '02. Revenue PY' =
+	measure '11.1 Revenue PY' = ```
 			
-			CALCULATE(
-			    [01. Revenue],
-			    SAMEPERIODLASTYEAR('dwh D_Date'[Date])
-			)
+			    CALCULATE(
+			        [01. Revenue],
+			        SAMEPERIODLASTYEAR('dwh D_Date'[Date])
+			    )
+			```
 		lineageTag: d120827d-57ab-4fc9-b5a9-b015b9f1a546
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		formatStringDefinition = pbi.NumberFormat()
 
-	measure '03. Revenue YoY %' = ```
+	measure '11.2 Revenue YoY %' = ```
 			
 			VAR _CY = [01. Revenue]
-			VAR _PY = [02. Revenue PY]
+			VAR _PY = [11.1 Revenue PY]
 			RETURN
 			    IF(ISBLANK(_PY), BLANK(), DIVIDE(_CY - _PY, _PY)) 
 			```
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: a600a5d1-52cd-4def-9d1a-e06670fe0a9f
 
-	measure '03.1 CF Revenue YoY %' =
+	measure '11.3 CF Revenue YoY %' =
 			
 			VAR _CY = [01. Revenue]
-			VAR _PY = [02. Revenue PY]
+			VAR _PY = [11.1 Revenue PY]
 			VAR _perc = DIVIDE(_CY - _PY, _PY)
 			RETURN
 			    SWITCH(
@@ -39,6 +40,93 @@ table _Measures
 			        "Grey"
 			        )
 		lineageTag: 0a6ec2db-3a06-4100-8cfc-27cdf84652c5
+
+	measure '02. Profit' = SUM('dwh v_Order_TimeSeries'[TotalProfit])
+		lineageTag: 7dcb2d46-86ba-4851-87e0-d77016471557
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '12.1 Profit Margin' = DIVIDE([02. Profit] , [01. Revenue], 0)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 72c40f60-0c6c-4178-9d24-b757c112cb25
+
+	measure '12.2 CF Profit Margin' = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        [12.1 Profit Margin] > 0, pbi.ThemeColor("pos"),
+			        [12.1 Profit Margin] < 0, pbi.ThemeColor("neg"),
+			        "Grey"
+			        )
+			```
+		lineageTag: 3428f26d-7561-447c-bb29-a539c132f4ff
+
+	measure '03. Orders' = SUM('dwh v_Order_TimeSeries'[OrderCount])
+		formatString: 0
+		lineageTag: 6d5c64a3-1516-4e11-a7a4-3fde60814f56
+
+	measure '13.1 Orders PY' = ```
+			
+			    CALCULATE(
+			        [03. Orders],
+			        SAMEPERIODLASTYEAR('dwh D_Date'[Date])
+			    )
+			```
+		formatString: 0
+		lineageTag: fe82e876-f3a3-4d24-86a6-055032534dcc
+
+	measure '13.2 Orders YoY %' = ```
+			
+			VAR _CY = [03. Orders]
+			VAR _PY = [13.1 Orders PY]
+			RETURN
+			    IF(ISBLANK(_PY), BLANK(), DIVIDE(_CY - _PY, _PY)) 
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a9e3eaf8-108e-4682-8682-e7f914c7e72d
+
+	measure '13.3 CF Orders YoY %' =
+			
+			VAR _CY = [03. Orders]
+			VAR _PY = [13.1 Orders PY]
+			VAR _perc = DIVIDE(_CY - _PY, _PY)
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _perc > 0, pbi.ThemeColor("pos"),
+			        _perc < 0, pbi.ThemeColor("neg"),
+			        "Grey"
+			        )
+		lineageTag: 60dbc6bd-d972-4ad0-af61-f45b0dd0a88d
+
+	measure '04. Avg Shipping Days' = ```
+			
+			VAR _TotalDays = 
+			    SUMX(
+			        'dwh v_Shipping_KPI',
+			        'dwh v_Shipping_KPI'[AvgShipDays] * 'dwh v_Shipping_KPI'[DeliveryCount]
+			        )
+			VAR _TotalCount = SUM('dwh v_Shipping_KPI'[DeliveryCount])
+			RETURN
+			    DIVIDE(_TotalDays, _TotalCount, 0)
+			```
+		formatString: 0.0
+		lineageTag: 4112e3f3-fd77-4a98-8595-9bcec4963499
+
+	measure '14.1 Shipping Variance' = [04. Avg Shipping Days] - 4.0
+		formatString: #,0.0
+		lineageTag: 5e79a549-cefd-4c83-aeae-26a326df1a0a
+
+	measure '14.2 CF Shipping vs. Target' = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        [14.1 Shipping Variance] < 0, pbi.ThemeColor("pos"),
+			        [14.1 Shipping Variance] > 0, pbi.ThemeColor("neg"),
+			        "Grey"
+			        )
+			```
+		lineageTag: 8523278d-5b37-4ed9-97a9-ecb6637ee62a
 
 	partition _Measures = m
 		mode: import

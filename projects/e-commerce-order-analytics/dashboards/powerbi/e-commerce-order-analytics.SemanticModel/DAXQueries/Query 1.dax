@@ -16,5 +16,5 @@ SWITCH(
 		9, "#2C3E50",
 		10, "#FFFFFF",
 		"neg", "#E74C3C ",
-		"pos", "E#27AE60"
+		"pos", "#27AE60"
 	)

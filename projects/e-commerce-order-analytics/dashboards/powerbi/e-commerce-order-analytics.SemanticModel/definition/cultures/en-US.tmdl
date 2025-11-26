@@ -5314,22 +5314,98 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity_02__revenue_PY": {
+			    "entity__measure.entity_11_1_revenue_PY": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "02. Revenue PY"
+			          "ConceptualProperty": "11.1 Revenue PY"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "02. revenue PY": {
+			          "11.1 revenue PY": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "02. income py": {
+			          "11.1 income py": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "11.1 profit py": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "11.1 turnover py": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "11.1 yield py": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_11_2_revenue_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "11.2 Revenue YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "11.2 revenue YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "11.2 revenue yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "11.2 revenue yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "11.2 income yoy %": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5339,7 +5415,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "02. profit py": {
+			          "11.2 profit yoy %": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5349,7 +5425,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "02. turnover py": {
+			          "11.2 turnover yoy %": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5359,7 +5435,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "02. yield py": {
+			          "11.2 yield yoy %": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5370,22 +5446,22 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity_03__revenue_YoY_": {
+			    "entity__measure.entity_11_3_CF_revenue_YoY_": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "03. Revenue YoY %"
+			          "ConceptualProperty": "11.3 CF Revenue YoY %"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "03. revenue YoY %": {
+			          "11.3 CF revenue YoY %": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "03. revenue yoy percentage": {
+			          "11.3 cf revenue yoy percentage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5395,7 +5471,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "03. revenue yoy pct": {
+			          "11.3 cf revenue yoy pct": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5405,7 +5481,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "03. income yoy %": {
+			          "11.3 cf income yoy %": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5415,7 +5491,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "03. profit yoy %": {
+			          "11.3 cf profit yoy %": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5425,7 +5501,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "03. turnover yoy %": {
+			          "11.3 cf turnover yoy %": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5435,910 +5511,893 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "03. yield yoy %": {
+			          "11.3 cf yield yoy %": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_02__profit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "02. Profit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "02. profit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "02. income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "02. revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "02. turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "02. return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "02. yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "02. advantage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "02. gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "02. benefit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "02. use": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "02. reward": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "Profit": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_12_1_profit_margin": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "12.1 Profit Margin"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "12.1 profit margin": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "12.1 profit boundary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "12.1 profit perimeter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "12.1 profit periphery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "12.1 profit border": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "12.1 profit brim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "12.1 profit sideline": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "12.1 profit edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "12.1 profit verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "12.1 profit fringe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "12.1 profit side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity__01__revenue_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_01. Revenue FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_01. revenue FormatString": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_01. income formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_01. profit formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_01. turnover formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_01. yield formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_12_2_CF_profit_margin": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "12.2 CF Profit Margin"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "12.2 CF profit margin": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "12.2 cf profit boundary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "12.2 cf profit perimeter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "12.2 cf profit periphery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "12.2 cf profit border": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "12.2 cf profit brim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "12.2 cf profit sideline": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "12.2 cf profit edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "12.2 cf profit verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "12.2 cf profit fringe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "12.2 cf profit side": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_03__orders": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "03. Orders"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "03. orders": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "03. instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "03. guideline": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "03. preparation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "03. direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "03. command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "03. tip": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "03. briefing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "03. remit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "03. mission": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "03. directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Orders": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_13_1_orders_PY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "13.1 Orders PY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "13.1 orders PY": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_13_2_orders_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "13.2 Orders YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "13.2 orders YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "13.2 order yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "13.2 order yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_13_3_CF_orders_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "13.3 CF Orders YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "13.3 CF orders YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "13.3 cf order yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "13.3 cf order yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_04__avg_shipping_days": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "04. Avg Shipping Days"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "04. avg shipping days": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "04. average shipping day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "04. avg shipping existence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "04. avg shipping being": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "04. avg shipping living": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "04. avg shipping eras": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "04. avg shipping generation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "04. avg shipping epoch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "04. avg shipping period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "04. avg shipping age": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "04. avg shipping daylight": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.455
+			          }
+			        },
+			        {
+			          "Avg Shipping Days": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_14_1_shipping_variance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "14.1 Shipping Variance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "14.1 shipping variance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "14.1 shipping alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "14.1 shipping modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "14.1 shipping adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "14.1 shipping change": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "14.1 shipping discrepancy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "14.1 shipping inconsistency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "14.1 shipping disagreement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "14.1 shipping variation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "14.1 shipping divergence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "14.1 shipping disparity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
 			          }
 			        }
 			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dwh_D_Date_is_weekend": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.is_weekend": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.is_weekend"
-			          }
-			        }
-			      },
-			      "Conditions": [
-			        {
-			          "Target": {
-			            "Role": "dwh_D_Date.is_weekend"
-			          },
-			          "Operator": "Equals",
-			          "Value": {
-			            "Boolean": [
-			              true
-			            ]
-			          }
-			        }
-			      ],
-			      "Phrasings": [
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Adjectives": [
-			              {
-			                "weekend": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ]
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "some_dwh_D_Dates_are_weekend_dwh_D_Dates"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_in_customer_country": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.customer_country": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.customer_country"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "dwh_v_Customer_CLV.customer_country"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.customer_country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_are_in_customer_countries"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Segment_in_customer_country": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Segments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment"
-			          }
-			        },
-			        "dwh_v_Customer_Segment.customer_country": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment.customer_country"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "dwh_v_Customer_Segment.customer_country"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Segment"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dwh_v_Customer_Segment.customer_country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_Segments_are_in_customer_countries"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_in_order_region": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.order_region": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.order_region"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "dwh_v_Geography_Performance.order_region"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.order_region"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_are_in_order_regions"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_in_order_country": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.order_country": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.order_country"
-			          }
-			        }
-			      },
-			      "SemanticSlots": {
-			        "Where": {
-			          "Role": "dwh_v_Geography_Performance.order_country"
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.order_country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_are_in_order_countries"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_customer_key": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.customer_key": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.customer_key"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.customer_key"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_customer_keys"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_customer_segment": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.customer_segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.customer_segment"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.customer_segment"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_customer_segments"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_customer_country": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.customer_country": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.customer_country"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.customer_country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_customer_countries"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_order_count": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.order_count": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.order_count"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.order_count"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_order_counts"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_revenue": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.revenue": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.revenue"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_revenues"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_profit": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.profit": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.profit"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.profit"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_profits"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_profit_margin": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.profit_margin": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.profit_margin"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.profit_margin"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_profit_margins"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_clv": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_v_Customer_CLV.clv": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV.clv"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV.clv"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_clvs"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Segment_has_customer_segment": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Segments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment"
-			          }
-			        },
-			        "dwh_v_Customer_Segment.customer_segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment.customer_segment"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Segment"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Segment.customer_segment"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_Segments_have_customer_segments"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Segment_has_customer_country": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Segments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment"
-			          }
-			        },
-			        "dwh_v_Customer_Segment.customer_country": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment.customer_country"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Segment"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Segment.customer_country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_Segments_have_customer_countries"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Segment_has_order_count": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Segments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment"
-			          }
-			        },
-			        "dwh_v_Customer_Segment.order_count": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment.order_count"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Segment"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Segment.order_count"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_Segments_have_order_counts"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Segment_has_revenue": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Segments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment"
-			          }
-			        },
-			        "dwh_v_Customer_Segment.revenue": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment.revenue"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Segment"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Segment.revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_Segments_have_revenues"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Segment_has_profit": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Segments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment"
-			          }
-			        },
-			        "dwh_v_Customer_Segment.profit": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment.profit"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Segment"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Segment.profit"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_Segments_have_profits"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Segment_has_profit_margin": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Segments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment"
-			          }
-			        },
-			        "dwh_v_Customer_Segment.profit_margin": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment.profit_margin"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Segment"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Segment.profit_margin"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_Segments_have_profit_margins"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_has_market": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.market": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.market"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.market"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_have_markets"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_has_order_region": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.order_region": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.order_region"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.order_region"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_have_order_regions"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_has_order_country": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.order_country": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.order_country"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.order_country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_have_order_countries"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_has_order_count": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.order_count": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.order_count"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.order_count"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_have_order_counts"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_has_total_revenue": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.total_revenue": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.total_revenue"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.total_revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_have_total_revenues"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_has_total_profit": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.total_profit": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.total_profit"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.total_profit"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_have_total_profits"
-			        }
-			      ]
-			    },
-			    "dwh_v_Order_TimeSery_has_order_count": {
+			    "dwh_v_Order_TimeSery_has_dwh_D_Date": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh v_Order_TimeSeries"
 			      },
@@ -6349,9 +6408,9 @@ cultureInfo en-US
 			            "Entity": "dwh_v_Order_TimeSery"
 			          }
 			        },
-			        "dwh_v_Order_TimeSery.order_count": {
+			        "dwh_D_Date": {
 			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery.order_count"
+			            "Entity": "dwh_D_Date"
 			          }
 			        }
 			      },
@@ -6362,1094 +6421,25 @@ cultureInfo en-US
 			              "Role": "dwh_v_Order_TimeSery"
 			            },
 			            "Object": {
-			              "Role": "dwh_v_Order_TimeSery.order_count"
+			              "Role": "dwh_D_Date"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_order_counts"
-			        }
-			      ]
-			    },
-			    "dwh_v_Order_TimeSery_has_unit_sold": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
-			          }
+			          "ID": "dwh_v_Order_TimeSeries_have_dwh_D_Dates"
 			        },
-			        "dwh_v_Order_TimeSery.unit_sold": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery.unit_sold"
-			          }
-			        }
-			      },
-			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
 			              "Role": "dwh_v_Order_TimeSery"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Order_TimeSery.unit_sold"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_unit_sold"
-			        }
-			      ]
-			    },
-			    "dwh_v_Order_TimeSery_has_total_revenue": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
-			          }
-			        },
-			        "dwh_v_Order_TimeSery.total_revenue": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery.total_revenue"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Order_TimeSery"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Order_TimeSery.total_revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_total_revenues"
-			        }
-			      ]
-			    },
-			    "dwh_v_Order_TimeSery_has_total_profit": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
-			          }
-			        },
-			        "dwh_v_Order_TimeSery.total_profit": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery.total_profit"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Order_TimeSery"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Order_TimeSery.total_profit"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_total_profits"
-			        }
-			      ]
-			    },
-			    "dwh_v_Product_Performance_has_product_name": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Product_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Product_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance"
-			          }
-			        },
-			        "dwh_v_Product_Performance.product_name": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance.product_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Product_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Product_Performance.product_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Product_Performances_have_product_names"
-			        }
-			      ]
-			    },
-			    "dwh_v_Product_Performance_has_category_name": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Product_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Product_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance"
-			          }
-			        },
-			        "dwh_v_Product_Performance.category_name": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance.category_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Product_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Product_Performance.category_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Product_Performances_have_category_names"
-			        }
-			      ]
-			    },
-			    "dwh_v_Product_Performance_has_department_name": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Product_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Product_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance"
-			          }
-			        },
-			        "dwh_v_Product_Performance.department_name": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance.department_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Product_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Product_Performance.department_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Product_Performances_have_department_names"
-			        }
-			      ]
-			    },
-			    "dwh_v_Product_Performance_has_unit_sold": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Product_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Product_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance"
-			          }
-			        },
-			        "dwh_v_Product_Performance.unit_sold": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance.unit_sold"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Product_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Product_Performance.unit_sold"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Product_Performances_have_unit_sold"
-			        }
-			      ]
-			    },
-			    "dwh_v_Product_Performance_has_revenue": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Product_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Product_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance"
-			          }
-			        },
-			        "dwh_v_Product_Performance.revenue": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance.revenue"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Product_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Product_Performance.revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Product_Performances_have_revenues"
-			        }
-			      ]
-			    },
-			    "dwh_v_Product_Performance_has_profit": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Product_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Product_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance"
-			          }
-			        },
-			        "dwh_v_Product_Performance.profit": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance.profit"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Product_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Product_Performance.profit"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Product_Performances_have_profits"
-			        }
-			      ]
-			    },
-			    "dwh_v_Product_Performance_has_profit_margin": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Product_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Product_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance"
-			          }
-			        },
-			        "dwh_v_Product_Performance.profit_margin": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance.profit_margin"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Product_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Product_Performance.profit_margin"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Product_Performances_have_profit_margins"
-			        }
-			      ]
-			    },
-			    "dwh_v_Shipping_KPI_has_delivery_status": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Shipping_KPI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Shipping_KPI": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI"
-			          }
-			        },
-			        "dwh_v_Shipping_KPI.delivery_status": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI.delivery_status"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Shipping_KPI"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Shipping_KPI.delivery_status"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Shipping_KPIs_have_delivery_statuses"
-			        }
-			      ]
-			    },
-			    "dwh_v_Shipping_KPI_has_shipping_mode": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Shipping_KPI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Shipping_KPI": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI"
-			          }
-			        },
-			        "dwh_v_Shipping_KPI.shipping_mode": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI.shipping_mode"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Shipping_KPI"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Shipping_KPI.shipping_mode"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Shipping_KPIs_have_shipping_modes"
-			        }
-			      ]
-			    },
-			    "dwh_v_Shipping_KPI_has_delivery_count": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Shipping_KPI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Shipping_KPI": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI"
-			          }
-			        },
-			        "dwh_v_Shipping_KPI.delivery_count": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI.delivery_count"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Shipping_KPI"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Shipping_KPI.delivery_count"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Shipping_KPIs_have_delivery_counts"
-			        }
-			      ]
-			    },
-			    "dwh_v_Shipping_KPI_has_avg_ship_day": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Shipping_KPI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Shipping_KPI": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI"
-			          }
-			        },
-			        "dwh_v_Shipping_KPI.avg_ship_day": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI.avg_ship_day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Shipping_KPI"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Shipping_KPI.avg_ship_day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Shipping_KPIs_have_avg_ship_days"
-			        }
-			      ]
-			    },
-			    "dwh_v_Shipping_KPI_has_late_risk_percent": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Shipping_KPI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Shipping_KPI": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI"
-			          }
-			        },
-			        "dwh_v_Shipping_KPI.late_risk_percent": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI.late_risk_percent"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Shipping_KPI"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Shipping_KPI.late_risk_percent"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Shipping_KPIs_have_late_risk_percent"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_date": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_dates"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.year": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_years"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.quarter": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_quarters"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.month": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_months"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_week_of_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.week_of_year": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.week_of_year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.week_of_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_week_of_year"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_day_of_month": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.day_of_month": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.day_of_month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.day_of_month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_day_of_month"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_day_of_week": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.day_of_week": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.day_of_week"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.day_of_week"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_day_of_week"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_day_of_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.day_of_year": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.day_of_year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.day_of_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_day_of_year"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_is_weekend": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.is_weekend": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.is_weekend"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.is_weekend"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_is_weekends"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_is_holiday": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.is_holiday": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.is_holiday"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.is_holiday"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_is_holidays"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_fiscal_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.fiscal_year": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.fiscal_year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.fiscal_year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_fiscal_years"
-			        }
-			      ]
-			    },
-			    "dwh_D_Date_has_fiscal_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh D_Date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        },
-			        "dwh_D_Date.fiscal_quarter": {
-			          "Target": {
-			            "Entity": "dwh_D_Date.fiscal_quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date.fiscal_quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_fiscal_quarters"
-			        }
-			      ]
-			    },
-			    "dwh_v_Order_TimeSery_has_entity__measure_entity_01__revenue": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
-			          }
-			        },
-			        "entity__measure.entity_01__revenue": {
-			          "Target": {
-			            "Entity": "entity__measure.entity_01__revenue"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Order_TimeSery"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.entity_01__revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_01__revenue"
-			        }
-			      ]
-			    },
-			    "dwh_v_Order_TimeSery_has_entity__measure_entity_02__revenue_PY": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
-			          }
-			        },
-			        "entity__measure.entity_02__revenue_PY": {
-			          "Target": {
-			            "Entity": "entity__measure.entity_02__revenue_PY"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Order_TimeSery"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.entity_02__revenue_PY"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_02__revenue_PY"
-			        }
-			      ]
-			    },
-			    "dwh_v_Order_TimeSery_has_entity__measure_entity_03__revenue_YoY_": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
-			          }
-			        },
-			        "entity__measure.entity_03__revenue_YoY_": {
-			          "Target": {
-			            "Entity": "entity__measure.entity_03__revenue_YoY_"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Order_TimeSery"
-			            },
-			            "Object": {
-			              "Role": "entity__measure.entity_03__revenue_YoY_"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_03__revenue_YoY_"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_CLV_has_dwh_D_Date": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_CLV"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_CLV": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_CLV"
-			          }
-			        },
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_CLV"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_CLVs_have_dwh_D_Dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_CLV"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_dwh_v_Customer_CLVs"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Segment_has_dwh_D_Date": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Segments"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Segment": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Segment"
-			          }
-			        },
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Segment"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Customer_Segments_have_dwh_D_Dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Segment"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_dwh_v_Customer_Segments"
+			          "ID": "dwh_D_Dates_have_dwh_v_Order_TimeSeries"
 			        }
 			      ]
 			    },
@@ -7499,15 +6489,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dwh_v_Order_TimeSery_has_dwh_D_Date": {
+			    "dwh_v_Customer_Segment_has_dwh_D_Date": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			        "ConceptualEntity": "dwh v_Customer_Segments"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
+			        "dwh_v_Customer_Segment": {
 			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
+			            "Entity": "dwh_v_Customer_Segment"
 			          }
 			        },
 			        "dwh_D_Date": {
@@ -7520,7 +6510,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_v_Order_TimeSery"
+			              "Role": "dwh_v_Customer_Segment"
 			            },
 			            "Object": {
 			              "Role": "dwh_D_Date"
@@ -7528,7 +6518,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_dwh_D_Dates"
+			          "ID": "dwh_v_Customer_Segments_have_dwh_D_Dates"
 			        },
 			        {
 			          "Attribute": {
@@ -7536,12 +6526,2301 @@ cultureInfo en-US
 			              "Role": "dwh_D_Date"
 			            },
 			            "Object": {
-			              "Role": "dwh_v_Order_TimeSery"
+			              "Role": "dwh_v_Customer_Segment"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_dwh_v_Order_TimeSeries"
+			          "ID": "dwh_D_Dates_have_dwh_v_Customer_Segments"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_dwh_D_Date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_dwh_D_Dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_dwh_v_Customer_CLVs"
+			        }
+			      ]
+			    },
+			    "dwh_v_Shipping_KPI_has_entity__measure_entity_14_1_shipping_variance": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "entity__measure.entity_14_1_shipping_variance": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14_1_shipping_variance"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_14_1_shipping_variance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_14_1_shipping_variance"
+			        }
+			      ]
+			    },
+			    "dwh_v_Shipping_KPI_has_entity__measure_entity_04__avg_shipping_days": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "entity__measure.entity_04__avg_shipping_days": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_04__avg_shipping_days"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_04__avg_shipping_days"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_04__avg_shipping_days"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_13_3_CF_orders_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_13_3_CF_orders_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_13_3_CF_orders_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_13_3_CF_orders_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_13_3_CF_orders_YoY_"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_13_2_orders_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_13_2_orders_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_13_2_orders_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_13_2_orders_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_13_2_orders_YoY_"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_13_1_orders_PY": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_13_1_orders_PY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_13_1_orders_PY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_13_1_orders_PY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_13_1_orders_PY"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_03__orders": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_03__orders": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_03__orders"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_03__orders"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_03__orders"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_12_2_CF_profit_margin": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_12_2_CF_profit_margin": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_12_2_CF_profit_margin"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_12_2_CF_profit_margin"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_12_2_CF_profit_margin"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_12_1_profit_margin": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_12_1_profit_margin": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_12_1_profit_margin"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_12_1_profit_margin"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_12_1_profit_margin"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_02__profit": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_02__profit": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_02__profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_02__profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_02__profit"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_11_3_CF_revenue_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_11_3_CF_revenue_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_11_3_CF_revenue_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_11_3_CF_revenue_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_11_3_CF_revenue_YoY_"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_11_2_revenue_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_11_2_revenue_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_11_2_revenue_YoY_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_11_2_revenue_YoY_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_11_2_revenue_YoY_"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_11_1_revenue_PY": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_11_1_revenue_PY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_11_1_revenue_PY"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_11_1_revenue_PY"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_11_1_revenue_PY"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_01__revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_01__revenue": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_01__revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_01__revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_01__revenue"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_fiscal_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.fiscal_quarter": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.fiscal_quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.fiscal_quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_fiscal_quarters"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_fiscal_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.fiscal_year": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.fiscal_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.fiscal_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_fiscal_years"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_is_holiday": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.is_holiday": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.is_holiday"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.is_holiday"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_is_holidays"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_is_weekend": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.is_weekend": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.is_weekend"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.is_weekend"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_is_weekends"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_day_of_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.day_of_year": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.day_of_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.day_of_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_day_of_year"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_day_of_week": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.day_of_week": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.day_of_week"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.day_of_week"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_day_of_week"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_day_of_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.day_of_month": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.day_of_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.day_of_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_day_of_month"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_week_of_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.week_of_year": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.week_of_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.week_of_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_week_of_year"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.month": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_months"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.quarter": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_quarters"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.year": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_years"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_dates"
+			        }
+			      ]
+			    },
+			    "dwh_v_Shipping_KPI_has_late_risk_percent": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "dwh_v_Shipping_KPI.late_risk_percent": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI.late_risk_percent"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Shipping_KPI.late_risk_percent"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_late_risk_percent"
+			        }
+			      ]
+			    },
+			    "dwh_v_Shipping_KPI_has_avg_ship_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "dwh_v_Shipping_KPI.avg_ship_day": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI.avg_ship_day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Shipping_KPI.avg_ship_day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_avg_ship_days"
+			        }
+			      ]
+			    },
+			    "dwh_v_Shipping_KPI_has_delivery_count": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "dwh_v_Shipping_KPI.delivery_count": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI.delivery_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Shipping_KPI.delivery_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_delivery_counts"
+			        }
+			      ]
+			    },
+			    "dwh_v_Shipping_KPI_has_shipping_mode": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "dwh_v_Shipping_KPI.shipping_mode": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI.shipping_mode"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Shipping_KPI.shipping_mode"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_shipping_modes"
+			        }
+			      ]
+			    },
+			    "dwh_v_Shipping_KPI_has_delivery_status": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "dwh_v_Shipping_KPI.delivery_status": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI.delivery_status"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Shipping_KPI.delivery_status"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_delivery_statuses"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_profit_margin": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "dwh_v_Product_Performance.profit_margin": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance.profit_margin"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Product_Performance.profit_margin"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_profit_margins"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "dwh_v_Product_Performance.profit": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance.profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Product_Performance.profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_profits"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "dwh_v_Product_Performance.revenue": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance.revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Product_Performance.revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_revenues"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_unit_sold": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "dwh_v_Product_Performance.unit_sold": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance.unit_sold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Product_Performance.unit_sold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_unit_sold"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_department_name": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "dwh_v_Product_Performance.department_name": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance.department_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Product_Performance.department_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_department_names"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_category_name": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "dwh_v_Product_Performance.category_name": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance.category_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Product_Performance.category_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_category_names"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_product_name": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "dwh_v_Product_Performance.product_name": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance.product_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Product_Performance.product_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_product_names"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_total_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "dwh_v_Order_TimeSery.total_profit": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery.total_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Order_TimeSery.total_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_total_profits"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_total_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "dwh_v_Order_TimeSery.total_revenue": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery.total_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Order_TimeSery.total_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_total_revenues"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_unit_sold": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "dwh_v_Order_TimeSery.unit_sold": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery.unit_sold"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Order_TimeSery.unit_sold"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_unit_sold"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_order_count": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "dwh_v_Order_TimeSery.order_count": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery.order_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Order_TimeSery.order_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_order_counts"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_has_total_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.total_profit": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.total_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.total_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_have_total_profits"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_has_total_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.total_revenue": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.total_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.total_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_have_total_revenues"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_has_order_count": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.order_count": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.order_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.order_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_have_order_counts"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_has_order_country": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.order_country": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.order_country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.order_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_have_order_countries"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_has_order_region": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.order_region": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.order_region"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.order_region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_have_order_regions"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_has_market": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.market": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.market"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.market"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_have_markets"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Segment_has_profit_margin": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Segments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment"
+			          }
+			        },
+			        "dwh_v_Customer_Segment.profit_margin": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment.profit_margin"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Segment"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Segment.profit_margin"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Segments_have_profit_margins"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Segment_has_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Segments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment"
+			          }
+			        },
+			        "dwh_v_Customer_Segment.profit": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment.profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Segment"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Segment.profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Segments_have_profits"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Segment_has_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Segments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment"
+			          }
+			        },
+			        "dwh_v_Customer_Segment.revenue": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment.revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Segment"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Segment.revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Segments_have_revenues"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Segment_has_order_count": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Segments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment"
+			          }
+			        },
+			        "dwh_v_Customer_Segment.order_count": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment.order_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Segment"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Segment.order_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Segments_have_order_counts"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Segment_has_customer_country": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Segments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment"
+			          }
+			        },
+			        "dwh_v_Customer_Segment.customer_country": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment.customer_country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Segment"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Segment.customer_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Segments_have_customer_countries"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Segment_has_customer_segment": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Segments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment"
+			          }
+			        },
+			        "dwh_v_Customer_Segment.customer_segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment.customer_segment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Segment"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Segment.customer_segment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Segments_have_customer_segments"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_clv": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.clv": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.clv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.clv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_clvs"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_profit_margin": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.profit_margin": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.profit_margin"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.profit_margin"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_profit_margins"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.profit": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_profits"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.revenue": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_revenues"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_order_count": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.order_count": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.order_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.order_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_order_counts"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_customer_country": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.customer_country": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.customer_country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.customer_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_customer_countries"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_customer_segment": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.customer_segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.customer_segment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.customer_segment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_customer_segments"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_has_customer_key": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.customer_key": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.customer_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.customer_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_have_customer_keys"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_in_order_country": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.order_country": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.order_country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_v_Geography_Performance.order_country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.order_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_are_in_order_countries"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_in_order_region": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.order_region": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.order_region"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_v_Geography_Performance.order_region"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.order_region"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_are_in_order_regions"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Segment_in_customer_country": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Segments"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment"
+			          }
+			        },
+			        "dwh_v_Customer_Segment.customer_country": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Segment.customer_country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_v_Customer_Segment.customer_country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Segment"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Customer_Segment.customer_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Segments_are_in_customer_countries"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_CLV_in_customer_country": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_CLV"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_CLV": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV"
+			          }
+			        },
+			        "dwh_v_Customer_CLV.customer_country": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_CLV.customer_country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_v_Customer_CLV.customer_country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_CLV"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Customer_CLV.customer_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_CLVs_are_in_customer_countries"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_is_weekend": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.is_weekend": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.is_weekend"
+			          }
+			        }
+			      },
+			      "Conditions": [
+			        {
+			          "Target": {
+			            "Role": "dwh_D_Date.is_weekend"
+			          },
+			          "Operator": "Equals",
+			          "Value": {
+			            "Boolean": [
+			              true
+			            ]
+			          }
+			        }
+			      ],
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Adjectives": [
+			              {
+			                "weekend": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "some_dwh_D_Dates_are_weekend_dwh_D_Dates"
 			        }
 			      ]
 			    },

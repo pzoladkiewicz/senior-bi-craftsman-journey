@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dwh D_Date.Month",
-              "nativeQueryRef": "Month"
+              "nativeQueryRef": "Month",
+              "active": true
             }
           ]
         },
@@ -45,7 +46,8 @@
                 }
               },
               "queryRef": "dwh D_Date.Year",
-              "nativeQueryRef": "Year"
+              "nativeQueryRef": "Year",
+              "active": true
             }
           ]
         },
@@ -64,6 +66,25 @@
               },
               "queryRef": "_Measures.01. Revenue",
               "nativeQueryRef": "01. Revenue"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dwh v_Shipping_KPI"
+                        }
+                      },
+                      "Property": "AvgShipDays"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(dwh v_Shipping_KPI.AvgShipDays)",
+              "nativeQueryRef": "Sum of AvgShipDays"
             }
           ]
         }

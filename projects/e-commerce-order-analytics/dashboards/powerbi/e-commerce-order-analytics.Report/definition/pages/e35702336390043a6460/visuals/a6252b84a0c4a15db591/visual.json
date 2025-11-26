@@ -3,9 +3,9 @@
   "name": "a6252b84a0c4a15db591",
   "position": {
     "x": 16,
-    "y": 64,
+    "y": 16,
     "z": 0,
-    "height": 640,
+    "height": 688,
     "width": 80,
     "tabOrder": 0
   },
@@ -25,7 +25,7 @@
             "roundEdge": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "0L"
                 }
               }
             }

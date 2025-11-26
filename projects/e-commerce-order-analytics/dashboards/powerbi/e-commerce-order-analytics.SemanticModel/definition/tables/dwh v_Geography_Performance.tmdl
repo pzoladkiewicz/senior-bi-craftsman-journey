@@ -4,6 +4,7 @@ table 'dwh v_Geography_Performance'
 	column Market
 		dataType: string
 		lineageTag: 432fb7c5-327b-4ae8-ae72-8340e4002ece
+		dataCategory: Continent
 		summarizeBy: none
 		sourceColumn: Market
 

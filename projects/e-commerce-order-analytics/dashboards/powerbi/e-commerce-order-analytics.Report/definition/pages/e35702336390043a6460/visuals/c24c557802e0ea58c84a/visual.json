@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "c24c557802e0ea58c84a",
   "position": {
-    "x": 128,
-    "y": 80,
+    "x": 127.67263427109975,
+    "y": 114.57800511508951,
     "z": 3,
     "height": 128,
     "width": 256,
@@ -129,7 +129,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "03. Revenue YoY %"
+                  "Property": "11.2 Revenue YoY %"
                 }
               }
             }
@@ -224,7 +224,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "03.1 CF Revenue YoY %"
+                      "Property": "11.3 CF Revenue YoY %"
                     }
                   }
                 }
@@ -287,6 +287,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }
@@ -431,7 +438,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "03.1 CF Revenue YoY %"
+                      "Property": "11.3 CF Revenue YoY %"
                     }
                   }
                 }

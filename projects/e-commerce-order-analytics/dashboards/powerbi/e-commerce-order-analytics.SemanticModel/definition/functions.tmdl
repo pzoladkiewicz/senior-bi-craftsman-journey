@@ -31,7 +31,7 @@ function 'pbi.ThemeColor' = ```
 				9, "#2C3E50",
 				10, "#FFFFFF",
 				"neg", "#E74C3C ",
-				"pos", "E#27AE60"
+				"pos", "#27AE60"
 			)
 		```
 	lineageTag: 1a5b5980-0632-45a2-a732-2c42e274b5bc
