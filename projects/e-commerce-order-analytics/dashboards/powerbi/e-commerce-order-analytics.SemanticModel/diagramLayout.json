@@ -38,17 +38,16 @@
         },
         {
           "location": {
-            "x": 717,
-            "y": 0
+            "x": 632,
+            "y": 368
           },
           "nodeIndex": "dwh v_Geography_Performance",
           "nodeLineageTag": "667e804d-6b56-405a-b7cd-8d98d0a9e99c",
           "size": {
-            "height": 104,
+            "height": 272,
             "width": 234
           },
-          "zIndex": 4,
-          "expandedHeight": 272
+          "zIndex": 4
         },
         {
           "location": {
@@ -65,8 +64,8 @@
         },
         {
           "location": {
-            "x": 787,
-            "y": 334
+            "x": 721,
+            "y": 123
           },
           "nodeIndex": "dwh v_Product_Performance",
           "nodeLineageTag": "d59e1f42-ca98-40aa-853e-9e159a77776c",
@@ -79,8 +78,8 @@
         },
         {
           "location": {
-            "x": 377,
-            "y": 524
+            "x": 271,
+            "y": 566
           },
           "nodeIndex": "dwh v_Shipping_KPI",
           "nodeLineageTag": "fef757c4-e24d-4ff4-8b6b-0f771402ab38",
@@ -99,7 +98,7 @@
           "nodeIndex": "dwh D_Date",
           "nodeLineageTag": "a22aece8-9ba2-4778-b1ad-136f4a3f4640",
           "size": {
-            "height": 128,
+            "height": 104,
             "width": 234
           },
           "zIndex": 1,
@@ -107,12 +106,26 @@
         },
         {
           "location": {
-            "x": 954,
-            "y": 126
+            "x": 977,
+            "y": 0
           },
-          "nodeIndex": "01. Revenue",
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "703fd2a7-2cbd-4370-8991-c18dfce70120",
           "size": {
-            "height": 200,
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 882,
+            "y": 540
+          },
+          "nodeIndex": "country_mapping",
+          "nodeLineageTag": "b8370109-1623-4621-aa31-2183c30e7b00",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 0

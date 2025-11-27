@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "14c75ecb69611c4a413d",
+  "name": "3888c59b12937a677684",
   "position": {
-    "x": 864,
-    "y": 272,
-    "z": 8,
-    "height": 256,
-    "width": 368,
-    "tabOrder": 8
+    "x": 751.99999999999989,
+    "y": 240,
+    "z": 0,
+    "height": 320,
+    "width": 512,
+    "tabOrder": 0
   },
   "visual": {
     "visualType": "shapeMap",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dwh v_Geography_Performance"
+                      "Entity": "country_mapping"
                     }
                   },
-                  "Property": "OrderRegion"
+                  "Property": "OrderCountry_EN"
                 }
               },
-              "queryRef": "dwh v_Geography_Performance.OrderRegion",
-              "nativeQueryRef": "OrderRegion"
+              "queryRef": "country_mapping.OrderCountry_EN",
+              "nativeQueryRef": "OrderCountry_EN"
             }
           ]
         },
@@ -35,17 +35,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dwh v_Geography_Performance"
+                        }
+                      },
+                      "Property": "TotalRevenue"
                     }
                   },
-                  "Property": "01. Revenue"
+                  "Function": 0
                 }
               },
-              "queryRef": "_Measures.01. Revenue",
-              "nativeQueryRef": "01. Revenue"
+              "queryRef": "Sum(dwh v_Geography_Performance.TotalRevenue)",
+              "nativeQueryRef": "Sum of TotalRevenue"
             }
           ]
         }
@@ -60,23 +65,23 @@
                 "type": {
                   "expr": {
                     "Literal": {
-                      "Value": "'shared'"
+                      "Value": "'packaged'"
                     }
                   }
                 },
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'usa.states.topo'"
+                      "Value": "'map_topojson.json'"
                     }
                   }
                 },
                 "content": {
                   "expr": {
                     "ResourcePackageItem": {
-                      "PackageName": "SharedResources",
-                      "PackageType": 2,
-                      "ItemName": "usa.states.topo"
+                      "PackageName": "RegisteredResources",
+                      "PackageType": 1,
+                      "ItemName": "map_topojson43601850263747577.json"
                     }
                   }
                 }
@@ -85,7 +90,7 @@
             "projectionEnum": {
               "expr": {
                 "Literal": {
-                  "Value": "'albersUsa'"
+                  "Value": "'mercator'"
                 }
               }
             }
@@ -101,7 +106,14 @@
                   "color": {
                     "expr": {
                       "Literal": {
-                        "Value": "'minColor'"
+                        "Value": "'#DEEFFF'"
+                      }
+                    }
+                  },
+                  "value": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "0D"
                       }
                     }
                   }
@@ -110,7 +122,7 @@
                   "color": {
                     "expr": {
                       "Literal": {
-                        "Value": "'maxColor'"
+                        "Value": "'#3498DB'"
                       }
                     }
                   }
@@ -121,6 +133,43 @@
                       "Literal": {
                         "Value": "'asZero'"
                       }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "defaultColors": [
+        {
+          "properties": {
+            "defaultShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "defaultColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.5
                     }
                   }
                 }

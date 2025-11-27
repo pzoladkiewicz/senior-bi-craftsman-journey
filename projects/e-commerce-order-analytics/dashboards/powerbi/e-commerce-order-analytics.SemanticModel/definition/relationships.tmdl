@@ -22,3 +22,7 @@ relationship c514a6f1-8a10-6513-6ded-d3685beae3dc
 	fromColumn: 'dwh v_Order_TimeSeries'.OrderDateKey
 	toColumn: 'dwh D_Date'.DateKey
 
+relationship efdbe889-ec7c-bd74-bc31-5c6b128a0eee
+	fromColumn: 'dwh v_Geography_Performance'.OrderCountry
+	toColumn: country_mapping.OrderCountry
+

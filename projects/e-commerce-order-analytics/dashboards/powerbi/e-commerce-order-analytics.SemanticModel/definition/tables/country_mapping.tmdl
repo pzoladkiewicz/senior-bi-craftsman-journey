@@ -1,0 +1,48 @@
+table country_mapping
+	lineageTag: b8370109-1623-4621-aa31-2183c30e7b00
+
+	column OrderCountry
+		dataType: string
+		isHidden
+		lineageTag: 9353a919-c627-48c6-aed6-e06e3ab8ec9d
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: OrderCountry
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCountry_EN
+		dataType: string
+		lineageTag: efe851e6-e743-4ea3-84f9-c1fe34b6aa63
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: OrderCountry_EN
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderCountryISO
+		dataType: string
+		lineageTag: 7d479ab7-2beb-484b-b810-e1c7db706842
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: OrderCountryISO
+
+		annotation SummarizationSetBy = Automatic
+
+	partition country_mapping = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\pzoladkiewicz\Documents\senior-bi-craftsman-journey\projects\e-commerce-order-analytics\data\raw\country_mapping.csv"),[Delimiter=",", Columns=3, Encoding=1250, QuoteStyle=QuoteStyle.None]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}}),
+				    #"Promoted Headers" = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true]),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Promoted Headers",{{"OrderCountry", type text}, {"OrderCountry_EN", type text}, {"OrderCountryISO", type text}})
+				in
+				    #"Changed Type1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

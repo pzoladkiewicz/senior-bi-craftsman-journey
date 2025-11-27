@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "a6252b84a0c4a15db591",
+  "name": "d11c031589d44b64590a",
   "position": {
     "x": 16,
     "y": 16,
-    "z": 11500,
+    "z": 0,
     "height": 688,
     "width": 80,
     "tabOrder": 0
@@ -173,13 +173,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Menu Bar'"
                 }
               }
             }

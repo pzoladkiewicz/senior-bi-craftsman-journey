@@ -13,6 +13,7 @@ table 'dwh v_Geography_Performance'
 	column OrderRegion
 		dataType: string
 		lineageTag: 5d0b6461-70c0-4f93-aa16-e823bf6aea7d
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: OrderRegion
 
@@ -21,6 +22,7 @@ table 'dwh v_Geography_Performance'
 	column OrderCountry
 		dataType: string
 		lineageTag: 31b8f54a-25d4-4d59-ad25-844783dbd441
+		dataCategory: Country
 		summarizeBy: none
 		sourceColumn: OrderCountry
 
@@ -37,13 +39,12 @@ table 'dwh v_Geography_Performance'
 
 	column TotalRevenue
 		dataType: double
+		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: a9c1820a-28ce-4d37-a499-787882979f60
 		summarizeBy: sum
 		sourceColumn: TotalRevenue
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column TotalProfit
 		dataType: double

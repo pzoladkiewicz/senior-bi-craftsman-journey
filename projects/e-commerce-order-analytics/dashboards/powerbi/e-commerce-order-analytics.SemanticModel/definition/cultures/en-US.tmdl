@@ -1650,6 +1650,12 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "continent": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
 			          "marketplace": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -1709,7 +1715,8 @@ cultureInfo en-US
 			            "Weight": 0.476
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Location"
 			    },
 			    "dwh_v_Geography_Performance.order_region": {
 			      "Definition": {
@@ -1848,6 +1855,9 @@ cultureInfo en-US
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "order country": {
@@ -1907,7 +1917,8 @@ cultureInfo en-US
 			            "Weight": 0.736
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Location"
 			    },
 			    "dwh_v_Geography_Performance.order_count": {
 			      "Definition": {
@@ -5303,6 +5314,16 @@ cultureInfo en-US
 			          }
 			        },
 			        {
+			          "FY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
 			          "Revenue": {
 			            "State": "Suggested",
 			            "Source": {
@@ -5366,6 +5387,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "PY": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -5760,6 +5791,16 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Profit Margin": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6394,23 +6435,633 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.entity_14_2_CF_shipping_vs__target": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "14.2 CF Shipping vs. Target"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "14.2 CF shipping vs. target": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity__11_1_revenue_PY_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_11.1 Revenue PY FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_11.1 revenue PY FormatString": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "_11.1 income py formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "_11.1 profit py formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_11.1 turnover py formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "_11.1 yield py formatstring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "country_mapping": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "country_mapping"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "country mapping": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "country_mapping": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "mapping": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "nation mapping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "location mapping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "country_mapping.order_country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "country_mapping",
+			          "ConceptualProperty": "OrderCountry"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "order country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "OrderCountry": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "order location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "country_mapping.order_country_EN": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "country_mapping",
+			          "ConceptualProperty": "OrderCountry_EN"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order country EN": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "OrderCountry_EN": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "EN": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "country EN": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order nation en": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "order location en": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "nation en": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "location en": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "country_mapping.order_country_ISO": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "country_mapping",
+			          "ConceptualProperty": "OrderCountryISO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "order country ISO": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "OrderCountryISO": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "ISO": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "country ISO": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order nation iso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "order location iso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "nation iso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "location iso": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Location"
+			    },
+			    "entity__measure.entity_17_1_margin_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "17.1 Margin %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "17.1 margin %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "17.1 margin percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "17.1 margin pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "Margin %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_D_Date.month_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh D_Date",
+			          "ConceptualProperty": "Month Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "month tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_D_Date.month_short": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh D_Date",
+			          "ConceptualProperty": "MonthShort"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month short": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MonthShort": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mth short": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "small": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "little": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "petite": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "squat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "diminutive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "brief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "quick": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "rapid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "fleeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "Month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dwh_v_Order_TimeSery_has_dwh_D_Date": {
+			    "dwh_v_Geography_Performance_has_country_mapping": {
 			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			        "ConceptualEntity": "dwh v_Geography_Performance"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
+			        "dwh_v_Geography_Performance": {
 			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
+			            "Entity": "dwh_v_Geography_Performance"
 			          }
 			        },
-			        "dwh_D_Date": {
+			        "country_mapping": {
 			          "Target": {
-			            "Entity": "dwh_D_Date"
+			            "Entity": "country_mapping"
 			          }
 			        }
 			      },
@@ -6418,28 +7069,28 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_v_Order_TimeSery"
+			              "Role": "dwh_v_Geography_Performance"
 			            },
 			            "Object": {
-			              "Role": "dwh_D_Date"
+			              "Role": "country_mapping"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_dwh_D_Dates"
+			          "ID": "dwh_v_Geography_Performances_have_country_mapping"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dwh_D_Date"
+			              "Role": "country_mapping"
 			            },
 			            "Object": {
-			              "Role": "dwh_v_Order_TimeSery"
+			              "Role": "dwh_v_Geography_Performance"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_dwh_v_Order_TimeSeries"
+			          "ID": "country_mapping_have_dwh_v_Geography_Performances"
 			        }
 			      ]
 			    },
@@ -6578,6 +7229,204 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_D_Dates_have_dwh_v_Customer_CLVs"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_month_short": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.month_short": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.month_short"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.month_short"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_month_shorts"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_month_name": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "dwh_D_Date.month_name": {
+			          "Target": {
+			            "Entity": "dwh_D_Date.month_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date.month_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_month_names"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_entity__measure_entity_17_1_margin_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "entity__measure.entity_17_1_margin_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_17_1_margin_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_17_1_margin_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_17_1_margin_"
+			        }
+			      ]
+			    },
+			    "country_mapping_has_order_country_ISO": {
+			      "Binding": {
+			        "ConceptualEntity": "country_mapping"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country_mapping": {
+			          "Target": {
+			            "Entity": "country_mapping"
+			          }
+			        },
+			        "country_mapping.order_country_ISO": {
+			          "Target": {
+			            "Entity": "country_mapping.order_country_ISO"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "country_mapping"
+			            },
+			            "Object": {
+			              "Role": "country_mapping.order_country_ISO"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_mapping_have_order_country_ISO"
+			        }
+			      ]
+			    },
+			    "country_mapping_has_order_country_EN": {
+			      "Binding": {
+			        "ConceptualEntity": "country_mapping"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country_mapping": {
+			          "Target": {
+			            "Entity": "country_mapping"
+			          }
+			        },
+			        "country_mapping.order_country_EN": {
+			          "Target": {
+			            "Entity": "country_mapping.order_country_EN"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "country_mapping"
+			            },
+			            "Object": {
+			              "Role": "country_mapping.order_country_EN"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_mapping_have_order_country_ENs"
+			        }
+			      ]
+			    },
+			    "dwh_v_Shipping_KPI_has_entity__measure_entity_14_2_CF_shipping_vs__target": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "entity__measure.entity_14_2_CF_shipping_vs__target": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14_2_CF_shipping_vs__target"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_14_2_CF_shipping_vs__target"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_14_2_CF_shipping_vs__target"
 			        }
 			      ]
 			    },
@@ -7997,6 +8846,33 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_v_Geography_Performances_have_total_revenues"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dwh_v_Geography_Performance.total_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "total_revenue_indicates_how_expensive_dwh_v_Geography_Performances_are"
 			        }
 			      ]
 			    },
@@ -8030,39 +8906,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_v_Geography_Performances_have_order_counts"
-			        }
-			      ]
-			    },
-			    "dwh_v_Geography_Performance_has_order_country": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Geography_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Geography_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance"
-			          }
-			        },
-			        "dwh_v_Geography_Performance.order_country": {
-			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.order_country"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.order_country"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_have_order_countries"
 			        }
 			      ]
 			    },
@@ -8594,7 +9437,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "dwh_v_Geography_Performance_in_order_country": {
+			    "dwh_v_Geography_Performance_in_country_mapping": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh v_Geography_Performance"
 			      },
@@ -8605,15 +9448,15 @@ cultureInfo en-US
 			            "Entity": "dwh_v_Geography_Performance"
 			          }
 			        },
-			        "dwh_v_Geography_Performance.order_country": {
+			        "country_mapping": {
 			          "Target": {
-			            "Entity": "dwh_v_Geography_Performance.order_country"
+			            "Entity": "country_mapping"
 			          }
 			        }
 			      },
 			      "SemanticSlots": {
 			        "Where": {
-			          "Role": "dwh_v_Geography_Performance.order_country"
+			          "Role": "country_mapping"
 			        }
 			      },
 			      "Phrasings": [
@@ -8630,12 +9473,102 @@ cultureInfo en-US
 			              }
 			            ],
 			            "Object": {
-			              "Role": "dwh_v_Geography_Performance.order_country"
+			              "Role": "country_mapping"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dwh_v_Geography_Performances_are_in_order_countries"
+			          "ID": "dwh_v_Geography_Performances_are_in_country_mapping"
+			        }
+			      ]
+			    },
+			    "country_mapping_in_order_country_ISO": {
+			      "Binding": {
+			        "ConceptualEntity": "country_mapping"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country_mapping": {
+			          "Target": {
+			            "Entity": "country_mapping"
+			          }
+			        },
+			        "country_mapping.order_country_ISO": {
+			          "Target": {
+			            "Entity": "country_mapping.order_country_ISO"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "country_mapping.order_country_ISO"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "country_mapping"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "country_mapping.order_country_ISO"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_mapping_are_in_order_country_ISO"
+			        }
+			      ]
+			    },
+			    "country_mapping_in_order_country_EN": {
+			      "Binding": {
+			        "ConceptualEntity": "country_mapping"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "country_mapping": {
+			          "Target": {
+			            "Entity": "country_mapping"
+			          }
+			        },
+			        "country_mapping.order_country_EN": {
+			          "Target": {
+			            "Entity": "country_mapping.order_country_EN"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "country_mapping.order_country_EN"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "country_mapping"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "country_mapping.order_country_EN"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "country_mapping_are_in_order_country_ENs"
 			        }
 			      ]
 			    },
@@ -8681,6 +9614,51 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_v_Geography_Performances_are_in_order_regions"
+			        }
+			      ]
+			    },
+			    "dwh_v_Geography_Performance_in_market": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Geography_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Geography_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance"
+			          }
+			        },
+			        "dwh_v_Geography_Performance.market": {
+			          "Target": {
+			            "Entity": "dwh_v_Geography_Performance.market"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_v_Geography_Performance.market"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_v_Geography_Performance"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Geography_Performance.market"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Geography_Performances_are_in_markets"
 			        }
 			      ]
 			    },
@@ -8821,6 +9799,52 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dwh_D_Dates_are_weekend_dwh_D_Dates"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_dwh_D_Date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_dwh_D_Dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_dwh_v_Order_TimeSeries"
 			        }
 			      ]
 			    },

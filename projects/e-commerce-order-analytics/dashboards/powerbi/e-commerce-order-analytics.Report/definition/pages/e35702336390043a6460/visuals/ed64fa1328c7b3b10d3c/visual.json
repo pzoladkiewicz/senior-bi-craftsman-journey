@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "ed64fa1328c7b3b10d3c",
   "position": {
-    "x": 407.67263427109975,
-    "y": 114.57800511508951,
-    "z": 4,
+    "x": 410.64861552476111,
+    "y": 92.560430422646562,
+    "z": 8000,
     "height": 128,
     "width": 256,
-    "tabOrder": 4
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -886,6 +886,13 @@
                   "Value": "'Segoe UI Semibold'"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Profit'"
+                }
+              }
             }
           }
         }
@@ -1124,23 +1131,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "1b4f8dc0044207a4d989",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "02. Profit"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

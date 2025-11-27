@@ -128,6 +128,17 @@ table _Measures
 			```
 		lineageTag: 8523278d-5b37-4ed9-97a9-ecb6637ee62a
 
+	measure '17.1 Margin %' = ```
+			
+			    DIVIDE(
+			        SUM('dwh v_Product_Performance'[Profit]),
+			        SUM('dwh v_Product_Performance'[Revenue]),
+			        0
+			    )
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 9b0bf90e-f58a-4732-b27a-ce20e99531c8
+
 	partition _Measures = m
 		mode: import
 		source =

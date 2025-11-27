@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["dwh v_Customer_CLV","dwh v_Customer_Segments","dwh v_Geography_Performance","dwh v_Order_TimeSeries","dwh v_Product_Performance","dwh v_Shipping_KPI","dwh D_Date","_Measures"]
+annotation PBI_QueryOrder = ["dwh v_Customer_CLV","dwh v_Customer_Segments","dwh v_Geography_Performance","dwh v_Order_TimeSeries","dwh v_Product_Performance","dwh v_Shipping_KPI","dwh D_Date","_Measures","country_mapping"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -20,6 +20,7 @@ ref table 'dwh v_Product_Performance'
 ref table 'dwh v_Shipping_KPI'
 ref table 'dwh D_Date'
 ref table _Measures
+ref table country_mapping
 
 ref cultureInfo en-US
 

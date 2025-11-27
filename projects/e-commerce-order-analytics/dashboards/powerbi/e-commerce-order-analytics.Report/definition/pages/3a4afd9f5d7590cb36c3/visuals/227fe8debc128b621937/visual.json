@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "44f7c5b4297b519edd79",
+  "name": "227fe8debc128b621937",
   "position": {
-    "x": 693.315282191428,
-    "y": 92.560430422646562,
-    "z": 7500,
+    "x": 208,
+    "y": 544,
+    "z": 5000,
     "height": 128,
     "width": 256,
-    "tabOrder": 4000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -886,13 +886,6 @@
                   "Value": "'Segoe UI Semibold'"
                 }
               }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Orders'"
-                }
-              }
             }
           }
         }
@@ -1131,5 +1124,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1b5e2bd2ca0dc93496a2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "03. Orders"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

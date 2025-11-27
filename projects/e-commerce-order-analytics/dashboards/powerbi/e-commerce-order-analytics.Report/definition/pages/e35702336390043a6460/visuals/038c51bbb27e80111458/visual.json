@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "038c51bbb27e80111458",
   "position": {
-    "x": 975.6726342710997,
-    "y": 114.57800511508951,
-    "z": 6,
+    "x": 975.98194885809471,
+    "y": 92.560430422646562,
+    "z": 7250,
     "height": 128,
     "width": 256,
-    "tabOrder": 6
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -900,6 +900,13 @@
                   "Value": "'Segoe UI Semibold'"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AvgShippingDays'"
+                }
+              }
             }
           }
         }
@@ -1138,23 +1145,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d7711ca313582e7e6115",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "04. Avg Shipping Days"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

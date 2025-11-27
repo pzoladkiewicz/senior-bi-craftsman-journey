@@ -20,6 +20,79 @@
       "type": "RegisteredResources"
     }
   },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "09326dd077ed8ca08c6a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh D_Date"
+              }
+            },
+            "Property": "Year"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dwh D_Date",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Year"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2015L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2016L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2017L"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "isLockedInViewMode": true
+      }
+    ]
+  },
   "objects": {
     "section": [
       {
@@ -57,11 +130,6 @@
           "name": "CY25SU11",
           "path": "BaseThemes/CY25SU11.json",
           "type": "BaseTheme"
-        },
-        {
-          "name": "usa.states.topo",
-          "path": "Shapemaps/usa.states.topo.json",
-          "type": "ShapeMap"
         }
       ]
     },
@@ -73,6 +141,16 @@
           "name": "Professional_Corporate_Theme558083178225938.json",
           "path": "Professional_Corporate_Theme558083178225938.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "map_topojson43601850263747577.json",
+          "path": "map_topojson43601850263747577.json",
+          "type": "ShapeMap"
+        },
+        {
+          "name": "map_topojson8384977468864256.json",
+          "path": "map_topojson8384977468864256.json",
+          "type": "ShapeMap"
         }
       ]
     }

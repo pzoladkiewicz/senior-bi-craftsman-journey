@@ -125,15 +125,40 @@ table 'dwh D_Date'
 
 		annotation SummarizationSetBy = User
 
+	column 'Month Name'
+		dataType: string
+		lineageTag: 39a1828b-1b1a-4f85-a1d8-57f3ec56bc70
+		summarizeBy: none
+		sourceColumn: Month Name
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthShort
+		dataType: string
+		lineageTag: fcb23732-dea2-4926-a26a-eafd477911ab
+		summarizeBy: none
+		sourceColumn: MonthShort
+		sortByColumn: Month
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'dwh D_Date' = m
 		mode: import
 		source =
 				let
 				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
 				    dwh_D_Date = Source{[Schema="dwh",Item="D_Date"]}[Data],
-				    #"Filtered Rows" = Table.SelectRows(dwh_D_Date, each ([Year] = 2015 or [Year] = 2016 or [Year] = 2017))
+				    #"Filtered Rows" = Table.SelectRows(dwh_D_Date, each ([Year] = 2015 or [Year] = 2016 or [Year] = 2017)),
+				    #"Inserted Month Name" = Table.AddColumn(#"Filtered Rows", "Month Name", each Date.MonthName([Date]), type text),
+				    #"Inserted First Characters" = Table.AddColumn(#"Inserted Month Name", "First Characters", each Text.Start([Month Name], 3), type text),
+				    #"Renamed Columns" = Table.RenameColumns(#"Inserted First Characters",{{"First Characters", "MonthShort"}})
 				in
-				    #"Filtered Rows"
+				    #"Renamed Columns"
 
 	annotation PBI_NavigationStepName = Navigation
 

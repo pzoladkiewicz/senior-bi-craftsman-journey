@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "c24c557802e0ea58c84a",
+  "name": "390ac35dae729928e124",
   "position": {
     "x": 127.98194885809446,
     "y": 92.560430422646562,
-    "z": 9000,
+    "z": 3000,
     "height": 128,
     "width": 256,
-    "tabOrder": 2000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -754,13 +754,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Revenue'"
                 }
               }
             }
