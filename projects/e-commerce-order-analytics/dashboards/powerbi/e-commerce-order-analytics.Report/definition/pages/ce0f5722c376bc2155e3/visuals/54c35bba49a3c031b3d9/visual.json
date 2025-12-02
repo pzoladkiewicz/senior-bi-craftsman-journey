@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "e80da6654eb897e97bd7",
+  "name": "54c35bba49a3c031b3d9",
   "position": {
     "x": 912,
-    "y": 256,
-    "z": 6500,
+    "y": 488.00000000000006,
+    "z": 0,
     "height": 200,
     "width": 320,
-    "tabOrder": 7000
+    "tabOrder": 9000
   },
   "visual": {
-    "visualType": "shapeMap",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,19 +20,19 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "country_mapping"
+                      "Entity": "dwh v_Customer_Segments"
                     }
                   },
-                  "Property": "OrderCountry_EN"
+                  "Property": "CustomerSegment"
                 }
               },
-              "queryRef": "country_mapping.OrderCountry_EN",
-              "nativeQueryRef": "Country",
-              "displayName": "Country"
+              "queryRef": "dwh v_Customer_Segments.CustomerSegment",
+              "nativeQueryRef": "CustomerSegment",
+              "active": true
             }
           ]
         },
-        "Value": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -41,58 +41,106 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dwh v_Geography_Performance"
+                          "Entity": "dwh v_Customer_Segments"
                         }
                       },
-                      "Property": "TotalRevenue"
+                      "Property": "Revenue"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(dwh v_Geography_Performance.TotalRevenue)",
-              "nativeQueryRef": "Revenue",
-              "displayName": "Revenue"
+              "queryRef": "Sum(dwh v_Customer_Segments.Revenue)",
+              "nativeQueryRef": "Sum of Revenue"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dwh v_Customer_Segments"
+                      }
+                    },
+                    "Property": "Revenue"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "shape": [
+      "categoryAxis": [
         {
           "properties": {
-            "map": {
-              "geoJson": {
-                "type": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'packaged'"
-                    }
-                  }
-                },
-                "name": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'map_topojson.json'"
-                    }
-                  }
-                },
-                "content": {
-                  "expr": {
-                    "ResourcePackageItem": {
-                      "PackageName": "RegisteredResources",
-                      "PackageType": 1,
-                      "ItemName": "map_topojson8384977468864256.json"
-                    }
-                  }
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
-            "projectionEnum": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'albersUsa'"
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "ribbonBands": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'InsideEnd'"
                 }
               }
             }
@@ -102,89 +150,7 @@
       "dataPoint": [
         {
           "properties": {
-            "fillRule": {
-              "linearGradient2": {
-                "min": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'minColor'"
-                      }
-                    }
-                  },
-                  "value": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "129.99D"
-                      }
-                    }
-                  }
-                },
-                "max": {
-                  "color": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'maxColor'"
-                      }
-                    }
-                  }
-                },
-                "nullColoringStrategy": {
-                  "strategy": {
-                    "expr": {
-                      "Literal": {
-                        "Value": "'asZero'"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "defaultColors": [
-        {
-          "properties": {
-            "defaultShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "defaultColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#EFEFEF'"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "zoom": [
-        {
-          "properties": {
-            "autoZoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "selectionZoom": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "manualZoom": {
+            "borderShow": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -203,6 +169,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Revenue by Segment'"
                 }
               }
             },
@@ -228,34 +201,13 @@
           }
         }
       ],
-      "padding": [
+      "border": [
         {
           "properties": {
-            "left": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "top": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
+                  "Value": "true"
                 }
               }
             }
@@ -300,6 +252,13 @@
                 }
               }
             },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "color": {
               "solid": {
                 "color": {
@@ -309,6 +268,33 @@
                       "Percent": -0.3
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
                 }
               }
             }

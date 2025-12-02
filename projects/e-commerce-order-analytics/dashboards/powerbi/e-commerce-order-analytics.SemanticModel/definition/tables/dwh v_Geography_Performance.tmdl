@@ -39,12 +39,14 @@ table 'dwh v_Geography_Performance'
 
 	column TotalRevenue
 		dataType: double
-		formatString: \$#,0;(\$#,0);\$#,0
+		formatString: #,0
 		lineageTag: a9c1820a-28ce-4d37-a499-787882979f60
 		summarizeBy: sum
 		sourceColumn: TotalRevenue
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column TotalProfit
 		dataType: double

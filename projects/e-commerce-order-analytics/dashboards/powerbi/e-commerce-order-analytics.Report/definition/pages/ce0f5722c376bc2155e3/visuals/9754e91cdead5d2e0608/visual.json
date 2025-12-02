@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "227fe8debc128b621937",
+  "name": "9754e91cdead5d2e0608",
   "position": {
-    "x": 208,
-    "y": 544,
-    "z": 5000,
+    "x": 410.64861552476111,
+    "y": 92.560430422646562,
+    "z": 6000,
     "height": 128,
     "width": 256,
-    "tabOrder": 5000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "03. Orders"
+                  "Property": "02. Profit"
                 }
               },
-              "queryRef": "_Measures.03. Orders",
-              "nativeQueryRef": "Orders",
-              "displayName": "Orders"
+              "queryRef": "_Measures.02. Total profit",
+              "nativeQueryRef": "Profit",
+              "displayName": "Profit"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "03. Orders"
+                "Property": "02. Profit"
               }
             },
             "direction": "Descending"
@@ -190,7 +190,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "13.2 Orders YoY %"
+                  "Property": "12.1 Profit Margin"
                 }
               }
             }
@@ -203,8 +203,8 @@
                 }
               }
             ],
-            "metadata": "_Measures.03. Orders",
-            "id": "field-f107d2c7-f114-867c-846c-23bd1d426c21",
+            "metadata": "_Measures.02. Total profit",
+            "id": "field-7b434634-23b3-ea36-d542-6d08d52a3edf",
             "order": 0
           }
         }
@@ -287,7 +287,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "13.3 CF Orders YoY %"
+                      "Property": "12.2 CF Profit Margin"
                     }
                   }
                 }
@@ -678,7 +678,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'vs. PY'"
+                  "Value": "'Margin:'"
                 }
               }
             },
@@ -691,8 +691,8 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.03. Orders",
-            "id": "field-f107d2c7-f114-867c-846c-23bd1d426c21"
+            "metadata": "_Measures.02. Total profit",
+            "id": "field-7b434634-23b3-ea36-d542-6d08d52a3edf"
           }
         }
       ],
@@ -789,8 +789,8 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.03. Orders",
-            "id": "field-f107d2c7-f114-867c-846c-23bd1d426c21"
+            "metadata": "_Measures.02. Total profit",
+            "id": "field-7b434634-23b3-ea36-d542-6d08d52a3edf"
           }
         },
         {
@@ -805,7 +805,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "13.3 CF Orders YoY %"
+                      "Property": "12.2 CF Profit Margin"
                     }
                   }
                 }
@@ -820,8 +820,8 @@
                 }
               }
             ],
-            "metadata": "_Measures.03. Orders",
-            "id": "field-f107d2c7-f114-867c-846c-23bd1d426c21"
+            "metadata": "_Measures.02. Total profit",
+            "id": "field-7b434634-23b3-ea36-d542-6d08d52a3edf"
           }
         }
       ]
@@ -884,6 +884,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Profit'"
                 }
               }
             }

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "227fe8debc128b621937",
+  "name": "3d33904f74b1700e9a75",
   "position": {
-    "x": 208,
-    "y": 544,
+    "x": 693.315282191428,
+    "y": 92.560430422646562,
     "z": 5000,
     "height": 128,
     "width": 256,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -884,6 +884,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Orders'"
                 }
               }
             }

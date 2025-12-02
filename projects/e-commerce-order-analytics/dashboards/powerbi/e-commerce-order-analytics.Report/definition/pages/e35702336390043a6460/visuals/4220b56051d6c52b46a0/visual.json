@@ -1,35 +1,40 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "d69adaf659b1d4900ab9",
+  "name": "4220b56051d6c52b46a0",
   "position": {
-    "x": 144,
-    "y": 272,
-    "z": 6000,
-    "height": 256,
-    "width": 400,
-    "tabOrder": 6000
+    "x": 912,
+    "y": 256,
+    "z": 12000,
+    "height": 208.00000000000003,
+    "width": 320,
+    "tabOrder": 12000
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "columnChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dwh v_Product_Performance"
+                      "Entity": "dwh v_Geography_Performance"
                     }
                   },
-                  "Property": "ProductName"
+                  "Property": "OrderCountry"
                 }
               },
-              "queryRef": "dwh v_Product_Performance.ProductName",
-              "nativeQueryRef": " ",
-              "displayName": " "
-            },
+              "queryRef": "dwh v_Geography_Performance.OrderCountry",
+              "nativeQueryRef": "Country",
+              "active": true,
+              "displayName": "Country"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
             {
               "field": {
                 "Aggregation": {
@@ -37,70 +42,18 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dwh v_Product_Performance"
+                          "Entity": "dwh v_Geography_Performance"
                         }
                       },
-                      "Property": "Revenue"
+                      "Property": "TotalRevenue"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(dwh v_Product_Performance.Revenue)",
+              "queryRef": "Sum(dwh v_Geography_Performance.TotalRevenue)",
               "nativeQueryRef": "Revenue",
               "displayName": "Revenue"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "17.1 Margin %"
-                }
-              },
-              "queryRef": "_Measures.17.1 Margin %",
-              "nativeQueryRef": "Margin %",
-              "displayName": "Margin %"
-            },
-            {
-              "field": {
-                "SparklineData": {
-                  "Measure": {
-                    "Aggregation": {
-                      "Expression": {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "dwh v_Product_Performance"
-                            }
-                          },
-                          "Property": "Revenue"
-                        }
-                      },
-                      "Function": 0
-                    }
-                  },
-                  "Groupings": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "dwh D_Date"
-                          }
-                        },
-                        "Property": "Month"
-                      }
-                    }
-                  ],
-                  "ApplyCalculationGroupTo": "Point"
-                }
-              },
-              "queryRef": "SparklineData(Sum(dwh v_Product_Performance.Revenue)_[dwh D_Date.Month])",
-              "nativeQueryRef": "Revenue by Month",
-              "displayName": "Revenue by Month"
             }
           ]
         }
@@ -114,10 +67,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "dwh v_Product_Performance"
+                        "Entity": "dwh v_Geography_Performance"
                       }
                     },
-                    "Property": "Revenue"
+                    "Property": "TotalRevenue"
                   }
                 },
                 "Function": 0
@@ -125,14 +78,71 @@
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "total": [
+      "dataPoint": [
         {
           "properties": {
-            "totals": {
+            "fillRule": {
+              "linearGradient2": {
+                "min": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'minColor'"
+                      }
+                    }
+                  },
+                  "value": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "129.99D"
+                      }
+                    }
+                  }
+                },
+                "max": {
+                  "color": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'maxColor'"
+                      }
+                    }
+                  }
+                },
+                "nullColoringStrategy": {
+                  "strategy": {
+                    "expr": {
+                      "Literal": {
+                        "Value": "'asZero'"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {}
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -142,26 +152,106 @@
           }
         }
       ],
-      "sparklines": [
+      "categoryAxis": [
         {
           "properties": {
-            "markers": {
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "false"
                 }
               }
             },
-            "strokeWidth": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "2D"
+                  "Value": "8D"
+                }
+              }
+            },
+            "preferredCategoryWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "20L"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "SparklineData(Sum(dwh v_Product_Performance.Revenue)_[dwh D_Date.Month])"
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelOrientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'left'"
+                }
+              }
+            }
           }
         }
       ]
@@ -170,10 +260,17 @@
       "title": [
         {
           "properties": {
-            "text": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "'TOP Products'"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -189,10 +286,10 @@
                 }
               }
             },
-            "fontFamily": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                  "Value": "'Revenue by Country'"
                 }
               }
             }
@@ -205,7 +302,14 @@
             "left": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "15D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "6D"
                 }
               }
             },
@@ -219,14 +323,7 @@
             "bottom": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
-                }
-              }
-            },
-            "right": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
+                  "Value": "8D"
                 }
               }
             }
@@ -292,15 +389,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "262f0fde4a777c4143e8",
+        "name": "53253f7c3c44d860aa09",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dwh v_Product_Performance"
+                "Entity": "country_mapping"
               }
             },
-            "Property": "ProductName"
+            "Property": "OrderCountry_EN"
           }
         },
         "type": "TopN",
@@ -315,8 +412,13 @@
                     "Version": 2,
                     "From": [
                       {
+                        "Name": "c",
+                        "Entity": "country_mapping",
+                        "Type": 0
+                      },
+                      {
                         "Name": "d",
-                        "Entity": "dwh v_Product_Performance",
+                        "Entity": "dwh v_Geography_Performance",
                         "Type": 0
                       }
                     ],
@@ -325,10 +427,10 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Source": "d"
+                              "Source": "c"
                             }
                           },
-                          "Property": "ProductName"
+                          "Property": "OrderCountry_EN"
                         },
                         "Name": "field"
                       }
@@ -345,7 +447,7 @@
                                     "Source": "d"
                                   }
                                 },
-                                "Property": "Revenue"
+                                "Property": "TotalRevenue"
                               }
                             },
                             "Function": 0
@@ -353,15 +455,15 @@
                         }
                       }
                     ],
-                    "Top": 5
+                    "Top": 7
                   }
                 }
               },
               "Type": 2
             },
             {
-              "Name": "d",
-              "Entity": "dwh v_Product_Performance",
+              "Name": "c",
+              "Entity": "country_mapping",
               "Type": 0
             }
           ],
@@ -374,10 +476,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "d"
+                            "Source": "c"
                           }
                         },
-                        "Property": "ProductName"
+                        "Property": "OrderCountry_EN"
                       }
                     }
                   ],
@@ -390,7 +492,41 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "51057658d0c0840ccbae",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh v_Geography_Performance"
+              }
+            },
+            "Property": "OrderCountry"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6b813c751b5d6ca00610",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dwh v_Geography_Performance"
+                  }
+                },
+                "Property": "TotalRevenue"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

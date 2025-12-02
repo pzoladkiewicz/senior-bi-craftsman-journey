@@ -7045,9 +7045,263 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.entity_12_3_profit_margin_last_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "12.3 Profit Margin Last Value"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "12.3 profit margin last value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "12.3 profit margin end value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin final value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin closing value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin concluding value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin finishing value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin former value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin latest value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin latter value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin past value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "12.3 profit margin remaining value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "dwh_v_Shipping_KPI_has_dwh_D_Date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Shipping_KPI"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Shipping_KPI": {
+			          "Target": {
+			            "Entity": "dwh_v_Shipping_KPI"
+			          }
+			        },
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Shipping_KPIs_have_dwh_D_Dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Shipping_KPI"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_dwh_v_Shipping_KPIs"
+			        }
+			      ]
+			    },
+			    "dwh_v_Product_Performance_has_dwh_D_Date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_dwh_D_Dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Product_Performance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_dwh_v_Product_Performances"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_dwh_D_Date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_dwh_D_Dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_dwh_v_Order_TimeSeries"
+			        }
+			      ]
+			    },
 			    "dwh_v_Geography_Performance_has_country_mapping": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh v_Geography_Performance"
@@ -7229,6 +7483,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_D_Dates_have_dwh_v_Customer_CLVs"
+			        }
+			      ]
+			    },
+			    "dwh_v_Order_TimeSery_has_entity__measure_entity_12_3_profit_margin_last_value": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Order_TimeSeries"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Order_TimeSery": {
+			          "Target": {
+			            "Entity": "dwh_v_Order_TimeSery"
+			          }
+			        },
+			        "entity__measure.entity_12_3_profit_margin_last_value": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_12_3_profit_margin_last_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Order_TimeSery"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_12_3_profit_margin_last_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Order_TimeSeries_have_12_3_profit_margin_last_value"
+			        }
+			      ]
+			    },
+			    "dwh_D_Date_has_entity__measure_entity_12_3_profit_margin_last_value": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh D_Date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        },
+			        "entity__measure.entity_12_3_profit_margin_last_value": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_12_3_profit_margin_last_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_12_3_profit_margin_last_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_12_3_profit_margin_last_value"
 			        }
 			      ]
 			    },
@@ -8846,33 +9166,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_v_Geography_Performances_have_total_revenues"
-			        },
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "dwh_v_Geography_Performance"
-			            },
-			            "Adjectives": [
-			              {
-			                "expensive": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Antonyms": [
-			              {
-			                "cheap": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Measurement": {
-			              "Role": "dwh_v_Geography_Performance.total_revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "total_revenue_indicates_how_expensive_dwh_v_Geography_Performances_are"
 			        }
 			      ]
 			    },
@@ -9799,144 +10092,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dwh_D_Dates_are_weekend_dwh_D_Dates"
-			        }
-			      ]
-			    },
-			    "dwh_v_Order_TimeSery_has_dwh_D_Date": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Order_TimeSeries"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Order_TimeSery": {
-			          "Target": {
-			            "Entity": "dwh_v_Order_TimeSery"
-			          }
-			        },
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Order_TimeSery"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Order_TimeSeries_have_dwh_D_Dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Order_TimeSery"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_dwh_v_Order_TimeSeries"
-			        }
-			      ]
-			    },
-			    "dwh_v_Product_Performance_has_dwh_D_Date": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Product_Performance"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Product_Performance": {
-			          "Target": {
-			            "Entity": "dwh_v_Product_Performance"
-			          }
-			        },
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Product_Performance"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Product_Performances_have_dwh_D_Dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Product_Performance"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_dwh_v_Product_Performances"
-			        }
-			      ]
-			    },
-			    "dwh_v_Shipping_KPI_has_dwh_D_Date": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Shipping_KPI"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Shipping_KPI": {
-			          "Target": {
-			            "Entity": "dwh_v_Shipping_KPI"
-			          }
-			        },
-			        "dwh_D_Date": {
-			          "Target": {
-			            "Entity": "dwh_D_Date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Shipping_KPI"
-			            },
-			            "Object": {
-			              "Role": "dwh_D_Date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_v_Shipping_KPIs_have_dwh_D_Dates"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_D_Date"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Shipping_KPI"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dwh_D_Dates_have_dwh_v_Shipping_KPIs"
 			        }
 			      ]
 			    }

@@ -4,9 +4,10 @@
   "position": {
     "x": 768,
     "y": 112,
-    "z": 9001,
+    "z": 7000,
     "height": 320,
-    "width": 448
+    "width": 448,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "tableEx",
@@ -83,56 +84,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8087e291290ac02b050d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dwh D_Date"
-              }
-            },
-            "Property": "Date"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "038ba35e039e906c9861",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dwh v_Product_Performance"
-              }
-            },
-            "Property": "ProductName"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "2cc28441dd0ee0b06dd9",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dwh v_Product_Performance"
-                  }
-                },
-                "Property": "Revenue"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

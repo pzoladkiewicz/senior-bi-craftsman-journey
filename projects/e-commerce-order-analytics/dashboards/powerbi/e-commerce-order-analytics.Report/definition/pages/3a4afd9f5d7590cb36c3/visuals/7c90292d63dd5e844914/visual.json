@@ -4,9 +4,10 @@
   "position": {
     "x": 768,
     "y": 432,
-    "z": 9002,
+    "z": 8000,
     "height": 224,
-    "width": 448
+    "width": 448,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "tableEx",
@@ -69,42 +70,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cf964b40cb96493e400d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dwh D_Date"
-              }
-            },
-            "Property": "Year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "28d59fde9e43709612c8",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dwh v_Order_TimeSeries"
-                  }
-                },
-                "Property": "TotalRevenue"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

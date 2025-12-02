@@ -139,6 +139,18 @@ table _Measures
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 9b0bf90e-f58a-4732-b27a-ce20e99531c8
 
+	measure '12.3 Profit Margin Last Value' =
+			
+			VAR _LastMonth = CALCULATE(MAX('dwh D_Date'[Month]), ALL('dwh D_Date'))
+			RETURN
+			    IF(
+			        SELECTEDVALUE('dwh D_Date'[Month]) = _LastMonth,
+			            [12.1 Profit Margin],
+			            BLANK()
+			    )
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: ae4ca2c3-62ff-4c91-96f8-7b50343f9e2a
+
 	partition _Measures = m
 		mode: import
 		source =

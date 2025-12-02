@@ -1,10 +1,10 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "227fe8debc128b621937",
+  "name": "5d1a792578025ca00e5d",
   "position": {
-    "x": 208,
-    "y": 544,
-    "z": 5000,
+    "x": 975.98194885809471,
+    "y": 92.560430422646562,
+    "z": 4000,
     "height": 128,
     "width": 256,
     "tabOrder": 5000
@@ -23,12 +23,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "03. Orders"
+                  "Property": "04. Avg Shipping Days"
                 }
               },
-              "queryRef": "_Measures.03. Orders",
-              "nativeQueryRef": "Orders",
-              "displayName": "Orders"
+              "queryRef": "_Measures.04. Avg Shipping Days",
+              "nativeQueryRef": "Avg Shipping Days",
+              "displayName": "Avg Shipping Days"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "03. Orders"
+                "Property": "04. Avg Shipping Days"
               }
             },
             "direction": "Descending"
@@ -190,7 +190,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "13.2 Orders YoY %"
+                  "Property": "14.1 Shipping Variance"
                 }
               }
             }
@@ -203,8 +203,8 @@
                 }
               }
             ],
-            "metadata": "_Measures.03. Orders",
-            "id": "field-f107d2c7-f114-867c-846c-23bd1d426c21",
+            "metadata": "_Measures.04. Avg Shipping Days",
+            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac",
             "order": 0
           }
         }
@@ -287,7 +287,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "13.3 CF Orders YoY %"
+                      "Property": "14.2 CF Shipping vs. Target"
                     }
                   }
                 }
@@ -678,7 +678,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'vs. PY'"
+                  "Value": "'vs. Target:'"
                 }
               }
             },
@@ -691,8 +691,22 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.03. Orders",
-            "id": "field-f107d2c7-f114-867c-846c-23bd1d426c21"
+            "metadata": "_Measures.04. Avg Shipping Days",
+            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.04. Avg Shipping Days",
+            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac"
           }
         }
       ],
@@ -789,8 +803,8 @@
             }
           },
           "selector": {
-            "metadata": "_Measures.03. Orders",
-            "id": "field-f107d2c7-f114-867c-846c-23bd1d426c21"
+            "metadata": "_Measures.04. Avg Shipping Days",
+            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac"
           }
         },
         {
@@ -805,7 +819,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "13.3 CF Orders YoY %"
+                      "Property": "14.2 CF Shipping vs. Target"
                     }
                   }
                 }
@@ -820,8 +834,8 @@
                 }
               }
             ],
-            "metadata": "_Measures.03. Orders",
-            "id": "field-f107d2c7-f114-867c-846c-23bd1d426c21"
+            "metadata": "_Measures.04. Avg Shipping Days",
+            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac"
           }
         }
       ]
@@ -884,6 +898,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'AvgShippingDays'"
                 }
               }
             }

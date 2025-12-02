@@ -404,39 +404,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "b5174bbf3612d8137274",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dwh v_Product_Performance"
-                  }
-                },
-                "Property": "Revenue"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2223fdfbc09706963028",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "17.1 Margin %"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

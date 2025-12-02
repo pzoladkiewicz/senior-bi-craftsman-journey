@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "d69adaf659b1d4900ab9",
+  "name": "49d570ac1e153108b41e",
   "position": {
-    "x": 144,
-    "y": 272,
-    "z": 6000,
-    "height": 256,
-    "width": 400,
-    "tabOrder": 6000
+    "x": 128,
+    "y": 488.00000000000006,
+    "z": 1000,
+    "height": 200,
+    "width": 752,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "tableEx",
@@ -162,6 +162,19 @@
           },
           "selector": {
             "metadata": "SparklineData(Sum(dwh v_Product_Performance.Revenue)_[dwh D_Date.Month])"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            }
           }
         }
       ]
