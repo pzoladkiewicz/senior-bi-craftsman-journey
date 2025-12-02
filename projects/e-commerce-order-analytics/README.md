@@ -61,19 +61,38 @@ Optymalizacja wydajności tabeli faktów F_Order w modelu gwiazdy, zrealizowana 
 ---
 
 
-## Status projektu (22.11.2025)
-✅ Staging załadowany: 180k+ rekordów  
-✅ Model gwiazdy (DWH) w pełni wdrożony  
-✅ 180k+ transakcji po oczyszczeniu  
-✅ Pełny audyt metryk i KPI  
-✅ Performance tuning F_Order (SQL Server):  
-  • 5 indeksów covering/filtered (Customer, Product, Time, Geo, Shipping)  
-  • 82% mniej I/O (średnia), 50% mniej CPU  
-  • Bottleneck COUNT(DISTINCT): naturalna granica OLAP (opisane w raporcie)
+## Status projektu
+
+**Ostatnia aktualizacja**: 02.12.2025
+
+### Ukończone ✅
+- ✅ **SQL** 
+    - Staging załadowany: 180k+ rekordów  
+    - Model gwiazdy (DWH) w pełni wdrożony  
+    - 180k+ transakcji po oczyszczeniu    
+    - Optymalizacja wydajności F_Order (SQL Server):  
+        • 5 indeksów covering/filtered (Customer, Product, Time, Geo, Shipping)  
+        • 82% mniej I/O (średnia), 50% mniej CPU  
+        • Bottleneck COUNT(DISTINCT): naturalna granica OLAP (opisane w raporcie)
+    - Widoki analityczne  - 5 widoków pod PBI
+✅ **Power BI Dashboard** (w trakcie)
+    - Strona "Executive Summary" ukończona
+        • Miary DAX: Revenue, Profit, Margin %, Orders, Avg Shipping Days
+✅ **Dokumentacja** (w trakcie)
+    - Słownik danych
+    - Wyniki optymalizacji wydajności
+    - Wymagania biznesowe      
+
+### W trakcie 🔄
+- Power BI Dashboard
+    - Strona 2: Analiza klientów (CLV, segmentacja)
+    - Strona 3: Wydajność produktów: (kategorie, marże)
+    - Strona 4: Operacje logistyczne (dostawa, KPI)
+
 
 ➡️ Kolejny etap:  
-  • Analityczne widoki SQL pod BI  
-  • Dashbord PBIP na widokach  
+- Ukończenie dashboardu PBI
+
 
 ---
 *Projekt w portfolio - Senior BI/SQL Developer*

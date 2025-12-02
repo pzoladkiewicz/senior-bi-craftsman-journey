@@ -1,4 +1,4 @@
-# Wyniki Baseline Wydajności — Analiza Performance Tuning
+# Wyniki optymalizacji wydajności — Analiza
 
 **Projekt**: E-Commerce Order Analytics
 **Data baseline**: 18.11.2025

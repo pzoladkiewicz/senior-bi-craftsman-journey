@@ -7,7 +7,8 @@
 ## Profile interesariuszy
 
 ### 1. Dyrektor finansowy (CFO - Chief Financial Officer)
-**Potrzeby**: Rentowność, marże, optymalizacja kosztów
+**Potrzeby**: Rentowność, marże, optymalizacja kosztów  
+
 **Kluczowe pytania**:
 - Jaka jest nasza marża zysku według kategorii kosztów?
 - Które rynki i regiony generują najwyższy wzrost z inwestycji (ROI)?
@@ -19,7 +20,8 @@
 - Wpływ kosztów opóźnień na wynik finansowy (minimalizacja)
 
 ### 2. Dyrektor marketingu (CMO - Chief MArketing Officer)
-**Potrzeby**: Segmentacja klientów, wartość klienta w cyklu życia (CLV), skuteczność kampanii
+**Potrzeby**: Segmentacja klientów, wartość klienta w cyklu życia (CLV), skuteczność kampanii  
+
 **Kluczowe pytania**:
 - Kim są nasi najbardziej wartościowi klienci?
 - Które segmenty mają najwyższą retencję?
@@ -31,7 +33,8 @@
 - Najpopularniejsze produkty według segmentu
 
 ### 3. Kierownik operacji (Operations Manager)
-**Potrzeby**: Wydajność dostaw, optymalizacja logistyki
+**Potrzeby**: Wydajność dostaw, optymalizacja logistyki  
+
 **Kluczowe pytania**:
 - Jaki jest nasz wskaźnik dostaw w terminie?
 - Które metody wysyłki są najbardziej opłacalne?
@@ -59,5 +62,5 @@
 - Responsywny design (obsługa urządzeń mobilnych)
 
 ---
-*Autor: Paweł Żołądkiewicz | Senior BI/SQL Developer*
+*Autor: Paweł Żołądkiewicz | Senior BI/SQL Developer*  
 *Data: 2025.12.01* 
