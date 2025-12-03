@@ -25,7 +25,7 @@
 
 **Średnia poprawa**:
 
-- Odczyty logiczne F_Order (Reads): spadek ze śr. 6854 na 1207 stron (**-82%**)
+- Odczyty logiczne F_Order (Reads): spadek z 6854 na śr. 1207 stron (**-82%**)
 - Czas CPU: średnio -50%
 - **Tempdb spill**: Zapytania Z3, Z4, Z7 generują zrzut do tempdb (122,684 stron Worktable) z powodu wąskiego gardła pamięci.
 
