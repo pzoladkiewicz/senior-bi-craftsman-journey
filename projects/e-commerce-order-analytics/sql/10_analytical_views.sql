@@ -182,3 +182,51 @@ GROUP BY
     ,c.CustomerCountry
     ,f.OrderDateKey;
 GO
+
+-- =================================
+-- 7. v_Customer_Summary
+-- =================================
+
+CREATE OR ALTER VIEW dwh.v_Customer_Summary AS
+SELECT 
+     c.CustomerKey
+    ,c.CustomerSegment
+    ,c.CustomerCountry
+    ,c.CustomerState
+    ,c.CustomerCity
+
+    -- Metryki zamówień
+    ,COUNT(DISTINCT f.OrderID)              AS TotalOrders
+    ,SUM(f.OrderItemQuantity)               AS TotalItems
+
+    -- Metryki finansowe
+    ,SUM(f.SalesAmount)                     AS TotalRevenue
+    ,SUM(f.BenefitPerOrder)                 AS TotalProfit
+    ,AVG(f.OrderItemProfitRate)             AS AvgProfitMargin
+
+    -- CLV
+    ,SUM(f.SalesAmount)                     AS CLV
+
+    --RFM
+    --,DATEDIFF(DAY, MAX(d.Date), GETDATE())  AS RecencyDays - nie ma sensu przy danych historycznych
+    ,COUNT(distinct f.OrderID)              AS Frequency
+    ,SUM(f.SalesAmount)                     AS Monetary
+
+    -- Daty pierwszego i ostatniego zamówienia informacyjne
+    ,MIN(d.Date)                            AS FirstOrderDate
+    ,MAX(d.Date)                            AS LastOrderDate
+
+FROM dwh.F_Order AS f
+JOIN dwh.D_Customer AS c
+    ON f.CustomerKey = c.CustomerKey
+LEFT JOIN dwh.D_Date AS d
+    ON f.OrderDateKey = d.DateKey
+WHERE f.OrderStatus = 'COMPLETE'
+GROUP BY
+     c.CustomerKey
+    ,c.CustomerSegment
+    ,c.CustomerCountry
+    ,c.CustomerState
+    ,c.CustomerCity;
+GO
+
