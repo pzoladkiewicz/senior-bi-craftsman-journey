@@ -1,0 +1,161 @@
+table 'dwh v_Customer_Summary'
+	lineageTag: 652282d7-dc8f-432b-b219-557a86735b38
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a47f84d2-4c41-495b-843a-e7cdfc2f9dbc
+		summarizeBy: count
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerSegment
+		dataType: string
+		lineageTag: cac1b14e-528e-4a64-aec5-2274b8b8008d
+		summarizeBy: none
+		sourceColumn: CustomerSegment
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCountry
+		dataType: string
+		lineageTag: f7328f8f-7cd8-4be2-b0a7-6714126a5ad4
+		summarizeBy: none
+		sourceColumn: CustomerCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerState
+		dataType: string
+		lineageTag: ebc0362d-7448-4efc-ad3c-2154486acaf3
+		summarizeBy: none
+		sourceColumn: CustomerState
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerCity
+		dataType: string
+		lineageTag: dc5f9dd8-8f8b-4170-a796-f1d7b5a7fb9c
+		summarizeBy: none
+		sourceColumn: CustomerCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalOrders
+		dataType: int64
+		formatString: 0
+		lineageTag: bcd99510-19bc-4885-922c-d91a291b8e25
+		summarizeBy: sum
+		sourceColumn: TotalOrders
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalItems
+		dataType: int64
+		formatString: 0
+		lineageTag: 848db7c9-652e-43b4-ab74-d517911a5de1
+		summarizeBy: sum
+		sourceColumn: TotalItems
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalRevenue
+		dataType: double
+		lineageTag: f01d9da7-cb5b-4c28-bb68-986ca9a5671a
+		summarizeBy: sum
+		sourceColumn: TotalRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalProfit
+		dataType: double
+		lineageTag: 66f4de07-1da0-4fe0-be19-632c93dd1f20
+		summarizeBy: sum
+		sourceColumn: TotalProfit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AvgProfitMargin
+		dataType: double
+		lineageTag: 04ac6762-7ee0-4e22-bcbb-0950244e713b
+		summarizeBy: sum
+		sourceColumn: AvgProfitMargin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CLV
+		dataType: double
+		lineageTag: f5aa905f-e9ca-4097-98f0-561ce1e7b4a9
+		summarizeBy: sum
+		sourceColumn: CLV
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LastOrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 66d4a016-95f1-458a-a8ec-05318f0bb621
+		summarizeBy: none
+		sourceColumn: LastOrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Frequency
+		dataType: int64
+		formatString: 0
+		lineageTag: e8313396-b34e-483a-a7da-0576a33cadc2
+		summarizeBy: sum
+		sourceColumn: Frequency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Monetary
+		dataType: double
+		lineageTag: 9be5840f-2caa-4d22-b5c8-bef7798a471c
+		summarizeBy: sum
+		sourceColumn: Monetary
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FirstOrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: cc33d3f2-db0c-4db6-817a-45773c922a58
+		summarizeBy: none
+		sourceColumn: FirstOrderDate
+
+		variation Variation
+			isDefault
+			relationship: 629f8363-4220-4abe-8516-744e47bedc7b
+			defaultHierarchy: LocalDateTable_d71241b9-ce31-456f-8684-b889aa81c27d.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition 'dwh v_Customer_Summary' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_v_Customer_Summary = Source{[Schema="dwh",Item="v_Customer_Summary"]}[Data]
+				in
+				    dwh_v_Customer_Summary
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "390ac35dae729928e124",
+  "name": "73fd1d26b44eca1838cc",
   "position": {
     "x": 127.98194885809446,
     "y": 92.560430422646562,
-    "z": 3000,
+    "z": 7000,
     "height": 128,
     "width": 256,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,13 +23,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "01. Revenue"
+                  "Property": "20.2 # Clients"
                 }
               },
-              "queryRef": "_Measures.01. Revenue",
-              "nativeQueryRef": "01. Revenue",
-              "displayName": "Revenue",
-              "format": "0.00"
+              "queryRef": "_Measures.21.1 # Clients",
+              "nativeQueryRef": "21.1 # Clients",
+              "format": "G"
             }
           ]
         }
@@ -44,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "01. Revenue"
+                "Property": "20.2 # Clients"
               }
             },
             "direction": "Descending"
@@ -105,49 +104,6 @@
       ],
       "referenceLabel": [
         {
-          "properties": {},
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-1f54c940-14c6-0d89-e896-e258683a649f",
-            "order": 0
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "11.2 Revenue YoY %"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c",
-            "order": 0
-          }
-        },
-        {
           "properties": {
             "backgroundShow": {
               "expr": {
@@ -195,38 +151,18 @@
           "selector": {
             "id": "default"
           }
-        }
-      ],
-      "referenceLabelValue": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue"
-          }
         },
         {
           "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "11.3 CF Revenue YoY %"
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
                     }
-                  }
+                  },
+                  "Property": "21.2 # Clients YoY %"
                 }
               }
             }
@@ -239,124 +175,9 @@
                 }
               }
             ],
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
-          }
-        },
-        {
-          "properties": {
-            "valueTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "valueFontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "valueFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
-          }
-        }
-      ],
-      "referenceLabelTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue"
-          }
-        },
-        {
-          "properties": {
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'vs. PY'"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "titleFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
-          }
-        }
-      ],
-      "referenceLabelDetail": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue"
+            "metadata": "_Measures.21.1 # Clients",
+            "id": "field-3786b44f-3f03-2e48-abfd-b0da3a514178",
+            "order": 0
           }
         }
       ],
@@ -438,7 +259,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "11.3 CF Revenue YoY %"
+                      "Property": "21.3 CF #Clients YoY %"
                     }
                   }
                 }
@@ -647,6 +468,20 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.21.1 # Clients"
+          }
         }
       ],
       "shadowCustom": [
@@ -744,6 +579,84 @@
             }
           }
         }
+      ],
+      "referenceLabelValue": [
+        {
+          "properties": {
+            "valueFontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "_Measures"
+                        }
+                      },
+                      "Property": "21.3 CF #Clients YoY %"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "_Measures.21.1 # Clients"
+          }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.21.1 # Clients",
+            "id": "field-3786b44f-3f03-2e48-abfd-b0da3a514178"
+          }
+        }
+      ],
+      "referenceLabelTitle": [
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'vs PY:'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Measures.21.1 # Clients",
+            "id": "field-3786b44f-3f03-2e48-abfd-b0da3a514178"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -754,6 +667,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Revenue'"
                 }
               }
             }
@@ -849,5 +769,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "70fadcbc6514a9475608",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "20.2 # Clients"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

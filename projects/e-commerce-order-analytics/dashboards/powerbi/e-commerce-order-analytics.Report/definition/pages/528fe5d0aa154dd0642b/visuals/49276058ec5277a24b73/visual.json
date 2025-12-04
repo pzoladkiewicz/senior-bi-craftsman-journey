@@ -1,19 +1,18 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "d863e0ab24570814bb06",
+  "name": "49276058ec5277a24b73",
   "position": {
-    "x": 768,
-    "y": 112,
-    "z": 7000,
-    "height": 320,
-    "width": 448,
-    "tabOrder": 8000
+    "x": 176,
+    "y": 80,
+    "z": 2,
+    "height": 224,
+    "width": 656
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Rows": {
           "projections": [
             {
               "field": {
@@ -23,25 +22,43 @@
                       "Entity": "dwh D_Date"
                     }
                   },
-                  "Property": "Date"
+                  "Property": "Year"
                 }
               },
-              "queryRef": "dwh D_Date.Date",
-              "nativeQueryRef": "Date"
+              "queryRef": "dwh D_Date.Year",
+              "nativeQueryRef": "Year"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "20.2 # Clients"
+                }
+              },
+              "queryRef": "_Measures.21.1 # Clients",
+              "nativeQueryRef": "21.1 # Clients"
             },
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dwh v_Product_Performance"
+                      "Entity": "_Measures"
                     }
                   },
-                  "Property": "ProductName"
+                  "Property": "21.1 # Clients PY"
                 }
               },
-              "queryRef": "dwh v_Product_Performance.ProductName",
-              "nativeQueryRef": "ProductName"
+              "queryRef": "_Measures.21.2 # Clients PY",
+              "nativeQueryRef": "21.2 # Clients PY"
             },
             {
               "field": {
@@ -50,17 +67,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dwh v_Product_Performance"
+                          "Entity": "dwh v_Customer_CLV"
                         }
                       },
-                      "Property": "Revenue"
+                      "Property": "CLV"
                     }
                   },
-                  "Function": 0
+                  "Function": 1
                 }
               },
-              "queryRef": "Sum(dwh v_Product_Performance.Revenue)",
-              "nativeQueryRef": "Sum of Revenue"
+              "queryRef": "Avg(dwh v_Customer_CLV.CLV)",
+              "nativeQueryRef": "Average of CLV"
             }
           ]
         }
@@ -75,7 +92,7 @@
                     "Entity": "dwh D_Date"
                   }
                 },
-                "Property": "Date"
+                "Property": "Year"
               }
             },
             "direction": "Ascending"

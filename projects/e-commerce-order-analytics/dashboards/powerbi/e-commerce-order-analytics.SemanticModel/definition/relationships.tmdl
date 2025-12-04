@@ -26,3 +26,12 @@ relationship efdbe889-ec7c-bd74-bc31-5c6b128a0eee
 	fromColumn: 'dwh v_Geography_Performance'.OrderCountry
 	toColumn: country_mapping.OrderCountry
 
+relationship 0d723cd7-bfb2-8453-1fa0-ab170f054d36
+	fromColumn: 'dwh v_Customer_Summary'.LastOrderDate
+	toColumn: 'dwh D_Date'.Date
+
+relationship 629f8363-4220-4abe-8516-744e47bedc7b
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'dwh v_Customer_Summary'.FirstOrderDate
+	toColumn: LocalDateTable_d71241b9-ce31-456f-8684-b889aa81c27d.Date
+
