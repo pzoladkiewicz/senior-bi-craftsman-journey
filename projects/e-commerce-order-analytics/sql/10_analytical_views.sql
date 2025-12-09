@@ -49,11 +49,17 @@ SELECT
     ,p.ProductName
     ,p.CategoryName
     ,p.DepartmentName
-    ,f.OrderDateKey
+    
+    -- Agregate metrics
+    ,COUNT(distinct f.OrderID) AS TotalOrders
     ,SUM(f.OrderItemQuantity) AS UnitsSold
     ,SUM(f.SalesAmount) AS Revenue
     ,SUM(f.BenefitPerOrder) AS Profit
     ,AVG(f.OrderItemProfitRate) AS ProfitMargin
+
+    -- Calculated
+    ,(SUM(f.SalesAmount) * 1.0) / NULLIF(SUM(f.OrderItemQuantity), 0) AS AvgPricePerUnit
+
 FROM dwh.F_Order AS f
 JOIN dwh.D_Product AS p
     ON f.ProductKey = p.ProductKey
@@ -63,7 +69,6 @@ GROUP BY
     ,p.ProductName
     ,p.CategoryName
     ,p.DepartmentName
-    ,f.OrderDateKey;
 GO
 
 
