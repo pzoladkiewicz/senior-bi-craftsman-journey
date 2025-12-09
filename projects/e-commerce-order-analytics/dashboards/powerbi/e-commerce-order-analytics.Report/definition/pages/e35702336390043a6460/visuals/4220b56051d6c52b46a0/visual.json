@@ -374,7 +374,25 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.3
+                      "Percent": -0.2
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
                 }
@@ -494,39 +512,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "51057658d0c0840ccbae",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dwh v_Geography_Performance"
-              }
-            },
-            "Property": "OrderCountry"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "6b813c751b5d6ca00610",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dwh v_Geography_Performance"
-                  }
-                },
-                "Property": "TotalRevenue"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

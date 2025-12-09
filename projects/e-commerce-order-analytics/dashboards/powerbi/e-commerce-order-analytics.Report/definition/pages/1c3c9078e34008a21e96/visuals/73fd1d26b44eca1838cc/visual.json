@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "73fd1d26b44eca1838cc",
   "position": {
-    "x": 127.98194885809446,
-    "y": 92.560430422646562,
-    "z": 7000,
+    "x": 228,
+    "y": 95.999999999999986,
+    "z": 8500,
     "height": 128,
     "width": 256,
     "tabOrder": 2000
@@ -23,12 +23,13 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "20.2 # Clients"
+                  "Property": "21.1 Total Customers"
                 }
               },
-              "queryRef": "_Measures.21.1 # Clients",
-              "nativeQueryRef": "21.1 # Clients",
-              "format": "G"
+              "queryRef": "_Measures.21.1 Total Customers",
+              "nativeQueryRef": "Total Customers",
+              "displayName": "Total Customers",
+              "format": "# ##0"
             }
           ]
         }
@@ -43,7 +44,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "20.2 # Clients"
+                "Property": "21.1 Total Customers"
               }
             },
             "direction": "Descending"
@@ -151,34 +152,6 @@
           "selector": {
             "id": "default"
           }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "21.2 # Clients YoY %"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.21.1 # Clients",
-            "id": "field-3786b44f-3f03-2e48-abfd-b0da3a514178",
-            "order": 0
-          }
         }
       ],
       "referenceLabelLayout": [
@@ -238,7 +211,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -246,22 +219,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Left'"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "21.3 CF #Clients YoY %"
-                    }
-                  }
                 }
               }
             },
@@ -468,20 +425,6 @@
               }
             }
           }
-        },
-        {
-          "properties": {
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.21.1 # Clients"
-          }
         }
       ],
       "shadowCustom": [
@@ -529,7 +472,7 @@
             "leftMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "10L"
                 }
               }
             },
@@ -557,7 +500,7 @@
             "rightMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "10L"
                 }
               }
             }
@@ -579,84 +522,6 @@
             }
           }
         }
-      ],
-      "referenceLabelValue": [
-        {
-          "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "21.3 CF #Clients YoY %"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.21.1 # Clients"
-          }
-        },
-        {
-          "properties": {
-            "valueFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.21.1 # Clients",
-            "id": "field-3786b44f-3f03-2e48-abfd-b0da3a514178"
-          }
-        }
-      ],
-      "referenceLabelTitle": [
-        {
-          "properties": {
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'vs PY:'"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.21.1 # Clients",
-            "id": "field-3786b44f-3f03-2e48-abfd-b0da3a514178"
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -673,7 +538,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Revenue'"
+                  "Value": "'Total Customers'"
                 }
               }
             }
@@ -766,6 +631,24 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -773,7 +656,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "70fadcbc6514a9475608",
+        "name": "810bc33e316a10fd62c1",
         "field": {
           "Measure": {
             "Expression": {
@@ -781,7 +664,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "20.2 # Clients"
+            "Property": "21.1 Total Customers"
           }
         },
         "type": "Advanced"

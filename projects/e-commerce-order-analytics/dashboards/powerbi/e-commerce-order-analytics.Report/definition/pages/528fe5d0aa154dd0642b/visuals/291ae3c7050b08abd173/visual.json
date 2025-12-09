@@ -4,9 +4,10 @@
   "position": {
     "x": 176,
     "y": 352,
-    "z": 3,
+    "z": 2000,
     "height": 224,
-    "width": 656
+    "width": 656,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "tableEx",
@@ -36,7 +37,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "20.1 Avg Orders per Customer"
+                  "Property": "23.1 Avg Orders per Customer"
                 }
               },
               "queryRef": "_Measures.20.1 Acg Orders per Customer",

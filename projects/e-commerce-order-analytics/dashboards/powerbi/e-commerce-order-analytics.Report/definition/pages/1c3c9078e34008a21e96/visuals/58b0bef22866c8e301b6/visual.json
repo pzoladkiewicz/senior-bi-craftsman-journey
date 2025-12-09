@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "58b0bef22866c8e301b6",
   "position": {
-    "x": 410.64861552476111,
-    "y": 92.560430422646562,
-    "z": 6000,
+    "x": 551.99097442904724,
+    "y": 95,
+    "z": 8250,
     "height": 128,
     "width": 256,
     "tabOrder": 3000
@@ -23,11 +23,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "20.3 Avg CLV"
+                  "Property": "24.1 Avg CLV per Customer"
                 }
               },
-              "queryRef": "_Measures.22.1 Avg CLV",
-              "nativeQueryRef": "20.3 Avg CLV"
+              "queryRef": "_Measures.20.3 Avg CLV",
+              "nativeQueryRef": "Avg CLV per Customer",
+              "displayName": "Avg CLV per Customer"
             }
           ]
         }
@@ -42,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "20.3 Avg CLV"
+                "Property": "24.1 Avg CLV per Customer"
               }
             },
             "direction": "Descending"
@@ -178,34 +179,6 @@
             "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c",
             "order": 0
           }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "22.2 Avg CLV YoY %"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.22.1 Avg CLV",
-            "id": "field-10360d60-7f71-3064-8250-27b613d18a5e",
-            "order": 0
-          }
         }
       ],
       "referenceLabelLayout": [
@@ -265,7 +238,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -273,22 +246,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Left'"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "22.3 CF Avg CLV YoY %"
-                    }
-                  }
                 }
               }
             },
@@ -445,6 +402,18 @@
                   "Value": "'aboveValue'"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
@@ -535,14 +504,14 @@
             "leftMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "10L"
                 }
               }
             },
             "rightMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "10L"
                 }
               }
             },
@@ -664,35 +633,6 @@
             "metadata": "_Measures.01. Revenue",
             "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
           }
-        },
-        {
-          "properties": {
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'vs. PY:'"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.22.1 Avg CLV",
-            "id": "field-10360d60-7f71-3064-8250-27b613d18a5e"
-          }
         }
       ],
       "referenceLabelValue": [
@@ -776,59 +716,6 @@
             "metadata": "_Measures.01. Revenue",
             "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
           }
-        },
-        {
-          "properties": {
-            "valueFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "valueDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.22.1 Avg CLV",
-            "id": "field-10360d60-7f71-3064-8250-27b613d18a5e"
-          }
-        },
-        {
-          "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "22.3 CF Avg CLV YoY %"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.22.1 Avg CLV",
-            "id": "field-10360d60-7f71-3064-8250-27b613d18a5e"
-          }
         }
       ]
     },
@@ -896,7 +783,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Profit'"
+                  "Value": "'Avg CLV'"
                 }
               }
             }
@@ -1085,8 +972,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#DCE1E6'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
                     }
                   }
                 }

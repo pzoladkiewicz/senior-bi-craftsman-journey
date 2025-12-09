@@ -151,98 +151,73 @@ table _Measures
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: ae4ca2c3-62ff-4c91-96f8-7b50343f9e2a
 
-	measure '20.2 # Clients' = DISTINCTCOUNT('dwh v_Customer_CLV'[CustomerKey])
+	measure '21.1 Total Customers' = DISTINCTCOUNT('dwh v_Customer_Summary'[CustomerKey])
 		lineageTag: 11e823ac-6081-4ea4-92c8-1e3b458e2d29
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '21.1 # Clients PY' = ```
+	measure '24.1 Avg CLV per Customer' = ```
 			
-			    CALCULATE(
-			        [20.2 # Clients],
-			        SAMEPERIODLASTYEAR('dwh D_Date'[Date])
+			    DIVIDE(
+			        SUM('dwh v_Customer_Summary'[CLV]),
+			        DISTINCTCOUNT('dwh v_Customer_Summary'[CustomerKey])
 			    )
 			```
-		formatString: 0
-		lineageTag: 8626985d-79e5-4c2e-b7e4-c50d97ca6382
-
-	measure '21.2 # Clients YoY %' = ```
-			
-			VAR _CY = [20.2 # Clients]
-			VAR _PY = [21.1 # Clients PY]
-			RETURN
-			    IF(ISBLANK(_PY), BLANK(), DIVIDE(_CY - _PY, _PY)) 
-			```
-		formatString: 0.0%;-0.0%;0.0%
-		lineageTag: 9e9efb8e-543f-4890-9c12-3933f9eefcb2
-
-	measure '21.3 CF #Clients YoY %' =
-			
-			VAR _CY = [20.2 # Clients]
-			VAR _PY = [21.1 # Clients PY]
-			VAR _perc = DIVIDE(_CY - _PY, _PY)
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        _perc > 0, pbi.ThemeColor("pos"),
-			        _perc < 0, pbi.ThemeColor("neg"),
-			        "Grey"
-			        )
-		lineageTag: 68c4ecfe-2c6e-447d-affe-28d927803321
-
-	measure '20.3 Avg CLV' = AVERAGE('dwh v_Customer_CLV'[CLV])
 		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: e835af14-3a56-4a18-9832-98bd0970bfa6
 
-	measure '22.1 Avg CLV PY' = ```
+	measure '23.1 Avg Orders per Customer' = ```
 			
-			    CALCULATE(
-			        [20.3 Avg CLV],
-			        SAMEPERIODLASTYEAR('dwh D_Date'[Date])
+			    DIVIDE(
+			            SUM('dwh v_Customer_Summary'[TotalOrders]),
+			            DISTINCTCOUNT('dwh v_Customer_Summary'[CustomerKey])
 			    )
 			```
-		lineageTag: c8a99974-f07f-4679-a3ce-1f079a39ba1f
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure '22.2 Avg CLV YoY %' = ```
-			
-			VAR _CY = [20.3 Avg CLV]
-			VAR _PY = [22.1 Avg CLV PY]
-			RETURN
-			    IF(ISBLANK(_PY), BLANK(), DIVIDE(_CY - _PY, _PY)) 
-			```
-		formatString: 0.0%;-0.0%;0.0%
-		lineageTag: d3627384-f721-4ac1-b264-6038eff44ed8
-
-	measure '22.3 CF Avg CLV YoY %' =
-			
-			VAR _CY = [20.3 Avg CLV]
-			VAR _PY = [22.1 Avg CLV PY]
-			VAR _perc = DIVIDE(_CY - _PY, _PY)
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        _perc > 0, pbi.ThemeColor("pos"),
-			        _perc < 0, pbi.ThemeColor("neg"),
-			        "Grey"
-			        )
-		lineageTag: facba314-5787-43f3-b525-fc01badab543
-
-	measure '20.1 Avg Orders per Customer' = AVERAGE('dwh v_Customer_CLV'[OrderCount])
 		lineageTag: c2704bbe-811b-455f-a3a3-5de1c629b8ca
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '20.4 Total Revenue' = SUM('dwh v_Customer_CLV'[Revenue])
+	measure '20.4 Total Revenue' = SUM('dwh v_Customer_Summary'[TotalRevenue])
 		lineageTag: 67fdc828-c61e-4ab0-ae99-cddcb3fb49dd
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '20.5 Total Profit' = SUM('dwh v_Customer_CLV'[Profit])
+	measure '20.5 Total Profit' = SUM('dwh v_Customer_Summary'[TotalProfit])
+		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: a162d8ed-aa4b-4c03-b7d5-41b6cd2d6f7d
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure '25.1 Profit Margin %' = ```
+			
+			    DIVIDE(
+			        [20.5 Total Profit],
+			        [20.4 Total Revenue],
+			        0
+			    )
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: e220258a-44cd-4904-8977-2e661655b1d3
+
+	measure '25.2 CF Profit Margin %' =
+			
+			VAR _m = [25.1 Profit Margin %]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _m < 0, "red",
+			        "#333"
+			    )
+		lineageTag: ed33a6ad-35e8-40b9-9fe4-d06aded3a3f8
+
+	measure '25.3 CF Total Profit' =
+			
+			VAR _m = [20.5 Total Profit]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _m < 0, "red",
+			        "#333"
+			    )
+		lineageTag: bfe95e88-2652-4bf4-bc09-0aea996f60d5
 
 	partition _Measures = m
 		mode: import

@@ -1,0 +1,362 @@
+table 'dwh F_Order'
+	isHidden
+	lineageTag: e2ed2640-2479-4007-b7ad-42280e63f1d3
+
+	column OrderDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 733848b2-46b5-49c7-86ee-f6c7f2a03345
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShippingDateKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5970aaec-c515-4289-9e58-244fcc72bd09
+		summarizeBy: count
+		sourceColumn: ShippingDateKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 517ca0ff-b49c-41cc-b32d-48f40bfbf3c5
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: b8e43941-9f4f-4d43-9c5c-46e2ca6b0b37
+		summarizeBy: count
+		sourceColumn: ProductKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderLocationKey
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 0a1ab7b7-cddd-4e21-a927-fb9471c179eb
+		summarizeBy: count
+		sourceColumn: OrderLocationKey
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d721710e-7ecf-402f-8abe-606b0c109168
+		summarizeBy: count
+		sourceColumn: OrderID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderItemID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 9633495b-a5e5-4768-ac41-6eae5ccc2fa9
+		summarizeBy: count
+		sourceColumn: OrderItemID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderStatus
+		dataType: string
+		isHidden
+		lineageTag: ff356bde-82da-4716-97af-b258723c53d3
+		summarizeBy: none
+		sourceColumn: OrderStatus
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DeliveryStatus
+		dataType: string
+		isHidden
+		lineageTag: 5841c69f-b69b-4839-8b52-317cb33514bd
+		summarizeBy: none
+		sourceColumn: DeliveryStatus
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShippingMode
+		dataType: string
+		isHidden
+		lineageTag: 17f93cfd-7788-48d0-a3a2-6b434e9e8411
+		summarizeBy: none
+		sourceColumn: ShippingMode
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TransactionType
+		dataType: string
+		isHidden
+		lineageTag: 4a47debd-ae81-481d-8c7b-973a33f6c51c
+		summarizeBy: none
+		sourceColumn: TransactionType
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderItemQuantity
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e0cfa313-d38b-45fc-8ea3-8f17e880d4a5
+		summarizeBy: sum
+		sourceColumn: OrderItemQuantity
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesAmount
+		dataType: double
+		isHidden
+		lineageTag: ec4b076a-6187-4dce-9e4d-82648727ec86
+		summarizeBy: sum
+		sourceColumn: SalesAmount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderItemTotal
+		dataType: double
+		isHidden
+		lineageTag: e182970c-dc4c-4e63-9ba0-cdd6fe3d1069
+		summarizeBy: sum
+		sourceColumn: OrderItemTotal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderItemDiscount
+		dataType: double
+		isHidden
+		lineageTag: 355bfbd1-1305-44aa-b846-2d770d4dcebb
+		summarizeBy: sum
+		sourceColumn: OrderItemDiscount
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column BenefitPerOrder
+		dataType: double
+		isHidden
+		lineageTag: ea43483a-3374-4fcf-b2c4-09515ca68de7
+		summarizeBy: sum
+		sourceColumn: BenefitPerOrder
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderProfitPerOrder
+		dataType: double
+		isHidden
+		lineageTag: aac2212d-d5d2-4fd9-afdd-010271499784
+		summarizeBy: sum
+		sourceColumn: OrderProfitPerOrder
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SalesPerCustomer
+		dataType: double
+		isHidden
+		lineageTag: 61b3b060-85d0-4289-bc63-844f5a67dca6
+		summarizeBy: sum
+		sourceColumn: SalesPerCustomer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProductPrice
+		dataType: double
+		isHidden
+		lineageTag: 4ebb2443-842f-4085-901d-8eb0f9beb516
+		summarizeBy: sum
+		sourceColumn: ProductPrice
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderItemDiscountRate
+		dataType: double
+		isHidden
+		lineageTag: 977e2889-149f-4c26-86bb-d2979c4c944a
+		summarizeBy: sum
+		sourceColumn: OrderItemDiscountRate
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OrderItemProfitRate
+		dataType: double
+		isHidden
+		lineageTag: db264167-a583-42a6-803f-c389f7760282
+		summarizeBy: sum
+		sourceColumn: OrderItemProfitRate
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DaysForShippingReal
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 29c4e584-d4bc-4abb-aac2-8fa8fa4feaa0
+		summarizeBy: sum
+		sourceColumn: DaysForShippingReal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DaysForShippmentScheduled
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 1b415d21-afb1-412d-9ba9-fb5626400dc6
+		summarizeBy: sum
+		sourceColumn: DaysForShippmentScheduled
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column LateDeliveryRisk
+		dataType: boolean
+		isHidden
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: dfe071d3-1a3b-45e6-ba3c-057d5bb4f086
+		summarizeBy: none
+		sourceColumn: LateDeliveryRisk
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreLatitude
+		dataType: double
+		isHidden
+		lineageTag: 1756708d-266f-4fe8-bdf6-7acd605ab323
+		summarizeBy: sum
+		sourceColumn: StoreLatitude
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column StoreLongitude
+		dataType: double
+		isHidden
+		lineageTag: 8f28f24d-a865-4b66-8302-8c5ea447f160
+		summarizeBy: sum
+		sourceColumn: StoreLongitude
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LoadDate
+		dataType: dateTime
+		isHidden
+		formatString: General Date
+		lineageTag: 0618cd47-ce33-4090-8ae4-610ce43a42fa
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		variation Variation
+			isDefault
+			relationship: d927d3c0-3f34-408b-8ba8-1764963865db
+			defaultHierarchy: LocalDateTable_d6009f9f-950a-44e2-879c-cb7f7c896a6e.'Date Hierarchy'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DataSource
+		dataType: string
+		isHidden
+		lineageTag: baec2add-76de-46af-97f6-b45360aebea2
+		summarizeBy: none
+		sourceColumn: DataSource
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'dwh F_Order' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("localhost:51433", "SupplyChainDB"),
+				    dwh_F_Order = Source{[Schema="dwh",Item="F_Order"]}[Data]
+				in
+				    dwh_F_Order
+
+	changedProperty = IsHidden
+

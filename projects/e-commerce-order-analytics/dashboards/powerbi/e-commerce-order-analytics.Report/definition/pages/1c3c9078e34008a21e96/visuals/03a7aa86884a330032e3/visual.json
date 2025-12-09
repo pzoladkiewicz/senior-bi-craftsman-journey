@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "038c51bbb27e80111458",
+  "name": "03a7aa86884a330032e3",
   "position": {
-    "x": 975.98194885809471,
-    "y": 92.560430422646562,
-    "z": 4000,
+    "x": 876,
+    "y": 95,
+    "z": 8125,
     "height": 128,
     "width": 256,
-    "tabOrder": 5000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "04. Avg Shipping Days"
+                  "Property": "23.1 Avg Orders per Customer"
                 }
               },
-              "queryRef": "_Measures.04. Avg Shipping Days",
-              "nativeQueryRef": "Avg Shipping Days",
-              "displayName": "Avg Shipping Days"
+              "queryRef": "_Measures.20.2 Avg Orders per Customer",
+              "nativeQueryRef": "Avg Orders per Customer",
+              "displayName": "Avg Orders per Customer"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "04. Avg Shipping Days"
+                "Property": "23.1 Avg Orders per Customer"
               }
             },
             "direction": "Descending"
@@ -179,34 +179,6 @@
             "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c",
             "order": 0
           }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "14.1 Shipping Variance"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.04. Avg Shipping Days",
-            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac",
-            "order": 0
-          }
         }
       ],
       "referenceLabelLayout": [
@@ -266,7 +238,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -274,22 +246,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Left'"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "14.2 CF Shipping vs. Target"
-                    }
-                  }
                 }
               }
             },
@@ -536,14 +492,14 @@
             "leftMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "20L"
+                  "Value": "10L"
                 }
               }
             },
             "rightMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "10L"
                 }
               }
             },
@@ -665,49 +621,6 @@
             "metadata": "_Measures.01. Revenue",
             "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
           }
-        },
-        {
-          "properties": {
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'vs. Target:'"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.04. Avg Shipping Days",
-            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac"
-          }
-        },
-        {
-          "properties": {},
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.04. Avg Shipping Days",
-            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac"
-          }
         }
       ],
       "referenceLabelValue": [
@@ -791,52 +704,6 @@
             "metadata": "_Measures.01. Revenue",
             "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
           }
-        },
-        {
-          "properties": {
-            "valueFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.04. Avg Shipping Days",
-            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac"
-          }
-        },
-        {
-          "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "14.2 CF Shipping vs. Target"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.04. Avg Shipping Days",
-            "id": "field-09170156-dc7d-d9ae-988d-36ac570117ac"
-          }
         }
       ]
     },
@@ -904,7 +771,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'AvgShippingDays'"
+                  "Value": "'Avg Orders'"
                 }
               }
             }

@@ -4,9 +4,10 @@
   "position": {
     "x": 176,
     "y": 80,
-    "z": 2,
+    "z": 1000,
     "height": 224,
-    "width": 656
+    "width": 656,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -26,7 +27,8 @@
                 }
               },
               "queryRef": "dwh D_Date.Year",
-              "nativeQueryRef": "Year"
+              "nativeQueryRef": "Year",
+              "active": true
             }
           ]
         },
@@ -40,7 +42,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "20.2 # Clients"
+                  "Property": "21.1 Total Customers"
                 }
               },
               "queryRef": "_Measures.21.1 # Clients",

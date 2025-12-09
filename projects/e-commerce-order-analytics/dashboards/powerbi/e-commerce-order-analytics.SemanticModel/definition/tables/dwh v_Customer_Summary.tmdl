@@ -3,12 +3,15 @@ table 'dwh v_Customer_Summary'
 
 	column CustomerKey
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: a47f84d2-4c41-495b-843a-e7cdfc2f9dbc
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CustomerKey
 
-		annotation SummarizationSetBy = Automatic
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
 
 	column CustomerSegment
 		dataType: string
@@ -92,13 +95,14 @@ table 'dwh v_Customer_Summary'
 
 	column CLV
 		dataType: double
+		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: f5aa905f-e9ca-4097-98f0-561ce1e7b4a9
 		summarizeBy: sum
 		sourceColumn: CLV
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
 
 	column LastOrderDate
 		dataType: dateTime
@@ -106,6 +110,11 @@ table 'dwh v_Customer_Summary'
 		lineageTag: 66d4a016-95f1-458a-a8ec-05318f0bb621
 		summarizeBy: none
 		sourceColumn: LastOrderDate
+
+		variation Variation
+			isDefault
+			relationship: 5fa9f9f5-75c7-4a99-b3be-59a2a2695efe
+			defaultHierarchy: LocalDateTable_d5adbddb-e078-47d7-a736-fcb52c797df8.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -145,6 +154,15 @@ table 'dwh v_Customer_Summary'
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
+
+	column CustomerId
+		dataType: int64
+		formatString: 0
+		lineageTag: fe2eae55-bd84-4ab6-beae-c0fbd8378a65
+		summarizeBy: none
+		sourceColumn: CustomerId
+
+		annotation SummarizationSetBy = User
 
 	partition 'dwh v_Customer_Summary' = m
 		mode: import

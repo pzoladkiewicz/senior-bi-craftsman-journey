@@ -3007,16 +3007,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "item": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
 			          "merchandise": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -3048,6 +3038,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "item name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "merchandise name": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -7161,9 +7161,3082 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.entity_21_1_total_customers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "21.1 Total Customers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "21.1 total customers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "21.1 aggregate customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "21.1 overall customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "21.1 total clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "21.1 total patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "21.1 total client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "21.1 total consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "21.1 total punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "21.1 total regular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "21.1 total custom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "21.1 total trade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Total Customers": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_24_1_avg_CLV_per_customer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "24.1 Avg CLV per Customer"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "24.1 avg CLV per customer": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "24.1 avg clv per client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "24.1 avg clv per consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "24.1 avg clv per user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "24.1 avg clv per buyer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "24.1 avg clv per patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "24.1 avg clv per purchaser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "24.1 avg clv per shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "24.1 average clv per customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "Avg CLV per Customer": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_23_1_avg_orders_per_customer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "23.1 Avg Orders per Customer"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "23.1 avg orders per customer": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "23.1 avg order per client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "23.1 avg order per consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "23.1 avg order per user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "23.1 avg order per buyer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "23.1 avg order per patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "23.1 avg order per purchaser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "23.1 avg order per shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "23.1 average order per customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "23.1 avg instruction per customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "23.1 avg guideline per customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "Avg Orders per Customer": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_20_4_total_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "20.4 Total Revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "20.4 total revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "20.4 total income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "20.4 total profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "20.4 total turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "20.4 total yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "20.4 aggregate revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "20.4 overall revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_20_5_total_profit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "20.5 Total Profit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "20.5 total profit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "20.5 aggregate profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "20.5 overall profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "20.5 total income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "20.5 total revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "20.5 total turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "20.5 total return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "20.5 total yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "20.5 total advantage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "20.5 total gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "20.5 total benefit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "Total Profit": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dwh v_Customer_Summary": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.customer_key": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "CustomerKey"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer key": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CustomerKey": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "key": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "client key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "consumer key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "user key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "buyer key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "patron key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "purchaser key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "shopper key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "main": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "basic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fundamental": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.customer_segment": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "CustomerSegment"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer segment": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CustomerSegment": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "segment": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer division": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer subdivision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "division": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "subdivision": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "customer section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "customer sector": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "customer bit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "customer fragment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "customer part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "customer piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.customer_country": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "CustomerCountry"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer country": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CustomerCountry": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "country": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "client country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "consumer country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "user country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "buyer country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "patron country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "purchaser country": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.customer_state": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "CustomerState"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer state": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CustomerState": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "state": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "province": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "territory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "nation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "customer condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "condition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.customer_city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "CustomerCity"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer city": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CustomerCity": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "city": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "metropolis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "municipality": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "customer town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "customer metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "town": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "metropolitan": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.total_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "TotalOrders"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalOrders": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "order": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "total command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.total_item": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "TotalItems"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total item": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalItems": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "item": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "total product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "total element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "total entry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "entry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "total article": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "total object": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "total piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "total token": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "article": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.total_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "TotalRevenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalRevenue": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "total income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "total turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "total yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "aggregate revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.total_profit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "TotalProfit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total profit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "TotalProfit": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total advantage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "total gain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "total benefit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "total use": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.avg_profit_margin": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "AvgProfitMargin"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg profit margin": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "AvgProfitMargin": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "average profit margin": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "avg profit boundary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "avg profit perimeter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "avg profit periphery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "avg profit border": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "avg profit brim": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "avg profit sideline": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "avg profit edge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "avg profit verge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "avg profit fringe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.clv": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "CLV"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "clv": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.last_order_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "LastOrderDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "last order date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LastOrderDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "order date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "last order moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "last order period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "order period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "end order date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "final order date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "closing order date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "concluding order date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "finishing order date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "former order date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dwh_v_Customer_Summary.frequency": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "Frequency"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "frequency": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "incidence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "regularity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.monetary": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "Monetary"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "monetary": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "financial": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fiscal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "economic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pecuniary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "regulatory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "monetarist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "budgetary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary.first_order_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "FirstOrderDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "first order date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FirstOrderDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "order date": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "first order moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "first order period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "order period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "VariationSource": "FirstOrderDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "first order date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dwh_v_Customer_Summary.first_order_date.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "VariationSource": "FirstOrderDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "first order year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "first order date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "first order date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "first order yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "first order moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "first order period year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dwh_v_Customer_Summary.first_order_date.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "VariationSource": "FirstOrderDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "first order quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "first order date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "first order date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "first order qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "order date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "order qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "first order moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "first order period quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dwh_v_Customer_Summary.first_order_date.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "VariationSource": "FirstOrderDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "first order month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "first order date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "first order date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "first order mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "order mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "first order moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "first order period month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dwh_v_Customer_Summary.first_order_date.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "VariationSource": "FirstOrderDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "first order day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "first order date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "order day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "order date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "first order moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "order moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "first order period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "order period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "period day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dwh_v_Customer_Summary.customer_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dwh v_Customer_Summary",
+			          "ConceptualProperty": "CustomerId"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customer id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CustomerId": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "customer": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customer identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "customer identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "buyer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "purchaser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_25_1_profit_margin_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "25.1 Profit Margin %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "25.1 profit margin %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "25.1 profit margin percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "25.1 profit margin pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "Profit Margin %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_25_2_CF_profit_margin_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "25.2 CF Profit Margin %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "25.2 CF profit margin %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "25.2 cf profit margin percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "25.2 cf profit margin pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date.year": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_order_date_hierarchies_have_first_order_years"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_first_order_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.first_order_date": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_order_dates_have_first_order_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_dwh_D_Date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_D_Date": {
+			          "Target": {
+			            "Entity": "dwh_D_Date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_D_Date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_dwh_D_Dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_D_Date"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_D_Dates_have_dwh_v_Customer_Summaries"
+			        }
+			      ]
+			    },
 			    "dwh_v_Shipping_KPI_has_dwh_D_Date": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh v_Shipping_KPI"
@@ -7483,6 +10556,812 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_D_Dates_have_dwh_v_Customer_CLVs"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_entity__measure_entity_25_2_CF_profit_margin_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "entity__measure.entity_25_2_CF_profit_margin_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_25_2_CF_profit_margin_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_25_2_CF_profit_margin_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_25_2_CF_profit_margin_"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_entity__measure_entity_25_1_profit_margin_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "entity__measure.entity_25_1_profit_margin_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_25_1_profit_margin_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_25_1_profit_margin_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_25_1_profit_margin_"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_customer_id": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_id": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_customer_ids"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_first_order_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_first_order_dates"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_monetary": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.monetary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.monetary"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.monetary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_monetary"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Adjectives": [
+			              {
+			                "monetary": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dwh_v_Customer_Summary.monetary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monetary_indicates_how_monetary_dwh_v_Customer_Summaries_are"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_frequency": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.frequency": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.frequency"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.frequency"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_frequencies"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_last_order_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.last_order_date": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.last_order_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.last_order_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_last_order_dates"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_clv": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.clv": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.clv"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.clv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_clvs"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "dwh_v_Customer_Summary.clv"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clv_indicates_how_expensive_dwh_v_Customer_Summaries_are"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_avg_profit_margin": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.avg_profit_margin": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.avg_profit_margin"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.avg_profit_margin"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_avg_profit_margins"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_total_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.total_profit": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.total_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.total_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_total_profits"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_total_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.total_revenue": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.total_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.total_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_total_revenues"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_total_item": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.total_item": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.total_item"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.total_item"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_total_items"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_total_order": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.total_order": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.total_order"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.total_order"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_total_orders"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_customer_city": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_city": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_city"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_customer_cities"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_customer_state": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_state": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_state"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_customer_states"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_customer_country": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_country": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_country"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_customer_countries"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_customer_segment": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_segment": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_segment"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_segment"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_customer_segments"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_customer_key": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_key": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_key"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_key"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_customer_keys"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_entity__measure_entity_20_5_total_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "entity__measure.entity_20_5_total_profit": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_20_5_total_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_20_5_total_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_20_5_total_profit"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_entity__measure_entity_20_4_total_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "entity__measure.entity_20_4_total_revenue": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_20_4_total_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_20_4_total_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_20_4_total_revenue"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_entity__measure_entity_23_1_avg_orders_per_customer": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "entity__measure.entity_23_1_avg_orders_per_customer": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_23_1_avg_orders_per_customer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_23_1_avg_orders_per_customer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_23_1_avg_orders_per_customer"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_entity__measure_entity_24_1_avg_CLV_per_customer": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "entity__measure.entity_24_1_avg_CLV_per_customer": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_24_1_avg_CLV_per_customer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_24_1_avg_CLV_per_customer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_24_1_avg_CLV_per_customer"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_has_entity__measure_entity_21_1_total_customers": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "entity__measure.entity_21_1_total_customers": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_21_1_total_customers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_21_1_total_customers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_have_21_1_total_customers"
 			        }
 			      ]
 			    },
@@ -9775,6 +13654,141 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dwh_v_Customer_Summary_in_customer_city": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_city": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_city"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_v_Customer_Summary.customer_city"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_city"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_are_in_customer_cities"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_in_customer_state": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_state": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_state"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_v_Customer_Summary.customer_state"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_state"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_are_in_customer_states"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_in_customer_country": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.customer_country": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.customer_country"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "dwh_v_Customer_Summary.customer_country"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.customer_country"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Customer_Summaries_are_in_customer_countries"
+			        }
+			      ]
+			    },
 			    "country_mapping_in_order_country_ISO": {
 			      "Binding": {
 			        "ConceptualEntity": "country_mapping"
@@ -10045,6 +14059,90 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "dwh_v_Customer_Summary_is_ordered_on_first_order_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "dwh_v_Customer_Summary.first_order_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "order": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "dwh_v_Customer_Summaries_are_ordered_on_first_order_dates"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_is_ordered_on_last_order_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.last_order_date": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.last_order_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "dwh_v_Customer_Summary.last_order_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "order": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "dwh_v_Customer_Summaries_are_ordered_on_last_order_dates"
+			        }
+			      ]
+			    },
 			    "dwh_D_Date_is_weekend": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh D_Date"
@@ -10092,6 +14190,105 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dwh_D_Dates_are_weekend_dwh_D_Dates"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date.quarter": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_order_date_hierarchies_have_first_order_quarters"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date.month": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_order_date_hierarchies_have_first_order_months"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date.day": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_order_date_hierarchies_have_first_order_days"
 			        }
 			      ]
 			    }

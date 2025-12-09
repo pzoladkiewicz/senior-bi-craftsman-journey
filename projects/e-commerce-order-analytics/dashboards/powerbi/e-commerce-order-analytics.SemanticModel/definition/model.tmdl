@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["dwh v_Customer_CLV","dwh v_Customer_Segments","dwh v_Geography_Performance","dwh v_Order_TimeSeries","dwh v_Product_Performance","dwh v_Shipping_KPI","dwh D_Date","_Measures","country_mapping","dwh v_Customer_Summary"]
+annotation PBI_QueryOrder = ["dwh v_Customer_CLV","dwh v_Customer_Segments","dwh v_Geography_Performance","dwh v_Order_TimeSeries","dwh v_Product_Performance","dwh v_Shipping_KPI","dwh D_Date","_Measures","country_mapping","dwh v_Customer_Summary","dwh F_Order"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -24,6 +24,9 @@ ref table country_mapping
 ref table 'dwh v_Customer_Summary'
 ref table DateTableTemplate_577e925f-9381-4e80-a094-e8534dbdb421
 ref table LocalDateTable_d71241b9-ce31-456f-8684-b889aa81c27d
+ref table LocalDateTable_d5adbddb-e078-47d7-a736-fcb52c797df8
+ref table 'dwh F_Order'
+ref table LocalDateTable_d6009f9f-950a-44e2-879c-cb7f7c896a6e
 
 ref cultureInfo en-US
 

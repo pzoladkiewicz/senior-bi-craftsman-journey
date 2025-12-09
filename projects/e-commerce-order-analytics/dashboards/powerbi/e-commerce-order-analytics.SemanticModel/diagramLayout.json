@@ -10,7 +10,7 @@
       "nodes": [
         {
           "location": {
-            "x": 140,
+            "x": 241.25,
             "y": 0
           },
           "nodeIndex": "dwh v_Customer_CLV",
@@ -24,7 +24,7 @@
         },
         {
           "location": {
-            "x": 476,
+            "x": 869.75,
             "y": 0
           },
           "nodeIndex": "dwh v_Customer_Segments",
@@ -38,8 +38,8 @@
         },
         {
           "location": {
-            "x": 819,
-            "y": 322
+            "x": 1047.75,
+            "y": 363.75
           },
           "nodeIndex": "dwh v_Geography_Performance",
           "nodeLineageTag": "667e804d-6b56-405a-b7cd-8d98d0a9e99c",
@@ -66,8 +66,8 @@
         },
         {
           "location": {
-            "x": 902,
-            "y": 125
+            "x": 1035.75,
+            "y": 130
           },
           "nodeIndex": "dwh v_Product_Performance",
           "nodeLineageTag": "d59e1f42-ca98-40aa-853e-9e159a77776c",
@@ -80,8 +80,8 @@
         },
         {
           "location": {
-            "x": 899,
-            "y": 520
+            "x": 1187.75,
+            "y": 668.75
           },
           "nodeIndex": "dwh v_Shipping_KPI",
           "nodeLineageTag": "fef757c4-e24d-4ff4-8b6b-0f771402ab38",
@@ -94,8 +94,8 @@
         },
         {
           "location": {
-            "x": 477,
-            "y": 253
+            "x": 653,
+            "y": 246
           },
           "nodeIndex": "dwh D_Date",
           "nodeLineageTag": "a22aece8-9ba2-4778-b1ad-136f4a3f4640",
@@ -107,7 +107,7 @@
         },
         {
           "location": {
-            "x": 1060,
+            "x": 1344,
             "y": 0
           },
           "nodeIndex": "_Measures",
@@ -121,8 +121,8 @@
         },
         {
           "location": {
-            "x": 1047,
-            "y": 326
+            "x": 1290.75,
+            "y": 269.75
           },
           "nodeIndex": "country_mapping",
           "nodeLineageTag": "b8370109-1623-4621-aa31-2183c30e7b00",
@@ -135,8 +135,8 @@
         },
         {
           "location": {
-            "x": 0,
-            "y": 304
+            "x": 33.75,
+            "y": 439
           },
           "nodeIndex": "dwh v_Customer_Summary",
           "nodeLineageTag": "652282d7-dc8f-432b-b219-557a86735b38",
@@ -145,10 +145,23 @@
             "width": 234
           },
           "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 320,
+            "y": 191
+          },
+          "nodeIndex": "dwh F_Order",
+          "nodeLineageTag": "e2ed2640-2479-4007-b7ad-42280e63f1d3",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 80,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

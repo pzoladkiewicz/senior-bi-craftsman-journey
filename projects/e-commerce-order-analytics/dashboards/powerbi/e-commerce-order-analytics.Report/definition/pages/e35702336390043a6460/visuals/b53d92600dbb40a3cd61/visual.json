@@ -690,68 +690,26 @@
             }
           }
         }
+      ],
+      "border": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cc70a0e1630ee916e8e4",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dwh D_Date"
-              }
-            },
-            "Property": "MonthShort"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "ff1ecc6ab06c5ab2004b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "01. Revenue"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "78829d3853bd0495bdab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "11.1 Revenue PY"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7339300e049bca08151e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "12.1 Profit Margin"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

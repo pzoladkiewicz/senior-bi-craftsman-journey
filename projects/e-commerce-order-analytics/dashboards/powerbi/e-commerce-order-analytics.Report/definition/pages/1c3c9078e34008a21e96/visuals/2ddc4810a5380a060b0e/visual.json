@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
   "name": "2ddc4810a5380a060b0e",
   "position": {
-    "x": 912,
-    "y": 488.00000000000006,
-    "z": 0,
-    "height": 200,
-    "width": 320,
-    "tabOrder": 9000
+    "x": 128,
+    "y": 528,
+    "z": 6500,
+    "height": 160,
+    "width": 416,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "barChart",
@@ -210,6 +210,18 @@
                   "Value": "true"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -265,7 +277,7 @@
                   "expr": {
                     "ThemeDataColor": {
                       "ColorId": 0,
-                      "Percent": -0.3
+                      "Percent": -0.2
                     }
                   }
                 }
@@ -313,8 +325,58 @@
             }
           }
         }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "46004397c92187a526b7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dwh v_Customer_Segments"
+              }
+            },
+            "Property": "CustomerSegment"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "256eba9e9f2344bb6681",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dwh v_Customer_Segments"
+                  }
+                },
+                "Property": "Revenue"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

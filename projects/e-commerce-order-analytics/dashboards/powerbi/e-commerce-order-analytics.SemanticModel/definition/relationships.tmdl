@@ -26,12 +26,26 @@ relationship efdbe889-ec7c-bd74-bc31-5c6b128a0eee
 	fromColumn: 'dwh v_Geography_Performance'.OrderCountry
 	toColumn: country_mapping.OrderCountry
 
-relationship 0d723cd7-bfb2-8453-1fa0-ab170f054d36
-	fromColumn: 'dwh v_Customer_Summary'.LastOrderDate
-	toColumn: 'dwh D_Date'.Date
-
 relationship 629f8363-4220-4abe-8516-744e47bedc7b
 	joinOnDateBehavior: datePartOnly
 	fromColumn: 'dwh v_Customer_Summary'.FirstOrderDate
 	toColumn: LocalDateTable_d71241b9-ce31-456f-8684-b889aa81c27d.Date
+
+relationship 5fa9f9f5-75c7-4a99-b3be-59a2a2695efe
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'dwh v_Customer_Summary'.LastOrderDate
+	toColumn: LocalDateTable_d5adbddb-e078-47d7-a736-fcb52c797df8.Date
+
+relationship d927d3c0-3f34-408b-8ba8-1764963865db
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'dwh F_Order'.LoadDate
+	toColumn: LocalDateTable_d6009f9f-950a-44e2-879c-cb7f7c896a6e.Date
+
+relationship AutoDetected_71548d98-9d3b-44b3-955a-b2e8bff63d29
+	fromColumn: 'dwh F_Order'.CustomerKey
+	toColumn: 'dwh v_Customer_Summary'.CustomerKey
+
+relationship AutoDetected_c0902291-cf53-4a98-99b9-8324d9367aa7
+	fromColumn: 'dwh F_Order'.OrderDateKey
+	toColumn: 'dwh D_Date'.DateKey
 
