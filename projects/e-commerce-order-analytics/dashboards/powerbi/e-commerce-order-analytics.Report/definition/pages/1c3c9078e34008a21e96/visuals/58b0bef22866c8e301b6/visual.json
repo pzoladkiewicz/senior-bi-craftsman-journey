@@ -4,7 +4,7 @@
   "position": {
     "x": 551.99097442904724,
     "y": 95,
-    "z": 8250,
+    "z": 5000,
     "height": 128,
     "width": 256,
     "tabOrder": 3000
@@ -446,6 +446,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "32D"
                 }
               }
             }

@@ -10,10 +10,6 @@ relationship d0176940-d9b1-57ee-fbda-71360580780b
 	fromColumn: 'dwh v_Geography_Performance'.OrderDateKey
 	toColumn: 'dwh D_Date'.DateKey
 
-relationship 8d11d5c5-3f46-218f-b9e8-d979f567e7ce
-	fromColumn: 'dwh v_Product_Performance'.OrderDateKey
-	toColumn: 'dwh D_Date'.DateKey
-
 relationship ca3e3925-4cc5-4966-70ea-7d64c8081a02
 	fromColumn: 'dwh v_Shipping_KPI'.OrderDateKey
 	toColumn: 'dwh D_Date'.DateKey
@@ -48,4 +44,8 @@ relationship AutoDetected_71548d98-9d3b-44b3-955a-b2e8bff63d29
 relationship AutoDetected_c0902291-cf53-4a98-99b9-8324d9367aa7
 	fromColumn: 'dwh F_Order'.OrderDateKey
 	toColumn: 'dwh D_Date'.DateKey
+
+relationship 27f1a60c-76bc-df27-6dba-90b5b95683bf
+	fromColumn: 'dwh F_Order'.ProductKey
+	toColumn: 'dwh v_Product_Performance'.ProductKey
 

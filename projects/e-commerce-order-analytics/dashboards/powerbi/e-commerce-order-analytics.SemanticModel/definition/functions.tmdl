@@ -36,3 +36,19 @@ function 'pbi.ThemeColor' = ```
 		```
 	lineageTag: 1a5b5980-0632-45a2-a732-2c42e274b5bc
 
+function 'pbi.CurrencyFormat' =
+		() =>
+		VAR _value = SELECTEDMEASURE()
+		VAR _absValue = ABS(_value)
+		VAR _fstring =
+			SWITCH(
+				TRUE(),
+				_absValue >= 1e9, "$#,##0,,,.00M",
+				_absValue >= 1e6, "$#,##0,,.0M",
+				_absValue >= 1e3, "$#,##0,.0K",
+				"$#,##0"
+			)
+		RETURN
+			_fstring
+	lineageTag: 0334d7a3-f439-4160-8dbb-dc3229abe2b7
+

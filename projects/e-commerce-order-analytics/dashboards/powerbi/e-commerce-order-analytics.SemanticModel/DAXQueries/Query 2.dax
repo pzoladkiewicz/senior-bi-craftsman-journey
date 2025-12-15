@@ -1,0 +1,4 @@
+EVALUATE
+    {
+        pbi.NumberFormat()
+    }

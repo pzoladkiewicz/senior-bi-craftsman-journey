@@ -4,7 +4,7 @@
   "position": {
     "x": 580,
     "y": 256,
-    "z": 8000,
+    "z": 2000,
     "height": 432,
     "width": 656,
     "tabOrder": 8000
@@ -880,34 +880,6 @@
               }
             },
             "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "88d7a4f54414eb060878",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "25.1 Profit Margin %"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b2574a4208662025bb5a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "20.5 Total Profit"
           }
         },
         "type": "Advanced"

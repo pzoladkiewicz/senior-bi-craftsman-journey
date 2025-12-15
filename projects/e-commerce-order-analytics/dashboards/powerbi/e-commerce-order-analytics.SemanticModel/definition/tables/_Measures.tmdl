@@ -4,7 +4,7 @@ table _Measures
 	measure '01. Revenue' = SUM('dwh v_Order_TimeSeries'[TotalRevenue])
 		lineageTag: a8a7b211-4a47-425d-9500-e83fe70d8725
 
-		formatStringDefinition = pbi.NumberFormat()
+		formatStringDefinition = pbi.CurrencyFormat()
 
 	measure '11.1 Revenue PY' = ```
 			
@@ -44,7 +44,7 @@ table _Measures
 	measure '02. Profit' = SUM('dwh v_Order_TimeSeries'[TotalProfit])
 		lineageTag: 7dcb2d46-86ba-4851-87e0-d77016471557
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		formatStringDefinition = pbi.CurrencyFormat()
 
 	measure '12.1 Profit Margin' = DIVIDE([02. Profit] , [01. Revenue], 0)
 		formatString: 0.0%;-0.0%;0.0%
@@ -62,8 +62,9 @@ table _Measures
 		lineageTag: 3428f26d-7561-447c-bb29-a539c132f4ff
 
 	measure '03. Orders' = SUM('dwh v_Order_TimeSeries'[OrderCount])
-		formatString: 0
 		lineageTag: 6d5c64a3-1516-4e11-a7a4-3fde60814f56
+
+		formatStringDefinition = pbi.NumberFormat()
 
 	measure '13.1 Orders PY' = ```
 			
@@ -218,6 +219,31 @@ table _Measures
 			        "#333"
 			    )
 		lineageTag: bfe95e88-2652-4bf4-bc09-0aea996f60d5
+
+	measure '31.1 Total Product Revenue' = SUM('dwh v_Product_Performance'[Revenue])
+		lineageTag: 971c05ed-3c57-4ba9-acd8-41aaca4120d3
+
+		formatStringDefinition = pbi.CurrencyFormat()
+
+	measure '32.1 Total Products' = DISTINCTCOUNT('dwh v_Product_Performance'[ProductKey])
+		formatString: 0
+		lineageTag: bab824c7-0ea2-4289-961b-6460e617bbfc
+
+	measure '33.1 Avg Profit Margin %' = ```
+			
+			    DIVIDE(
+			        SUM('dwh v_Product_Performance'[Profit]),
+			        SUM('dwh v_Product_Performance'[Revenue]),
+			        0
+			    )
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 7233c1bb-8a53-4452-8470-a6d06b1e730b
+
+	measure '17.2 Revenue' = SUM('dwh v_Product_Performance'[Revenue])
+		lineageTag: 7e4633bf-936e-4b4b-9de3-487db9d7d0aa
+
+		formatStringDefinition = pbi.CurrencyFormat()
 
 	partition _Measures = m
 		mode: import

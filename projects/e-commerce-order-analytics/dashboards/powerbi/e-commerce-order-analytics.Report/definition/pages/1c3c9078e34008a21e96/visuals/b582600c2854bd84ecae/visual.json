@@ -4,7 +4,7 @@
   "position": {
     "x": 128,
     "y": 256,
-    "z": 8062,
+    "z": 3000,
     "height": 240,
     "width": 416,
     "tabOrder": 6000
@@ -518,75 +518,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d3acf68e50b7df21b7fe",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dwh v_Customer_Summary"
-              }
-            },
-            "Property": "CustomerSegment"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "c1facfbc5e538aae3085",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dwh v_Customer_Summary"
-                  }
-                },
-                "Property": "TotalProfit"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "af9051219955fbfd8017",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dwh v_Customer_Summary"
-                  }
-                },
-                "Property": "Frequency"
-              }
-            },
-            "Function": 1
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5749986fcb0d1b7f482d",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "24.1 Avg CLV per Customer"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

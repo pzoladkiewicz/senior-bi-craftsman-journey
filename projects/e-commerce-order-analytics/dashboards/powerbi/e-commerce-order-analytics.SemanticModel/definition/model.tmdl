@@ -1,7 +1,7 @@
 model Model
 	culture: en-US
 	defaultPowerBIDataSourceVersion: powerBI_V3
-	sourceQueryCulture: pl-PL
+	sourceQueryCulture: en-US
 	dataAccessOptions
 		legacyRedirects
 		returnErrorValuesAsNull
@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_QueryOrder = ["dwh v_Customer_CLV","dwh v_Customer_Segments","dwh v_Geography_Performance","dwh v_Order_TimeSeries","dwh v_Product_Performance","dwh v_Shipping_KPI","dwh D_Date","_Measures","country_mapping","dwh v_Customer_Summary","dwh F_Order"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
 
 ref table 'dwh v_Customer_CLV'
 ref table 'dwh v_Customer_Segments'

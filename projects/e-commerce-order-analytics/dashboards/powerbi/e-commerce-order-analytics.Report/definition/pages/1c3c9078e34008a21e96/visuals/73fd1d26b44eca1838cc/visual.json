@@ -4,7 +4,7 @@
   "position": {
     "x": 228,
     "y": 95.999999999999986,
-    "z": 8500,
+    "z": 6000,
     "height": 128,
     "width": 256,
     "tabOrder": 2000
@@ -409,6 +409,20 @@
                   "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "32D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           },
           "selector": {
@@ -652,23 +666,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "810bc33e316a10fd62c1",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "_Measures"
-              }
-            },
-            "Property": "21.1 Total Customers"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

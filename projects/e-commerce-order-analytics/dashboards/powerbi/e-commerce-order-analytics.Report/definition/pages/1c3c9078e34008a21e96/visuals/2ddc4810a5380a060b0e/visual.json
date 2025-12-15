@@ -4,7 +4,7 @@
   "position": {
     "x": 128,
     "y": 528,
-    "z": 6500,
+    "z": 1000,
     "height": 160,
     "width": 416,
     "tabOrder": 4000
@@ -341,42 +341,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "46004397c92187a526b7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dwh v_Customer_Segments"
-              }
-            },
-            "Property": "CustomerSegment"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "256eba9e9f2344bb6681",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dwh v_Customer_Segments"
-                  }
-                },
-                "Property": "Revenue"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

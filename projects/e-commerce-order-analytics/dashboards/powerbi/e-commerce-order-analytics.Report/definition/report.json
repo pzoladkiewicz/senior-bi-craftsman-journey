@@ -148,16 +148,6 @@
           "name": "Professional_Corporate_Theme558083178225938.json",
           "path": "Professional_Corporate_Theme558083178225938.json",
           "type": "CustomTheme"
-        },
-        {
-          "name": "map_topojson43601850263747577.json",
-          "path": "map_topojson43601850263747577.json",
-          "type": "ShapeMap"
-        },
-        {
-          "name": "map_topojson8384977468864256.json",
-          "path": "map_topojson8384977468864256.json",
-          "type": "ShapeMap"
         }
       ]
     }

@@ -43,7 +43,7 @@ table 'dwh F_Order'
 		isHidden
 		formatString: 0
 		lineageTag: b8e43941-9f4f-4d43-9c5c-46e2ca6b0b37
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ProductKey
 
 		changedProperty = IsHidden

@@ -1,0 +1,17 @@
+createOrReplace
+
+	function 'pbi.CurrencyFormat' =
+			() =>
+			VAR _value = SELECTEDMEASURE()
+			VAR _absValue = ABS(_value)
+			VAR _fstring =
+				SWITCH(
+					TRUE(),
+					_absValue >= 1e9, "$#,##0,,,.00M",
+					_absValue >= 1e6, "$#,##0,,.0M",
+					_absValue >= 1e3, "$#,##0,.0K",
+					"$#,##0"
+				)
+			RETURN
+				_fstring
+

@@ -6,7 +6,7 @@ table 'dwh v_Product_Performance'
 		isHidden
 		formatString: 0
 		lineageTag: 27a9c26b-e763-487f-9050-c30dfec918ae
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ProductKey
 
 		changedProperty = IsHidden
@@ -41,7 +41,7 @@ table 'dwh v_Product_Performance'
 		dataType: int64
 		formatString: 0
 		lineageTag: 85c9be72-2874-4c7c-8c89-7d9bfb9b8dfc
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: UnitsSold
 
 		annotation SummarizationSetBy = Automatic
@@ -49,7 +49,7 @@ table 'dwh v_Product_Performance'
 	column Revenue
 		dataType: double
 		lineageTag: 464d4416-ee53-459b-a0c1-709cc52b4fb7
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Revenue
 
 		annotation SummarizationSetBy = Automatic
@@ -59,7 +59,7 @@ table 'dwh v_Product_Performance'
 	column Profit
 		dataType: double
 		lineageTag: a1bfb74d-31ca-422a-9762-162cb9eb7d1a
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Profit
 
 		annotation SummarizationSetBy = Automatic
@@ -69,24 +69,31 @@ table 'dwh v_Product_Performance'
 	column ProfitMargin
 		dataType: double
 		lineageTag: 1bc1b340-458f-495e-bdcc-0e01fa40b338
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: ProfitMargin
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column OrderDateKey
+	column TotalOrders
 		dataType: int64
-		isHidden
 		formatString: 0
-		lineageTag: a90fb36a-ccc8-4ec5-9bba-4c1a760674c9
+		lineageTag: 31f84d42-6fef-40b6-9977-4d473bd4cb91
 		summarizeBy: none
-		sourceColumn: OrderDateKey
-
-		changedProperty = IsHidden
+		sourceColumn: TotalOrders
 
 		annotation SummarizationSetBy = Automatic
+
+	column AvgPricePerUnit
+		dataType: double
+		lineageTag: 43b0dba3-d62a-4f9b-b470-86882666f7a0
+		summarizeBy: none
+		sourceColumn: AvgPricePerUnit
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition 'dwh v_Product_Performance' = m
 		mode: import
