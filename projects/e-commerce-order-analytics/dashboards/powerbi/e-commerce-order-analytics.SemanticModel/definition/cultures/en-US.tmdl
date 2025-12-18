@@ -7002,7 +7002,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "24.1 Avg CLV per Customer"
+			          "ConceptualProperty": "22.1 Avg CLV per Customer"
 			        }
 			      },
 			      "State": "Generated",

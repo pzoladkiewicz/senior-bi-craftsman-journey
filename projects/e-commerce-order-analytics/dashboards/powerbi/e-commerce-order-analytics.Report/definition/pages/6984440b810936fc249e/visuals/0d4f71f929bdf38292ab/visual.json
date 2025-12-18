@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "58b0bef22866c8e301b6",
+  "name": "0d4f71f929bdf38292ab",
   "position": {
-    "x": 551.99097442904724,
-    "y": 95,
-    "z": 5000,
+    "x": 228,
+    "y": 95.999999999999986,
+    "z": 6000,
     "height": 128,
     "width": 256,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,13 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "22.1 Avg CLV per Customer"
+                  "Property": "21.1 Total Customers"
                 }
               },
-              "queryRef": "_Measures.20.3 Avg CLV",
-              "nativeQueryRef": "Avg CLV per Customer",
-              "displayName": "Avg CLV per Customer"
+              "queryRef": "_Measures.21.1 Total Customers",
+              "nativeQueryRef": "Total Customers",
+              "displayName": "Total Customers",
+              "format": "# ##0"
             }
           ]
         }
@@ -43,7 +44,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "22.1 Avg CLV per Customer"
+                "Property": "21.1 Total Customers"
               }
             },
             "direction": "Descending"
@@ -63,10 +64,17 @@
                 }
               }
             },
-            "dividerWidth": {
+            "dividerLineStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "'dashed'"
+                }
+              }
+            },
+            "dividerIgnorePadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -82,17 +90,10 @@
                 }
               }
             },
-            "dividerLineStyle": {
+            "dividerWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "'dashed'"
-                }
-              }
-            },
-            "dividerIgnorePadding": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "1D"
                 }
               }
             }
@@ -126,6 +127,13 @@
                 }
               }
             },
+            "paddingTop": {
+              "expr": {
+                "Literal": {
+                  "Value": "8L"
+                }
+              }
+            },
             "paddingLeft": {
               "expr": {
                 "Literal": {
@@ -139,58 +147,16 @@
                   "Value": "5L"
                 }
               }
-            },
-            "paddingTop": {
-              "expr": {
-                "Literal": {
-                  "Value": "8L"
-                }
-              }
             }
           },
           "selector": {
             "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "11.2 Revenue YoY %"
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c",
-            "order": 0
           }
         }
       ],
       "referenceLabelLayout": [
         {
           "properties": {
-            "arrangement": {
-              "expr": {
-                "Literal": {
-                  "Value": "'rows'"
-                }
-              }
-            },
             "style": {
               "expr": {
                 "Literal": {
@@ -198,10 +164,10 @@
                 }
               }
             },
-            "horizontalAlignment": {
+            "arrangement": {
               "expr": {
                 "Literal": {
-                  "Value": "'right'"
+                  "Value": "'rows'"
                 }
               }
             },
@@ -223,6 +189,13 @@
               "expr": {
                 "Literal": {
                   "Value": "0D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
                 }
               }
             }
@@ -249,17 +222,17 @@
                 }
               }
             },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
             "width": {
               "expr": {
                 "Literal": {
                   "Value": "5D"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -304,17 +277,17 @@
       "layout": [
         {
           "properties": {
+            "autoGrid": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "columnCount": {
               "expr": {
                 "Literal": {
                   "Value": "3L"
-                }
-              }
-            },
-            "calloutSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "68D"
                 }
               }
             },
@@ -325,10 +298,10 @@
                 }
               }
             },
-            "autoGrid": {
+            "calloutSize": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "68D"
                 }
               }
             }
@@ -402,18 +375,6 @@
                   "Value": "'aboveValue'"
                 }
               }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.6
-                    }
-                  }
-                }
-              }
             }
           },
           "selector": {
@@ -424,10 +385,10 @@
       "value": [
         {
           "properties": {
-            "fontFamily": {
+            "horizontalAlignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                  "Value": "'center'"
                 }
               }
             },
@@ -442,10 +403,10 @@
                 }
               }
             },
-            "horizontalAlignment": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
                 }
               }
             },
@@ -453,6 +414,13 @@
               "expr": {
                 "Literal": {
                   "Value": "32D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -508,24 +476,17 @@
       "padding": [
         {
           "properties": {
+            "paddingIndividual": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "leftMargin": {
               "expr": {
                 "Literal": {
                   "Value": "10L"
-                }
-              }
-            },
-            "rightMargin": {
-              "expr": {
-                "Literal": {
-                  "Value": "10L"
-                }
-              }
-            },
-            "topMargin": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
                 }
               }
             },
@@ -543,10 +504,17 @@
                 }
               }
             },
-            "paddingIndividual": {
+            "topMargin": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "0L"
+                }
+              }
+            },
+            "rightMargin": {
+              "expr": {
+                "Literal": {
+                  "Value": "10L"
                 }
               }
             }
@@ -568,162 +536,6 @@
             }
           }
         }
-      ],
-      "referenceLabelDetail": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue"
-          }
-        }
-      ],
-      "referenceLabelTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue"
-          }
-        },
-        {
-          "properties": {
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'vs. PY'"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "titleFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            },
-            "titleContentType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'custom'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
-          }
-        }
-      ],
-      "referenceLabelValue": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue"
-          }
-        },
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "valueFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "valueFontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "valueTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
-          }
-        },
-        {
-          "properties": {
-            "valueFontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
-                        }
-                      },
-                      "Property": "11.3 CF Revenue YoY %"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 0
-                }
-              }
-            ],
-            "metadata": "_Measures.01. Revenue",
-            "id": "field-e4a341c9-c435-a261-d821-72bcad2c240c"
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -737,60 +549,10 @@
                 }
               }
             },
-            "titleWrap": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#2C3E50'"
-                    }
-                  }
-                }
-              }
-            },
-            "background": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'left'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "'12'"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI Semibold'"
-                }
-              }
-            },
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Avg CLV'"
+                  "Value": "'Total Customers'"
                 }
               }
             }
@@ -800,24 +562,38 @@
       "dropShadow": [
         {
           "properties": {
-            "show": {
+            "angle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "45L"
                 }
               }
             },
-            "preset": {
+            "shadowDistance": {
               "expr": {
                 "Literal": {
-                  "Value": "'BottomRight'"
+                  "Value": "10L"
                 }
               }
             },
-            "position": {
+            "shadowBlur": {
               "expr": {
                 "Literal": {
-                  "Value": "'Outer'"
+                  "Value": "10L"
+                }
+              }
+            },
+            "shadowSpread": {
+              "expr": {
+                "Literal": {
+                  "Value": "3L"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "70L"
                 }
               }
             },
@@ -832,41 +608,6 @@
                   }
                 }
               }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "70L"
-                }
-              }
-            },
-            "shadowSpread": {
-              "expr": {
-                "Literal": {
-                  "Value": "3L"
-                }
-              }
-            },
-            "shadowBlur": {
-              "expr": {
-                "Literal": {
-                  "Value": "10L"
-                }
-              }
-            },
-            "angle": {
-              "expr": {
-                "Literal": {
-                  "Value": "45L"
-                }
-              }
-            },
-            "shadowDistance": {
-              "expr": {
-                "Literal": {
-                  "Value": "10L"
-                }
-              }
             }
           }
         }
@@ -874,6 +615,13 @@
       "padding": [
         {
           "properties": {
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
             "top": {
               "expr": {
                 "Literal": {
@@ -882,13 +630,6 @@
               }
             },
             "bottom": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            },
-            "left": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
@@ -905,76 +646,9 @@
           }
         }
       ],
-      "subTitle": [
-        {
-          "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FFFFFF'"
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
-                }
-              }
-            }
-          }
-        }
-      ],
       "border": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "color": {
               "solid": {
                 "color": {
@@ -984,46 +658,6 @@
                       "Percent": -0.1
                     }
                   }
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualTooltip": [
-        {
-          "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "visualHeaderTooltip": [
-        {
-          "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Segoe UI'"
                 }
               }
             }

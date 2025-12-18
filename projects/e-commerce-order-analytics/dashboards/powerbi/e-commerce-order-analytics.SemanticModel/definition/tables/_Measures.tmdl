@@ -142,7 +142,7 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure '24.1 Avg CLV per Customer' = ```
+	measure '22.1 Avg CLV per Customer' = ```
 			
 			    DIVIDE(
 			        SUM('dwh v_Customer_Summary'[CLV]),
@@ -169,8 +169,9 @@ table _Measures
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '20.5 Total Profit' = SUM('dwh v_Customer_Summary'[TotalProfit])
-		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: a162d8ed-aa4b-4c03-b7d5-41b6cd2d6f7d
+
+		formatStringDefinition = pbi.CurrencyFormat()
 
 	measure '25.1 Profit Margin %' = ```
 			
@@ -290,12 +291,19 @@ table _Measures
 			VAR _Rev = SUM('dwh v_Geography_Performance'[TotalRevenue])
 			VAR _Total = CALCULATE(
 			                        SUM('dwh v_Geography_Performance'[TotalRevenue]),
-			                        ALLSELECTED(country_mapping[OrderCountryISO])
+			                        ALLEXCEPT('dwh v_Geography_Performance', 'dwh D_Date'[Year])
 			                        )
 			VAR _Pct = DIVIDE(_Rev, _Total, 0)
 			RETURN
 			FORMAT(_Rev / 1000, "#,0") & "K (" & FORMAT(_Pct, "0%") & ")"
 		lineageTag: 0e47b88f-ec8c-4cbc-a6a0-4353a832263f
+
+	measure Measure
+		lineageTag: 05e64da5-8c00-4c36-a575-201a0e728860
+
+		annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":null}
+
+		annotation 277cc1b9-af89-4597-8e15-cacc25c0886b = To use special characters in a measure name, enclose the entire name in brackets ( [] ) and add a ] to any closing brackets in the name.
 
 	partition _Measures = m
 		mode: import

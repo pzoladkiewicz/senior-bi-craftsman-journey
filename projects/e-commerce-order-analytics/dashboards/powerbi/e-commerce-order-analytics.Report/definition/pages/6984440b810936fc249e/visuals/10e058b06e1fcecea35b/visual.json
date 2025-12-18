@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "58b0bef22866c8e301b6",
+  "name": "10e058b06e1fcecea35b",
   "position": {
-    "x": 551.99097442904724,
+    "x": 876,
     "y": 95,
-    "z": 5000,
+    "z": 4000,
     "height": 128,
     "width": 256,
-    "tabOrder": 3000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,12 +23,12 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "22.1 Avg CLV per Customer"
+                  "Property": "23.1 Avg Orders per Customer"
                 }
               },
-              "queryRef": "_Measures.20.3 Avg CLV",
-              "nativeQueryRef": "Avg CLV per Customer",
-              "displayName": "Avg CLV per Customer"
+              "queryRef": "_Measures.20.2 Avg Orders per Customer",
+              "nativeQueryRef": "Avg Orders per Customer",
+              "displayName": "Avg Orders per Customer"
             }
           ]
         }
@@ -43,7 +43,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "22.1 Avg CLV per Customer"
+                "Property": "23.1 Avg Orders per Customer"
               }
             },
             "direction": "Descending"
@@ -400,18 +400,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'aboveValue'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.6
-                    }
-                  }
                 }
               }
             }
@@ -790,7 +778,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Avg CLV'"
+                  "Value": "'Avg Orders'"
                 }
               }
             }
