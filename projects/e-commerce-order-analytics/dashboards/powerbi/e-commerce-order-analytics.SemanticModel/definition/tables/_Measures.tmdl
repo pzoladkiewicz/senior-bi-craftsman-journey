@@ -114,21 +114,6 @@ table _Measures
 		formatString: 0.0
 		lineageTag: 4112e3f3-fd77-4a98-8595-9bcec4963499
 
-	measure '14.1 Shipping Variance' = [04. Avg Shipping Days] - 4.0
-		formatString: #,0.0
-		lineageTag: 5e79a549-cefd-4c83-aeae-26a326df1a0a
-
-	measure '14.2 CF Shipping vs. Target' = ```
-			
-			    SWITCH(
-			        TRUE(),
-			        [14.1 Shipping Variance] < 0, pbi.ThemeColor("pos"),
-			        [14.1 Shipping Variance] > 0, pbi.ThemeColor("neg"),
-			        "Grey"
-			        )
-			```
-		lineageTag: 8523278d-5b37-4ed9-97a9-ecb6637ee62a
-
 	measure '17.1 Margin %' = ```
 			
 			    DIVIDE(
@@ -244,6 +229,73 @@ table _Measures
 		lineageTag: 7e4633bf-936e-4b4b-9de3-487db9d7d0aa
 
 		formatStringDefinition = pbi.CurrencyFormat()
+
+	measure '17.3 CF Margin %' =
+			
+			VAR _m = [17.1 Margin %]
+			RETURN
+			    SWITCH(
+			        TRUE(),
+			        _m >= 0.11, "green",
+			        _m >= 0.10 && _m < 0.11, "orange",
+			        _m < 0.10, "red"
+			    )
+		lineageTag: 3a4e339a-fee7-458b-934f-3adcf359d1a4
+
+	measure '14.1 Avg Order Value' = ```
+			
+			    DIVIDE(
+			        SUM('dwh F_Order'[SalesAmount]),
+			        DISTINCTCOUNT('dwh F_Order'[OrderID]),
+			        0
+			    )
+			```
+		lineageTag: 4be300f4-f583-4f90-ba8f-85a6cbf6198b
+
+		formatStringDefinition = pbi.CurrencyFormat()
+
+	measure '14.2 Avg Order Value PY' =
+			
+			CALCULATE(
+			    [14.1 Avg Order Value],
+			    SAMEPERIODLASTYEAR('dwh D_Date'[Date])
+			)
+		lineageTag: 8ee6bb7c-d56e-42f4-b955-c8c1838e5214
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '14.3 AOV YoY %' = ```
+			
+			VAR _CY = [14.1 Avg Order Value]
+			VAR _PY = [14.2 Avg Order Value PY]
+			RETURN
+			    IF(ISBLANK(_PY), BLANK(), DIVIDE(_CY - _PY, _PY)) 
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 9da43237-2369-48c6-9875-3505057020d8
+
+	measure '14.4 CF AOV YoY %' = ```
+			
+			    SWITCH(
+			        TRUE(),
+			        [14.3 AOV YoY %] > 0, pbi.ThemeColor("pos"),
+			        [14.3 AOV YoY %] < 0, pbi.ThemeColor("neg"),
+			        "Grey"
+			        )
+			```
+		lineageTag: 160c4a88-60a4-4d8e-ae3f-de3d48d9d2be
+
+	measure '16.1 Revenue Label' =
+			
+			VAR _Rev = SUM('dwh v_Geography_Performance'[TotalRevenue])
+			VAR _Total = CALCULATE(
+			                        SUM('dwh v_Geography_Performance'[TotalRevenue]),
+			                        ALLSELECTED(country_mapping[OrderCountryISO])
+			                        )
+			VAR _Pct = DIVIDE(_Rev, _Total, 0)
+			RETURN
+			FORMAT(_Rev / 1000, "#,0") & "K (" & FORMAT(_Pct, "0%") & ")"
+		lineageTag: 0e47b88f-ec8c-4cbc-a6a0-4353a832263f
 
 	partition _Measures = m
 		mode: import

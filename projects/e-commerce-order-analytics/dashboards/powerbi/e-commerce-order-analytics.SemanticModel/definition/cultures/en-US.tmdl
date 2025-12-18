@@ -6162,138 +6162,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "entity__measure.entity_14_1_shipping_variance": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "14.1 Shipping Variance"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "14.1 shipping variance": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "14.1 shipping alteration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "14.1 shipping modification": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "14.1 shipping adjustment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "14.1 shipping change": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "14.1 shipping discrepancy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "14.1 shipping inconsistency": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "14.1 shipping disagreement": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "14.1 shipping variation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "14.1 shipping divergence": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        },
-			        {
-			          "14.1 shipping disparity": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.482
-			          }
-			        }
-			      ]
-			    },
-			    "entity__measure.entity_14_2_CF_shipping_vs__target": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "14.2 CF Shipping vs. Target"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "14.2 CF shipping vs. target": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "entity__measure.entity__11_1_revenue_PY_FormatString": {
 			      "Definition": {
 			        "Binding": {
@@ -15236,141 +15104,288 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.entity_17_3_CF_margin_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "17.3 CF Margin %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "17.3 CF margin %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "17.3 cf margin percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "17.3 cf margin pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_14_1_avg_order_value": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "14.1 Avg Order Value"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "14.1 avg order value": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "14.1 average order value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "14.1 avg order assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "14.1 avg order worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "14.1 avg order price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "14.1 avg order cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "14.1 avg order charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "14.1 avg order rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "14.1 avg order importance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "14.1 avg order significance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "14.1 avg order usefulness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Avg Order Value": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_14_2_avg_order_value_PY": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "14.2 Avg Order Value PY"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "14.2 avg order value PY": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "14.2 average order value py": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_14_3_AOV_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "14.3 AOV YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "14.3 AOV YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "14.3 aov yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "14.3 aov yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity_14_4_CF_AOV_YoY_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "14.4 CF AOV YoY %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "14.4 CF AOV YoY %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "14.4 cf aov yoy percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "14.4 cf aov yoy pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.entity__14_1_avg_order_value_FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "_14.1 Avg Order Value FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_14.1 avg order value FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dwh_v_Customer_Summary_last_order_date_date_hierarchy_has_dwh_v_Customer_Summary_last_order_date_year": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Summary"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Summary.last_order_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Summary.last_order_date.date_hierarchy"
-			          }
-			        },
-			        "dwh_v_Customer_Summary.last_order_date.year": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Summary.last_order_date.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Summary.last_order_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Summary.last_order_date.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_order_date_hierarchies_have_last_order_years"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Summary_last_order_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Summary"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Summary.last_order_date": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Summary.last_order_date"
-			          }
-			        },
-			        "dwh_v_Customer_Summary.last_order_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Summary.last_order_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Summary.last_order_date"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Summary.last_order_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_order_dates_have_last_order_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_day": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Summary"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
-			          }
-			        },
-			        "dwh_v_Customer_Summary.first_order_date.day": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Summary.first_order_date.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Summary.first_order_date.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "first_order_date_hierarchies_have_first_order_days"
-			        }
-			      ]
-			    },
-			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "dwh v_Customer_Summary"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
-			          }
-			        },
-			        "dwh_v_Customer_Summary.first_order_date.month": {
-			          "Target": {
-			            "Entity": "dwh_v_Customer_Summary.first_order_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "dwh_v_Customer_Summary.first_order_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "first_order_date_hierarchies_have_first_order_months"
-			        }
-			      ]
-			    },
 			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "dwh v_Customer_Summary"
@@ -15797,6 +15812,111 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dwh_D_Dates_have_dwh_v_Customer_CLVs"
+			        }
+			      ]
+			    },
+			    "dwh_F_Order_has_entity__measure_entity_14_4_CF_AOV_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh F_Order"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_F_Order": {
+			          "Target": {
+			            "Entity": "dwh_F_Order"
+			          }
+			        },
+			        "entity__measure.entity_14_4_CF_AOV_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14_4_CF_AOV_YoY_"
+			          }
+			        }
+			      }
+			    },
+			    "dwh_F_Order_has_entity__measure_entity_14_3_AOV_YoY_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh F_Order"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_F_Order": {
+			          "Target": {
+			            "Entity": "dwh_F_Order"
+			          }
+			        },
+			        "entity__measure.entity_14_3_AOV_YoY_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14_3_AOV_YoY_"
+			          }
+			        }
+			      }
+			    },
+			    "dwh_F_Order_has_entity__measure_entity_14_2_avg_order_value_PY": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh F_Order"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_F_Order": {
+			          "Target": {
+			            "Entity": "dwh_F_Order"
+			          }
+			        },
+			        "entity__measure.entity_14_2_avg_order_value_PY": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14_2_avg_order_value_PY"
+			          }
+			        }
+			      }
+			    },
+			    "dwh_F_Order_has_entity__measure_entity_14_1_avg_order_value": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh F_Order"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_F_Order": {
+			          "Target": {
+			            "Entity": "dwh_F_Order"
+			          }
+			        },
+			        "entity__measure.entity_14_1_avg_order_value": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_14_1_avg_order_value"
+			          }
+			        }
+			      }
+			    },
+			    "dwh_v_Product_Performance_has_entity__measure_entity_17_3_CF_margin_": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Product_Performance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Product_Performance": {
+			          "Target": {
+			            "Entity": "dwh_v_Product_Performance"
+			          }
+			        },
+			        "entity__measure.entity_17_3_CF_margin_": {
+			          "Target": {
+			            "Entity": "entity__measure.entity_17_3_CF_margin_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Product_Performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.entity_17_3_CF_margin_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dwh_v_Product_Performances_have_17_3_CF_margin_"
 			        }
 			      ]
 			    },
@@ -19629,6 +19749,138 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_dwh_D_Dates_are_weekend_dwh_D_Dates"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date.month": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_order_date_hierarchies_have_first_order_months"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_first_order_date_date_hierarchy_has_dwh_v_Customer_Summary_first_order_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.first_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.first_order_date.day": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.first_order_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.first_order_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "first_order_date_hierarchies_have_first_order_days"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_last_order_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.last_order_date": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.last_order_date"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.last_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.last_order_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.last_order_date"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.last_order_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_order_dates_have_last_order_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "dwh_v_Customer_Summary_last_order_date_date_hierarchy_has_dwh_v_Customer_Summary_last_order_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "dwh v_Customer_Summary"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dwh_v_Customer_Summary.last_order_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.last_order_date.date_hierarchy"
+			          }
+			        },
+			        "dwh_v_Customer_Summary.last_order_date.year": {
+			          "Target": {
+			            "Entity": "dwh_v_Customer_Summary.last_order_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dwh_v_Customer_Summary.last_order_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "dwh_v_Customer_Summary.last_order_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_order_date_hierarchies_have_last_order_years"
 			        }
 			      ]
 			    },
